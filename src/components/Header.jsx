@@ -3,10 +3,15 @@ import { Search, User, ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import LogoAbanic from "../assets/LogoAbanic.png";
+import { useLanguage } from "../context/LanguageContext";
 
 const translations = {
   pt: {
     topBar: "Enviamos para todo o Brasil",
+    userMenu: {
+      login: "Entrar",
+      register: "Registrar-se",
+    },
     menu: [
       { name: "Home", href: "/" },
       {
@@ -47,6 +52,10 @@ const translations = {
   },
   en: {
     topBar: "We ship all over Brazil",
+    userMenu: {
+      login: "Login",
+      register: "Sign up",
+    },
     menu: [
       { name: "Home", href: "#home" },
       {
@@ -90,11 +99,9 @@ const translations = {
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const [language, setLanguage] = useState("pt");
-
-  // Para abrir/fechar menu mobile
+  const { language, changeLanguage } = useLanguage();
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // Para controlar submenus mobile abertos
   const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState(null);
 
   useEffect(() => {
@@ -141,7 +148,7 @@ const Header = () => {
           <div className="hidden lg:block absolute left-0">
             <select
               value={language}
-              onChange={(e) => setLanguage(e.target.value)}
+              onChange={(e) => changeLanguage(e.target.value)}
               className="
         bg-transparent
         border border-gray-300
@@ -190,13 +197,35 @@ const Header = () => {
                 className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-abanic-gray hover:text-abanic-gray-dark"
-            >
-              <User className="h-5 w-5" />
-            </Button>
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer"
+                onClick={() => setUserMenuOpen(!userMenuOpen)}
+              >
+                <User className="h-5 w-5" />
+              </Button>
+
+              {userMenuOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                  <a
+                    href="/login"
+                    className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    {translations[language].userMenu.login}
+                  </a>
+                  <a
+                    href="/register"
+                    className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    {translations[language].userMenu.register}
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}

@@ -8,7 +8,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 // Lazy loading das páginas
 const Home = lazy(() => import("./pages/Home"));
 const Product = lazy(() => import("./pages/Product"));
-
+const Register = lazy(() => import("./pages/Register"));
 function App() {
   return (
     <LanguageProvider>
@@ -19,6 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product" element={<Product />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </Suspense>
           <Footer />
