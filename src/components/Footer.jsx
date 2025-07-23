@@ -225,24 +225,6 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-gray-600">
-          <div className="text-center">
-            <h4 className="text-xl font-semibold mb-4">{t.newsletterTitle}</h4>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              {t.newsletterDesc}
-            </p>
-            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
-              <input
-                type="email"
-                placeholder={language === "pt" ? "Seu e-mail" : "Your email"}
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              />
-              <button className="bg-abanic-orange hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-smooth hover-lift">
-                {t.subscribeBtn}
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Footer */}
