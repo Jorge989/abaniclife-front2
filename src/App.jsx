@@ -9,6 +9,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 const Home = lazy(() => import("./pages/Home"));
 const Product = lazy(() => import("./pages/Product"));
 const Register = lazy(() => import("./pages/Register"));
+const Login = lazy(() => import("./pages/Login"));
 function App() {
   return (
     <LanguageProvider>
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product" element={<Product />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </Suspense>
           <Footer />

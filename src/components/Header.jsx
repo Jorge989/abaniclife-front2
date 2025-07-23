@@ -16,7 +16,7 @@ const translations = {
       { name: "Home", href: "/" },
       {
         name: "Sobre",
-        href: "#sobre",
+        href: "#",
         submenu: [
           { name: "Marca", href: "#marca" },
           { name: "Fundadoras", href: "#fundadoras" },
@@ -24,7 +24,7 @@ const translations = {
       },
       {
         name: "Produto",
-        href: "#produto",
+        href: "#",
         submenu: [
           { name: "Hidratante com FPS 50", href: "/product" },
           { name: "Ativos e Benefícios", href: "#ativos" },
@@ -32,7 +32,7 @@ const translations = {
       },
       {
         name: "Explore",
-        href: "#explore",
+        href: "#",
         submenu: [
           { name: "Guia-Explore", href: "#guia" },
           { name: "Novidades", href: "#novidades" },
@@ -41,7 +41,7 @@ const translations = {
       },
       {
         name: "Suporte",
-        href: "#suporte",
+        href: "#",
         submenu: [
           { name: "FAQ", href: "#faq" },
           { name: "Contato", href: "#contato" },
@@ -204,7 +204,7 @@ const Header = () => {
                 className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer"
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
               >
-                <User className="h-5 w-5" />
+                <User className="bg-red" />
               </Button>
 
               {userMenuOpen && (
@@ -244,8 +244,13 @@ const Header = () => {
             <div
               key={item.name}
               className="relative group"
-              onMouseEnter={() => item.submenu && setActiveSubmenu(index)}
-              onMouseLeave={() => setActiveSubmenu(null)}
+              onClick={() => {
+                if (activeSubmenu === index) {
+                  setActiveSubmenu(null);
+                } else {
+                  setActiveSubmenu(index);
+                }
+              }}
             >
               <a
                 href={item.href}
