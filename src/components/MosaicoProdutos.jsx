@@ -1,20 +1,21 @@
 import React from "react";
 import Produto from "../assets/produto.png";
 import MulheresFoto from "../assets/mulheres.jpg";
-
+import CouplePicture from "../assets/Casal.jpg";
+import FotoCreme from "../assets/Fotocreme.jpg";
 const MosaicoProdutos = () => {
   const products = [
     {
       id: 1,
       name: "Hidratante com FPS50",
       brand: "Minimalist",
-      image: Produto,
+      image: FotoCreme,
     },
     {
       id: 2,
       name: "Hidratante com FPS50",
       brand: "Minimalist",
-      image: Produto,
+      image: CouplePicture,
     },
     {
       id: 3,
@@ -27,7 +28,7 @@ const MosaicoProdutos = () => {
   return (
     <div className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-abanic-gray-dark mb-4">
           Hidratante com FPS50
         </h2>
 

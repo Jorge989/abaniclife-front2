@@ -128,7 +128,7 @@ const CultureSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-4">
+          <h2 className="text-center text-4xl font-light text-[#494949] mb-10">
             Cultura e Tendência
           </h2>
           <p className="text-lg md:text-xl text-abanic-gray max-w-3xl mx-auto">

@@ -18,16 +18,16 @@ const translations = {
         name: "Sobre",
         href: "#",
         submenu: [
-          { name: "Marca", href: "#marca" },
-          { name: "Fundadoras", href: "#fundadoras" },
+          { name: "Marca", href: "/about#marca" },
+          { name: "Fundadoras", href: "/about#fundadoras" },
         ],
       },
       {
         name: "Produto",
         href: "#",
         submenu: [
-          { name: "Hidratante com FPS 50", href: "/product" },
-          { name: "Ativos e Benefícios", href: "#ativos" },
+          { name: "Hidratante com FPS 50", href: "/product#hidratante" },
+          { name: "Princípios e Ativos", href: "/product#ativos" },
         ],
       },
       {
@@ -43,7 +43,7 @@ const translations = {
         name: "Suporte",
         href: "#",
         submenu: [
-          { name: "FAQ", href: "#faq" },
+          { name: "FAQ", href: "/faq" },
           { name: "Contato", href: "#contato" },
           { name: "Tutorial", href: "#tutorial" },
         ],
@@ -60,10 +60,10 @@ const translations = {
       { name: "Home", href: "#home" },
       {
         name: "About",
-        href: "#sobre",
+        href: "",
         submenu: [
-          { name: "Brand", href: "#marca" },
-          { name: "Founders", href: "#fundadoras" },
+          { name: "Brand", href: "/about" },
+          { name: "Founders", href: "/about" },
         ],
       },
       {

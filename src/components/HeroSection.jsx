@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import Banner1 from "../assets/Banner1.jpg";
+import Banner2 from "../assets/Banner2.jpg";
+import Banner3 from "../assets/Banner3.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,16 +14,14 @@ const HeroSection = () => {
       title: "Explore a Natureza",
       subtitle:
         "Descubra as maravilhas naturais ao redor do mundo e inspire-se em sua beleza",
-      image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      image: Banner1,
       overlay: "bg-black/30",
     },
     {
       id: 2,
       title: "Cultura e Tendência",
       subtitle: "Acompanhe com a ABANIC as últimas novidades do mundo",
-      image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: Banner2,
       overlay: "bg-black/40",
     },
     {
@@ -28,8 +29,7 @@ const HeroSection = () => {
       title: "Beleza Natural",
       subtitle:
         "Conecte-se com a essência da natureza através dos nossos produtos",
-      image:
-        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
+      image: Banner3,
       overlay: "bg-black/35",
     },
   ];
@@ -65,7 +65,7 @@ const HeroSection = () => {
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-no-repeat bg-[center_top_0%]"
               style={{ backgroundImage: `url(${slide.image})` }}
             />
 
