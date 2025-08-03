@@ -2,7 +2,7 @@ import React from "react";
 import Produto from "../assets/produto.png";
 import MulheresFoto from "../assets/mulheres.jpg";
 import CouplePicture from "../assets/Casal.jpg";
-import FotoCreme from "../assets/Fotocreme.jpg";
+import FotoCreme from "../assets/FotoCreme.jpg";
 const MosaicoProdutos = () => {
   const products = [
     {
