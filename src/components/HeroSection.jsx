@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
-import Banner1 from "../assets/Banner1.jpg";
-import Banner2 from "../assets/Banner2.jpg";
+import Banner1 from "../assets/Bannerteste1.jpg";
+import Banner1mobile from "../assets/Banner1mobile.jpg";
 import Banner3 from "../assets/Banner3.jpg";
+import Banner2 from "../assets/Banner2.jpg";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,7 +22,7 @@ const HeroSection = () => {
       id: 2,
       title: "Cultura e Tendência",
       subtitle: "Acompanhe com a ABANIC as últimas novidades do mundo",
-      image: Banner2,
+      image: Banner3,
       overlay: "bg-black/40",
     },
     {
@@ -29,7 +30,7 @@ const HeroSection = () => {
       title: "Beleza Natural",
       subtitle:
         "Conecte-se com a essência da natureza através dos nossos produtos",
-      image: Banner3,
+      image: Banner2,
       overlay: "bg-black/35",
     },
   ];
@@ -65,28 +66,21 @@ const HeroSection = () => {
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 bg-cover bg-no-repeat bg-[center_top_0%]"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              className="absolute inset-0 bg-no-repeat bg-center bg-cover md:bg-contain md:bg-[center_110%] bg-black"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+              }}
             />
 
             {/* Overlay */}
             <div className={`absolute inset-0 ${slide.overlay}`} />
 
             {/* Content */}
-            <div className="relative z-10 flex items-center justify-center h-full">
-              <div className="text-center text-white px-4 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">
-                  {slide.title}
-                </h1>
-                <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90 animate-fade-in-up animation-delay-300">
+            <div className="relative z-10 h-full">
+              <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
+                <p className="text-lg md:text-xl lg:text-3xl mb-0 opacity-90 animate-fade-in-up animation-delay-300">
                   {slide.subtitle}
                 </p>
-                <Button
-                  size="lg"
-                  className="bg-abanic-orange hover:bg-orange-600 text-white px-8 py-3 text-lg font-semibold rounded-full transition-smooth hover-lift animate-fade-in-up animation-delay-600"
-                >
-                  Descobrir Mais
-                </Button>
               </div>
             </div>
           </div>

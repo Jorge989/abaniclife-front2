@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Search, User, ChevronDown, Menu, X } from "lucide-react";
+import { Search, User, ChevronDown, Menu, X, ShoppingBag } from "lucide-react";
+import { Heart, Star, StarHalf, StarOff } from "lucide-react";
+
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import LogoAbanic from "../assets/LogoAbanic.png";
@@ -17,26 +19,23 @@ const translations = {
       {
         name: "Sobre",
         href: "#",
-        submenu: [
-          { name: "Marca", href: "/about#marca" },
-          { name: "Fundadoras", href: "/about#fundadoras" },
-        ],
+        submenu: [{ name: "Manifesto da Marca", href: "/about#marca" }],
       },
       {
         name: "Produto",
         href: "#",
         submenu: [
-          { name: "Hidratante com FPS 50", href: "/product#hidratante" },
-          { name: "Princípios e Ativos", href: "/product#ativos" },
+          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
+          { name: "Lip Balm", href: "/product#ativos" },
         ],
       },
       {
         name: "Explore",
         href: "#",
         submenu: [
-          { name: "Guia-Explore", href: "#guia" },
-          { name: "Novidades", href: "#novidades" },
-          { name: "Dicas", href: "#dicas" },
+          { name: "Ativos e Benefícios", href: "#guia" },
+          { name: "A importância da proteção solar", href: "#importancia" },
+          { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
         ],
       },
       {
@@ -44,8 +43,9 @@ const translations = {
         href: "#",
         submenu: [
           { name: "FAQ", href: "/faq" },
-          { name: "Contato", href: "#contato" },
-          { name: "Tutorial", href: "#tutorial" },
+          { name: "Política de Privacidade", href: "#contato" },
+          { name: "Política de Cookies", href: "#contato" },
+          { name: "Têrmos de Uso", href: "#tutorial" },
         ],
       },
     ],
@@ -57,39 +57,37 @@ const translations = {
       register: "Sign up",
     },
     menu: [
-      { name: "Home", href: "#home" },
+      { name: "Home", href: "/" },
       {
         name: "About",
-        href: "",
-        submenu: [
-          { name: "Brand", href: "/about" },
-          { name: "Founders", href: "/about" },
-        ],
+        href: "#",
+        submenu: [{ name: "Brand Manifesto", href: "/about#marca" }],
       },
       {
         name: "Product",
-        href: "#produto",
+        href: "#",
         submenu: [
-          { name: "Moisturizer SPF 50", href: "#hidratante" },
-          { name: "Actives and Benefits", href: "#ativos" },
+          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
+          { name: "Lip Balm", href: "/product#ativos" },
         ],
       },
       {
         name: "Explore",
-        href: "#explore",
+        href: "#",
         submenu: [
-          { name: "Explore Guide", href: "#guia" },
-          { name: "News", href: "#novidades" },
-          { name: "Tips", href: "#dicas" },
+          { name: "Actives and Benefits", href: "#guia" },
+          { name: "The Importance of Sun Protection", href: "#importancia" },
+          { name: "ABANIC and Sustainability", href: "#dicas" },
         ],
       },
       {
         name: "Support",
-        href: "#suporte",
+        href: "#",
         submenu: [
-          { name: "FAQ", href: "#faq" },
-          { name: "Contact", href: "#contato" },
-          { name: "Tutorial", href: "#tutorial" },
+          { name: "FAQ", href: "/faq" },
+          { name: "Privacy Policy", href: "#contato" },
+          { name: "Cookie Policy", href: "#contato" },
+          { name: "Terms of Use", href: "#tutorial" },
         ],
       },
     ],
@@ -131,7 +129,7 @@ const Header = () => {
       }`}
     >
       {/* Top bar */}
-      <div className="bg-abanic-gray-light border-b border-gray-200">
+      {/* <div className="bg-abanic-gray-light border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center py-2">
             <span className="text-sm text-abanic-gray">
@@ -139,11 +137,11 @@ const Header = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between py-4">
+        <div className="relative flex items-center justify-between py-4 mt-5">
           {/* Desktop Language Selector */}
           <div className="hidden lg:block absolute left-0">
             <select
@@ -182,7 +180,7 @@ const Header = () => {
               <img
                 src={LogoAbanic}
                 alt="Logo Abanic"
-                className="h-14 w-auto max-w-full object-contain"
+                className="h-17 w-auto max-w-full object-contain"
               />
             </a>
           </div>
@@ -194,21 +192,35 @@ const Header = () => {
               <Input
                 type="text"
                 placeholder={language === "pt" ? "Buscar" : "Search"}
-                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />
             </div>
             <div className="relative">
               <Button
                 variant="ghost"
-                size="icon"
-                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer"
+                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4 " // padding à esquerda
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
               >
-                <User className="bg-red" />
+                <User style={{ width: 23, height: 23 }} />
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4" // padding à esquerda
+                onClick={() => setUserMenuOpen(!userMenuOpen)}
+              >
+                <Star style={{ width: 23, height: 23 }} />
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4" // padding à esquerda
+                onClick={() => setUserMenuOpen(!userMenuOpen)}
+              >
+                <ShoppingBag style={{ width: 23, height: 23 }} />{" "}
+                {/* ícone maior */}
               </Button>
 
               {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                <div className="absolute right-0 mt-2 w-40  rounded-lg shadow-lg border border-gray-200 z-50">
                   <a
                     href="/login"
                     className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
@@ -239,7 +251,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex justify-center items-center space-x-16 pb-4">
+        <nav className="hidden lg:flex justify-center items-center space-x-16 pb-4 mt-5">
           {menuItems.map((item, index) => (
             <div
               key={item.name}
@@ -255,6 +267,11 @@ const Header = () => {
               <a
                 href={item.href}
                 className="text-abanic-gray hover:text-abanic-gray-dark transition-smooth flex items-center"
+                style={{
+                  fontFamily: '"Space Grotesk", sans-serif',
+                  fontWeight: "500",
+                  fontSize: "20px",
+                }}
               >
                 {item.name}
                 {item.submenu && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -267,6 +284,11 @@ const Header = () => {
                       key={subItem.name}
                       href={subItem.href}
                       className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
+                      style={{
+                        fontFamily: '"Inter", sans-serif',
+                        fontWeight: "500",
+                        fontSize: "14px",
+                      }}
                     >
                       {subItem.name}
                     </a>
@@ -374,7 +396,7 @@ const Header = () => {
                   {!item.submenu ? (
                     <a
                       href={item.href}
-                      className="block py-2 text-lg text-gray-800 hover:text-abanic-orange transition-colors"
+                      className="block py-2  text-gray-800 hover:text-abanic-orange transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

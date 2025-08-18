@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Ativos from "../assets/Ativos.png";
 import Produto from "../assets/produto.png";
-
+import RhodyphytasFoto from "../assets/Rhodyphytas.png";
 const ativosInfo = [
   {
     name: "RHODYSSEY",
