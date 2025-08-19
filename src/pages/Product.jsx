@@ -132,38 +132,62 @@ const PrincipiosAtivos = () => {
       {ativoSelecionado && (
         <div
           ref={painelRef}
-          className="bg-white shadow-lg rounded-md  max-w-[1250px] mx-auto p-6 md:p-10 flex flex-col md:flex-row gap-8 text-gray-800"
+          className="shadow-lg rounded-b-md max-w-[1250px] mx-auto flex flex-col md:flex-row overflow-hidden"
           aria-live="polite"
           role="region"
           aria-labelledby="ativo-titulo"
         >
-          <button
-            onClick={() => setAtivoSelecionado(null)}
-            className="self-end md:self-start text-[#ff5722] hover:text-[#e64a19] text-2xl font-bold cursor-pointer focus:outline-none"
-            aria-label="Fechar painel de princípio ativo"
-          >
-            &times;
-          </button>
-
-          <div className="flex-1">
-            <h2 id="ativo-titulo" className="text-3xl font-semibold mb-4">
-              {ativoSelecionado}
-            </h2>
-            <p className="mb-6 leading-relaxed text-lg">
-              {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
-            </p>
-            <h3 className="text-2xl font-semibold mb-2">Benefícios</h3>
-            <p className="leading-relaxed text-lg">
-              {ativosInfo.find((a) => a.name === ativoSelecionado)?.beneficios}
-            </p>
-          </div>
-
-          <div className="flex-shrink-0 max-w-[300px] md:max-w-[350px] self-center">
+          {/* Coluna da Imagem */}
+          <div className="flex-1 bg-black flex items-center justify-center relative">
             <img
               src={ativosInfo.find((a) => a.name === ativoSelecionado)?.image}
               alt={`Imagem do princípio ativo ${ativoSelecionado}`}
-              className="w-full h-auto rounded-lg object-contain shadow-md"
+              className="w-full h-full object-cover grayscale"
             />
+          </div>
+
+          {/* Linha Laranja Divisória */}
+          <div className="w-2 bg-[#ff5722]" />
+
+          {/* Coluna do Texto */}
+          <div className="flex-1 bg-[#f7f6f4] p-8 md:p-12 text-gray-800 relative">
+            {/* Botão de fechar no canto superior direito da coluna de texto */}
+            <button
+              onClick={() => setAtivoSelecionado(null)}
+              className="absolute top-4 right-4 text-[#ff5722] hover:text-[#e64a19] text-3xl font-bold cursor-pointer focus:outline-none z-10"
+              aria-label="Fechar painel de princípio ativo"
+            >
+              &times;
+            </button>
+
+            {/* Título */}
+            <h2
+              id="ativo-titulo"
+              className="text-5xl font-bold italic uppercase mb-6 leading-snug"
+            >
+              {ativoSelecionado}
+            </h2>
+
+            {/* Subtítulo */}
+            <h3 className="text-xl font-semibold text-[#ff5722] mb-6 uppercase">
+              Anti Pigmentação
+            </h3>
+
+            {/* Texto com divisores */}
+            <div className="space-y-6 text-base md:text-lg leading-relaxed">
+              <p>
+                {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
+              </p>
+
+              <hr className="border-t border-gray-300" />
+
+              <p>
+                {
+                  ativosInfo.find((a) => a.name === ativoSelecionado)
+                    ?.beneficios
+                }
+              </p>
+            </div>
           </div>
         </div>
       )}

@@ -64,11 +64,18 @@ const HeroSection = () => {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* Background Image */}
             <div
-              className="absolute inset-0 bg-no-repeat bg-center bg-cover md:bg-contain md:bg-[center_110%] bg-black"
+              key={index}
+              className="absolute inset-0 bg-no-repeat bg-center bg-black 
+               bg-cover sm:bg-contain sm:bg-[length:auto_82%]"
               style={{
                 backgroundImage: `url(${slide.image})`,
+                backgroundPosition:
+                  window.innerWidth < 640
+                    ? index === 0
+                      ? "left 52% top 75px" // primeira imagem no mobile deslocada para a esquerda
+                      : "center top 75px" // demais imagens no mobile
+                    : "center top 115px", // desktop
               }}
             />
 

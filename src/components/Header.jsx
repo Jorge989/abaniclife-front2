@@ -180,7 +180,7 @@ const Header = () => {
               <img
                 src={LogoAbanic}
                 alt="Logo Abanic"
-                className="h-17 w-auto max-w-full object-contain"
+                className="h-15 w-auto max-w-full object-contain"
               />
             </a>
           </div>
