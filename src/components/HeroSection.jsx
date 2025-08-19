@@ -1,144 +1,84 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
-import Banner1 from "../assets/Bannerteste1.jpg";
-import Banner1mobile from "../assets/Banner1mobile.jpg";
-import Banner3 from "../assets/Banner3.jpg";
-import Banner2 from "../assets/Banner2.jpg";
+import React from "react";
+import MulheresFoto from "../assets/mulheres.jpg";
+import CouplePicture from "../assets/Casal.jpg";
+import FotoCreme from "../assets/FotoCreme.jpg";
 
-const HeroSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
+const MosaicoProdutos = () => {
+  const products = [
     {
       id: 1,
-      title: "Explore a Natureza",
-      subtitle:
-        "Descubra as maravilhas naturais ao redor do mundo e inspire-se em sua beleza",
-      image: Banner1,
-      overlay: "bg-black/30",
+      name: "Hidratante com FPS50",
+      brand: "Minimalist",
+      image: FotoCreme,
     },
     {
       id: 2,
-      title: "Cultura e Tendência",
-      subtitle: "Acompanhe com a ABANIC as últimas novidades do mundo",
-      image: Banner3,
-      overlay: "bg-black/40",
+      name: "Hidratante com FPS50",
+      brand: "Minimalist",
+      image: CouplePicture,
     },
     {
       id: 3,
-      title: "Beleza Natural",
-      subtitle:
-        "Conecte-se com a essência da natureza através dos nossos produtos",
-      image: Banner2,
-      overlay: "bg-black/35",
+      name: "Hidratante com FPS50",
+      brand: "Minimalist",
+      image: MulheresFoto,
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-play functionality
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative h-screen overflow-hidden" id="home">
-      {/* Slides */}
-      <div className="relative w-full h-full">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div
-              key={index}
-              className="absolute inset-0 bg-no-repeat bg-center bg-black 
-               bg-cover sm:bg-contain sm:bg-[length:auto_82%]"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-                backgroundPosition:
-                  window.innerWidth < 640
-                    ? index === 0
-                      ? "left 52% top 75px" // primeira imagem no mobile deslocada para a esquerda
-                      : "center top 75px" // demais imagens no mobile
-                    : "center top 115px", // desktop
-              }}
-            />
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-abanic-gray-dark mb-8">
+          Hidratante com FPS50
+        </h2>
 
-            {/* Overlay */}
-            <div className={`absolute inset-0 ${slide.overlay}`} />
+        <div className="flex flex-col gap-6">
+          {/* Grid superior */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {products.slice(0, 2).map((product) => (
+              <div
+                key={product.id}
+                className="relative overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[4/3] flex items-center justify-center bg-gray-100"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
 
-            {/* Content */}
-            <div className="relative z-10 h-full">
-              <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
-                <p className="text-lg md:text-xl lg:text-3xl mb-0 opacity-90 animate-fade-in-up animation-delay-300">
-                  {slide.subtitle}
-                </p>
+                {/* Overlay de texto */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-4">
+                  <p className="font-medium text-white text-sm sm:text-base">
+                    {product.name}
+                  </p>
+                  <p className="text-xs sm:text-sm text-white/80">
+                    {product.brand}
+                  </p>
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Card inferior */}
+          <div className="relative overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[3/1] flex items-center justify-center bg-gray-100">
+            <img
+              src={products[2].image}
+              alt={products[2].name}
+              className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
+              <p className="text-lg sm:text-xl font-medium text-white">
+                {products[2].name}
+              </p>
+              <p className="text-sm sm:text-base text-white/80">
+                {products[2].brand}
+              </p>
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
-        aria-label="Slide anterior"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </Button>
-
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
-        aria-label="Próximo slide"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </Button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-smooth ${
-              index === currentSlide
-                ? "bg-white"
-                : "bg-white/50 hover:bg-white/75"
-            }`}
-            aria-label={`Ir para slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 right-8 z-20 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default MosaicoProdutos;

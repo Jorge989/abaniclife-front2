@@ -1,8 +1,8 @@
 import React from "react";
-import Produto from "../assets/produto.png";
 import MulheresFoto from "../assets/mulheres.jpg";
 import CouplePicture from "../assets/Casal.jpg";
 import FotoCreme from "../assets/FotoCreme.jpg";
+
 const MosaicoProdutos = () => {
   const products = [
     {
@@ -26,25 +26,25 @@ const MosaicoProdutos = () => {
   ];
 
   return (
-    <div className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-abanic-gray-dark mb-4">
+    <section className="py-12 bg-gray-50">
+      {/* container fluido com limites responsivos */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-abanic-gray-dark mb-8">
           Hidratante com FPS50
         </h2>
 
-        <div className="flex flex-col gap-4">
-          {/* Mobile: Uma foto abaixo da outra */}
-          {/* Desktop: Duas em cima, uma embaixo */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-6">
+          {/* Grid superior: 2 colunas no md+ */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {products.slice(0, 2).map((product) => (
               <div
                 key={product.id}
-                className="relative aspect-[3/4] sm:aspect-[4/3] overflow-hidden rounded-lg"
+                className="relative overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[4/3] group"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-4">
                   <p className="font-medium text-white text-sm sm:text-base">
@@ -58,12 +58,12 @@ const MosaicoProdutos = () => {
             ))}
           </div>
 
-          {/* Card grande - ocupa coluna única */}
-          <div className="relative aspect-[3/4] sm:aspect-[3/1] overflow-hidden rounded-lg">
+          {/* Card inferior: ocupa largura toda */}
+          <div className="relative overflow-hidden rounded-xl aspect-[4/5] sm:aspect-[3/1] group">
             <img
               src={products[2].image}
               alt={products[2].name}
-              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
               <p className="text-lg sm:text-xl font-medium text-white">
@@ -76,7 +76,7 @@ const MosaicoProdutos = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
