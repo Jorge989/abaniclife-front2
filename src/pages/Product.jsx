@@ -169,9 +169,9 @@ const PrincipiosAtivos = () => {
             </h2>
 
             {/* Subtítulo */}
-            <h3 className="text-xl font-semibold text-[#ff5722] mb-6 uppercase">
+            {/* <h3 className="text-xl font-semibold text-[#ff5722] mb-6 uppercase">
               Anti Pigmentação
-            </h3>
+            </h3> */}
 
             {/* Texto com divisores */}
             <div className="space-y-6 text-base md:text-lg leading-relaxed">

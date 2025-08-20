@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import Banner1 from "../assets/Bannerteste1.jpg";
-import Banner1mobile from "../assets/Banner1mobile.jpg";
 import Banner3 from "../assets/Banner3.jpg";
 import Banner2 from "../assets/Banner2.jpg";
 
@@ -55,6 +54,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen overflow-hidden" id="home">
+      {/* Estilos específicos para iPad */}
+      <style>
+        {`
+          /* Ajustes específicos para iPad (768px - 1024px) */
+          @media (min-width: 768px) and (max-width: 1024px) {
+            .ipad-adjustment {
+              background-size: cover !important;
+              background-position: center center !important;
+            }
+          }
+        `}
+      </style>
+
       {/* Slides */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
@@ -66,16 +78,15 @@ const HeroSection = () => {
           >
             <div
               key={index}
-              className="absolute inset-0 bg-no-repeat bg-center bg-black 
-               bg-cover sm:bg-contain sm:bg-[length:auto_82%]"
+              className="absolute inset-0 h-full w-full bg-no-repeat bg-center bg-cover"
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundPosition:
                   window.innerWidth < 640
                     ? index === 0
-                      ? "left 52% top 75px" // primeira imagem no mobile deslocada para a esquerda
-                      : "center top 75px" // demais imagens no mobile
-                    : "center top 115px", // desktop
+                      ? "left 52% top 50px"
+                      : "center top 75px"
+                    : "center top 75px",
               }}
             />
 

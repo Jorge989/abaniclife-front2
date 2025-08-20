@@ -3,7 +3,7 @@ import { Mail, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
-import AbanicWoman from "../assets/abaniclifewoman.jpg";
+import AbanicWoman from "../assets/NewsLetter.png";
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -32,11 +32,14 @@ const NewsletterSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div
+              className="relative overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center h-96 lg:h-[500px]"
+              style={{ backgroundColor: "#A1B6C1" }}
+            >
               <img
                 src={AbanicWoman}
                 alt="Mulher aplicando produto de beleza natural"
-                className="w-full h-96 lg:h-[500px] object-cover"
+                className="w-auto h-auto max-w-full max-h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
@@ -50,18 +53,17 @@ const NewsletterSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
-                Fique por dentro das{" "}
-                <span className="abanic-orange">novidades</span>
+                Fique por <span className="abanic-orange">dentro</span>
               </h2>
               <p className="text-lg text-abanic-gray leading-relaxed mb-8">
-                Receba em primeira mão as últimas tendências em beleza natural,
-                dicas exclusivas de cuidados com a pele e lançamentos especiais
-                da ABANIC diretamente no seu e-mail.
+                Assine a nossa newsletter e receba em primeira mão as
+                atualizações sobre lançamentos, edições especiais e eventos da
+                marca.
               </p>
             </div>
 
             {/* Benefits */}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
                 <span className="text-abanic-gray">
@@ -80,7 +82,7 @@ const NewsletterSection = () => {
                   Ofertas especiais para assinantes
                 </span>
               </div>
-            </div>
+            </div> */}
 
             {/* Newsletter Form */}
             <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
