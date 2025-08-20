@@ -2,7 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Ativos from "../assets/Ativos.png";
 import Produto from "../assets/produto.png";
-import RhodyphytasFoto from "../assets/Rhodyphytas.png";
+import Belides from "../assets/cardsAtivos/Belides.png";
+import Calendula from "../assets/cardsAtivos/Calendula.png";
+import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
+import Esqualano from "../assets/cardsAtivos/Esqualano.png";
+import Gatuline from "../assets/cardsAtivos/Gatuline.png";
 const ativosInfo = [
   {
     name: "RHODYSSEY",
@@ -12,7 +16,7 @@ const ativosInfo = [
       "Rhodyssey é um extrato marinho obtido da Evodia rutaecarpa, tradicionalmente cultivada em regiões do sudoeste asiático. Rico em flavonoides e compostos bioativos, é conhecido por promover uma sensação de conforto na pele, além de estimular a microcirculação cutânea. Seu uso em cosméticos está relacionado ao aumento da luminosidade e uniformidade do tom da pele, combatendo sinais de fadiga. É indicado especialmente para peles opacas e desidratadas.",
     beneficios:
       "Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.",
-    image: Produto,
+    image: Rhodophyta,
   },
   {
     name: "BELIDES",
@@ -22,7 +26,7 @@ const ativosInfo = [
       "Extrato da flor de margarida (Bellis perennis), com potente ação despigmentante natural, que uniformiza o tom da pele e reduz manchas.",
     beneficios:
       "Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.",
-    image: Produto,
+    image: Belides,
   },
   {
     name: "GATULINE RADIESS",
@@ -32,7 +36,7 @@ const ativosInfo = [
       "Derivado da flor Asteraceae, estimula a microcirculação e proporciona efeito tensor imediato, suavizando linhas de expressão.",
     beneficios:
       "Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidanteProporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.",
-    image: Produto,
+    image: Gatuline,
   },
   {
     name: "ESQUALANO",
@@ -42,7 +46,7 @@ const ativosInfo = [
       "Ingrediente biomimético derivado da cana-de-açúcar, hidrata profundamente, restaura a barreira da pele e é altamente compatível com a pele humana.",
     beneficios:
       "Hidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade natural.Hidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade naturalHidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade natural",
-    image: Produto,
+    image: Esqualano,
   },
   {
     name: "CALÊNDULA",
@@ -52,7 +56,7 @@ const ativosInfo = [
       "Conhecida por suas propriedades calmantes e anti-inflamatórias, ideal para peles sensíveis ou com vermelhidão.",
     beneficios:
       "Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.",
-    image: Produto,
+    image: Calendula,
   },
   {
     name: "JOJOBA",
@@ -132,29 +136,32 @@ const PrincipiosAtivos = () => {
       {ativoSelecionado && (
         <div
           ref={painelRef}
-          className="shadow-lg rounded-b-md max-w-[1250px] mx-auto flex flex-col md:flex-row overflow-hidden"
+          className="shadow-lg rounded-b-md max-w-[1240px] mx-auto flex flex-col md:flex-row overflow-hidden"
           aria-live="polite"
           role="region"
           aria-labelledby="ativo-titulo"
         >
           {/* Coluna da Imagem */}
-          <div className="flex-1 bg-black flex items-center justify-center relative">
-            <img
-              src={ativosInfo.find((a) => a.name === ativoSelecionado)?.image}
-              alt={`Imagem do princípio ativo ${ativoSelecionado}`}
-              className="w-full h-full object-cover grayscale"
-            />
+          <div className="flex-1 bg-black flex items-center justify-center relative h-[200px] md:h-[450px] overflow-hidden">
+            <div className="w-full h-full flex items-center justify-center">
+              <img
+                src={ativosInfo.find((a) => a.name === ativoSelecionado)?.image}
+                alt={`Imagem do princípio ativo ${ativoSelecionado}`}
+                className="max-w-full max-h-full object-scale-down scale-101"
+                style={{ transform: "scale(1.01)" }}
+              />
+            </div>
           </div>
 
           {/* Linha Laranja Divisória */}
-          <div className="w-2 bg-[#ff5722]" />
+          <div className="w-1 bg-[#ff5722]" />
 
           {/* Coluna do Texto */}
-          <div className="flex-1  p-8 md:p-12 text-gray-800 relative bg-[#F1F0EB]">
-            {/* Botão de fechar no canto superior direito da coluna de texto */}
+          <div className="flex-1 p-4 md:p-6 text-gray-800 relative bg-[#F1F0EB]">
+            {/* Botão de fechar */}
             <button
               onClick={() => setAtivoSelecionado(null)}
-              className="absolute top-4 right-4 text-[#ff5722] hover:text-[#e64a19] text-3xl font-bold cursor-pointer focus:outline-none z-10"
+              className="absolute top-2 right-2 text-[#ff5722] hover:text-[#e64a19] text-xl md:text-2xl font-bold cursor-pointer focus:outline-none z-10"
               aria-label="Fechar painel de princípio ativo"
             >
               &times;
@@ -163,24 +170,17 @@ const PrincipiosAtivos = () => {
             {/* Título */}
             <h2
               id="ativo-titulo"
-              className="text-5xl font-bold italic uppercase mb-6 leading-snug"
+              className="text-xl md:text-2xl font-bold italic uppercase mb-3 leading-snug"
             >
               {ativoSelecionado}
             </h2>
 
-            {/* Subtítulo */}
-            {/* <h3 className="text-xl font-semibold text-[#ff5722] mb-6 uppercase">
-              Anti Pigmentação
-            </h3> */}
-
             {/* Texto com divisores */}
-            <div className="space-y-6 text-base md:text-lg leading-relaxed">
+            <div className="space-y-3 text-xs md:text-sm leading-relaxed max-h-[180px] md:max-h-[280px] overflow-y-auto">
               <p>
                 {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
               </p>
-
               <hr className="border-t border-gray-300" />
-
               <p>
                 {
                   ativosInfo.find((a) => a.name === ativoSelecionado)
