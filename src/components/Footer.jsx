@@ -17,7 +17,7 @@ const Footer = () => {
   // Textos traduzidos por idioma
   const translations = {
     pt: {
-      companyTitle: "Empresa",
+      companyTitle: "Sobre",
       productsTitle: "Produtos",
       supportTitle: "Suporte",
       exploreTitle: "Explore",
@@ -32,29 +32,21 @@ const Footer = () => {
         { name: "Cookies", href: "#cookies" },
       ],
       footerLinks: {
-        company: [
-          { name: "Sobre Nós", href: "#sobre" },
-          { name: "Nossa História", href: "#historia" },
-          { name: "Fundadoras", href: "#fundadoras" },
-          { name: "Carreiras", href: "#carreiras" },
-        ],
+        company: [{ name: "Manifesto da Marca", href: "/about#marca" }],
         products: [
-          { name: "Hidratante FPS 50", href: "#hidratante" },
-          { name: "Ativos Naturais", href: "#ativos" },
-          { name: "Linha Completa", href: "#produtos" },
-          { name: "Novidades", href: "#novidades" },
+          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
+          { name: "Lip Balm", href: "/product#ativos" },
         ],
         support: [
-          { name: "FAQ", href: "#faq" },
-          { name: "Contato", href: "#contato" },
-          { name: "Tutorial", href: "#tutorial" },
-          { name: "Política de Privacidade", href: "#privacidade" },
+          { name: "FAQ", href: "/faq" },
+          { name: "Política de Privacidade", href: "#contato" },
+          { name: "Política de Cookies", href: "#contato" },
+          { name: "Têrmos de Uso", href: "#tutorial" },
         ],
         explore: [
-          { name: "Guia Explore", href: "#guia" },
-          { name: "Dicas de Beleza", href: "#dicas" },
-          { name: "Blog", href: "#blog" },
-          { name: "Comunidade", href: "#comunidade" },
+          { name: "Ativos e Benefícios", href: "#guia" },
+          { name: "A importância da proteção solar", href: "#importancia" },
+          { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
         ],
       },
     },
@@ -122,31 +114,31 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-abanic-gray-dark text-white">
+    <footer className="text-[#444444]" style={{ backgroundColor: "#F1F0EB" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-6">
               <h3 className="text-2xl font-bold abanic-orange mb-4">ABANIC</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="leading-relaxed mb-6">
                 {language === "pt"
-                  ? "Conectando você com a essência da natureza através de produtos de beleza naturais e sustentáveis. Descubra a força da natureza em cada produto ABANIC."
-                  : "Connecting you with the essence of nature through natural and sustainable beauty products. Discover the strength of nature in every ABANIC product."}
+                  ? "Queremos inspirar, de modo provocativo, as pessoas a buscarem todas as suas versões através do autocuidado,vida saudável e expansiva"
+                  : "We want to provocatively inspire people to seek out all their versions through self-care, healthy and expansive living"}
               </p>
             </div>
 
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-600">contato@abanic.com.br</span>
+                <Mail className="h-5 w-5 text-[#444444] flex-shrink-0" />
+                <span>contato@abanic.com.br</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-600">(11) 9999-9999</span>
+                <Phone className="h-5 w-5 text-[#444444] flex-shrink-0" />
+                <span>(11) 9999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-orange-500 flex-shrink-0" />
-                <span className="text-gray-600">
+                <MapPin className="h-5 w-5 text-[#444444] flex-shrink-0" />
+                <span>
                   {language === "pt"
                     ? "São Paulo, Brasil"
                     : "São Paulo, Brazil"}
@@ -157,13 +149,13 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{t.companyTitle}</h4>
+            <h4 className="text-lg font-semibold mb-6"> {t.companyTitle} </h4>
             <ul className="space-y-3">
               {t.footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors"
+                    className="hover:text-[#444444] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -174,13 +166,13 @@ const Footer = () => {
 
           {/* Products Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{t.productsTitle}</h4>
+            <h4 className="text-lg font-semibold mb-6"> {t.productsTitle} </h4>
             <ul className="space-y-3">
               {t.footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors"
+                    className="hover:text-[#444444] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -188,33 +180,31 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Support Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">{t.supportTitle}</h4>
-            <ul className="space-y-3">
-              {t.footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Explore Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{t.exploreTitle}</h4>
+            <h4 className="text-lg font-semibold mb-6"> {t.exploreTitle} </h4>
             <ul className="space-y-3">
               {t.footerLinks.explore.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-500 hover:text-white transition-colors"
+                    className="hover:text-[#444444] transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Support Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6"> {t.supportTitle} </h4>
+            <ul className="space-y-3">
+              {t.footerLinks.support.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="hover:text-[#444444] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -224,66 +214,64 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-      </div>
+        {/* Bottom Footer */}
+        <div className="border-t border-[#444444]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-[#444444] text-sm">{t.copyright}</div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-700 text-sm">{t.copyright}</div>
+              <div className="flex items-center space-x-6">
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      className="text-[#444444] transition-colors"
+                      aria-label={social.name}
+                    >
+                      <IconComponent className="h-5 w-5" />
+                    </a>
+                  );
+                })}
+              </div>
 
-            <div className="flex items-center space-x-6">
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
+              <div className="flex items-center space-x-6 text-sm">
+                {t.legalLinks.map((link) => (
                   <a
-                    key={social.name}
-                    href={social.href}
-                    className={`text-gray-700 ${social.color} transition-colors`}
-                    aria-label={social.name}
+                    key={link.name}
+                    href={link.href}
+                    className="hover:text-[#444444] transition-colors"
                   >
-                    <IconComponent className="h-5 w-5" />
+                    {link.name}
                   </a>
-                );
-              })}
-            </div>
-
-            <div className="flex items-center space-x-6 text-sm text-gray-500">
-              {t.legalLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="hover:text-white transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Back to Top Button */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 bg-abanic-orange hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-smooth hover-lift z-40"
-        aria-label={language === "pt" ? "Voltar ao topo" : "Back to top"}
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+        {/* Back to Top Button */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-8 right-8 bg-abanic-orange hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-smooth hover-lift z-40"
+          aria-label={language === "pt" ? "Voltar ao topo" : "Back to top"}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18 22"
-          />
-        </svg>
-      </button>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
+      </div>
     </footer>
   );
 };

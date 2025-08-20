@@ -43,12 +43,12 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Cores customizadas do Abanic */
-  --abanic-orange: #ff4c1b;
+  --abanic-orange: #fc622b;
   --abanic-orange-light: #ff6b3d;
   --abanic-orange-dark: #e63e15;
   --abanic-gray-light: #f7f7f7;
   --abanic-gray: #6f6f6f;
-  --abanic-gray-dark: #3f3f3f;
+  --abanic-gray-dark: #444444;
 }
 
 :root {
@@ -288,4 +288,14 @@
       scroll-behavior: auto;
     }
   }
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Aplica fundo padrão para toda a página */
+html,
+body {
+  background-color: #f1f0eb;
 }

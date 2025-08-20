@@ -6,6 +6,7 @@ import { Card, CardContent } from "./ui/card";
 import AbanicWoman from "../assets/NewsLetter.png";
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
+  const [nome, setNome] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -25,7 +26,8 @@ const NewsletterSection = () => {
 
   return (
     <section
-      className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100"
+      className="py-16"
+      style={{ backgroundColor: "#A4B6C0" }}
       id="newsletter"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +57,10 @@ const NewsletterSection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
                 Fique por <span className="abanic-orange">dentro</span>
               </h2>
-              <p className="text-lg text-abanic-gray leading-relaxed mb-8">
+              <p
+                className="text-lg leading-relaxed mb-8"
+                style={{ color: "#444444" }}
+              >
                 Assine a nossa newsletter e receba em primeira mão as
                 atualizações sobre lançamentos, edições especiais e eventos da
                 marca.
@@ -95,20 +100,39 @@ const NewsletterSection = () => {
                         Inscreva-se na nossa newsletter
                       </span>
                     </div>
+                    <div className="flex gap-3">
+                      {/* Coluna de Inputs */}
+                      <div className="flex flex-col gap-3 flex-1">
+                        <Input
+                          type="Nome"
+                          placeholder="Seu nome"
+                          value={nome}
+                          onChange={(e) => setNome(e.target.value)}
+                          required
+                          className="border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        />
+                        <Input
+                          type="email"
+                          placeholder="Seu melhor e-mail"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          required
+                          className="border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        />
+                      </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Input
-                        type="email"
-                        placeholder="Seu melhor e-mail"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="flex-1 border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      />
+                      {/* Botão ao lado */}
                       <Button
                         type="submit"
-                        disabled={isLoading || !email}
-                        className="bg-abanic-orange hover:bg-orange-600 text-white px-8 py-2 font-semibold transition-smooth hover-lift disabled:opacity-50"
+                        disabled={isLoading || !nome || !email}
+                        className="text-white px-8 py-3 font-semibold transition-smooth hover-lift self-center"
+                        style={{
+                          height: "100%", // mantém altura igual aos inputs
+                          backgroundColor:
+                            isLoading || !nome || !email
+                              ? "#cccccc"
+                              : "#fc622b", // cinza se desabilitado, laranja quando habilitado
+                        }}
                       >
                         {isLoading ? (
                           <div className="flex items-center space-x-2">
@@ -116,15 +140,14 @@ const NewsletterSection = () => {
                             <span>Inscrevendo...</span>
                           </div>
                         ) : (
-                          "Inscrever-se"
+                          "Assinar"
                         )}
                       </Button>
                     </div>
 
-                    <p className="text-xs text-abanic-gray">
-                      Ao se inscrever, você concorda com nossa política de
-                      privacidade. Você pode cancelar a inscrição a qualquer
-                      momento.
+                    <p className="text-1xl text-abanic-gray">
+                      Segurança de dados de acordo com a Política de Privacidade
+                      A assinatura poderá ser cancelada a qualquer momento.
                     </p>
                   </form>
                 ) : (

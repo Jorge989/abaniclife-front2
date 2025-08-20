@@ -150,7 +150,7 @@ const PrincipiosAtivos = () => {
           <div className="w-2 bg-[#ff5722]" />
 
           {/* Coluna do Texto */}
-          <div className="flex-1 bg-[#f7f6f4] p-8 md:p-12 text-gray-800 relative">
+          <div className="flex-1  p-8 md:p-12 text-gray-800 relative bg-[#F1F0EB]">
             {/* Botão de fechar no canto superior direito da coluna de texto */}
             <button
               onClick={() => setAtivoSelecionado(null)}
@@ -197,8 +197,9 @@ const PrincipiosAtivos = () => {
 
 const ProductPage = () => {
   return (
-    <>
+    <div style={{ backgroundColor: "#F1F0EB" }}>
       <section
+        style={{ backgroundColor: "#F1F0EB" }}
         id="hidratante"
         className=" min-h-screen flex flex-col md:flex-row items-stretch justify-center mt-15 p-3 md:p-19 gap-x-0"
       >
@@ -286,7 +287,7 @@ const ProductPage = () => {
       </section>
 
       <PrincipiosAtivos />
-    </>
+    </div>
   );
 };
 

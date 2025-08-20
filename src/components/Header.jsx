@@ -186,59 +186,6 @@ const Header = () => {
           </div>
 
           {/* Desktop Search and User Icons aligned to right */}
-          <div className="hidden lg:flex items-center space-x-4 ml-auto pr-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-abanic-gray" />
-              <Input
-                type="text"
-                placeholder={language === "pt" ? "Buscar" : "Search"}
-                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
-              />
-            </div>
-            <div className="relative">
-              <Button
-                variant="ghost"
-                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4 " // padding à esquerda
-                onClick={() => setUserMenuOpen(!userMenuOpen)}
-              >
-                <User style={{ width: 23, height: 23 }} />
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4" // padding à esquerda
-                onClick={() => setUserMenuOpen(!userMenuOpen)}
-              >
-                <Star style={{ width: 23, height: 23 }} />
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-abanic-gray hover:text-abanic-gray-dark cursor-pointer pl-4" // padding à esquerda
-                onClick={() => setUserMenuOpen(!userMenuOpen)}
-              >
-                <ShoppingBag style={{ width: 23, height: 23 }} />{" "}
-                {/* ícone maior */}
-              </Button>
-
-              {userMenuOpen && (
-                <div className="absolute right-0 mt-2 w-40  rounded-lg shadow-lg border border-gray-200 z-50">
-                  <a
-                    href="/login"
-                    className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
-                    onClick={() => setUserMenuOpen(false)}
-                  >
-                    {translations[language].userMenu.login}
-                  </a>
-                  <a
-                    href="/register"
-                    className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
-                    onClick={() => setUserMenuOpen(false)}
-                  >
-                    {translations[language].userMenu.register}
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
 
           {/* Mobile menu button */}
           <button

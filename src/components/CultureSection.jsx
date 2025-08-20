@@ -124,7 +124,11 @@ const CultureSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white" id="cultura">
+    <section
+      className="py-16"
+      id="cultura"
+      style={{ backgroundColor: "#F1F0EB" }}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
