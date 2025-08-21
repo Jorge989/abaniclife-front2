@@ -147,8 +147,10 @@ const PrincipiosAtivos = () => {
               <img
                 src={ativosInfo.find((a) => a.name === ativoSelecionado)?.image}
                 alt={`Imagem do princípio ativo ${ativoSelecionado}`}
-                className="max-w-full max-h-full object-scale-down scale-101"
-                style={{ transform: "scale(1.01)" }}
+                className="
+        w-full h-full
+        object-contain md:object-cover
+      "
               />
             </div>
           </div>
