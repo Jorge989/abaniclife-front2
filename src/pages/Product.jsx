@@ -13,19 +13,20 @@ const ativosInfo = [
     top: "20%",
     left: "43%",
     descricao:
-      "Rhodyssey é um extrato marinho obtido da Evodia rutaecarpa, tradicionalmente cultivada em regiões do sudoeste asiático. Rico em flavonoides e compostos bioativos, é conhecido por promover uma sensação de conforto na pele, além de estimular a microcirculação cutânea. Seu uso em cosméticos está relacionado ao aumento da luminosidade e uniformidade do tom da pele, combatendo sinais de fadiga. É indicado especialmente para peles opacas e desidratadas.",
+      "Rhodyssey é um extrato marinho obtido da Evodia rutaecarpa, tradicionalmente cultivada em regiões do sudoeste asiático. Rico em flavonoides e compostos bioativos, é conhecido por promover uma sensação de conforto na pele, além de estimular a microcirculação cutânea. Seu uso em cosméticos está relacionado ao aumento da luminosidade e **uniformização do tom da pele**, combatendo sinais de fadiga. É indicado especialmente para peles opacas, **clareadoras** e **iluminadoras**.",
     beneficios:
-      "Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.Promove aumento da luminosidade da pele, melhora a uniformidade do tom e combate sinais de fadiga. Estimula a microcirculação e ajuda na hidratação profunda da pele.",
+      "Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até 31,4%, redução em até 76% endotelina, bem como a modulação do receptor MC-1 em até 89,9%",
     image: Rhodophyta,
   },
   {
     name: "BELIDES",
+    subtitle: "ANTI PIGMENTAÇÂO",
     top: "20%",
     left: "63%",
     descricao:
-      "Extrato da flor de margarida (Bellis perennis), com potente ação despigmentante natural, que uniformiza o tom da pele e reduz manchas.",
+      "Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a uniformização do tom da pele tornando-o um ativo de destaque em formulações clareadores e iluminadoras.",
     beneficios:
-      "Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.Reduz manchas escuras e uniformiza o tom da pele com ação suave e natural. Auxilia no clareamento progressivo sem agredir a pele.",
+      "Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até 31,4%, redução em até 76% endotelina, bem como a modulação do receptor MC-1 em até 89,9%",
     image: Belides,
   },
   {
@@ -172,18 +173,20 @@ const PrincipiosAtivos = () => {
             {/* Título */}
             <h2
               id="ativo-titulo"
-              className="text-xl md:text-2xl font-bold italic uppercase mb-3 leading-snug"
+              className="text-2xl md:text-3xl font-bold italic uppercase mb-3 leading-snug"
             >
               {ativoSelecionado}
             </h2>
-
+            <h3 class="text-[#FF5C26] font-extrabold uppercase tracking-wide text-lg">
+              ANTI PIGMENTAÇÃO
+            </h3>
             {/* Texto com divisores */}
             <div className="space-y-3 text-xs md:text-sm leading-relaxed max-h-[180px] md:max-h-[280px] overflow-y-auto">
-              <p>
+              <p className=" mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
                 {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
               </p>
               <hr className="border-t border-gray-300" />
-              <p>
+              <p className=" mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
                 {
                   ativosInfo.find((a) => a.name === ativoSelecionado)
                     ?.beneficios
