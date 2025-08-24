@@ -54,14 +54,14 @@ const MosaicoProdutos = () => {
             ))}
           </div>
 
-          {/* Card grande - ocupa coluna única */}
-          <div className="relative w-full h-0 pb-[33%] overflow-hidden rounded-lg">
-            <img
-              src={products[2].image}
-              alt={products[2].name}
-              className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
-            />
-          </div>
+     {/* Card grande - ocupa coluna única */}
+<div className="relative w-full h-0 pb-[75%] sm:pb-[33%] overflow-hidden rounded-lg">
+  <img
+    src={products[2].image}
+    alt={products[2].name}
+    className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+  />
+</div>
         </div>
       </div>
     </div>
