@@ -28,7 +28,7 @@ const MosaicoProdutos = () => {
 
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
-      <div className="w-[90%] mx-auto text-center">
+      <div className="w-full max-w-[90%] mx-auto text-center">
         <h2 className="text-4xl font-light text-[#494949] mb-7 mt-5">
           Hidratante com FPS50
         </h2>
@@ -43,23 +43,23 @@ const MosaicoProdutos = () => {
             {products.slice(0, 2).map((product) => (
               <div
                 key={product.id}
-                className="relative aspect-[3/4] sm:aspect-[4/3] overflow-hidden rounded-lg"
+                className="relative w-full h-0 pb-[75%] overflow-hidden rounded-lg"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                  className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
                 />
               </div>
             ))}
           </div>
 
           {/* Card grande - ocupa coluna única */}
-          <div className="relative aspect-[3/4] sm:aspect-[3/1] overflow-hidden rounded-lg">
+          <div className="relative w-full h-0 pb-[33%] overflow-hidden rounded-lg">
             <img
               src={products[2].image}
               alt={products[2].name}
-              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
