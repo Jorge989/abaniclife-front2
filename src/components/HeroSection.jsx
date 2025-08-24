@@ -78,15 +78,21 @@ const HeroSection = () => {
           >
             <div
               key={index}
-              className="absolute inset-0 h-full w-full bg-no-repeat bg-center bg-cover"
+              className="absolute inset-0 h-full w-full bg-no-repeat bg-cover"
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundPosition:
                   window.innerWidth < 640
                     ? index === 0
-                      ? "left 52% top 50px"
-                      : "center top 75px"
-                    : "center top 75px",
+                      ? "left 52% top 50px" // slide 0 no mobile (mantido)
+                      : index === 1
+                      ? "right 53% top 50px" // slide 1 no mobile
+                      : "center top 75px" // demais slides
+                    : "center top 75px", // desktop/tablet
+                backgroundSize:
+                  window.innerWidth < 640 && index === 0
+                    ? "395%" // zoom out maior no slide 0
+                    : "cover",
               }}
             />
 
