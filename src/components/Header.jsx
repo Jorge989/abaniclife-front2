@@ -250,61 +250,6 @@ const Header = () => {
         {mobileMenuOpen && (
           <nav className="lg:hidden bg-white border-t border-gray-200 shadow-md py-6">
             <ul className="flex flex-col space-y-4 px-4">
-              {/* Search input */}
-              <li>
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
-                  <Input
-                    type="text"
-                    placeholder={language === "pt" ? "Buscar" : "Search"}
-                    className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
-              </li>
-
-              {/* Login / Perfil e Sacola */}
-              <li className="flex space-x-4 justify-center">
-                <Button
-                  variant="outline"
-                  className="flex items-center space-x-2"
-                  onClick={() => {
-                    // aqui você pode redirecionar ou abrir modal login/perfil
-                    alert("Login/Perfil");
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <User className="h-5 w-5" />
-                  <span>{language === "pt" ? "Entrar" : "Login"}</span>
-                </Button>
-
-                <Button
-                  variant="outline"
-                  className="flex items-center space-x-2"
-                  onClick={() => {
-                    // aqui você pode redirecionar para sacola/carrinho
-                    alert("Sacola de compras");
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  {/* Se você tiver um ícone de sacola/carrinho, importe e use aqui */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6H19"
-                    />
-                  </svg>
-                  <span>{language === "pt" ? "Sacola" : "Cart"}</span>
-                </Button>
-              </li>
-
               {/* Idioma dentro do menu mobile */}
               <li className="mb-4">
                 <select
@@ -343,7 +288,7 @@ const Header = () => {
                   {!item.submenu ? (
                     <a
                       href={item.href}
-                      className="block py-2  text-gray-800 hover:text-abanic-orange transition-colors"
+                      className="block py-2 text-gray-800 hover:text-abanic-orange transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
