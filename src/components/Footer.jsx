@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import {
   Facebook,
   Instagram,
@@ -13,6 +13,7 @@ import { useLanguage } from "@/context/LanguageContext"; // ajuste o caminho con
 const Footer = () => {
   const { language } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const [showButton, setShowButton] = useState(false);
 
   // Textos traduzidos por idioma
   const translations = {
@@ -112,6 +113,21 @@ const Footer = () => {
     { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-blue-400" },
     { name: "YouTube", icon: Youtube, href: "#", color: "hover:text-red-600" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (!showButton) return null;
 
   return (
     <footer className="text-[#444444]" style={{ backgroundColor: "#F1F0EB" }}>
