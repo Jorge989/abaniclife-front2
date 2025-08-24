@@ -84,15 +84,13 @@ const HeroSection = () => {
                 backgroundPosition:
                   window.innerWidth < 640
                     ? index === 0
-                      ? "left 52% top 50px" // slide 0 no mobile (mantido)
+                      ? "left 52% top 50px"
                       : index === 1
-                      ? "right 53% top 50px" // slide 1 no mobile
-                      : "center top 75px" // demais slides
-                    : "center top 75px", // desktop/tablet
+                      ? "right 53% top 50px"
+                      : "center top 75px"
+                    : "center top 75px",
                 backgroundSize:
-                  window.innerWidth < 640 && index === 0
-                    ? "400%" // zoom out maior no slide 0
-                    : "cover",
+                  window.innerWidth < 640 && index === 0 ? "350%" : "cover",
               }}
             />
 
