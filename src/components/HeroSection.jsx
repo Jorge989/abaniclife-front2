@@ -91,7 +91,7 @@ const HeroSection = () => {
                     : "center top 75px",
                 backgroundSize:
                   window.innerWidth < 640 && index === 0
-                    ? "340% 100%"
+                    ? "380% 100%"
                     : "cover",
               }}
             />
