@@ -3,6 +3,7 @@ import Produto from "../assets/produto.png";
 import MulheresFoto from "../assets/mulheres.jpg";
 import CouplePicture from "../assets/Produtoladodireito.png";
 import FotoCreme from "../assets/Produtoladoesquerdo.png";
+
 const MosaicoProdutos = () => {
   const products = [
     {
@@ -27,11 +28,11 @@ const MosaicoProdutos = () => {
 
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-center text-4xl font-light text-[#494949] mb-7 mt-5">
+      <div className="w-[90%] mx-auto text-center">
+        <h2 className="text-4xl font-light text-[#494949] mb-7 mt-5">
           Hidratante com FPS50
         </h2>
-        <p className=" mt-7 text-lg md:text-xl text-abanic-gray max-w-3xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-abanic-gray mb-10">
           Hidratante multifuncional com proteção.
         </p>
 
