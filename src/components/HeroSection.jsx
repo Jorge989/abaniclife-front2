@@ -91,7 +91,7 @@ const HeroSection = () => {
                     : "center top 75px", // desktop/tablet
                 backgroundSize:
                   window.innerWidth < 640 && index === 0
-                    ? "395%" // zoom out maior no slide 0
+                    ? "400%" // zoom out maior no slide 0
                     : "cover",
               }}
             />
