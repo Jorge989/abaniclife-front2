@@ -95,7 +95,10 @@ const PrincipiosAtivos = () => {
   useEffect(() => {
     if (ativoSelecionado && painelRef.current) {
       setTimeout(() => {
-        const yOffset = -165;
+        // Detecta largura da tela
+        const isMobile = window.innerWidth < 768; // breakpoint mobile
+        const yOffset = isMobile ? -80 : -120; // menor deslocamento no mobile
+
         const elementPosition =
           painelRef.current.getBoundingClientRect().top + window.pageYOffset;
         const y = elementPosition + yOffset;
@@ -143,18 +146,18 @@ const PrincipiosAtivos = () => {
           aria-labelledby="ativo-titulo"
         >
           {/* Coluna da Imagem */}
-          <div className="flex-1 bg-black flex items-center justify-center relative h-[200px] md:h-[450px] overflow-hidden">
-            <div className="w-full h-full flex items-center justify-center">
-              <img
-                src={ativosInfo.find((a) => a.name === ativoSelecionado)?.image}
-                alt={`Imagem do princípio ativo ${ativoSelecionado}`}
-                className="
-        w-full h-full
-        object-contain md:object-cover
-      "
-              />
-            </div>
-          </div>
+
+          <div
+            className="flex-1 relative w-full aspect-[12/9] overflow-hidden"
+            style={{
+              backgroundImage: `url(${
+                ativosInfo.find((a) => a.name === ativoSelecionado)?.image
+              })`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
 
           {/* Linha Laranja Divisória */}
           <div className="w-1 bg-[#ff5722]" />
@@ -177,16 +180,17 @@ const PrincipiosAtivos = () => {
             >
               {ativoSelecionado}
             </h2>
-            <h3 class="text-[#FF5C26] font-extrabold uppercase tracking-wide text-lg">
+            <h3 className="text-[#FF5C26] font-extrabold uppercase tracking-wide text-lg">
               ANTI PIGMENTAÇÃO
             </h3>
-            {/* Texto com divisores */}
-            <div className="space-y-3 text-xs md:text-sm leading-relaxed max-h-[180px] md:max-h-[280px] overflow-y-auto">
-              <p className=" mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
+
+            {/* Texto sem scroll */}
+            <div className="space-y-3 text-xs md:text-sm leading-relaxed">
+              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
                 {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
               </p>
               <hr className="border-t border-gray-300" />
-              <p className=" mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
+              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
                 {
                   ativosInfo.find((a) => a.name === ativoSelecionado)
                     ?.beneficios

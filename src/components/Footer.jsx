@@ -251,18 +251,6 @@ const Footer = () => {
                   );
                 })}
               </div>
-
-              <div className="flex items-center space-x-6 text-sm">
-                {t.legalLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="hover:text-[#444444] transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </div>

@@ -175,7 +175,6 @@ const NewsletterSection = () => {
                   />
                 ))}
               </div>
-              <span>Mais de 10.000 pessoas já se inscreveram</span>
             </div>
           </div>
         </div>
