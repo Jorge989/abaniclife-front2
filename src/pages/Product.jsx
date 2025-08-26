@@ -7,9 +7,11 @@ import Calendula from "../assets/cardsAtivos/Calendula.png";
 import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
 import Esqualano from "../assets/cardsAtivos/Esqualano.png";
 import Gatuline from "../assets/cardsAtivos/Gatuline.png";
+import Jojoba from "../assets/cardsAtivos/Jojoba.png";
 const ativosInfo = [
   {
     name: "RHODYSSEY",
+    subtitle: "ANTI OXIDANTE",
     top: "20%",
     left: "43%",
     descricao:
@@ -31,6 +33,7 @@ const ativosInfo = [
   },
   {
     name: "GATULINE RADIESS",
+    subtitle: "REGENERAÇÃO",
     top: "20%",
     left: "82%",
     descricao:
@@ -44,9 +47,9 @@ const ativosInfo = [
     top: "62%",
     left: "43%",
     descricao:
-      "Ingrediente biomimético derivado da cana-de-açúcar, hidrata profundamente, restaura a barreira da pele e é altamente compatível com a pele humana.",
+      "O esqualano, derivado do esqualeno composto triterpênico que representa cerca de 13% da composição lidíca cutânea. É frequentemente de origem vegetal, obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícios:",
     beneficios:
-      "Hidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade natural.Hidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade naturalHidratação profunda sem obstruir os poros. Restaura a barreira cutânea e melhora a elasticidade da pele, mantendo a suavidade natural",
+      "Forma um filme protetor que reduz a perda de água e mantém maciez, elasticidade e hidratação. Sua estrutura é semelhante aos lipídios naturais, com boa absorção e tolerância, até mesmo em peles sensíveis ou acneicas. Combate radicais livres e ajuda a prevenir danos e envelhecimento precore.",
     image: Esqualano,
   },
   {
@@ -61,13 +64,14 @@ const ativosInfo = [
   },
   {
     name: "JOJOBA",
+    subtitle: "EQUILÍBRIO DA OLESIDADE",
     top: "62%",
     left: "82%",
     descricao:
-      "Óleo vegetal com composição semelhante ao sebo humano, regula a oleosidade, hidrata sem obstruir poros e é rico em antioxidantes.",
+      " O óleo de jojoba é, na verdade, uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudoeste dos Estados Unidos e norte do México. Possui alta compatibilidade com todos os tipos de pele.",
     beneficios:
-      "Regula a oleosidade, hidrata profundamente e protege a pele contra danos ambientais graças aos seus antioxidantes naturais.Regula a oleosidade, hidrata profundamente e protege a pele contra danos ambientais graças aos seus antioxidantes naturais.Regula a oleosidade, hidrata profundamente e protege a pele contra danos ambientais graças aos seus antioxidantes naturais.Regula a oleosidade, hidrata profundamente e protege a pele contra danos ambientais graças aos seus antioxidantes naturais.",
-    image: Produto,
+      "Forma uma película protetora que reduz a perda de água, mantendo a pele hidratada sem obstruir os poros. Ajuda a equilibrar a produção de sebo, sendo indicado tanto para peles secas quanto oleosas. Contém tocoferóis naturais que combatem radicais livres e auxiliam na prevenção do envelhecimento precoce. Fortalece a função protetora da pele, ajudando na recuperação de áreas sensibilizadas. Resistente à oxidação, prolonga a durabilidade de formulações cosméticas.",
+    image: Jojoba,
   },
 ];
 
@@ -129,7 +133,7 @@ const PrincipiosAtivos = () => {
             key={name}
             onClick={() => setAtivoSelecionado(name)}
             style={{ top: top, left: left }}
-            className="absolute w-[13%] h-[22%] cursor-pointer rounded-lg transition hover:bg-opacity-40  "
+            className="absolute w-[13%] h-[22%] cursor-pointer rounded-lg transition transform hover:scale-105 hover:ring-2 hover:ring-[#ff5722] animate-pulse"
             title={name}
             aria-label={`Selecionar princípio ativo ${name}`}
           />
@@ -165,8 +169,24 @@ const PrincipiosAtivos = () => {
           {/* Coluna do Texto */}
           <div className="flex-1 p-4 md:p-6 text-gray-800 relative bg-[#F1F0EB]">
             {/* Botão de fechar */}
+
             <button
-              onClick={() => setAtivoSelecionado(null)}
+              onClick={() => {
+                setAtivoSelecionado(null);
+                setTimeout(() => {
+                  const section = document.getElementById("ativos");
+                  if (section) {
+                    const y =
+                      section.getBoundingClientRect().top +
+                      window.pageYOffset -
+                      0;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  } else {
+                    // fallback: sobe até o topo da página
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }, 100);
+              }}
               className="absolute top-2 right-2 text-[#ff5722] hover:text-[#e64a19] text-xl md:text-2xl font-bold cursor-pointer focus:outline-none z-10"
               aria-label="Fechar painel de princípio ativo"
             >
@@ -181,16 +201,16 @@ const PrincipiosAtivos = () => {
               {ativoSelecionado}
             </h2>
             <h3 className="text-[#FF5C26] font-extrabold uppercase tracking-wide text-lg">
-              ANTI PIGMENTAÇÃO
+              {ativosInfo.find((a) => a.name === ativoSelecionado)?.subtitle}
             </h3>
 
             {/* Texto sem scroll */}
             <div className="space-y-3 text-xs md:text-sm leading-relaxed">
-              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
+              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-2">
                 {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
               </p>
               <hr className="border-t border-gray-300" />
-              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-10">
+              <p className="mt-5 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-0">
                 {
                   ativosInfo.find((a) => a.name === ativoSelecionado)
                     ?.beneficios
@@ -243,50 +263,9 @@ const ProductPage = () => {
             </p>
           </div>
 
-          <div className="w-full max-w-[340px] mt-4">
-            <label htmlFor="quantidade" className="sr-only">
-              Quantidade
-            </label>
-            <div className="flex items-center border border-gray-300 rounded-md overflow-hidden">
-              <button
-                type="button"
-                onClick={() => {
-                  const input = document.getElementById("quantidade");
-                  const value = parseInt(input.value || "0", 10);
-                  if (value > 1) input.value = value - 1;
-                }}
-                className=" cursor-pointer px-3 py-2 text-lg text-gray-600 hover:bg-gray-100"
-                aria-label="Diminuir quantidade"
-              >
-                −
-              </button>
-              <input
-                type="number"
-                id="quantidade"
-                defaultValue={1}
-                min={1}
-                className="w-full text-center text-sm px-2 py-2 focus:outline-none"
-                aria-live="polite"
-                aria-atomic="true"
-              />
-              <button
-                type="button"
-                onClick={() => {
-                  const input = document.getElementById("quantidade");
-                  const value = parseInt(input.value || "0", 10);
-                  input.value = value + 1;
-                }}
-                className="px-3 py-2 text-lg text-gray-600 hover:bg-gray-100"
-                aria-label="Aumentar quantidade"
-              >
-                +
-              </button>
-            </div>
-          </div>
-
-          <div className="w-full max-w-[340px] mt-3">
+          <div className="w-full max-w-[340px] mt-13">
             <button
-              className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300"
+              className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
               aria-label="Comprar agora"
             >
               Comprar agora
