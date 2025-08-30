@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FotoCreme from "../assets/FotoCreme.jpg";
+import FotoCreme from "../assets/produto.png";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(0); // item 0 aberto por padrão
