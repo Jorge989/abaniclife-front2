@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Ativos from "../assets/Ativos.png";
-import Produto from "../assets/produto.png";
 import Belides from "../assets/cardsAtivos/Belides.png";
 import Calendula from "../assets/cardsAtivos/Calendula.png";
 import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
@@ -14,10 +13,12 @@ const ativosInfo = [
     subtitle: "ANTI OXIDANTE",
     top: "20%",
     left: "43%",
-    descricao:
-      "Rhodyssey é um extrato marinho obtido da Evodia rutaecarpa, tradicionalmente cultivada em regiões do sudoeste asiático. Rico em flavonoides e compostos bioativos, é conhecido por promover uma sensação de conforto na pele, além de estimular a microcirculação cutânea. Seu uso em cosméticos está relacionado ao aumento da luminosidade e **uniformização do tom da pele**, combatendo sinais de fadiga. É indicado especialmente para peles opacas, **clareadoras** e **iluminadoras**.",
-    beneficios:
-      "Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até 31,4%, redução em até 76% endotelina, bem como a modulação do receptor MC-1 em até 89,9%",
+    descricao: [
+      "<p> A macroalga vermelha Furcellaria lumbricalis, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
+    ],
+    beneficios: [
+      "<p>Foi demonstrado que ativo utilizado no <b>RHODY SENCE FPS50</b> aumenta em até <b>124% a sintese de ácido hialurônico.</b> Além de demonstrar. <b>ação antioxidante</b> e potencial proteção a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas. Além de aumentar significativamente a expressão de proteínas estruturais<b>fortalecendo a função de barreira da pele,</b> essencial para evitar a desidratação causada por agressões externas. O ativo também demonstrou aumentar em até <b>276% a produção de energia celular</b> promovendo a <b>vitalidade da pele.</b></p>",
+    ],
     image: Rhodophyta,
   },
   {
@@ -25,52 +26,63 @@ const ativosInfo = [
     subtitle: "ANTI PIGMENTAÇÂO",
     top: "20%",
     left: "63%",
-    descricao:
-      "Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a uniformização do tom da pele tornando-o um ativo de destaque em formulações clareadores e iluminadoras.",
-    beneficios:
-      "Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até 31,4%, redução em até 76% endotelina, bem como a modulação do receptor MC-1 em até 89,9%",
+    descricao: [
+      "<p>Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a <b>uniformização do tom da pele</b> tornando-o um ativo de destaque em formulações <b>clareadoras e iluminadoras.</b></p>",
+    ],
+    beneficios: [
+      "<p>Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até <b>31,4%</b> redução em até <b>76%</b> endotelina, bem como a modulação do receptor MC-1 ema té <b>89,9%</b></p>",
+    ],
     image: Belides,
   },
   {
-    name: "GATULINE RADIESS",
-    subtitle: "REGENERAÇÃO",
+    name: "EVODIA RUTAECARPA RUTACEAE",
+    subtitle: "LUMINOSIDADE",
     top: "20%",
     left: "82%",
-    descricao:
-      "Derivado da flor Asteraceae, estimula a microcirculação e proporciona efeito tensor imediato, suavizando linhas de expressão.",
-    beneficios:
-      "Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidanteProporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.Proporciona efeito lifting imediato, suaviza linhas finas e melhora a firmeza da pele com ação antioxidante.",
+    descricao: [
+      "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico realizado pelo dentor do ativo obtido da fruta e utilizado no <b>RHODY SENCE FPS50</b> demonstrou em seus resultados:</p>",
+    ],
+    beneficios: [
+      "<p>Aumento na <b>iluminosidade</b> e <b>radiância</b> cutânea em até <b>96%</b> Reduz significativa da opacidade, vermelhidão e poros dilatados em <b>85%</b> Além da melhora na homogeneidade do tom da pele em <b>96%.</b> Os voluntários apresentaram <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais <b>hidratada e 100% do aumento da macies</b> da pele.</p>",
+    ],
     image: Gatuline,
   },
   {
     name: "ESQUALANO",
     top: "62%",
     left: "43%",
-    descricao:
-      "O esqualano, derivado do esqualeno composto triterpênico que representa cerca de 13% da composição lidíca cutânea. É frequentemente de origem vegetal, obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícios:",
-    beneficios:
-      "Forma um filme protetor que reduz a perda de água e mantém maciez, elasticidade e hidratação. Sua estrutura é semelhante aos lipídios naturais, com boa absorção e tolerância, até mesmo em peles sensíveis ou acneicas. Combate radicais livres e ajuda a prevenir danos e envelhecimento precore.",
+    descricao: [
+      "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios:</p>",
+    ],
+    beneficios: [
+      "<p>Forma um <b>filme protetor</b> que reduz a perda de água e mantém <b>maciez, elasticidade e hidratação.</b> Sua estrutura é semelhante aos lipídios naturais, com a boa absorção e tolerância, até mesmo em peles sensíveis ou acneicas. <b>Combate radicais lives</b> e ajuda a prevenir danos e envelhecimento precoce.</p>",
+    ],
     image: Esqualano,
   },
   {
-    name: "CALÊNDULA",
+    name: "CALÊNDULA CALENDUA OFFICINALIS",
+    subtitle: "REGENERAÇÃO",
     top: "62%",
     left: "63%",
-    descricao:
-      "Conhecida por suas propriedades calmantes e anti-inflamatórias, ideal para peles sensíveis ou com vermelhidão.",
-    beneficios:
-      "Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.Reduz inflamações, acalma a pele sensibilizada e ajuda a prevenir vermelhidão e irritações.",
+    descricao: [
+      "<p>É uma planta herbácea originária da região mediterrânea, é amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
+    ],
+    beneficios: [
+      "<p>Estimula fibroblastos e a <b>síntese de colágeno,</b> acelera a epitelização e a <b>reparação e regenração</b> tecidual, Inibe mediadores inflamatórios e alivia irritações cutâneas, sendo <b>eficaz em processos inflamatórios</b>leves. <b>Neutraliza radicais livres,</b> ajudando a prevenir o envelhecimento precoce e o estresse oxidativo cutâneo. Reduz vermelhidão e desconfortos, sendo útil em <b>peles sensíveis</b> ou fragilizadas.</p>",
+    ],
     image: Calendula,
   },
   {
-    name: "JOJOBA",
+    name: "ÓLEO DE JOJOBA SIMMONDSIA CHINENSIS",
     subtitle: "EQUILÍBRIO DA OLESIDADE",
     top: "62%",
     left: "82%",
-    descricao:
-      " O óleo de jojoba é, na verdade, uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudoeste dos Estados Unidos e norte do México. Possui alta compatibilidade com todos os tipos de pele.",
-    beneficios:
-      "Forma uma película protetora que reduz a perda de água, mantendo a pele hidratada sem obstruir os poros. Ajuda a equilibrar a produção de sebo, sendo indicado tanto para peles secas quanto oleosas. Contém tocoferóis naturais que combatem radicais livres e auxiliam na prevenção do envelhecimento precoce. Fortalece a função protetora da pele, ajudando na recuperação de áreas sensibilizadas. Resistente à oxidação, prolonga a durabilidade de formulações cosméticas.",
+    descricao: [
+      "<p>O óleo de jojoba é, na verdade uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
+    ],
+    beneficios: [
+      "<p>Forma uma <b>película protetora</b> que reduz a perda de água, mantendo a pele <b>hidratada</b> sem obstruir os poros, Ajuda a <b> equilibrar </b>a produção de sebo, sendo indicado tanto para peles secas quanto oleosas, Contém tocoferóis naturais que <b> combatem radicais livres </b> e auxiliam na prevenção do envelhecimento precoce. Fortalaece a função protetora da pele, ajudando na recuperação de áreas <b>sensibilizadas.</b></p>",
+    ],
     image: Jojoba,
   },
 ];
@@ -101,7 +113,7 @@ const PrincipiosAtivos = () => {
       setTimeout(() => {
         // Detecta largura da tela
         const isMobile = window.innerWidth < 768; // breakpoint mobile
-        const yOffset = isMobile ? -80 : -120; // menor deslocamento no mobile
+        const yOffset = isMobile ? -77 : -110; // menor deslocamento no mobile
 
         const elementPosition =
           painelRef.current.getBoundingClientRect().top + window.pageYOffset;
@@ -206,15 +218,20 @@ const PrincipiosAtivos = () => {
 
             {/* Texto sem scroll */}
             <div className="space-y-3 text-xs md:text-sm leading-relaxed">
-              <p className="mt-7 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-2">
-                {ativosInfo.find((a) => a.name === ativoSelecionado)?.descricao}
+              <p className="mt-7 text-[15px] md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-2">
+                {ativosInfo
+                  .find((a) => a.name === ativoSelecionado)
+                  ?.descricao.map((texto, i) => (
+                    <p key={i} dangerouslySetInnerHTML={{ __html: texto }} />
+                  ))}
               </p>
               <hr className="border-t border-gray-300" />
-              <p className="mt-5 text-lg md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-0">
-                {
-                  ativosInfo.find((a) => a.name === ativoSelecionado)
-                    ?.beneficios
-                }
+              <p className="mt-5 text-[15px] md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-0">
+                {ativosInfo
+                  .find((a) => a.name === ativoSelecionado)
+                  ?.beneficios.map((texto, i) => (
+                    <p key={i} dangerouslySetInnerHTML={{ __html: texto }} />
+                  ))}
               </p>
             </div>
           </div>
