@@ -11,7 +11,7 @@ import BelidesItem from "../assets/itemsAtivos/AtivoBelides.png";
 import CalendulaItem from "../assets/itemsAtivos/AtivoCalendula.png";
 import EsqualanoItem from "../assets/itemsAtivos/AtivoEsqualano.png";
 import EvodiaItem from "../assets/itemsAtivos/AtivoEvodia.png";
-import JojobaItem from "../assets/itemsAtivos/Ativojojoba.png";
+import JojobaItem from "../assets/itemsAtivos/AtivoJojoba.png";
 import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
 
 const ativosInfo = [
