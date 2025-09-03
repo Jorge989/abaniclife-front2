@@ -45,7 +45,7 @@ const translations = {
           { name: "FAQ", href: "/faq" },
           { name: "Política de Privacidade", href: "#contato" },
           { name: "Política de Cookies", href: "#contato" },
-          { name: "Têrmos de Uso", href: "#tutorial" },
+          { name: "Termos de Uso", href: "#tutorial" },
         ],
       },
     ],

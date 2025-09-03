@@ -146,8 +146,9 @@ const NewsletterSection = () => {
                     </div>
 
                     <p className="text-1xl text-abanic-gray">
-                      Segurança de dados de acordo com a Política de Privacidade
-                      A assinatura poderá ser cancelada a qualquer momento.
+                      Segurança de dados de acordo com a Política de
+                      Privacidade. A assinatura poderá ser cancelada a qualquer
+                      momento.
                     </p>
                   </form>
                 ) : (

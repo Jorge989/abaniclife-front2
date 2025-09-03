@@ -9,6 +9,8 @@ import {
   MapPin,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext"; // ajuste o caminho conforme sua estrutura
+import AbanicLogo from "../assets/footer/AbanicLogo.png";
+import AbanicLogoName from "../assets/footer/AbanicLogoName.png";
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -42,7 +44,7 @@ const Footer = () => {
           { name: "FAQ", href: "/faq" },
           { name: "Política de Privacidade", href: "#contato" },
           { name: "Política de Cookies", href: "#contato" },
-          { name: "Têrmos de Uso", href: "#tutorial" },
+          { name: "Termos de Uso", href: "#tutorial" },
         ],
         explore: [
           { name: "Ativos e Benefícios", href: "#guia" },
@@ -135,7 +137,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold abanic-orange mb-4">ABANIC</h3>
+              <div className="flex items-center mb-4 space-x-2">
+                <img
+                  src={AbanicLogo}
+                  alt="Logo Abanic"
+                  className="h-8 w-auto sm:h-11 md:h-12 lg:h-7"
+                />
+                <img
+                  src={AbanicLogoName}
+                  alt="Abanic Nome"
+                  className="h-6 w-auto sm:h-11 md:h-10 lg:h-7"
+                />
+              </div>
               <p className="leading-relaxed mb-6">
                 {language === "pt"
                   ? "Queremos inspirar, de modo provocativo, as pessoas a buscarem todas as suas versões através do autocuidado, vida saudável e expansiva"

@@ -1,18 +1,26 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import Ativos from "../assets/Ativos.png";
 import Belides from "../assets/cardsAtivos/Belides.png";
 import Calendula from "../assets/cardsAtivos/Calendula.png";
 import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
 import Esqualano from "../assets/cardsAtivos/Esqualano.png";
 import Gatuline from "../assets/cardsAtivos/Gatuline.png";
 import Jojoba from "../assets/cardsAtivos/Jojoba.png";
+import AtivosTeste from "../assets/cardsAtivos/TesteAtivo.png";
+import AtivosTeste2 from "../assets/cardsAtivos/TesteAtivo2.png";
+import BelidesItem from "../assets/itemsAtivos/AtivoBelides.png";
+import CalendulaItem from "../assets/itemsAtivos/AtivoCalendula.png";
+import EsqualanoItem from "../assets/itemsAtivos/AtivoEsqualano.png";
+import EvodiaItem from "../assets/itemsAtivos/AtivoEvodia.png";
+import JojobaItem from "../assets/itemsAtivos/Ativojojoba.png";
+import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
+
 const ativosInfo = [
   {
     name: "RHODYSSEY",
     subtitle: "ANTI OXIDANTE",
-    top: "20%",
-    left: "43%",
+    top: "56%",
+    left: "6.7%",
     descricao: [
       "<p> A macroalga vermelha Furcellaria lumbricalis, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
     ],
@@ -24,8 +32,8 @@ const ativosInfo = [
   {
     name: "BELIDES",
     subtitle: "ANTI PIGMENTAÇÂO",
-    top: "20%",
-    left: "63%",
+    top: "56%",
+    left: "21.7%",
     descricao: [
       "<p>Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a <b>uniformização do tom da pele</b> tornando-o um ativo de destaque em formulações <b>clareadoras e iluminadoras.</b></p>",
     ],
@@ -37,8 +45,8 @@ const ativosInfo = [
   {
     name: "EVODIA RUTAECARPA RUTACEAE",
     subtitle: "LUMINOSIDADE",
-    top: "20%",
-    left: "82%",
+    top: "56%",
+    left: "36.4%",
     descricao: [
       "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico realizado pelo dentor do ativo obtido da fruta e utilizado no <b>RHODY SENCE FPS50</b> demonstrou em seus resultados:</p>",
     ],
@@ -49,8 +57,8 @@ const ativosInfo = [
   },
   {
     name: "ESQUALANO",
-    top: "62%",
-    left: "43%",
+    top: "56%",
+    left: "51%",
     descricao: [
       "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios:</p>",
     ],
@@ -62,8 +70,8 @@ const ativosInfo = [
   {
     name: "CALÊNDULA CALENDUA OFFICINALIS",
     subtitle: "REGENERAÇÃO",
-    top: "62%",
-    left: "63%",
+    top: "56%",
+    left: "65.5%",
     descricao: [
       "<p>É uma planta herbácea originária da região mediterrânea, é amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
     ],
@@ -75,8 +83,8 @@ const ativosInfo = [
   {
     name: "ÓLEO DE JOJOBA SIMMONDSIA CHINENSIS",
     subtitle: "EQUILÍBRIO DA OLESIDADE",
-    top: "62%",
-    left: "82%",
+    top: "56%",
+    left: "80%",
     descricao: [
       "<p>O óleo de jojoba é, na verdade uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
     ],
@@ -91,6 +99,15 @@ const PrincipiosAtivos = () => {
   const [ativoSelecionado, setAtivoSelecionado] = useState(null);
   const painelRef = useRef(null);
   const location = useLocation();
+
+  const itemsAtivos = [
+    { id: 1, src: BelidesItem, alt: "Belides" },
+    { id: 2, src: CalendulaItem, alt: "Calêndula" },
+    { id: 3, src: EsqualanoItem, alt: "Esqualano" },
+    { id: 4, src: EvodiaItem, alt: "Evodia" },
+    { id: 5, src: JojobaItem, alt: "Jojoba" },
+    { id: 6, src: RhodophytaItem, alt: "Rhodophyta" },
+  ];
 
   // Scroll suave para hash na URL
   useEffect(() => {
@@ -132,12 +149,19 @@ const PrincipiosAtivos = () => {
         Princípios Ativos
       </h1>
 
-      <div className="relative w-full">
-        <img
+      <div className="relative w-[100%] h-[100%]">
+        {/* <img
           src={Ativos}
           alt="Princípios ativos"
           className="w-full h-full rounded-xl object-contain"
-        />
+        /> */}
+        <div className="flex w-full justify-center px-4">
+          <img
+            src={AtivosTeste2}
+            alt="Ativos Rhodysence"
+            className="w-full max-w-[1100px] h-auto object-contain"
+          />
+        </div>
 
         {/* Botões interativos posicionados sobre a imagem, usando top/left do array */}
         {ativosInfo.map(({ name, top, left }) => (
@@ -244,49 +268,45 @@ const PrincipiosAtivos = () => {
 const ProductPage = () => {
   return (
     <div style={{ backgroundColor: "#F1F0EB" }}>
-      <section
-        style={{ backgroundColor: "#F1F0EB" }}
-        id="hidratante"
-        className=" min-h-screen flex flex-col md:flex-row items-stretch justify-center mt-15 p-3 md:p-19 gap-x-0"
-      >
-        {/* Imagem do Produto - ocupa 50% com fundo branco e padding */}
-        <div className="w-full md:w-1/2 flex justify-center items-center p-0 h-full">
-          <div className="w-full h-full overflow-hidden rounded-xl">
+      <section className="w-full bg-[#F1F0EB] py-12 px-4 mt-[8%]">
+        <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-6 md:gap-12">
+          {/* Imagem do Produto */}
+          <div className="flex justify-center md:justify-end w-full md:w-1/2">
             <img
               src="https://abaniclife.com/wp-content/uploads/2025/06/Produto-RHODY-SENCE-FPS50.png"
               alt="Hidratante FPS50"
-              className="w-full h-[500px] object-cover mt-5 rounded-lg"
+              className="w-full max-w-[300px] md:max-w-[440px] h-auto object-contain rounded-lg"
             />
           </div>
-        </div>
 
-        {/* Conteúdo do Produto */}
-        <div className="w-full md:w-1/2 flex flex-col justify-start gap-3 px-4 md:px-8 py-7">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-abanic-gray-dark">
-            Hidratante com FPS50
-          </h2>
+          {/* Conteúdo do Produto */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal text-abanic-gray-dark">
+              Hidratante com FPS50
+            </h2>
 
-          <p className="text-lg font-semibold text-[#ff5722]">R$00,00</p>
+            <p className="text-lg font-semibold text-[#ff5722]">R$00,00</p>
 
-          <div className="text-sm md:text-base text-[#555555] leading-relaxed space-y-1">
-            <p>Recomendação de uso</p>
-            <p>Textura Hidratante</p>
-            <p>Aroma: Neutro</p>
-            <p>FPS50 – 50ml</p>
-            <p>100% natural. cruelty-free. sem parabenos.</p>
-            <p>
-              ingredientes: ácido hialurônico, gatuline, beleides, esqualano,
-              jojoba, camomila, fps físico.
-            </p>
-          </div>
+            <div className="text-sm md:text-base text-[#555555] leading-relaxed space-y-1">
+              <p>Recomendação de uso</p>
+              <p>Textura Hidratante</p>
+              <p>Aroma: Neutro</p>
+              <p>FPS50 – 50ml</p>
+              <p>100% natural. cruelty-free. sem parabenos.</p>
+              <p>
+                ingredientes: ácido hialurônico, gatuline, beleides, esqualano,
+                jojoba, camomila, fps físico.
+              </p>
+            </div>
 
-          <div className="w-full max-w-[340px] mt-13">
-            <button
-              className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
-              aria-label="Comprar agora"
-            >
-              Comprar agora
-            </button>
+            <div className="w-full max-w-[320px] mt-6">
+              <button
+                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
+                aria-label="Comprar agora"
+              >
+                Comprar agora
+              </button>
+            </div>
           </div>
         </div>
       </section>
