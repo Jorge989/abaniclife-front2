@@ -29,7 +29,7 @@ const ativosInfo = [
     image: Rhodophyta,
   },
   {
-    name: "BELIDESs",
+    name: "BELIDES",
     subtitle: "ANTI PIGMENTAÇÂO",
     top: "56%",
     left: "21.7%",
