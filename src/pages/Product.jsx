@@ -6,7 +6,6 @@ import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
 import Esqualano from "../assets/cardsAtivos/Esqualano.png";
 import Gatuline from "../assets/cardsAtivos/Gatuline.png";
 import Jojoba from "../assets/cardsAtivos/Jojoba.png";
-import AtivosTeste from "../assets/cardsAtivos/TesteAtivo.png";
 import AtivosTeste2 from "../assets/cardsAtivos/Testeativo2.png";
 import BelidesItem from "../assets/itemsAtivos/AtivoBelides.png";
 import CalendulaItem from "../assets/itemsAtivos/AtivoCalendula.png";
