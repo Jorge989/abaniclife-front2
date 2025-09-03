@@ -16,7 +16,7 @@ import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
 
 const ativosInfo = [
   {
-    name: "RHODYSSEY",
+    name: "RHODYSSEYs",
     subtitle: "ANTI OXIDANTE",
     top: "56%",
     left: "6.7%",
