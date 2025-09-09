@@ -33,7 +33,7 @@ const translations = {
         name: "Explore",
         href: "#",
         submenu: [
-          { name: "Ativos e Benefícios", href: "#guia" },
+          { name: "Ativos e Benefícios", href: "/explore" },
           { name: "A importância da proteção solar", href: "#importancia" },
           { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
         ],
@@ -75,7 +75,7 @@ const translations = {
         name: "Explore",
         href: "#",
         submenu: [
-          { name: "Actives and Benefits", href: "#guia" },
+          { name: "Actives and Benefits", href: "/explore" },
           { name: "The Importance of Sun Protection", href: "#importancia" },
           { name: "ABANIC and Sustainability", href: "#dicas" },
         ],

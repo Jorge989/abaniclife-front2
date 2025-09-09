@@ -1,6 +1,6 @@
 import React from "react";
 import Produto from "../assets/produto.png";
-import MulheresFoto from "../assets/mulheres.jpg";
+import MulheresFoto from "../assets/Trocam.png";
 import CouplePicture from "../assets/Produtoladodireito.png";
 import FotoCreme from "../assets/Produtoladoesquerdo.png";
 
