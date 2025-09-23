@@ -6,9 +6,14 @@ const BlogPostPage = () => {
   const { id } = useParams();
   const article = articles.find((a) => a.id === parseInt(id));
 
-  // Scroll para o topo ao carregar o componente
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Scroll para o topo após a renderização do conteúdo
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Pequeno delay garante que imagens e layout estejam renderizados
+    const timeoutId = setTimeout(scrollToTop, 50);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   if (!article) {
@@ -17,7 +22,6 @@ const BlogPostPage = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-10 mt-27">
-      {/* Conteúdo fluido tipo float */}
       <div className="relative">
         <img
           src={article.image}
