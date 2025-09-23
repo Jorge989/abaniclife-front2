@@ -1,9 +1,15 @@
 import { useParams, Link } from "react-router-dom";
 import { articles } from "../data/articles";
+import { useEffect } from "react";
 
 const BlogPostPage = () => {
   const { id } = useParams();
   const article = articles.find((a) => a.id === parseInt(id));
+
+  // Scroll para o topo ao carregar o componente
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (!article) {
     return <p>Artigo não encontrado.</p>;
