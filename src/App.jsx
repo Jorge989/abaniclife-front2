@@ -13,6 +13,7 @@ const Login = lazy(() => import("./pages/Login"));
 const BrandAndFounders = lazy(() => import("./pages/BrandAndFounders"));
 const Faq = lazy(() => import("./pages/Faq"));
 const Explore = lazy(() => import("./pages/Explore"));
+const BlogPostPage = lazy(() => import("./pages/Blog"));
 function App() {
   return (
     <LanguageProvider>
@@ -28,6 +29,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/faq" element={<Faq />} />
+              <Route path="/blog/:id" element={<BlogPostPage />} />
             </Routes>
           </Suspense>
           <Footer />

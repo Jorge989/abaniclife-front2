@@ -2,62 +2,63 @@ import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-
+import { Link } from "react-router-dom";
+import { articles } from "../data/articles";
 const CultureSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
   const containerRef = useRef(null);
 
-  const articles = [
-    {
-      id: 1,
-      title: "Opening Day Of Boating Season",
-      description: "Of course the Puget Sound is very watery...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Lifestyle",
-    },
-    {
-      id: 2,
-      title: "How To Choose The Right Laptop",
-      description: "Choosing the right laptop for programming...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Technology",
-    },
-    {
-      id: 3,
-      title: "How We Built The First Self-Driving Car",
-      description: "Electric self-driving cars will save millions...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Innovation",
-    },
-    {
-      id: 4,
-      title: "How To Persuade Your Parents",
-      description: "Parents often don't want to...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Lifestyle",
-    },
-    {
-      id: 5,
-      title: "Another Awesome Article",
-      description: "More content that keeps the user scrolling...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Culture",
-    },
-    {
-      id: 6,
-      title: "The Future of Design",
-      description: "Exploring new trends in modern design...",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      category: "Design",
-    },
-  ];
+  // const articles = [
+  //   {
+  //     id: 1,
+  //     title: "Opening Day Of Boating Season",
+  //     description: "Of course the Puget Sound is very watery...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Lifestyle",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "How To Choose The Right Laptop",
+  //     description: "Choosing the right laptop for programming...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Technology",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "How We Built The First Self-Driving Car",
+  //     description: "Electric self-driving cars will save millions...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Innovation",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "How To Persuade Your Parents",
+  //     description: "Parents often don't want to...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Lifestyle",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Another Awesome Article",
+  //     description: "More content that keeps the user scrolling...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Culture",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "The Future of Design",
+  //     description: "Exploring new trends in modern design...",
+  //     image:
+  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  //     category: "Design",
+  //   },
+  // ];
 
   // Atualiza o número de itens visíveis conforme o tamanho da tela
   useEffect(() => {
@@ -180,48 +181,34 @@ const CultureSection = () => {
                         : `${100 / itemsPerView}%`,
                   }}
                 >
-                  <Card>
-                    {/* Product Image */}
-                    <div className="relative h-64 bg-gradient-to-br from-orange-200 to-orange-300 rounded-t-lg overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative">
-                          <div className="w-20 h-32 bg-gradient-to-b from-red-600 to-red-700 rounded-lg shadow-lg transform rotate-12 group-hover:rotate-6 transition-transform duration-300">
-                            <div className="absolute inset-2 bg-gradient-to-b from-red-500 to-red-600 rounded-md">
-                              <div className="h-full flex items-center justify-center">
-                                <span className="text-white text-xs font-bold transform -rotate-90 whitespace-nowrap">
-                                  ABANIC
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-black/20 rounded-full blur-sm" />
+                  <Card className="group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <Link to={`/blog/${article.id}`}>
+                      <div className="relative w-full">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-500 rounded-lg"
+                        />
+                        <div className="absolute top-2 left-2">
+                          <span className="bg-white/90 text-abanic-gray text-xs font-medium px-2 py-1 rounded-full shadow">
+                            {article.category}
+                          </span>
                         </div>
                       </div>
-
-                      {/* Category Badge */}
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 text-abanic-gray text-xs font-medium px-3 py-1 rounded-full">
-                          {article.category}
-                        </span>
+                      <div className="p-4 bg-white">
+                        <h3 className="text-lg font-semibold text-abanic-gray-dark mb-2 group-hover:text-orange-600 transition-colors">
+                          {article.title}
+                        </h3>
+                        <p className="text-abanic-gray text-sm leading-relaxed line-clamp-2">
+                          {article.description}
+                        </p>
+                        <div className="mt-2">
+                          <span className="text-orange-600 text-sm font-medium group-hover:text-orange-700 transition-colors">
+                            Ler mais →
+                          </span>
+                        </div>
                       </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold text-abanic-gray-dark mb-3 group-hover:text-orange-600 transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-abanic-gray text-sm leading-relaxed">
-                        {article.description}
-                      </p>
-
-                      {/* Read More Link */}
-                      <div className="mt-4">
-                        <span className="text-orange-600 text-sm font-medium group-hover:text-orange-700 transition-colors">
-                          Ler mais →
-                        </span>
-                      </div>
-                    </div>
+                    </Link>
                   </Card>
                 </div>
               ))}

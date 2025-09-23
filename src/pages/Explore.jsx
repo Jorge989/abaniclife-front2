@@ -136,7 +136,7 @@ const Explore = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen py-12 mt-25">
+    <div className=" min-h-screen py-12 mt-25">
       <div className="w-full max-w-6xl mx-auto px-6">
         {/* Header com foto + textos */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
