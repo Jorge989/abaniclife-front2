@@ -23,21 +23,33 @@ const BlogPostPage = () => {
   return (
     <div className="max-w-5xl mx-auto px-6 py-10 mt-27">
       <div className="relative">
+        {/* Imagem flutuante à esquerda */}
         <img
           src={article.image}
           alt={article.title}
-          className="w-full md:w-1/2 lg:w-5/12 float-left md:mr-6 mb-4 md:mb-0 object-contain rounded-lg"
+          className="w-full md:w-1/2 lg:w-5/12 float-left mr-6 mb-2 object-contain rounded-lg"
         />
 
-        <p className="text-sm text-gray-500 mb-2">{article.category}</p>
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          {article.title}
-        </h1>
+        {/* Conteúdo que flui ao lado da imagem */}
+        <div className="text-justify text-gray-800 text-[16px] leading-[1.5]">
+          <p className="text-sm text-gray-500 mb-1">{article.category}</p>
 
-        <div className="prose prose-orange max-w-none">
-          {article.content
-            .split("\n")
-            .map((p, i) => (p.trim() !== "" ? <p key={i}>{p}</p> : null))}
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            {article.title}
+          </h1>
+
+          {article.content.split("\n").map((p, i) => {
+            if (p.trim() === "") return null;
+
+            const precisaIndent = p.startsWith("#indentar");
+            const texto = precisaIndent ? p.replace("#indentar", "").trim() : p;
+
+            return (
+              <p key={i} className={`mb-2 ${precisaIndent ? "indent-4" : ""}`}>
+                {texto}
+              </p>
+            );
+          })}
         </div>
       </div>
     </div>

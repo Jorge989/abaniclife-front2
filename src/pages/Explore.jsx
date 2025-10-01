@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import FotoCreme from "../assets/Produtoladoesquerdo.png";
-
+import rhodophytas from "../assets/explore/rhodophytas.jpeg";
+import bellis from "../assets/explore/belis.jpg";
+import evodia from "../assets/explore/evodia.jpg";
 const sectionsData = [
   {
     id: "rhodophytas",
     title: "Rhodophytas - Algas vermelhas",
+    image: rhodophytas,
     intro: [
-      "<p>O oceano cobre mais de 70% da superfície do planeta, abriga uma biodiversidade rica e complexa. Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018). Entre esses organismos, destaca-se a macroalga vermelha Furcellaria lumbricalis f. aegagrophila, pertencente ao filo das Rhodophytas. Encontrada na Europa, do norte da Noruega ao Golfo da Biscaia, incluindo as Ilhas Faroé e o Mar Báltico, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado no <b>RHODY SENCE FPS50</b> é o extrato das Rhodophytas hidrolisado.</p>",
+      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018). Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado no <b>RHODY SENCE FPS50</b> é o extrato das Rhodophytas hidrolisado. ",
     ],
     items: [
       {
         id: "rhodophytas1",
-        title: "Ativos da Furcellaria lumbricalis",
+        title: "Ativos das Algas Vermelhas",
         text: [
           "<p>Diversos compostos já foram identificados em algas vermelhas do filo Rhodophyta, como a Furcellaria lumbricalis, e vêm sendo amplamente estudados por seu potencial de aplicação cosmética, especialmente na proteção da pele contra agressões externas. </p>",
         ],
       },
       {
         id: "rhodophytas2",
-        title: "Polissacarídeos sulfatados — Carragena",
+        title: "Estímulo à síntese de ácido hialurônico",
         text: [
           "<p>De acordo com ensaio técnico-clínico in vitro disponibilizado pelo fabricante, feitos com explantes humanos demonstraram que o ativo extraído da Rhodophytas e utilizado no RODY SENCE FPS50 aumenta em até <b>124%</b> a síntese de ácido hialurônico, um componente fundamental para o preenchimento e hidratação profunda da pele. Isso contribui para a melhora da textura, elasticidade e viço cutâneo.</p>",
         ],
@@ -32,31 +35,38 @@ const sectionsData = [
       },
       {
         id: "rhodophytas4",
-        title: "Atividade antimicrobiana e regenerativa ",
+        title: "Ativação mitocondrial e síntese de ATP",
         text: [
-          "<p>Polissacarídeos de algas vermelhas também demonstraram efeito contra microrganismos da microbiota cutânea, além de potencial de regeneração tecidual por meio da ativação de fibroblastos e estimulação da cicatrização (Alves et al., 2022).</p>",
+          "<p>O ativo demonstrou aumentar em até <b>276%</b> a produção de ATP (molécula de energia celular) nas mitocôndrias (estrutura celular responsável pela respiração e energia celular), estimulando o metabolismo celular e promovendo a vitalidade da pele. A melhora na respiração celular está diretamente associada à regeneração dos tecidos, principalmente em peles fatigadas e com sinais de envelhecimento.</p>",
         ],
       },
       {
         id: "rhodophytas5",
+        title: "Reforço da barreira cutânea",
+        text: [
+          "<p>Um estudo in vivo realizado com o ativo utilizado no RHODY SENCE FPS50 apresentou a pele <b>99%</b> visivelmente mais hidratada. A expressão de proteínas estruturais (como exemplo +61% de catenina alfa-1, +69% de loricrina e 86% calmodulina like protein 5) foi significativamente aumentada, promovendo maior coesão entre os queratinócitos e fortalecendo a função de barreira da pele, essencial para evitar a desidratação de agressões externas. </p>",
+        ],
+      },
+      {
+        id: "rhodophytas6",
+        title: "Polissacarídeos sulfatados — Carragena",
+        text: [
+          "<p>As carragenas são polissacarídeos sulfatados (macromoléculas de açúcares e grupo sulfato) que possuem ação hidratante, calmante, antioxidante e derivam de algas vermelhas. Com propriedades filmógenas, formam uma barreira sobre a pele que reduz a perda de água e melhora a hidratação. Testes demonstram que carragenas do tipo híbrido kappa/beta, presentes no extrato de Furcellaria lumbricalis, promovem efeitos protetores contra a apoptose induzida por UVB (morte celular), além de atuarem na regulação da resposta inflamatória por meio da expressão da enzima Ciclooxigenase-2 (COX-2), envolvida na regeneração celular (Hwang et al., 2018; Tripp et al., 2003). </p>",
+        ],
+      },
+      {
+        id: "rhodophytas7",
         title: "Compostos bioativos adicionais presentes em Rhodophytas",
         text: [
           "<p>Além das carragenas diversas espécies de algas vermelhas do filo Rhodophyta são conhecidas por sintetizar compostos fotoprotetores como os aminoácidos semelhantes à micosporina (MAAs) e os polifenóis marinhos, que contribuem para a proteção contra radiação UV, o equilíbrio oxidativo e a integridade cutânea (Hwang et al., 2018; Conde et al., 2021). MAAs atuam como filtros solares naturais, absorvendo radiação ultravioleta (UV) entre 310 e 360 nm, com excelente estabilidade e baixa toxicidade. São particularmente abundantes em macroalgas que vivem em zonas expostas à luz solar intensa (Conde et al., 2021). </p>",
         ],
       },
       {
-        id: "rhodophytas6",
+        id: "rhodophytas8",
         title:
-          "Equilíbrio oxidativo e controle de espécies reativas de oxigênio (ROS) ",
+          "Equilíbrio oxidativo e controle de espécies reativas de oxigênio (ROS)",
         text: [
-          "<p>O envelhecimento cutâneo é impulsionado por fatores intrínsecos (como genética e alterações hormonais) e extrínsecos, como exposição à radiação UV, poluição e hábitos de vida.  Tanto os raios solares UVA quanto os raios solares UVB  desempenham papel central na aceleração do envelhecimento da pele, promovendo estresse oxidativo e inflamação crônica. <b>UVA</b>  penetra profundamente na derme, estimulando a formação de espécies reativas de oxigênio (ROS), que degradam fibras de colágeno e elastina, favorecendo o surgimento de rugas e flacidez. <b>UVB</b>  atua nas camadas mais superficiais da pele, induzindo danos diretos ao DNA celular, contribuindo para hiperpigmentações, inflamações e até alterações cancerígenas (Berthon et al., 2017). A radiação solar ativa vias de sinalização que estimulam a produção excessiva de espécies reativas de oxigênio (ROS), desencadeando inflamação, degradação da matriz extracelular e perda da integridade da barreira cutânea. Compostos presentes em algas vermelhas, como catalase, superóxido dismutase e carragenas, são conhecidos por atuar como agentes antioxidantes naturais, ajudando a restaurar o equilíbrio celular mesmo sob condições de estresse ambiental (Berthon et al., 2017; Hwang et al., 2018).  A Furcellaria lumbricalis, alga vermelha da qual é derivado o ativo, contém carragenas sulfatadas, que auxiliam na preservação da matriz extracelular por meio da inibição de processos inflamatórios e da neutralização de ROS — dois gatilhos centrais na degradação do colágeno (Hwang et al., 2018). Adicionalmente, estudos demonstram que compostos bioativos derivados de Rhodophytas, como polifenóis e polissacarídeos, podem modular a atividade de enzimas como as metaloproteinases de matriz (MMPs), responsáveis por fragmentar o colágeno e elastina da pele. A superexpressão dessas enzimas é estimulada por fatores como radiação UV e poluição atmosférica, e sua regulação representa um mecanismo-chave de ação antienvelhecimento (Baptista et al., 2023; Hwang et al., 2018). O extrato padronizado de Furcellaria lumbricalis demonstrou ação antioxidante significativa em testes in vitro, sugerindo potencial para proteger a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas naturais. </p>",
-        ],
-      },
-      {
-        id: "rhodophytas7",
-        title: "Proteção antipoluição e ação anti-inflamatória",
-        text: [
-          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do microbioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado pelo detentor do ativo, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de 85% menos sensibilidade da pele, 89% a pele mais hidratada e 100% do aumento da macies da pele. Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020)  </p>",
+          "<p>O envelhecimento cutâneo é impulsionado por fatores intrínsecos (como genética e alterações hormonais) e extrínsecos, como exposição à radiação UV, poluição e hábitos de vida.  Tanto os raios solares UVA quanto os raios solares UVB  desempenham papel central na aceleração do envelhecimento da pele, promovendo estresse oxidativo e inflamação crônica. A radiação solar ativa vias de sinalização que estimulam a produção excessiva de espécies reativas de oxigênio (ROS), desencadeando inflamação, degradação da matriz extracelular e perda da integridade da barreira cutânea. Compostos presentes em algas vermelhas, como catalase, superóxido dismutase e carragenas, são conhecidos por atuar como agentes antioxidantes naturais, ajudando a restaurar o equilíbrio celular mesmo sob condições de estresse ambiental (Berthon et al., 2017; Hwang et al., 2018). A Furcellaria lumbricalis, alga vermelha da qual é derivado o ativo, contém carragenas sulfatadas, que auxiliam na preservação da matriz extracelular por meio da inibição de processos inflamatórios e da neutralização de ROS — dois gatilhos centrais na degradação do colágeno (Hwang et al., 2018). Adicionalmente, estudos demonstram que compostos bioativos derivados de Rhodophytas, como polifenóis e polissacarídeos, podem modular a atividade de enzimas como as metaloproteinases de matriz (MMPs), responsáveis por fragmentar o colágeno e elastina da pele. A superexpressão dessas enzimas é estimulada por fatores como radiação UV e poluição atmosférica, e sua regulação representa um mecanismo-chave de ação antienvelhecimento (Baptista et al., 2023; Hwang et al., 2018). O extrato padronizado de Furcellaria lumbricalis demonstrou ação antioxidante significativa em testes in vitro, sugerindo potencial para proteger a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas naturais. </p>",
         ],
       },
     ],
@@ -64,6 +74,7 @@ const sectionsData = [
   {
     id: "bellis",
     title: "Bellis perennis – Margarida",
+    image: bellis,
     intro: [
       "<p>Também conhecida comumente como margarida — é uma planta herbácea perene da família Asteraceae, típica de campos, gramados e pastagens. Nativa da Europa Ocidental, Central e do Norte, também é encontrada como espécie invasora em regiões da América do Norte (Tutin et al., 1976; Panda, 2004). O ativo utilizado no <b>RHODY SENCE FPS50</b> é um extrato padronizado obtido das flores orgânicas de Bellis perennis, certificado por órgãos como ECOCERT, NATRUE e COSMOS para uso em cosméticos naturais. Seu mecanismo de ação é amplo: atua simultaneamente na expressão e atividade da tirosinase (enzima responsável pela produção de melanina na pele), na ligação da α-MSH  (hormônio estimulante de melanócitos) ao receptor MC-1, na síntese de melanossomos e no processo de endocitose (mecanismo de incorporação celular) — etapas essenciais da melanogênese. Estudos in vitro do ativo demonstraram reduções significativas na expressão de tirosinase em até <b>89,9%,</b> na atividade da enzima até <b>49,8%</b> e na formação de melanina redução de até <b>74,1%.</b> </p>",
     ],
@@ -84,9 +95,9 @@ const sectionsData = [
       },
       {
         id: "bellis3",
-        title: "Atuação sobre manchas e hiperpigmentações",
+        title: "Ação regenerativa",
         text: [
-          "<p>Além da atividade despigmentante, frações de Bellis perennis demonstraram ação cicatrizante em modelo animal. Em um estudo realizado in vivo, a aplicação tópica do extrato acelerou a regeneração de feridas por excisão circular, promovendo aumento na proliferação celular, formação de tecido de granulação e reepitelização da pele (processo de cicatrização). Esses efeitos são atribuídos à presença de compostos fenólicos (moléculas vegetais com propriedades antioxidantes que ajudam a neutralizar os radicais livres), flavonoides (subclasse dos compostos fenólicos com ação antioxidante, anti-inflamatória e fotoprotetora) e taninos (polifenóis vegetais com efeito adstringente e anti-inflamatório) com propriedades anti-inflamatórias e antioxidantes (Aydin et al., 2020). </p>",
+          "<p>Em um estudo realizado in vivo, a aplicação tópica do extrato demonstrou aumento na proliferação celular, formação de tecido de granulação e reepitelização da pele (processo de cicatrização). Esses efeitos são atribuídos à presença de compostos fenólicos (moléculas vegetais com propriedades antioxidantes que ajudam a neutralizar os radicais livres), flavonoides (subclasse dos compostos fenólicos com ação antioxidante, anti-inflamatória e fotoprotetora) e taninos (polifenóis vegetais com efeito adstringente e anti-inflamatório) com propriedades anti-inflamatórias e antioxidantes. </p>",
         ],
       },
     ],
@@ -94,6 +105,7 @@ const sectionsData = [
   {
     id: "evodea",
     title: "Evodia rutaecarpa — Rutaceae",
+    image: evodia,
     intro: [
       "<p>Originária da medicina tradicional oriental, a planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, essa planta é um arbusto ornamental que chega a crescer uns 10 mestros. O composto que está presente no <b>RHODY SENCE FPS50</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
     ],
@@ -183,15 +195,17 @@ const Explore = () => {
               <h2 className="text-2xl font-semibold text-gray-800 mb-3">
                 {section.title}
               </h2>
-
               {/* Renderiza intro como string ou array */}
               {Array.isArray(section.intro) ? (
                 section.intro.map((texto, i) => (
-                  <div
-                    key={i}
-                    className="text-gray-700 mb-4 text-justify"
-                    dangerouslySetInnerHTML={{ __html: texto }}
-                  />
+                  <>
+                    <div
+                      key={i}
+                      className="text-gray-700 mb-4 text-justify"
+                      dangerouslySetInnerHTML={{ __html: texto }}
+                    />
+                    <img src={section.image} alt="foto ativo" />
+                  </>
                 ))
               ) : (
                 <div
