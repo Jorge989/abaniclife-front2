@@ -3,7 +3,7 @@ import { Mail, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
-import FiqueLigado from "../assets/FiqueLigado.png";
+import FiqueLigado from "../assets/Fiqueligado.png";
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
   const [nome, setNome] = useState("");
