@@ -45,7 +45,7 @@ const BlogPostPage = () => {
             const texto = precisaIndent ? p.replace("#indentar", "").trim() : p;
 
             return (
-              <p key={i} className={`mb-2 ${precisaIndent ? "indent-4" : ""}`}>
+              <p key={i} className={`mb-2 ${precisaIndent ? "indent-10" : ""}`}>
                 {texto}
               </p>
             );

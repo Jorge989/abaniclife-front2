@@ -6,7 +6,8 @@ import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
 import Esqualano from "../assets/cardsAtivos/Esqualano.png";
 import Gatuline from "../assets/cardsAtivos/Gatuline.png";
 import Jojoba from "../assets/cardsAtivos/Jojoba.png";
-import AtivosTeste2 from "../assets/cardsAtivos/Testeativo2.png";
+import AtivosTeste2 from "../assets/cardsAtivos/Ativos.png";
+import AtivosMobile from "../assets/cardsAtivos/AtivosMobile.png";
 import BelidesItem from "../assets/itemsAtivos/AtivoBelides.png";
 import CalendulaItem from "../assets/itemsAtivos/AtivoCalendula.png";
 import EsqualanoItem from "../assets/itemsAtivos/AtivoEsqualano.png";
@@ -18,8 +19,10 @@ const ativosInfo = [
   {
     name: "RHODYSSEY",
     subtitle: "ANTI OXIDANTE",
-    top: "56%",
-    left: "6.7%",
+    top: "2%",
+    left: "2.2%",
+    width: "33%",
+    height: "86%",
     descricao: [
       "<p> A macroalga vermelha Furcellaria lumbricalis, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
     ],
@@ -31,8 +34,10 @@ const ativosInfo = [
   {
     name: "BELIDES",
     subtitle: "ANTI PIGMENTAÇÂO",
-    top: "56%",
-    left: "21.7%",
+    top: "2.2%",
+    left: "37%",
+    width: "22.8%",
+    height: "86%",
     descricao: [
       "<p>Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a <b>uniformização do tom da pele</b> tornando-o um ativo de destaque em formulações <b>clareadoras e iluminadoras.</b></p>",
     ],
@@ -44,8 +49,10 @@ const ativosInfo = [
   {
     name: "EVODIA RUTAECARPA RUTACEAE",
     subtitle: "LUMINOSIDADE",
-    top: "56%",
-    left: "36.4%",
+    top: "1%",
+    left: "61%",
+    width: "18%",
+    height: "36.5%",
     descricao: [
       "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico realizado pelo dentor do ativo obtido da fruta e utilizado no <b>RHODY SENCE FPS50</b> demonstrou em seus resultados:</p>",
     ],
@@ -56,8 +63,10 @@ const ativosInfo = [
   },
   {
     name: "ESQUALANO",
-    top: "56%",
-    left: "51%",
+    top: "1%",
+    left: "80%",
+    width: "18%",
+    height: "36.5%",
     descricao: [
       "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios:</p>",
     ],
@@ -69,8 +78,10 @@ const ativosInfo = [
   {
     name: "CALÊNDULA CALENDUA OFFICINALIS",
     subtitle: "REGENERAÇÃO",
-    top: "56%",
-    left: "65.5%",
+    top: "49%",
+    left: "61%",
+    width: "17.8%",
+    height: "40%",
     descricao: [
       "<p>É uma planta herbácea originária da região mediterrânea, é amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
     ],
@@ -82,8 +93,10 @@ const ativosInfo = [
   {
     name: "ÓLEO DE JOJOBA SIMMONDSIA CHINENSIS",
     subtitle: "EQUILÍBRIO DA OLESIDADE",
-    top: "56%",
+    top: "49%",
     left: "80%",
+    width: "18.2%",
+    height: "40%",
     descricao: [
       "<p>O óleo de jojoba é, na verdade uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
     ],
@@ -115,7 +128,7 @@ const PrincipiosAtivos = () => {
       const element = document.querySelector(hash);
       if (element) {
         setTimeout(() => {
-          const yOffset = -165; // ajuste conforme altura do header fixo
+          const yOffset = -165;
           const y =
             element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
@@ -142,44 +155,65 @@ const PrincipiosAtivos = () => {
   return (
     <section
       id="ativos"
-      className="max-w-[1250px] mx-auto px-4 mb-10 relative transition-all mt-10"
+      className="max-w-[1290px] mx-auto px-4 mb-10 relative transition-all mt-10"
     >
       <h1 className="text-center text-4xl font-light text-[#494949] mb-10">
         Princípios Ativos
       </h1>
-
-      <div className="relative w-[100%] h-[100%]">
-        {/* <img
-          src={Ativos}
-          alt="Princípios ativos"
-          className="w-full h-full rounded-xl object-contain"
-        /> */}
-        <div className="flex w-full justify-center px-4">
-          <img
-            src={AtivosTeste2}
-            alt="Ativos Rhodysence"
-            className="w-full max-w-[1100px] h-auto object-contain"
-          />
+      {/* --- Animação de dica no topo --- */}
+      <div
+        className="
+    absolute
+    top-2
+    left-1/2 md:left-10
+    w-[90%] md:w-auto
+    -translate-x-1/2 md:translate-x-0
+    flex items-center justify-center md:justify-start
+    cursor-pointer
+    mt-12 md:mt-2
+  "
+      >
+        <div className="animate-fade-in-down flex flex-row items-center gap-2 bg-[#ff5722]/90 text-white px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
+          <span className="text-xl animate-bounce">👆</span>
+          <span className="text-xs md:text-sm font-semibold">
+            Clique nos ativos
+          </span>
         </div>
-
-        {/* Botões interativos posicionados sobre a imagem, usando top/left do array */}
-        {ativosInfo.map(({ name, top, left }) => (
-          <button
-            key={name}
-            onClick={() => setAtivoSelecionado(name)}
-            style={{ top: top, left: left }}
-            className="absolute w-[13%] h-[22%] cursor-pointer rounded-lg transition transform hover:scale-105 hover:ring-2 hover:ring-[#ff5722] animate-pulse"
-            title={name}
-            aria-label={`Selecionar princípio ativo ${name}`}
-          />
-        ))}
+      </div>
+      <div className="relative w-[100%] h-[100%] mt-20 md:mt-0">
+        {/* Imagem principal */}
+        <div className="flex w-full justify-center px-4">
+          <picture className="flex justify-center w-full">
+            <source srcSet={AtivosMobile} media="(max-width: 767px)" />
+            <img
+              src={AtivosTeste2}
+              alt="Ativos Rhodysence"
+              className="
+          w-[112%] max-w-none md:w-full md:max-w-[1290px]
+          h-auto object-contain rounded-t-lg rounded-b-none shadow-md
+          transition-transform duration-300
+        "
+            />
+          </picture>
+          {/* Botões interativos posicionados sobre a imagem */}
+          {ativosInfo.map(({ name, top, left, width, height }) => (
+            <button
+              key={name}
+              onClick={() => setAtivoSelecionado(name)}
+              style={{ top: top, left: left, width: width, height: height }}
+              className="absolute cursor-pointer rounded-lg transition transform hover:scale-105 hover:ring-4 hover:ring-[#ff5722] animate-pulse"
+              title={name}
+              aria-label={`Selecionar princípio ativo ${name}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Painel de conteúdo detalhado abaixo da imagem */}
       {ativoSelecionado && (
         <div
           ref={painelRef}
-          className="shadow-lg rounded-b-md max-w-[1240px] mx-auto flex flex-col md:flex-row overflow-hidden"
+          className="shadow-lg rounded-b-md max-w-[1224px] mx-auto flex flex-col md:flex-row overflow-hidden"
           aria-live="polite"
           role="region"
           aria-labelledby="ativo-titulo"

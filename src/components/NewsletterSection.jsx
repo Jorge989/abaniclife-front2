@@ -3,7 +3,7 @@ import { Mail, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
-import AbanicWoman from "../assets/NewsLetter.png";
+import FiqueLigado from "../assets/FiqueLigado.png";
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
   const [nome, setNome] = useState("");
@@ -39,7 +39,7 @@ const NewsletterSection = () => {
               style={{ backgroundColor: "#A1B6C1" }}
             >
               <img
-                src={AbanicWoman}
+                src={FiqueLigado}
                 alt="Mulher aplicando produto de beleza natural"
                 className="w-auto h-auto max-w-full max-h-full"
               />
@@ -66,28 +66,6 @@ const NewsletterSection = () => {
                 marca.
               </p>
             </div>
-
-            {/* Benefits */}
-            {/* <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-abanic-gray">
-                  Dicas exclusivas de beleza natural
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-abanic-gray">
-                  Acesso antecipado a novos produtos
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-abanic-gray">
-                  Ofertas especiais para assinantes
-                </span>
-              </div>
-            </div> */}
 
             {/* Newsletter Form */}
             <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm">
