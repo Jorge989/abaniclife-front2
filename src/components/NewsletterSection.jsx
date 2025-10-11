@@ -40,7 +40,7 @@ const NewsletterSection = () => {
             >
               <img
                 src={FiqueLigado}
-                alt="Mulher aplicando produto de beleza natural"
+                alt="Imagem Newsletter"
                 className="w-auto h-auto max-w-full max-h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
