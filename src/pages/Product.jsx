@@ -177,10 +177,12 @@ const PrincipiosAtivos = () => {
               src={AtivosTeste2}
               alt="Ativos Rhodysence"
               className="
-          w-[112%] max-w-none md:w-full md:max-w-[1290px]
-          h-auto object-contain rounded-t-lg rounded-b-none shadow-md
-          transition-transform duration-300
-        "
+    w-[112%] max-w-none 
+    md:w-[104%] lg:w-[100%]    /* 🔥 iPad (entre 768 e 1024px) */
+    xl:w-full                 /* desktops grandes */
+    h-auto object-contain rounded-t-lg rounded-b-none shadow-md
+    transition-transform duration-300
+  "
             />
           </picture>
           {/* Botões interativos posicionados sobre a imagem */}
