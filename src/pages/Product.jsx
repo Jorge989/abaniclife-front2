@@ -19,10 +19,8 @@ const ativosInfo = [
   {
     name: "RHODYSSEY",
     subtitle: "ANTI OXIDANTE",
-    top: "2%",
-    left: "2.2%",
-    width: "33%",
-    height: "86%",
+    desktop: { top: "2%", left: "2.2%", width: "33%", height: "86%" },
+    mobile: { top: "0%", left: "0.5%", width: "49%", height: "42%" },
     descricao: [
       "<p> A macroalga vermelha Furcellaria lumbricalis, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
     ],
@@ -34,10 +32,8 @@ const ativosInfo = [
   {
     name: "BELIDES",
     subtitle: "ANTI PIGMENTAÇÂO",
-    top: "2.2%",
-    left: "37%",
-    width: "22.8%",
-    height: "86%",
+    desktop: { top: "2.2%", left: "37%", width: "22.8%", height: "86%" },
+    mobile: { top: "0%", left: "51%", width: "49%", height: "42%" },
     descricao: [
       "<p>Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a <b>uniformização do tom da pele</b> tornando-o um ativo de destaque em formulações <b>clareadoras e iluminadoras.</b></p>",
     ],
@@ -49,10 +45,8 @@ const ativosInfo = [
   {
     name: "EVODIA RUTAECARPA RUTACEAE",
     subtitle: "LUMINOSIDADE",
-    top: "1%",
-    left: "61%",
-    width: "18%",
-    height: "36.5%",
+    desktop: { top: "1%", left: "61%", width: "18%", height: "36.5%" },
+    mobile: { top: "41%", left: "0.5%", width: "49%", height: "29%" },
     descricao: [
       "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico realizado pelo dentor do ativo obtido da fruta e utilizado no <b>RHODY SENCE FPS50</b> demonstrou em seus resultados:</p>",
     ],
@@ -63,10 +57,8 @@ const ativosInfo = [
   },
   {
     name: "ESQUALANO",
-    top: "1%",
-    left: "80%",
-    width: "18%",
-    height: "36.5%",
+    desktop: { top: "1%", left: "80%", width: "18%", height: "36.5%" },
+    mobile: { top: "41%", left: "51%", width: "49%", height: "29%" },
     descricao: [
       "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios:</p>",
     ],
@@ -78,10 +70,8 @@ const ativosInfo = [
   {
     name: "CALÊNDULA CALENDUA OFFICINALIS",
     subtitle: "REGENERAÇÃO",
-    top: "49%",
-    left: "61%",
-    width: "17.8%",
-    height: "40%",
+    desktop: { top: "49%", left: "61%", width: "17.8%", height: "40%" },
+    mobile: { top: "71%", left: "0%", width: "49%", height: "29%" },
     descricao: [
       "<p>É uma planta herbácea originária da região mediterrânea, é amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
     ],
@@ -93,10 +83,8 @@ const ativosInfo = [
   {
     name: "ÓLEO DE JOJOBA SIMMONDSIA CHINENSIS",
     subtitle: "EQUILÍBRIO DA OLESIDADE",
-    top: "49%",
-    left: "80%",
-    width: "18.2%",
-    height: "40%",
+    desktop: { top: "49%", left: "80%", width: "18.2%", height: "40%" },
+    mobile: { top: "71%", left: "51%", width: "49%", height: "29%" },
     descricao: [
       "<p>O óleo de jojoba é, na verdade uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
     ],
@@ -196,16 +184,26 @@ const PrincipiosAtivos = () => {
             />
           </picture>
           {/* Botões interativos posicionados sobre a imagem */}
-          {ativosInfo.map(({ name, top, left, width, height }) => (
-            <button
-              key={name}
-              onClick={() => setAtivoSelecionado(name)}
-              style={{ top: top, left: left, width: width, height: height }}
-              className="absolute cursor-pointer rounded-lg transition transform hover:scale-105 hover:ring-4 hover:ring-[#ff5722] animate-pulse"
-              title={name}
-              aria-label={`Selecionar princípio ativo ${name}`}
-            />
-          ))}
+          {ativosInfo.map(({ name, desktop, mobile }) => {
+            const isMobile = window.innerWidth < 768;
+            const { top, left, width, height } = isMobile ? mobile : desktop;
+
+            return (
+              <button
+                key={name}
+                onClick={() => setAtivoSelecionado(name)}
+                style={{
+                  top,
+                  left,
+                  width,
+                  height,
+                }}
+                className="absolute cursor-pointer rounded-lg transition transform hover:scale-105 hover:ring-4 hover:ring-[#ff5722] animate-pulse"
+                title={name}
+                aria-label={`Selecionar princípio ativo ${name}`}
+              />
+            );
+          })}
         </div>
       </div>
 
