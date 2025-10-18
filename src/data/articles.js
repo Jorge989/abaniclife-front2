@@ -1,5 +1,6 @@
 import ArticleImageOne from "../assets/blog/article1.png"
 import ArticleImagetwo from "../assets/blog/article2.png"
+import ArticleImageThree from "../assets/blog/article3.png"
 export const articles = [
   {
     id: 1,
@@ -70,5 +71,13 @@ Mais do que adquirir e possuir, estamos à procura de experiências, valores e p
 
 As nossas múltiplas versões é que nos tornam únicos.
 `,
+  },
+    {
+    id: 3,
+    title: "Inovação e Sustentabilidade: O Futuro dos Cosméticos",
+    category: "Inovação & Sustentabilidade",
+    description: "Como a ABANIC está reinventando a indústria de cosméticos com práticas sustentáveis.",
+    image: ArticleImageThree,
+    content: `A indústria de cosméticos vive um momento de transformação profunda, onde inovação e sustentabilidade se tornaram pilares fundamentais para o futuro. Na ABANIC, acreditamos que é possível criar produtos de alta performance sem comprometer o meio ambiente ou os valores éticos. Nossa abordagem combina pesquisa científica avançada com práticas sustentáveis em toda a cadeia produtiva. Desenvolvemos fórmulas que utilizam ativos naturais provenientes de fontes renováveis, sempre priorizando o comércio justo e a preservação da biodiversidade. A embalagem dos nossos produtos é pensada para minimizar o impacto ambiental, utilizando materiais reciclados e recicláveis, além de incentivar a reutilização. Mas a sustentabilidade vai além dos produtos em si. Estamos comprometidos com uma produção consciente que respeita os limites do planeta e valoriza as comunidades envolvidas em todo o processo. Acreditamos que a verdadeira beleza está na harmonia entre eficácia, segurança e responsabilidade ambiental. Cada produto ABANIC é resultado de um cuidadoso equilíbrio entre ciência, natureza e ética, representando nosso compromisso com um futuro mais consciente e sustentável para a indústria de cosméticos.`,
   },
 ];

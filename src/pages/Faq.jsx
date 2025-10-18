@@ -36,9 +36,9 @@ const Faq = () => {
 
   return (
     <section className="w-full bg-white px-4 py-12 md:py-20 flex flex-col items-center mt-25">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-abanic-gray-dark mb-4 text-center">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
         FAQ
-      </h2>
+      </h1>
 
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10 mt-10">
         {/* FAQ Section */}

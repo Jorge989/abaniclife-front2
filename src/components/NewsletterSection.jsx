@@ -57,10 +57,7 @@ const NewsletterSection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
                 Fique por <span className="abanic-orange">dentro</span>
               </h2>
-              <p
-                className="text-lg leading-relaxed mb-8"
-                style={{ color: "#444444" }}
-              >
+              <p className="text-gray-700 mb-4 text-justify text-[18px]">
                 Assine a nossa newsletter e receba em primeira mão as
                 atualizações sobre lançamentos, edições especiais e eventos da
                 marca.
@@ -123,7 +120,7 @@ const NewsletterSection = () => {
                       </Button>
                     </div>
 
-                    <p className="text-1xl text-abanic-gray">
+                    <p className="text-gray-700 mb-4 text-justify text-[17px]">
                       Segurança de dados de acordo com a Política de
                       Privacidade. A assinatura poderá ser cancelada a qualquer
                       momento.

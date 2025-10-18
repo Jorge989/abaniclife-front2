@@ -133,9 +133,9 @@ const CultureSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-center text-4xl font-light text-[#494949] mb-7">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
             ABANIC LIFE
-          </h2>
+          </h1>
           <p className="text-lg md:text-xl text-abanic-gray max-w-3xl mx-auto">
             Acompanhe com a ABANIC as últimas novidades sobre cultura e
             tenedências.

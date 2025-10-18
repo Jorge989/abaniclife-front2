@@ -34,7 +34,7 @@ const BlogPostPage = () => {
         <div className="text-justify text-gray-800 text-[16px] leading-[1.5]">
           <p className="text-sm text-gray-500 mb-1">{article.category}</p>
 
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
             {article.title}
           </h1>
 
@@ -45,7 +45,10 @@ const BlogPostPage = () => {
             const texto = precisaIndent ? p.replace("#indentar", "").trim() : p;
 
             return (
-              <p key={i} className={`mb-2 ${precisaIndent ? "indent-10" : ""}`}>
+              <p
+                key={i}
+                className="text-gray-700 mb-4 text-justify mb-2 ${precisaIndent ? 'indent-10' : ''}"
+              >
                 {texto}
               </p>
             );

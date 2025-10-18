@@ -145,7 +145,7 @@ const PrincipiosAtivos = () => {
       id="ativos"
       className="max-w-[1290px] mx-auto px-4 mb-10 relative transition-all mt-10"
     >
-      <h1 className="text-center text-4xl font-light text-[#494949] mb-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-space-grotesk-h1 text-center mb-10">
         Princípios Ativos
       </h1>
       {/* --- Animação de dica no topo --- */}
@@ -171,7 +171,7 @@ const PrincipiosAtivos = () => {
       <div className="relative w-[100%] h-[100%] mt-20 md:mt-0">
         {/* Imagem principal */}
         <div className="flex w-full justify-center px-4">
-          <picture className="flex justify-center w-full">
+          <picture className="flex justify-center w-full ">
             <source srcSet={AtivosMobile} media="(max-width: 767px)" />
             <img
               src={AtivosTeste2}
@@ -180,7 +180,7 @@ const PrincipiosAtivos = () => {
     w-[112%] max-w-none 
     md:w-[104%] lg:w-[100%]    /* 🔥 iPad (entre 768 e 1024px) */
     xl:w-full                 /* desktops grandes */
-    h-auto object-contain rounded-t-lg rounded-b-none shadow-md
+    h-auto object-contain rounded-t-lg rounded-b-none 
     transition-transform duration-300
   "
             />
@@ -213,83 +213,119 @@ const PrincipiosAtivos = () => {
       {ativoSelecionado && (
         <div
           ref={painelRef}
-          className="shadow-lg rounded-b-md max-w-[1224px] mx-auto flex flex-col md:flex-row overflow-hidden"
+          className="shadow-lg rounded-b-md max-w-[1224px] mx-auto border border-gray-200 overflow-hidden bg-[#F1F0EB]"
           aria-live="polite"
           role="region"
           aria-labelledby="ativo-titulo"
         >
-          {/* Coluna da Imagem */}
+          {/* Cabeçalho do card */}
+          <div className="px-4 sm:px-6 py-4 border-b border-gray-300">
+            <div className="flex justify-between items-start gap-4">
+              {/* Título e Subtítulo - Agora ocupa mais espaço */}
+              <div className="flex-1 min-w-0">
+                {" "}
+                {/* min-w-0 permite que o texto quebre */}
+                <div className="flex justify-between items-start mb-1">
+                  <h1 className="text-[28px] md:text-[36px] font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
+                    {ativoSelecionado}
+                  </h1>
 
-          <div
-            className="flex-1 relative w-full aspect-[12/9] overflow-hidden"
-            style={{
-              backgroundImage: `url(${
-                ativosInfo.find((a) => a.name === ativoSelecionado)?.image
-              })`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
-
-          {/* Linha Laranja Divisória */}
-          <div className="w-1 bg-[#ff5722]" />
-
-          {/* Coluna do Texto */}
-          <div className="flex-1 p-4 md:p-6 text-gray-800 relative bg-[#F1F0EB]">
-            {/* Botão de fechar */}
-
-            <button
-              onClick={() => {
-                setAtivoSelecionado(null);
-                setTimeout(() => {
-                  const section = document.getElementById("ativos");
-                  if (section) {
-                    const y =
-                      section.getBoundingClientRect().top +
-                      window.pageYOffset -
-                      0;
-                    window.scrollTo({ top: y, behavior: "smooth" });
-                  } else {
-                    // fallback: sobe até o topo da página
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  {/* Botão de fechar - agora dentro do fluxo do título */}
+                  <button
+                    onClick={() => {
+                      setAtivoSelecionado(null);
+                      setTimeout(() => {
+                        const section = document.getElementById("ativos");
+                        if (section) {
+                          const y =
+                            section.getBoundingClientRect().top +
+                            window.pageYOffset -
+                            0;
+                          window.scrollTo({ top: y, behavior: "smooth" });
+                        } else {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                      }, 100);
+                    }}
+                    className="text-[#ff5722] hover:text-[#e64a19] text-2xl md:text-2xl font-bold cursor-pointer focus:outline-none transition-colors duration-200 flex-shrink-0 mt-1"
+                    aria-label="Fechar painel de princípio ativo"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <h3 className="text-[20px] md:text-[23px] font-bold text-[#FF5C26] mb-3 font-space-grotesk-h3">
+                  {
+                    ativosInfo.find((a) => a.name === ativoSelecionado)
+                      ?.subtitle
                   }
-                }, 100);
-              }}
-              className="absolute top-2 right-2 text-[#ff5722] hover:text-[#e64a19] text-xl md:text-2xl font-bold cursor-pointer focus:outline-none z-10"
-              aria-label="Fechar painel de princípio ativo"
-            >
-              &times;
-            </button>
+                </h3>
+              </div>
+            </div>
+          </div>
 
-            {/* Título */}
-            <h2
-              id="ativo-titulo"
-              className="text-2xl md:text-3xl font-bold italic uppercase mb-3 leading-snug"
-            >
-              {ativoSelecionado}
-            </h2>
-            <h3 className="text-[#FF5C26] font-extrabold uppercase tracking-wide text-lg">
-              {ativosInfo.find((a) => a.name === ativoSelecionado)?.subtitle}
-            </h3>
+          {/* Conteúdo do card */}
+          <div className="p-4 sm:p-6 md:p-8">
+            {/* Descrição */}
+            <div className="mb-6 flex items-start">
+              <span className="w-3 h-3 bg-[#ff5722] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <h3 className="text-lg font-bold text-black mb-3 font-space-grotesk-h3">
+                Descrição
+              </h3>
+            </div>
+            <div className="space-y-4 text-gray-700">
+              {ativosInfo
+                .find((a) => a.name === ativoSelecionado)
+                ?.descricao.map((texto, i) => (
+                  <p
+                    key={i}
+                    className="text-gray-700 mb-4 text-justify"
+                    dangerouslySetInnerHTML={{ __html: texto }}
+                  />
+                ))}
+            </div>
 
-            {/* Texto sem scroll */}
-            <div className="space-y-3 text-xs md:text-sm leading-relaxed">
-              <p className="mt-7 text-[15px] md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-2">
-                {ativosInfo
-                  .find((a) => a.name === ativoSelecionado)
-                  ?.descricao.map((texto, i) => (
-                    <p key={i} dangerouslySetInnerHTML={{ __html: texto }} />
-                  ))}
-              </p>
-              <hr className="border-t border-gray-300" />
-              <p className="mt-5 text-[15px] md:text-1xl text-abanic-gray max-w-3xl mx-auto mb-0">
-                {ativosInfo
-                  .find((a) => a.name === ativoSelecionado)
-                  ?.beneficios.map((texto, i) => (
-                    <p key={i} dangerouslySetInnerHTML={{ __html: texto }} />
-                  ))}
-              </p>
+            {/* Linha divisória */}
+            <div className="my-8">
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+            </div>
+
+            {/* Benefícios */}
+            <div className="mt-6 flex items-start">
+              <span className="w-3 h-3 bg-[#ff5722] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <h3 className="text-lg font-bold text-black mb-3 font-space-grotesk-h3">
+                Benefícios
+              </h3>
+            </div>
+            <div className="space-y-4 text-gray-700">
+              {ativosInfo
+                .find((a) => a.name === ativoSelecionado)
+                ?.beneficios.map((texto, i) => (
+                  <p
+                    key={i}
+                    className="text-gray-700 mb-4 text-justify"
+                    dangerouslySetInnerHTML={{ __html: texto }}
+                  />
+                ))}
+            </div>
+
+            {/* Label com background */}
+            <div className="mt-8 pt-6 border-t border-gray-300">
+              <div className="flex items-center justify-center">
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange-100 text-[#ff5722] border border-orange-200">
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Princípio Ativo
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -314,9 +350,9 @@ const ProductPage = () => {
 
           {/* Conteúdo do Produto */}
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal text-abanic-gray-dark">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
               Hidratante com FPS50
-            </h2>
+            </h1>
 
             <p className="text-lg font-semibold text-[#ff5722]">R$00,00</p>
 
