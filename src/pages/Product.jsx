@@ -109,7 +109,6 @@ const PrincipiosAtivos = () => {
     { id: 6, src: RhodophytaItem, alt: "Rhodophyta" },
   ];
 
-  // Scroll suave para hash na URL
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -128,9 +127,8 @@ const PrincipiosAtivos = () => {
   useEffect(() => {
     if (ativoSelecionado && painelRef.current) {
       setTimeout(() => {
-        // Detecta largura da tela
-        const isMobile = window.innerWidth < 768; // breakpoint mobile
-        const yOffset = isMobile ? -77 : -110; // menor deslocamento no mobile
+        const isMobile = window.innerWidth < 768;
+        const yOffset = isMobile ? -77 : -110;
 
         const elementPosition =
           painelRef.current.getBoundingClientRect().top + window.pageYOffset;

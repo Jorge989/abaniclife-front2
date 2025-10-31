@@ -35,10 +35,7 @@ const BrandAndFounders = () => {
           style={{ marginTop: "-40px" }}
         >
           <div className="flex-1 space-y-4">
-            <p
-              className="text-[18px] font-medium text-muted-foreground leading-relaxed text-justify"
-              style={{ lineHeight: "1.8" }}
-            >
+            <p className="text-gray-700 mb-4 text-justify">
               Nós da ABANIC acreditamos que as pessoas são múltiplas e que devem
               se permitir explorar todas as suas capacidades, interesses e
               versões, criando um leque de possibilidades em suas
@@ -63,7 +60,7 @@ const BrandAndFounders = () => {
             <img
               src={ManifestImage}
               alt="Foto da Marca"
-              className="w-full h-auto object-cover rounded-xl"
+              className="w-full h-[500px] object-cover rounded-xl"
             />
           </div>
         </div>

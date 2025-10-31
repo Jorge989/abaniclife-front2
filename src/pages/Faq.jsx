@@ -35,8 +35,8 @@ const Faq = () => {
   };
 
   return (
-    <section className="w-full bg-white px-4 py-12 md:py-20 flex flex-col items-center mt-25">
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
+    <section className="w-full  px-4 py-12 md:py-20 flex flex-col items-center mt-25">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-space-grotesk-h1 text-center mb-10">
         FAQ
       </h1>
 
@@ -60,9 +60,7 @@ const Faq = () => {
                 </span>
               </button>
               {activeIndex === index && (
-                <p className="text-sm text-[#555] mt-2 leading-relaxed">
-                  {item.answer}
-                </p>
+                <p className="text-gray-700 mb-4 text-justify">{item.answer}</p>
               )}
             </div>
           ))}
@@ -80,9 +78,9 @@ const Faq = () => {
 
       {/* Contact Form */}
       <div className="w-full max-w-4xl mt-16">
-        <h3 className="text-xl md:text-2xl text-center text-[#494949] mb-8">
+        <h1 className="text-3xl md:text-3xl font-bold text-gray-800 leading-tight font-space-grotesk-h1 text-center mb-10">
           Ainda tem dúvidas? fale conosco!
-        </h3>
+        </h1>
         <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <input
             type="text"

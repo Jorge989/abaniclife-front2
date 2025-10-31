@@ -47,7 +47,7 @@ const BlogPostPage = () => {
             return (
               <p
                 key={i}
-                className="text-gray-700 mb-4 text-justify mb-2 ${precisaIndent ? 'indent-10' : ''}"
+                className="text-gray-700 mb-4 text-justify ${precisaIndent ? 'indent-10' : ''}"
               >
                 {texto}
               </p>
