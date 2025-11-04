@@ -25,8 +25,9 @@ const translations = {
         name: "Produto",
         href: "#",
         submenu: [
+          { name: "GEL RHODY CLEANSE", href: "/product#ativos" },
+          { name: "SÈRUM RHODY CLAREDOR", href: "/product#ativos" },
           { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
-          { name: "Lip Balm", href: "/product#ativos" },
         ],
       },
       {
@@ -128,17 +129,6 @@ const Header = () => {
           : "bg-abanic-gray-light"
       }`}
     >
-      {/* Top bar */}
-      {/* <div className="bg-abanic-gray-light border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center py-2">
-            <span className="text-sm text-abanic-gray">
-              {translations[language].topBar}
-            </span>
-          </div>
-        </div>
-      </div> */}
-
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between py-4 mt-5">
@@ -225,7 +215,7 @@ const Header = () => {
               </a>
 
               {item.submenu && activeSubmenu === index && (
-                <div className="absolute top-full left-0 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                <div className="absolute top-full left-0 w-58 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                   {item.submenu.map((subItem) => (
                     <a
                       key={subItem.name}

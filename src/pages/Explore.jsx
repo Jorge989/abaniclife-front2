@@ -9,7 +9,7 @@ const sectionsData = [
     title: "Rhodophytas - Algas vermelhas",
     image: rhodophytas,
     intro: [
-      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018). Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado no <b>RHODY SENCE FPS50</b> é o extrato das Rhodophytas hidrolisado. ",
+      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018). Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado na linha <b>RHODY SENCE</b> é o extrato das Rhodophytas hidrolisado. ",
     ],
     items: [
       {
@@ -24,7 +24,7 @@ const sectionsData = [
         id: "rhodophytas2",
         title: "Estímulo à síntese de ácido hialurônico",
         text: [
-          "<p>De acordo com ensaio técnico-clínico <em>in vitro</em> disponibilizado pelo fabricante, feitos com explantes humanos demonstraram que o ativo extraído da Rhodophytas e utilizado no <b>RODY SENCE FPS50</b> aumenta em até <b>124%</b> a síntese de ácido hialurônico, um componente fundamental para o preenchimento e hidratação profunda da pele. Isso contribui para a melhora da textura, elasticidade e viço cutâneo.</p>",
+          "<p>De acordo com ensaio técnico-clínico <em>in vitro</em> disponibilizado pelo fabricante, feitos com explantes humanos demonstraram que o ativo extraído da Rhodophytas e utilizado na linha <b>RHODY SENCE</b> aumenta em até <b>124%</b> a síntese de ácido hialurônico, um componente fundamental para o preenchimento e hidratação profunda da pele. Isso contribui para a melhora da textura, elasticidade e viço cutâneo.</p>",
         ],
       },
 
@@ -39,7 +39,7 @@ const sectionsData = [
         id: "rhodophytas4",
         title: "Reforço da barreira cutânea",
         text: [
-          "<p>Um estudo <em>in vivo</em> realizado com o ativo utilizado no <b>RHODY SENCE FPS50</b> apresentou a pele <b>99%</b> visivelmente mais hidratada. A expressão de proteínas estruturais (como exemplo +61% de catenina alfa-1, +69% de loricrina e 86% calmodulina like protein 5) foi significativamente aumentada, promovendo maior coesão entre os queratinócitos e fortalecendo a função de barreira da pele, essencial para evitar a desidratação de agressões externas. </p>",
+          "<p>Um estudo <em>in vivo</em> realizado com o ativo utilizado na linha <b>RHODY SENCE</b> apresentou a pele <b>99%</b> visivelmente mais hidratada. A expressão de proteínas estruturais (como exemplo +61% de catenina alfa-1, +69% de loricrina e 86% calmodulina like protein 5) foi significativamente aumentada, promovendo maior coesão entre os queratinócitos e fortalecendo a função de barreira da pele, essencial para evitar a desidratação de agressões externas. </p>",
         ],
       },
       {
@@ -71,7 +71,7 @@ const sectionsData = [
     title: "Bellis perennis – Margarida",
     image: bellis,
     intro: [
-      "<p>Também conhecida como margarida — é uma planta da família Asteraceae, típica de campos. Nativa da Europa Ocidental, Central e do Norte. (Tutin et al., 1976; Panda, 2004). O ativo utilizado no <b>RHODY SENCE FPS50</b> é um extrato obtido das flores orgânicas de <em>Bellis perennis</em>, certificado por órgãos como ECOCERT, NATRUE e COSMOS para uso em cosméticos naturais. Seu mecanismo de ação é amplo: atua simultaneamente na expressão e atividade da tirosinase (enzima responsável pela produção de melanina na pele), na ligação da α-MSH  (hormônio estimulante de melanócitos) ao receptor MC-1, na síntese de melanossomos e no processo de endocitose (mecanismo de incorporação celular) — etapas essenciais da melanogênese. Estudos in vitro do ativo demonstraram reduções significativas na expressão de tirosinase em até <b>89,9%</b>, na atividade da enzima até <b>49,8%</b> e na formação de melanina redução de até <b>74,1%</b>. </p>",
+      "<p>Também conhecida como margarida — é uma planta da família Asteraceae, típica de campos. Nativa da Europa Ocidental, Central e do Norte. (Tutin et al., 1976; Panda, 2004). O ativo utilizado na linha <b>RHODY SENCE</b> é um extrato obtido das flores orgânicas de <em>Bellis perennis</em>, certificado por órgãos como ECOCERT, NATRUE e COSMOS para uso em cosméticos naturais. Seu mecanismo de ação é amplo: atua simultaneamente na expressão e atividade da tirosinase (enzima responsável pela produção de melanina na pele), na ligação da α-MSH  (hormônio estimulante de melanócitos) ao receptor MC-1, na síntese de melanossomos e no processo de endocitose (mecanismo de incorporação celular) — etapas essenciais da melanogênese. Estudos in vitro do ativo demonstraram reduções significativas na expressão de tirosinase em até <b>89,9%</b>, na atividade da enzima até <b>49,8%</b> e na formação de melanina redução de até <b>74,1%</b>. </p>",
     ],
     items: [
       {
@@ -85,7 +85,7 @@ const sectionsData = [
         id: "bellis2",
         title: "Atuação sobre manchas e hiperpigmentações",
         text: [
-          "<p>Estudos clínicos realizado pelo detentor do ativo que foi utlizado na formulação do <b>RHODY SENCE FPS50</b>, com aplicação tópica de formulações contendo 2% e 5%, por 28 dias, demonstrou clareamento visível da pele e redução da intensidade de manchas senis, especialmente na região do dorso das mãos em voluntários entre 50 e 60 anos. Houve também manutenção dos efeitos após cessação do uso, sugerindo uma ação profunda e duradoura.</p>",
+          "<p>Estudos clínicos realizado pelo detentor do ativo que foi utlizado na formulação da linha <b>RHODY SENCE</b>, com aplicação tópica de formulações contendo 2% e 5%, por 28 dias, demonstrou clareamento visível da pele e redução da intensidade de manchas senis, especialmente na região do dorso das mãos em voluntários entre 50 e 60 anos. Houve também manutenção dos efeitos após cessação do uso, sugerindo uma ação profunda e duradoura.</p>",
         ],
       },
       {
@@ -102,14 +102,14 @@ const sectionsData = [
     title: "Evodia rutaecarpa — Rutaceae",
     image: evodia,
     intro: [
-      "<p>Originária da medicina tradicional oriental, a planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, essa planta é um arbusto ornamental que chega a crescer uns 10 mestros. O composto que está presente no <b>RHODY SENCE FPS50</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
+      "<p>Originária da medicina tradicional oriental, a planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, essa planta é um arbusto ornamental que chega a crescer uns 10 mestros. O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
     ],
     items: [
       {
         id: "evodea1",
         title: "Estímulo à microcirculação e melhora da radiância",
         text: [
-          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos in vitro do fabricante do ativo utilizado no <b>RHODY SENCE FPS50</b> agem aumentando a produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
+          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos in vitro do fabricante do ativo utilizado na linha <b>RHODY SENCE</b> agem aumentando a produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
           "<ul style='list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem;'>" +
             "<li>Aumento da luminosidade e radiância cutânea em até 96%;</li>" +
             "<li>Redução significativa da opacidade, vermelhidão e poros dilatados em 85%;</li>" +
