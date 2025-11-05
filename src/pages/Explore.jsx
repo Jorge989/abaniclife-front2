@@ -102,18 +102,18 @@ const sectionsData = [
     title: "Evodia rutaecarpa — Rutaceae",
     image: evodia,
     intro: [
-      "<p>Originária da medicina tradicional oriental, a planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, essa planta é um arbusto ornamental que chega a crescer uns 10 mestros. O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
+      "<p>Originária da medicina tradicional oriental, a planta  <em>Evodia rutaecarpa </em> (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
     ],
     items: [
       {
         id: "evodea1",
         title: "Estímulo à microcirculação e melhora da radiância",
         text: [
-          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos in vitro do fabricante do ativo utilizado na linha <b>RHODY SENCE</b> agem aumentando a produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
+          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos <em>in vitro</em> do fabricante do ativo utilizado na linha <b>RHODY SENCE</b> demonstraram aumento na produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
           "<ul style='list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem;'>" +
-            "<li>Aumento da luminosidade e radiância cutânea em até 96%;</li>" +
-            "<li>Redução significativa da opacidade, vermelhidão e poros dilatados em 85%;</li>" +
-            "<li>Melhora da homogeneidade do tom da pele e suavização da textura superficial em 96%.</li>" +
+            "<li>Aumento da luminosidade e radiância cutânea em até <b>96%</b>;</li>" +
+            "<li>Redução significativa da opacidade, vermelhidão e poros dilatados em <b>85%</b>;</li>" +
+            "<li>Melhora da homogeneidade do tom da pele e suavização da textura superficial em <b>96%</b>.</li>" +
             "</ul>",
         ],
       },
@@ -121,14 +121,14 @@ const sectionsData = [
         id: "evodea2",
         title: "Proteção antipoluição e ação anti-inflamatória",
         text: [
-          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do microbioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado pelo detentor do ativo, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
+          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do micro bioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado com o ativo da linha <b>RHODY SENCE</b>, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
         ],
       },
       {
         id: "evodea3",
         title: "Perfis bioativos e efeitos farmacológicos adicionais",
         text: [
-          "<p>Evodiamina, principal alcaloide da planta, exibe ação vasodilatadora endotélio-dependente, além de propriedades antitumorais, anti-inflamatórias, cardioprotetoras e neuroprotetoras. Atua por mecanismos como inibição da proliferação celular, bloqueio do ciclo celular, indução de apoptose e modulação de vias redox-sensíveis (Jiang et al. 2009; Tian et al., 2019). Rutaecarpina, outro alcaloide de destaque, apresenta efeitos cardiovasculares positivos — como ação inotrópica e cronotrópica, proteção contra lesão isquêmica, manutenção do metabolismo lipídico e glicêmico, além da modulação de eventos moleculares da aterosclerose. Seus efeitos são mediados principalmente por ativação dos receptores TRPV1 (Receptor sensorial envolvido na modulação da inflamação e termorregulação. Pode ser ativado por compostos como rutaecarpina, favorecendo efeitos calmantes e vasculares) e liberação de peptídeo (molécula de aminoácidos curta) relacionado ao gene da calcitonina (regulação dos níveis de cálcio no sangue-CGRP) (Jiang et al. 2009; Tianet al., 2019). </p>",
+          "<p>Evodiamina, principal alcaloide da planta, exibe ação vasodilatadora endotélio-dependente, além de propriedades antitumorais, anti-inflamatórias, cardioprotetoras e neuroprotetoras. Atua por mecanismos como inibição da proliferação celular, bloqueio do ciclo celular, indução de apoptose e modulação de vias redox-sensíveis (Jiang et al. 2009; Tian et al., 2019). Rutaecarpina, outro alcaloide de destaque, seus efeitos são mediados principalmente por ativação dos receptores TRPV1 (Receptor sensorial envolvido na modulação da inflamação e termorregulação. Pode ser ativado por compostos como rutaecarpina, favorecendo efeitos calmantes e vasculares) e liberação de peptídeo (molécula de aminoácidos curta) relacionado ao gene da calcitonina (regulação dos níveis de cálcio no sangue-CGRP) (Jiang et al. 2009; Tianet al., 2019). </p>",
         ],
       },
     ],
