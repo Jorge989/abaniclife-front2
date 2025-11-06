@@ -235,7 +235,7 @@ const Explore = () => {
                   </button>
 
                   {openItemId === item.id && (
-                    <div className="mt-2 text-gray-700 text-justify space-y-3">
+                    <div className="mt-2 text-gray-700 text-justify space-y-3 leading-[2]">
                       {item.text.map((t, i) => (
                         <div key={i} dangerouslySetInnerHTML={{ __html: t }} />
                       ))}
