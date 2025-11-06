@@ -12,23 +12,21 @@ const HeroSection = () => {
     {
       id: 1,
       title: "Explore a Natureza",
-      subtitle:
-        "Descubra as maravilhas naturais ao redor do mundo e inspire-se em sua beleza",
+      subtitle: "EXPLORE AS POSSIBILIDADES",
       image: Banner1,
       overlay: "bg-black/30",
     },
     {
       id: 2,
       title: "Cultura e Tendência",
-      subtitle: "Acompanhe com a ABANIC as últimas novidades do mundo",
+      subtitle: "SUAS MULTIPLAS VERSÕES",
       image: Banner3,
       overlay: "bg-black/40",
     },
     {
       id: 3,
       title: "Beleza Natural",
-      subtitle:
-        "Conecte-se com a essência da natureza através dos nossos produtos",
+      subtitle: "E DEIXE-SE SURPREENDER",
       image: Banner2,
       overlay: "bg-black/35",
     },
@@ -98,7 +96,18 @@ const HeroSection = () => {
             {/* Content */}
             <div className="relative z-10 h-full">
               <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
-                <p className="text-lg md:text-xl lg:text-3xl mb-0 opacity-90 animate-fade-in-up animation-delay-300">
+                <p
+                  className="
+    text-xl 
+    md:text-2xl 
+    lg:text-[38px] 
+    mb-0 
+    opacity-90 
+    animate-fade-in-up 
+    animation-delay-300 
+    font-space-grotesk-h1
+  "
+                >
                   {slide.subtitle}
                 </p>
               </div>

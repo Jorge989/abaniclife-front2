@@ -9,13 +9,13 @@ const BreadText = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       className="
-        mt-30
+        mt-40
         text-[36px]
         leading-normal
         text-abanic-gray
         max-w-4xl
         mx-auto
-        mb-20
+        mb-35
         font-space-grotesk-h1
         text-center
       "
