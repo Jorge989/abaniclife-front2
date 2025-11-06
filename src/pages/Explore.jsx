@@ -64,6 +64,31 @@ const sectionsData = [
           "<p>O envelhecimento cutâneo é impulsionado por fatores intrínsecos (como genética e alterações hormonais) e extrínsecos, como exposição à radiação UV, poluição e hábitos de vida.  Tanto os raios solares UVA quanto os raios solares UVB  desempenham papel central na aceleração do envelhecimento da pele, promovendo estresse oxidativo e inflamação crônica. A radiação solar ativa vias de sinalização que estimulam a produção excessiva de espécies reativas de oxigênio (ROS), desencadeando inflamação, degradação da matriz extracelular e perda da integridade da barreira cutânea. Compostos presentes em algas vermelhas, como catalase, superóxido dismutase e carragenas, são conhecidos por atuar como agentes antioxidantes naturais, ajudando a restaurar o equilíbrio celular mesmo sob condições de estresse ambiental (Berthon et al., 2017; Hwang et al., 2018). A <em>Furcellaria lumbricalis</em>, alga vermelha da qual é derivado o ativo, contém carragenas sulfatadas, que auxiliam na preservação da matriz extracelular por meio da inibição de processos inflamatórios e da neutralização de ROS — dois gatilhos centrais na degradação do colágeno (Hwang et al., 2018). Adicionalmente, estudos demonstram que compostos bioativos derivados de Rhodophytas, como polifenóis e polissacarídeos, podem modular a atividade de enzimas como as metaloproteinases de matriz (MMPs), responsáveis por fragmentar o colágeno e elastina da pele. A superexpressão dessas enzimas é estimulada por fatores como radiação UV e poluição atmosférica, e sua regulação representa um mecanismo-chave de ação antienvelhecimento (Baptista et al., 2023; Hwang et al., 2018). O extrato padronizado de <em>Furcellaria lumbricalis</em> demonstrou ação antioxidante significativa em testes in vitro, sugerindo potencial para proteger a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas naturais. </p>",
         ],
       },
+      {
+        id: "rhodophytas_referencias",
+        title: "Referências",
+        text: [
+          `
+
+    <p>BAPTISTA, E. G. <em>et al.</em> Marine bioactives against skin aging: the role of seaweed-derived polyphenols and polysaccharides in modulating MMPs and oxidative stress. <em>Marine Biotechnology</em>, v. 25, n. 1, p. 50–64, 2023.</p>
+
+    <p>BERTHON, J. Y. <em>et al.</em> Marine algae as attractive source to skin care. <em>Free Radical Research</em>, v. 51, n. 6, p. 555–567, 2017.</p>
+
+    <p>CODIF RECHERCHE & NATURE. <em>Ficha técnica: Rhodyssey™ PA – Furcellaria lumbricalis standardized extract.</em> França, 2023. Documento interno do fabricante.</p>
+
+    <p>CONDE, E. <em>et al.</em> Mycosporine-like amino acids from red macroalgae: a natural sunscreen perspective. <em>Marine Drugs</em>, v. 19, n. 7, p. 364, 2021.</p>
+
+    <p>HWANG, E. <em>et al.</em> Photoprotective substances derived from marine algae. <em>Marine Drugs</em>, v. 16, n. 10, p. 399, 2018.</p>
+
+    <p>KOTTA, J. <em>et al.</em> Macroalgae of the Kassari Bay (Baltic Sea). <em>Proceedings of the Estonian Academy of Sciences</em>, v. 52, p. 217–223, 2003.</p>
+
+    <p>RAYMENT, W. J. <em>Furcellaria lumbricalis</em> (Clawed fork weed). In: TYLER-WALTERS, H.; HISCOCK, K. (ed.). <em>Marine Life Information Network: Biology and Sensitivity Key Information Reviews</em> [online]. Plymouth: Marine Biological Association of the United Kingdom, 2008. Disponível em: &lt;https://www.marlin.ac.uk/species/detail/1616&gt;. Acesso em: 4 ago. 2025.</p>
+
+    <p>TRIPP, C. S. <em>et al.</em> Suppression of UVB-induced COX-2 expression by anti-inflammatory agents in SKH-1 mice. <em>Photochemistry and Photobiology</em>, v. 77, n. 3, p. 339–346, 2003.</p>
+
+    <p>FIGURA 1: © fotoman-kharkov/Getty Image. Acessado em agosto de 2025. Disponível em: &lt;https://peapix.com/bing/39853&gt;.</p>`,
+        ],
+      },
     ],
   },
   {
@@ -93,6 +118,20 @@ const sectionsData = [
         title: "Ação regenerativa",
         text: [
           "<p>Em um estudo realizado <em>in vivo</em>, a aplicação tópica do extrato demonstrou aumento na proliferação celular, formação de tecido de granulação e reepitelização da pele (processo de cicatrização). Esses efeitos são atribuídos à presença de compostos fenólicos (moléculas vegetais com propriedades antioxidantes que ajudam a neutralizar os radicais livres), flavonoides (subclasse dos compostos fenólicos com ação antioxidante, anti-inflamatória e fotoprotetora) e taninos (polifenóis vegetais com efeito adstringente e anti-inflamatório) com propriedades anti-inflamatórias e antioxidantes. </p>",
+        ],
+      },
+      {
+        id: "bellis_referencias",
+        title: "Referências",
+        text: [
+          `
+    <p>KARAKAŞ, F. P. et al. The evaluation of topical administration of <em>Bellis perennis</em> fraction on circular excision wound healing in Wistar albino rats. <em>Pharmaceutical Biology</em>, v. 50, n. 8, p. 1031-1037, 2012.</p>
+
+    <p>CLR – CHEMISCHES LABORATORIUM DR. KURT RICHTER GMBH. <em>Belides™ ORG: The natural way of skin lightening.</em> Berlin, 2020. Documento interno do fabricante.</p>
+
+    <p>PANDA, H. <em>Herbs cultivation and medicinal uses.</em> New Delhi: Asia Pacific Business Press, 2004.</p>
+
+    <p>TUTIN, T. G. et al. <em>Flora Europaea.</em> v. 4: Plantaginaceae to Compositae (and Rubiaceae). Cambridge: Cambridge University Press, 1976.</p>`,
         ],
       },
     ],
