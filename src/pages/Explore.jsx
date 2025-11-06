@@ -161,7 +161,9 @@ const Explore = () => {
             </h1>
 
             <p className="text-gray-700 mb-6">
-              Conheça em detalhes os ativos naturais que compõem os produtos...
+              A Linha RHODY SENCE foi desenvolvida com ativos naturais e
+              selecionado com base em seus benefícios. Conheça abaxo os
+              principais ativos de nossas formulações e sua ações.
             </p>
 
             <div>
