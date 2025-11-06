@@ -160,7 +160,7 @@ const PrincipiosAtivos = () => {
   "
       >
         <div className="animate-fade-in-down flex flex-row items-center gap-2 bg-[#ff5722]/90 text-white px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
-          <span className="text-xl animate-bounce">👆</span>
+          <span className="text-xl animate-bounce">👇</span>
           <span className="text-xs md:text-sm font-semibold">
             Clique nos ativos
           </span>
