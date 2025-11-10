@@ -32,35 +32,34 @@ const BlogPostPage = () => {
   };
 
   return (
-    <div className="relative max-w-5xl mx-auto px-6 py-10 mt-28">
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mt-28">
       {/* Imagem flutuante com animação */}
       <motion.img
-        key={`img-${id}`} // 👈 força remontagem e reanimação
+        key={`img-${id}`}
         src={article.image}
         alt={article.title}
         initial={{ x: -80, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full md:w-1/2 lg:w-5/12 float-left mr-6 mb-4 object-contain rounded-xl shadow-lg"
+        className="w-full md:w-1/2 lg:w-5/12 md:float-left md:mr-6 mb-6 object-contain rounded-xl shadow-lg"
       />
 
       {/* Conteúdo animado */}
       <motion.div
-        key={`content-${id}`} // 👈 idem aqui
+        key={`content-${id}`}
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-        className="text-justify text-gray-800 text-[18px] leading-[1.6]"
+        className="text-justify text-gray-800 text-[17px] md:text-[18px] leading-relaxed"
       >
-        <p className="text-sm text-gray-500 mb-1">{article.category}</p>
+        <p className="text-sm text-gray-500 mb-2">{article.category}</p>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
+        <h1 className="text-[28px] sm:text-[34px] md:text-[42px] font-bold text-gray-800 mb-5 leading-tight font-space-grotesk-h1">
           {article.title}
         </h1>
 
         {article.content.split("\n").map((p, i) => {
           if (p.trim() === "") return null;
-
           return (
             <p key={i} className="text-gray-700 mb-5 text-justify">
               {p.trim()}
@@ -70,28 +69,32 @@ const BlogPostPage = () => {
       </motion.div>
 
       {/* === SETAS DE NAVEGAÇÃO === */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={goToPrev}
-        className="absolute left-[-70px] top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
-        aria-label="Artigo anterior"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </Button>
+      <div className="flex justify-between items-center mt-8 md:mt-0">
+        {/* Botão anterior */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goToPrev}
+          className="fixed md:absolute left-3 md:left-[-60px] top-[150px] md:top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 transition-all"
+          aria-label="Artigo anterior"
+        >
+          <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+        </Button>
 
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={goToNext}
-        className="absolute right-[-70px] top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
-        aria-label="Próximo artigo"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </Button>
+        {/* Botão próximo */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goToNext}
+          className="fixed md:absolute right-3 md:right-[-60px] top-[150px] md:top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 transition-all"
+          aria-label="Próximo artigo"
+        >
+          <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+        </Button>
+      </div>
 
       {/* Indicador de número de artigo */}
-      <div className="absolute bottom-4 right-4 text-gray-600 text-sm opacity-70">
+      <div className="absolute bottom-6 right-6 text-gray-600 text-sm opacity-70">
         {articleIndex + 1} / {articles.length}
       </div>
     </div>
