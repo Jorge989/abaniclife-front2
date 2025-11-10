@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import ManifestImage from "../assets/Manifesto.png";
 import ImageWoman from "../assets/manifest/woman.png";
 import ImageHouse from "../assets/manifest/house.png";
 import ImageMountains from "../assets/manifest/mountains.png";
@@ -24,7 +23,6 @@ const BrandAndFounders = () => {
     }
   }, [location]);
 
-  // 👉 Agora cada seção tem seu texto e imagem
   const sections = [
     {
       id: "section1",
@@ -38,7 +36,6 @@ const BrandAndFounders = () => {
     },
     {
       id: "section2",
-
       text: `
         Influeniada pelo design, arte, pilares na ciência e na tecnologia para criar produtos de alta qualidade e respeito à natureza. Criamos um espaço onde podemos dialogar com as pessoas que posssuem essa autenticidade e compartilham o interesse em lançar um olhar diferente sobre as possíveis combinações de experiências transformadoras.
       `,
@@ -48,7 +45,6 @@ const BrandAndFounders = () => {
     },
     {
       id: "section3",
-
       text: `
         Temos como propósito acompanhar as pessoas em suas jornadas pessoais em todos os momentos De maneira disruptiva e original A ABANIC é para aqueles que desejam viver todas as possibilidades!
       `,
@@ -58,7 +54,6 @@ const BrandAndFounders = () => {
     },
   ];
 
-  // Animações
   const imageVariants = (reverse) => ({
     hidden: { opacity: 0, x: reverse ? 150 : -150 },
     visible: {
@@ -83,12 +78,11 @@ const BrandAndFounders = () => {
       id={id}
       className={`flex flex-col ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
-      } gap-6 p-4 border-none`}
-      style={{ marginTop: "-20px" }}
+      } gap-10 border-none`}
+      style={{ marginTop: "-10px" }}
     >
-      {/* Imagem animada */}
       <motion.div
-        className="flex-1"
+        className="flex-1 flex justify-center"
         variants={imageVariants(reverse)}
         initial="hidden"
         whileInView="visible"
@@ -97,13 +91,12 @@ const BrandAndFounders = () => {
         <img
           src={image}
           alt={title}
-          className={`w-full h-[430px] object-cover rounded-xl shadow-md ${
-            id === "section1" ? "object-[center_0%]" : "object-center"
+          className={`w-full min-h-[400px] object-cover rounded-xl shadow-md ${
+            id === "section1" ? "object-[center_30%]" : "object-center"
           }`}
         />
       </motion.div>
 
-      {/* Texto animado */}
       <motion.div
         className="flex-1 space-y-4 flex flex-col justify-start"
         variants={textVariants}
@@ -113,25 +106,30 @@ const BrandAndFounders = () => {
       >
         {hasTitle && (
           <h1
-            className="text-3xl md:text-4xl mb-4 leading-tight font-space-grotesk-h1 text-center"
+            className="mb-4 leading-tight font-space-grotesk-h1 text-center"
             style={{
               color: "#F26B3A",
               letterSpacing: "2px",
               fontWeight: "500",
+              fontSize: "28px",
+              lineHeight: "1.2",
             }}
           >
             IT IS ALL ABOUT THE <br />
-            <span className="font-bold tracking-widest text-[40px]">
+            <span
+              className="font-bold tracking-widest"
+              style={{ fontSize: "45px" }}
+            >
               POSSIBILITIES
             </span>
           </h1>
         )}
         {!hasTitle && (
-          <h2 className="text-2xl md:text-3xl font-space-grotesk-h1 font-semibold text-gray-800 mb-2">
+          <h2 className="text-2xl md:text-3xl font-space-grotesk-h1 font-semibold text-gray-800 mb-1">
             {title}
           </h2>
         )}
-        <p className="text-gray-700 mb-4 text-justify whitespace-pre-line">
+        <p className="text-gray-700 text-[22px] md:text-[25px] mb-4 text-justify whitespace-pre-line leading-relaxed">
           {text}
         </p>
       </motion.div>
@@ -143,7 +141,7 @@ const BrandAndFounders = () => {
       className="overflow-x-hidden"
       style={{ backgroundColor: "#F1F0EB" }}
     >
-      <div id="marca" className="max-w-7xl mx-auto px-4 py-35 space-y-20">
+      <div id="marca" className="max-w-5xl mx-auto px-6 py-10 mt-28 space-y-20">
         <h1 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
           Manifesto da Marca
         </h1>
@@ -151,7 +149,6 @@ const BrandAndFounders = () => {
           Conheça um pouco da nossa marca e seus fundamentos
         </p>
 
-        {/* Render dinâmico das seções */}
         {sections.map((section) => renderSection(section))}
       </div>
     </section>
