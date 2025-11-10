@@ -141,14 +141,14 @@ const sectionsData = [
     title: "Evodia rutaecarpa — Rutaceae",
     image: evodia,
     intro: [
-      "<p>Originária da medicina tradicional oriental, a planta  <em>Evodia rutaecarpa </em> (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada. Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
+      "<p>Originária da medicina tradicional oriental, a planta  <em>Evodia rutaecarpa </em> (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada.   <br><br>Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
     ],
     items: [
       {
         id: "evodea1",
         title: "Estímulo à microcirculação e melhora da radiância",
         text: [
-          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos <em>in vitro</em> do fabricante do ativo utilizado na linha <b>RHODY SENCE</b> demonstraram aumento na produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
+          "<p>Com o avanço da idade e a exposição contínua a fatores ambientais, a microcirculação dérmica sofre redução, comprometendo o aporte de oxigênio e nutrientes às células da pele e com consequencia sua tonalidade e textura. Estudos <em>in vitro</em> do fabricante do ativo utilizado na linha <b>RHODY SENCE</b> demonstraram aumento na produção de óxido nítrico (NO) em <b>111%</b>. O óxido nítrico é um importante mediador da vasodilatação, favorecendo a circulação dérmica e o aporte de nutrientes. <br><br>Também foram conduzidos ensaios clínicos onde foi aplicado 1% e 3% do ativo em uso tópico e observou-se:</p>",
           "<ul style='list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem;'>" +
             "<li>Aumento da luminosidade e radiância cutânea em até <b>96%</b>;</li>" +
             "<li>Redução significativa da opacidade, vermelhidão e poros dilatados em <b>85%</b>;</li>" +
@@ -160,7 +160,7 @@ const sectionsData = [
         id: "evodea2",
         title: "Proteção antipoluição e ação anti-inflamatória",
         text: [
-          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do micro bioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado com o ativo da linha <b>RHODY SENCE</b>, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
+          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do micro bioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. <br><br>Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado com o ativo da linha <b>RHODY SENCE</b>, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. <br><br>Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
         ],
       },
       {
@@ -175,21 +175,21 @@ const sectionsData = [
         title: "Referências",
         text: [
           `
-    <p>CHEN, F. et al. Transdermal behaviors comparisons among <em>Evodia rutaecarpa</em> extracts and major alkaloids by in vitro and in vivo methods. <em>Fitoterapia</em>, v. 83, n. 4, p. 706-713, 2012.</p>
+    <p>CHEN, F. et al. Transdermal behaviors comparisons among <em>Evodia rutaecarpa</em> extracts and major alkaloids by in vitro and in vivo methods. <em>Fitoterapia</em>, v. 83, n. 4, p. 706-713, 2012.</p></br>
 
-    <p>FORMAN, H. J.; ZHANG, H. Targeting oxidative stress in disease: promise and limitations of antioxidant therapy. <em>Nature Reviews Drug Discovery</em>, v. 20, p. 689-709, 2021.</p>
+    <p>FORMAN, H. J.; ZHANG, H. Targeting oxidative stress in disease: promise and limitations of antioxidant therapy. <em>Nature Reviews Drug Discovery</em>, v. 20, p. 689-709, 2021.</p></br>
 
-    <p>JIANG, J.; HU, C-P. Evodiamine: a novel anti-cancer alkaloid from <em>Evodia rutaecarpa</em>. <em>Molecules</em>, v. 14, n. 5, p. 1852–1859, 2009.</p>
+    <p>JIANG, J.; HU, C-P. Evodiamine: a novel anti-cancer alkaloid from <em>Evodia rutaecarpa</em>. <em>Molecules</em>, v. 14, n. 5, p. 1852–1859, 2009.</p></br>
 
-    <p>ROBERTET. <em>Gatuline® Radiance – Technical Dossier</em>. Grasse: Robertet Group, 2017. Documento interno do fabricante.</p>
+    <p>ROBERTET. <em>Gatuline® Radiance – Technical Dossier</em>. Grasse: Robertet Group, 2017. Documento interno do fabricante.</p></br>
 
-    <p>TIAN, K.; LI, J.; XU, S. Rutaecarpine: a promising cardiovascular protective alkaloid from <em>Evodia rutaecarpa</em> (Wu Zhu Yu). <em>Pharmacological Research</em>, v. 141, p. 541–550, 2019.</p>
+    <p>TIAN, K.; LI, J.; XU, S. Rutaecarpine: a promising cardiovascular protective alkaloid from <em>Evodia rutaecarpa</em> (Wu Zhu Yu). <em>Pharmacological Research</em>, v. 141, p. 541–550, 2019.</p></br>
 
-    <p>WANG, C. et al. Rutaecarpine: a promising cardiovascular protective alkaloid from <em>Evodia rutaecarpa</em>. <em>Phytochemistry Reviews</em>, v. 19, p. 971-985, 2020.</p>
+    <p>WANG, C. et al. Rutaecarpine: a promising cardiovascular protective alkaloid from <em>Evodia rutaecarpa</em>. <em>Phytochemistry Reviews</em>, v. 19, p. 971-985, 2020.</p></br>
 
-    <p>ZHOU, Y. et al. Air pollution and skin aging: molecular mechanisms and clinical perspectives. <em>Journal of Dermatological Science</em>, v. 104, n. 2, p. 78-85, 2021.</p>
+    <p>ZHOU, Y. et al. Air pollution and skin aging: molecular mechanisms and clinical perspectives. <em>Journal of Dermatological Science</em>, v. 104, n. 2, p. 78-85, 2021.</p></br>
 
-    <p>PEAKVISOR. Jiangxi – China. [Imagem]. Disponível em: <a href="https://peakvisor.com/adm/jiangxi.html" target="_blank" class="text-blue-600 hover:underline">https://peakvisor.com/adm/jiangxi.html</a>. Acesso em: 08 ago. 2025.</p>`,
+    <p>PEAKVISOR. Jiangxi – China. [Imagem]. Disponível em: <a href="https://peakvisor.com/adm/jiangxi.html" target="_blank" class="text-blue-600 hover:underline">https://peakvisor.com/adm/jiangxi.html</a>. Acesso em: 08 ago. 2025.</p></br>`,
         ],
       },
     ],
