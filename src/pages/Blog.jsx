@@ -3,7 +3,7 @@ import { articles } from "../data/articles";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "../components/ui/button"; // ajuste o caminho se necessário
+import { Button } from "../components/ui/button";
 
 const BlogPostPage = () => {
   const { id } = useParams();
@@ -69,29 +69,30 @@ const BlogPostPage = () => {
       </motion.div>
 
       {/* === SETAS DE NAVEGAÇÃO === */}
-      <div className="flex justify-between items-center mt-8 md:mt-0">
-        {/* Botão anterior */}
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={goToPrev}
-          className="fixed md:absolute left-3 md:left-[-60px] top-[150px] md:top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 transition-all"
-          aria-label="Artigo anterior"
-        >
-          <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
-        </Button>
+      {/* Mobile → fixa no meio da tela / Desktop → posicionamento lateral */}
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={goToPrev}
+        className="fixed md:absolute left-3 md:left-[-60px] top-1/2 md:top-[180px] -translate-y-1/2 md:translate-y-0 
+                   z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full 
+                   w-10 h-10 md:w-12 md:h-12 transition-all"
+        aria-label="Artigo anterior"
+      >
+        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+      </Button>
 
-        {/* Botão próximo */}
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={goToNext}
-          className="fixed md:absolute right-3 md:right-[-60px] top-[150px] md:top-[180px] z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 transition-all"
-          aria-label="Próximo artigo"
-        >
-          <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
-        </Button>
-      </div>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={goToNext}
+        className="fixed md:absolute right-3 md:right-[-60px] top-1/2 md:top-[180px] -translate-y-1/2 md:translate-y-0 
+                   z-20 bg-black/10 hover:bg-black/20 text-gray-700 backdrop-blur-sm rounded-full 
+                   w-10 h-10 md:w-12 md:h-12 transition-all"
+        aria-label="Próximo artigo"
+      >
+        <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+      </Button>
 
       {/* Indicador de número de artigo */}
       <div className="absolute bottom-6 right-6 text-gray-600 text-sm opacity-70">
