@@ -9,7 +9,7 @@ const sectionsData = [
     title: "Rhodophytas - Algas vermelhas",
     image: rhodophytas,
     intro: [
-      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018). Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado na linha <b>RHODY SENCE</b> é o extrato das Rhodophytas hidrolisado. ",
+      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018).<br><br> Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado na linha <b>RHODY SENCE</b> é o extrato das Rhodophytas hidrolisado. ",
     ],
     items: [
       {
@@ -70,23 +70,23 @@ const sectionsData = [
         text: [
           `
 
-    <p>BAPTISTA, E. G. <em>et al.</em> Marine bioactives against skin aging: the role of seaweed-derived polyphenols and polysaccharides in modulating MMPs and oxidative stress. <em>Marine Biotechnology</em>, v. 25, n. 1, p. 50–64, 2023.</p>
+    <p>BAPTISTA, E. G. <em>et al.</em> Marine bioactives against skin aging: the role of seaweed-derived polyphenols and polysaccharides in modulating MMPs and oxidative stress. <em>Marine Biotechnology</em>, v. 25, n. 1, p. 50–64, 2023.<br><br></p>
 
-    <p>BERTHON, J. Y. <em>et al.</em> Marine algae as attractive source to skin care. <em>Free Radical Research</em>, v. 51, n. 6, p. 555–567, 2017.</p>
+    <p>BERTHON, J. Y. <em>et al.</em> Marine algae as attractive source to skin care. <em>Free Radical Research</em>, v. 51, n. 6, p. 555–567, 2017.<br><br></p>
 
-    <p>CODIF RECHERCHE & NATURE. <em>Ficha técnica: Rhodyssey™ PA – Furcellaria lumbricalis standardized extract.</em> França, 2023. Documento interno do fabricante.</p>
+    <p>CODIF RECHERCHE & NATURE. <em>Ficha técnica: Rhodyssey™ PA – Furcellaria lumbricalis standardized extract.</em> França, 2023. Documento interno do fabricante.<br><br></p>
 
-    <p>CONDE, E. <em>et al.</em> Mycosporine-like amino acids from red macroalgae: a natural sunscreen perspective. <em>Marine Drugs</em>, v. 19, n. 7, p. 364, 2021.</p>
+    <p>CONDE, E. <em>et al.</em> Mycosporine-like amino acids from red macroalgae: a natural sunscreen perspective. <em>Marine Drugs</em>, v. 19, n. 7, p. 364, 2021.<br><br></p>
 
-    <p>HWANG, E. <em>et al.</em> Photoprotective substances derived from marine algae. <em>Marine Drugs</em>, v. 16, n. 10, p. 399, 2018.</p>
+    <p>HWANG, E. <em>et al.</em> Photoprotective substances derived from marine algae. <em>Marine Drugs</em>, v. 16, n. 10, p. 399, 2018.<br><br></p>
 
-    <p>KOTTA, J. <em>et al.</em> Macroalgae of the Kassari Bay (Baltic Sea). <em>Proceedings of the Estonian Academy of Sciences</em>, v. 52, p. 217–223, 2003.</p>
+    <p>KOTTA, J. <em>et al.</em> Macroalgae of the Kassari Bay (Baltic Sea). <em>Proceedings of the Estonian Academy of Sciences</em>, v. 52, p. 217–223, 2003.<br><br></p>
 
-    <p>RAYMENT, W. J. <em>Furcellaria lumbricalis</em> (Clawed fork weed). In: TYLER-WALTERS, H.; HISCOCK, K. (ed.). <em>Marine Life Information Network: Biology and Sensitivity Key Information Reviews</em> [online]. Plymouth: Marine Biological Association of the United Kingdom, 2008. Disponível em: &lt;https://www.marlin.ac.uk/species/detail/1616&gt;. Acesso em: 4 ago. 2025.</p>
+    <p>RAYMENT, W. J. <em>Furcellaria lumbricalis</em> (Clawed fork weed). In: TYLER-WALTERS, H.; HISCOCK, K. (ed.). <em>Marine Life Information Network: Biology and Sensitivity Key Information Reviews</em> [online]. Plymouth: Marine Biological Association of the United Kingdom, 2008. Disponível em: &lt;https://www.marlin.ac.uk/species/detail/1616&gt;. Acesso em: 4 ago. 2025.<br><br></p>
 
-    <p>TRIPP, C. S. <em>et al.</em> Suppression of UVB-induced COX-2 expression by anti-inflammatory agents in SKH-1 mice. <em>Photochemistry and Photobiology</em>, v. 77, n. 3, p. 339–346, 2003.</p>
+    <p>TRIPP, C. S. <em>et al.</em> Suppression of UVB-induced COX-2 expression by anti-inflammatory agents in SKH-1 mice. <em>Photochemistry and Photobiology</em>, v. 77, n. 3, p. 339–346, 2003.<br><br></p>
 
-    <p>FIGURA 1: © fotoman-kharkov/Getty Image. Acessado em agosto de 2025. Disponível em: &lt;https://peapix.com/bing/39853&gt;.</p>`,
+    <p>FIGURA 1: © fotoman-kharkov/Getty Image. Acessado em agosto de 2025. Disponível em: https://peapix.com/bing/39853.<br><br></p>`,
         ],
       },
     ],
@@ -96,7 +96,7 @@ const sectionsData = [
     title: "Bellis perennis – Margarida",
     image: bellis,
     intro: [
-      "<p>Também conhecida como margarida — é uma planta da família Asteraceae, típica de campos. Nativa da Europa Ocidental, Central e do Norte. (Tutin et al., 1976; Panda, 2004). O ativo utilizado na linha <b>RHODY SENCE</b> é um extrato obtido das flores orgânicas de <em>Bellis perennis</em>, certificado por órgãos como ECOCERT, NATRUE e COSMOS para uso em cosméticos naturais. Seu mecanismo de ação é amplo: atua simultaneamente na expressão e atividade da tirosinase (enzima responsável pela produção de melanina na pele), na ligação da α-MSH  (hormônio estimulante de melanócitos) ao receptor MC-1, na síntese de melanossomos e no processo de endocitose (mecanismo de incorporação celular) — etapas essenciais da melanogênese. Estudos in vitro do ativo demonstraram reduções significativas na expressão de tirosinase em até <b>89,9%</b>, na atividade da enzima até <b>49,8%</b> e na formação de melanina redução de até <b>74,1%</b>. </p>",
+      "<p>Também conhecida como margarida — é uma planta da família Asteraceae, típica de campos. Nativa da Europa Ocidental, Central e do Norte. (Tutin et al., 1976; Panda, 2004).<br><br> O ativo utilizado na linha <b>RHODY SENCE</b> é um extrato obtido das flores orgânicas de <em>Bellis perennis</em>, certificado por órgãos como ECOCERT, NATRUE e COSMOS para uso em cosméticos naturais. Seu mecanismo de ação é amplo: atua simultaneamente na expressão e atividade da tirosinase (enzima responsável pela produção de melanina na pele), na ligação da α-MSH  (hormônio estimulante de melanócitos) ao receptor MC-1, na síntese de melanossomos e no processo de endocitose (mecanismo de incorporação celular) — etapas essenciais da melanogênese. Estudos in vitro do ativo demonstraram reduções significativas na expressão de tirosinase em até <b>89,9%</b>, na atividade da enzima até <b>49,8%</b> e na formação de melanina redução de até <b>74,1%</b>. </p>",
     ],
     items: [
       {
@@ -125,13 +125,13 @@ const sectionsData = [
         title: "Referências",
         text: [
           `
-    <p>KARAKAŞ, F. P. et al. The evaluation of topical administration of <em>Bellis perennis</em> fraction on circular excision wound healing in Wistar albino rats. <em>Pharmaceutical Biology</em>, v. 50, n. 8, p. 1031-1037, 2012.</p>
+    <p>KARAKAŞ, F. P. et al. The evaluation of topical administration of <em>Bellis perennis</em> fraction on circular excision wound healing in Wistar albino rats. <em>Pharmaceutical Biology</em>, v. 50, n. 8, p. 1031-1037, 2012.<br><br></p>
 
-    <p>CLR – CHEMISCHES LABORATORIUM DR. KURT RICHTER GMBH. <em>Belides™ ORG: The natural way of skin lightening.</em> Berlin, 2020. Documento interno do fabricante.</p>
+    <p>CLR – CHEMISCHES LABORATORIUM DR. KURT RICHTER GMBH. <em>Belides™ ORG: The natural way of skin lightening.</em> Berlin, 2020. Documento interno do fabricante.<br><br></p>
 
-    <p>PANDA, H. <em>Herbs cultivation and medicinal uses.</em> New Delhi: Asia Pacific Business Press, 2004.</p>
+    <p>PANDA, H. <em>Herbs cultivation and medicinal uses.</em> New Delhi: Asia Pacific Business Press, 2004.<br><br></p>
 
-    <p>TUTIN, T. G. et al. <em>Flora Europaea.</em> v. 4: Plantaginaceae to Compositae (and Rubiaceae). Cambridge: Cambridge University Press, 1976.</p>`,
+    <p>TUTIN, T. G. et al. <em>Flora Europaea.</em> v. 4: Plantaginaceae to Compositae (and Rubiaceae). Cambridge: Cambridge University Press, 1976.<br><br></p>`,
         ],
       },
     ],
