@@ -101,14 +101,14 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-relaxed p-10 -mt-10">
+                <p className="text-gray-600 text-base lg:text-[22px] leading-relaxed p-0 lg:p-10 lg:-mt-10">
                   <b>3 passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
                   ativos naturais extraídos de
                   <b>
                     {" "}
                     algas vermelhas, flores de margaridas e esqualano vegetal
-                  </b>{" "}
+                  </b>
                   com propriedades
                   <b> antioxidantes, clareadoras e iluminadoras.</b> Além de
                   ativos que oferecem
