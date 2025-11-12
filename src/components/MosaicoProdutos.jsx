@@ -29,13 +29,6 @@ const MosaicoProdutos = () => {
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
       <div className="w-full max-w-[90%] mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
-          Hidratante com FPS50
-        </h1>
-        <p className="text-lg md:text-xl text-abanic-gray mb-10">
-          Hidratante multifuncional com proteção.
-        </p>
-
         <div className="flex flex-col gap-4">
           {/* Mobile: Uma foto abaixo da outra */}
           {/* Desktop: Duas em cima, uma embaixo */}

@@ -15,9 +15,10 @@ const BreadText = () => {
         text-abanic-gray
         max-w-4xl
         mx-auto
-        mb-35
+        mb-28
         font-space-grotesk-h1
         text-center
+        text-gray-800
       "
     >
       COM FÓRMULAS LEVES E CONCENTRADAS EM ATIVOS A LINHA <b>RHODY SENCE</b>{" "}
