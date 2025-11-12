@@ -101,7 +101,7 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-relaxed p-0 lg:p-10 lg:-mt-10">
+                <p className="text-gray-600 text-base lg:text-[22px] leading-relaxed pt-4 pr-0 pb-0 pl-0 lg:pt-0 lg:pr-10 lg:pb-0 lg:pl-0">
                   <b>3 passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
                   ativos naturais extraídos de
@@ -120,7 +120,7 @@ const MosaicoProdutos = () => {
 
               {/* Imagem */}
               <motion.div
-                className="flex justify-end items-start w-full lg:w-[40%]"
+                className="flex justify-end items-start w-full lg:w-[40%] mt-6 lg:mt-0"
                 initial={{ opacity: 0, x: 100, scale: 0.9 }}
                 whileInView={{
                   opacity: 1,
