@@ -98,9 +98,9 @@ const HeroSection = () => {
               <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
                 <p
                   className="
-    text-xl 
-    md:text-2xl 
-    lg:text-[38px] 
+    text-[40px]          /* 🔥 maior no mobile */
+    md:text-[28px]       /* bom em tablets */
+    lg:text-[38px]       /* mantém no desktop */
     mb-0 
     opacity-90 
     animate-fade-in-up 

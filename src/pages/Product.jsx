@@ -17,50 +17,50 @@ import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
 
 const ativosInfo = [
   {
-    name: "RHODYSSEY",
+    name: "RHODOPHYTAS",
     subtitle: "ANTI OXIDANTE",
     desktop: { top: "2%", left: "2.2%", width: "33%", height: "86%" },
     mobile: { top: "0%", left: "0.5%", width: "49%", height: "42%" },
     descricao: [
-      "<p> A macroalga vermelha Furcellaria lumbricalis, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
+      "<p> A macroalga vermelha <em>Furcellaria lumbricalis</em>, pertencente ao filo das Rhodophytas, é encontrada na Europa, no Mar Báltico — especialmente na Baía de Kassari, na Estônia. Possui bioativos com potencial cosmético.</p>",
     ],
     beneficios: [
-      "<p>Foi demonstrado que ativo utilizado na linha <b>RHODY SENCE</b> aumenta em até <b>124% a sintese de ácido hialurônico.</b> Além de demonstrar. <b>ação antioxidante</b> e potencial proteção a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas. Além de aumentar significativamente a expressão de proteínas estruturais<b>fortalecendo a função de barreira da pele,</b> essencial para evitar a desidratação causada por agressões externas. O ativo também demonstrou aumentar em até <b>276% a produção de energia celular</b> promovendo a <b>vitalidade da pele.</b></p>",
+      "<p>Foi demonstrado que ativo utilizado na linha <b>RHODY SENCE</b> aumenta em até <b>124% a sintese de ácido hialurônico.</b> Além de demonstrar <b>ação antioxidante</b> e potencial proteção da pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas. Aumenta significativamente a expressão de proteínas estruturais <b>fortalecendo a função de barreira da pele,</b> essencial para evitar a desidratação causada por agressões externas. O ativo demonstrou aumentar em até <b>276% a produção de energia celular</b> promovendo a <b>vitalidade da pele.</b></p>",
     ],
     image: Rhodophyta,
   },
   {
-    name: "BELIDES",
-    subtitle: "ANTI PIGMENTAÇÂO",
+    name: "BELLIS PERENNIS",
+    subtitle: "ANTI-PIGMENTAÇÃO",
     desktop: { top: "2.2%", left: "37%", width: "22.8%", height: "86%" },
     mobile: { top: "0%", left: "51%", width: "49%", height: "42%" },
     descricao: [
       "<p>Conhecido popularmente como margarida, é uma planta originária da Europa. Estudos demonstraram que seu uso regular contribui para a <b>uniformização do tom da pele</b> tornando-o um ativo de destaque em formulações <b>clareadoras e iluminadoras.</b></p>",
     ],
     beneficios: [
-      "<p>Atuando na redução da sintese de melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até <b>31,4%</b> redução em até <b>76%</b> endotelina, bem como a modulação do receptor MC-1 ema té <b>89,9%</b></p>",
+      "<p>Atuando na redução da síntese da melanina por múltiplos mecanismos, incluindo a inibição da atividade da tirosinase em até <b>31,4%</b> redução em até <b>76%</b> endotelina, bem como a modulação do receptor MC-1 em até <b>89,9%</b></p>",
     ],
     image: Belides,
   },
   {
-    name: "EVODIA RUTAECARPA RUTACEAE",
+    name: "EVODIA RUTAECARPA",
     subtitle: "LUMINOSIDADE",
     desktop: { top: "1%", left: "61%", width: "18%", height: "36.5%" },
     mobile: { top: "41%", left: "0.5%", width: "49%", height: "29%" },
     descricao: [
-      "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico realizado pelo dentor do ativo obtido da fruta e utilizado na linha <b>RHODY SENCE</b> demonstrou em seus resultados:</p>",
+      "<p>A planta Evodia rutaecarpa (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China e pertence da familía Rutaceae. O dossiê técnico do ativo obtido da fruta e utilizado na linha <b>RHODY SENCE,</b> demonstrou em seus resultados:</p>",
     ],
     beneficios: [
-      "<p>Aumento na <b>iluminosidade</b> e <b>radiância</b> cutânea em até <b>96%</b> Reduz significativa da opacidade, vermelhidão e poros dilatados em <b>85%</b> Além da melhora na homogeneidade do tom da pele em <b>96%.</b> Os voluntários apresentaram <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais <b>hidratada e 100% do aumento da macies</b> da pele.</p>",
+      "<p>Aumento na <b>iluminosidade</b> e <b>radiância</b> cutânea em até <b>96%</b>. Redução significativa da opacidade, vermelhidão e poros dilatados em <b>85%</b> e da melhora na homogeneidade do tom da pele em <b>96%.</b> Os voluntários apresentaram <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais <b>hidratada e 100% do aumento da macies</b> da pele.</p>",
     ],
     image: Gatuline,
   },
   {
-    name: "ESQUALANO",
+    name: "ESQUALANO VEGETAL",
     desktop: { top: "1%", left: "80%", width: "18%", height: "36.5%" },
     mobile: { top: "41%", left: "51%", width: "49%", height: "29%" },
     descricao: [
-      "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios:</p>",
+      "<p>O esqualano derivado do esqualeno composto triterpênico que representa cerca de <b>13%</b> da composição lipídica cutânea. É frequentemente de <b>origem vegetal</b> obtida de fontes como óleo de oliva, óleo de palma, óleo de gérmen de trigo, óleo de amaranto e óleo de farelo de arroz. Oferece múltiplos benefícicios.</p>",
     ],
     beneficios: [
       "<p>Forma um <b>filme protetor</b> que reduz a perda de água e mantém <b>maciez, elasticidade e hidratação.</b> Sua estrutura é semelhante aos lipídios naturais, com a boa absorção e tolerância, até mesmo em peles sensíveis ou acneicas. <b>Combate radicais lives</b> e ajuda a prevenir danos e envelhecimento precoce.</p>",
@@ -68,28 +68,28 @@ const ativosInfo = [
     image: Esqualano,
   },
   {
-    name: "CALÊNDULA CALENDUA OFFICINALIS",
+    name: "CALÊNDULA - CALENDUA OFFICINALIS",
     subtitle: "REGENERAÇÃO",
     desktop: { top: "49%", left: "61%", width: "17.8%", height: "40%" },
     mobile: { top: "71%", left: "0%", width: "49%", height: "29%" },
     descricao: [
-      "<p>É uma planta herbácea originária da região mediterrânea, é amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
+      "<p>É uma planta herbácea originária da região mediterrânea, amplamente cultivada em climas temperados e utilizada há séculos na cosmtelogia. Suas flores concentram compostos biotivos como flavonoides, triterpenos, carotenoides e sapopinas, responsáveis por sua ação dermatológica.</p>",
     ],
     beneficios: [
-      "<p>Estimula fibroblastos e a <b>síntese de colágeno,</b> acelera a epitelização e a <b>reparação e regenração</b> tecidual, Inibe mediadores inflamatórios e alivia irritações cutâneas, sendo <b>eficaz em processos inflamatórios</b>leves. <b>Neutraliza radicais livres,</b> ajudando a prevenir o envelhecimento precoce e o estresse oxidativo cutâneo. Reduz vermelhidão e desconfortos, sendo útil em <b>peles sensíveis</b> ou fragilizadas.</p>",
+      "<p>Estimula fibroblastos e a <b>síntese de colágeno.</b> Acelera a epitelização, a <b>reparação e a regeneração</b> tecidual. Inibe mediadores inflamatórios e alivia irritações cutâneas, sendo <b>eficaz em processos inflamatórios</b> leves. <b>Neutraliza radicais livres,</b> ajudando a prevenir o envelhecimento precoce e o estresse oxidativo cutâneo. Reduz vermelhidão e desconfortos, sendo útil em <b>peles sensíveis</b> ou fragilizadas.</p>",
     ],
     image: Calendula,
   },
   {
-    name: "ÓLEO DE JOJOBA SIMMONDSIA CHINENSIS",
+    name: "ÓLEO DE JOJOBA - SIMMONDSIA CHINENSIS",
     subtitle: "EQUILÍBRIO DA OLESIDADE",
     desktop: { top: "49%", left: "80%", width: "18.2%", height: "40%" },
     mobile: { top: "71%", left: "51%", width: "49%", height: "29%" },
     descricao: [
-      "<p>O óleo de jojoba é, na verdade uma cera líquida extraída das sementes da Simmondsia chinensis, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
+      "<p>O óleo de jojoba é na verdade uma cera líquida extraída das sementes da <em>Simmondsia chinensis</em>, um arbusto nativo de regiões áridas do sudeste dos Estados Unidos e norte do México. Possuí alta compatibilidade com todos os tipos de pele.</p>",
     ],
     beneficios: [
-      "<p>Forma uma <b>película protetora</b> que reduz a perda de água, mantendo a pele <b>hidratada</b> sem obstruir os poros, Ajuda a <b> equilibrar </b>a produção de sebo, sendo indicado tanto para peles secas quanto oleosas, Contém tocoferóis naturais que <b> combatem radicais livres </b> e auxiliam na prevenção do envelhecimento precoce. Fortalaece a função protetora da pele, ajudando na recuperação de áreas <b>sensibilizadas.</b></p>",
+      "<p>Forma uma <b>película protetora</b> que reduz a perda de água, mantendo a pele <b>hidratada</b> sem obstruir os poros. Ajuda a <b> equilibrar </b>a produção de sebo, sendo indicado tanto para peles secas quanto oleosas. Contém tocoferóis naturais que <b> combatem radicais livres </b> e auxiliam na prevenção do envelhecimento precoce. Fortalece a função protetora da pele, ajudando na recuperação de áreas sensibilizadas.</p>",
     ],
     image: Jojoba,
   },

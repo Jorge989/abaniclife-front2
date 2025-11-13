@@ -136,7 +136,7 @@ const CultureSection = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
             ABANIC LIFE
           </h1>
-          <p className="text-lg md:text-xl text-abanic-gray max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
             Acompanhe com a ABANIC as últimas novidades sobre cultura e
             tenedências.
           </p>

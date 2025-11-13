@@ -62,7 +62,7 @@ const MosaicoProdutos = () => {
 
           {/* Card grande */}
           <motion.div
-            className="relative w-full rounded-lg"
+            className="relative w-full rounded-lg mt-30"
             initial={{ opacity: 0, y: 100, scale: 0.95 }}
             whileInView={{
               opacity: 1,
@@ -74,7 +74,7 @@ const MosaicoProdutos = () => {
           >
             {/* Label laranja */}
             <motion.div
-              className="w-full bg-[#E4572E] text-white py-3 text-[22px] font-semibold z-10 text-center rounded-t-lg"
+              className="w-full bg-[#f6622b] text-white py-3 text-[22px] z-10 text-center rounded-t-lg font-space-grotesk-p "
               initial={{ opacity: 0, y: -50 }}
               whileInView={{
                 opacity: 1,
@@ -83,12 +83,12 @@ const MosaicoProdutos = () => {
               }}
               viewport={{ once: true }}
             >
-              RHODY SENCE Linha de cuidados essenciais e escolha diária para as
-              suas múltiplas versões
+              RHODY SENCE LINHA DE CUIDADOS ESSENCIAIS E ESCOLHA DIÁRIA PARA AS
+              SUAS MÚLTIPLAS VERSÕES
             </motion.div>
 
             {/* Conteúdo interno */}
-            <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-auto pt-2 pb-8 lg:pt-4 lg:pb-10 gap-0">
+            <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-auto pt-2 pb-8 lg:pt- lg:pb-10 gap-0 mt-10">
               {/* Texto */}
               <motion.div
                 className="flex flex-col justify-start w-full lg:w-[60%] text-justify"
@@ -101,20 +101,20 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-relaxed pt-4 pr-0 pb-0 pl-0 lg:pt-0 lg:pr-10 lg:pb-0 lg:pl-0">
+                <p className="text-gray-600 text-base lg:text-[22px] leading-loose pt-4 pr-0 pb-0 pl-0 lg:pt-0 lg:pr-10 lg:pb-0 lg:pl-0">
                   <b>3 passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
                   ativos naturais extraídos de
                   <b>
                     {" "}
                     algas vermelhas, flores de margaridas e esqualano vegetal
-                  </b>
+                  </b>{" "}
                   com propriedades
-                  <b> antioxidantes, clareadoras e iluminadoras.</b> Além de
-                  ativos que oferecem
+                  <b> antioxidantes, clareadoras e iluminadoras.</b> <br></br>
+                  Além de ativos que oferecem
                   <b> regeneração, equilíbrio da oleosidade</b> e fortalecem a
                   barreira cutânea contra agressões externas como poluição, luz
-                  visível e radicais livres — <b>100% natural.</b>
+                  visível e radicais livres
                 </p>
               </motion.div>
 

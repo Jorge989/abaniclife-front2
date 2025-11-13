@@ -19,10 +19,13 @@ const BreadText = () => {
         font-space-grotesk-h1
         text-center
         text-gray-800
+        px-6           /* adiciona margem lateral no mobile */
+        sm:px-8        /* um pouco mais em tablets */
+        md:px-0        /* remove no desktop */
       "
     >
       COM FÓRMULAS LEVES E CONCENTRADAS EM ATIVOS A LINHA <b>RHODY SENCE</b>{" "}
-      REÚNE OS PASSOS ESSENCIAIS PARA SUA ROTINA DE AUTO CUIDADO.
+      REÚNE OS PASSOS ESSENCIAIS PARA SUA ROTINA DE AUTOCUIDADO.
     </motion.p>
   );
 };
