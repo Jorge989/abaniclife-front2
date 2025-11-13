@@ -22,7 +22,7 @@ const translations = {
         submenu: [{ name: "Manifesto da Marca", href: "/about#marca" }],
       },
       {
-        name: "Produto",
+        name: "Produtos",
         href: "#",
         submenu: [
           { name: "GEL RHODY CLEANSE", href: "/product#ativos" },

@@ -28,7 +28,7 @@ const BrandAndFounders = () => {
       id: "section1",
       title: "IT IS ALL ABOUT THE POSSIBILITIES",
       text: `
-        Nós da ABANIC acreditamos que as pessoas são múltipas e que devem se permitir explorar todos seus interesses, capacidades e versões. Um leque de possibilidades.
+        Nós da ABANIC acreditamos que as pessoas são múltipas e que devem se permitir explorar todos seus interesses, capacidades e versões. criando um leque de possibilidades em suas vidas. Por isso criamos uma marca autêntica, cult e inovadora, que traz uma nova perspecitva sobre beleza, estilo de vida e autocuidado, com produtos de alta eficiência que inspiram e transforam.
       `,
       image: ImageWoman,
       reverse: false,
@@ -37,7 +37,7 @@ const BrandAndFounders = () => {
     {
       id: "section2",
       text: `
-        Influeniada pelo design, arte, pilares na ciência e na tecnologia para criar produtos de alta qualidade e respeito à natureza. Criamos um espaço onde podemos dialogar com as pessoas que posssuem essa autenticidade e compartilham o interesse em lançar um olhar diferente sobre as possíveis combinações de experiências transformadoras.
+        A marca foi fundada e influenciada pela arte design e arquitetura, mas apoiando seus pilares na ciência e tecnologia, para criar produtos de alta qualidade e respeito à natureza. Nosso propósito é acompanhar as pessoas nas suas jornadas, em todos os momentos, de forma desruptiva e original com uma pitada de questionamento para que testem as suas habilidades, se abram para o novo e se permitam viver suas múltiplas facetas.
       `,
       image: ImageHouse,
       reverse: true,
@@ -46,7 +46,7 @@ const BrandAndFounders = () => {
     {
       id: "section3",
       text: `
-        Temos como propósito acompanhar as pessoas em suas jornadas pessoais em todos os momentos De maneira disruptiva e original A ABANIC é para aqueles que desejam viver todas as possibilidades!
+        Muita além de produtos de alta qualidade, criamos um espaço onde podemos dialogar com as pessoas que possuem essa autenticidade e compartilhem o interesse em lançar um olhar diferente sobre as possíveis combinações de experiências para viererem todas suas versões A ABANIC é para aqueles que desejam viver todas possibilidades.
       `,
       image: ImageMountains,
       reverse: false,
@@ -129,7 +129,7 @@ const BrandAndFounders = () => {
             {title}
           </h2>
         )}
-        <p className="text-gray-700 text-[22px] md:text-[25px]  text-justify whitespace-pre-line leading-relaxed  p-4 rounded-lg items-start -mt-6">
+        <p className="text-gray-700 text-[22px] md:text-[22px]  text-justify whitespace-pre-line leading-relaxed  p-4 rounded-lg items-start -mt-6">
           {text}
         </p>
       </motion.div>
