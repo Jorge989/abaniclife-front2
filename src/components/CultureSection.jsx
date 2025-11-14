@@ -4,96 +4,58 @@ import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Link } from "react-router-dom";
 import { articles } from "../data/articles";
+import { motion } from "framer-motion";
+
 const CultureSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
   const containerRef = useRef(null);
 
-  // const articles = [
-  //   {
-  //     id: 1,
-  //     title: "Opening Day Of Boating Season",
-  //     description: "Of course the Puget Sound is very watery...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Lifestyle",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "How To Choose The Right Laptop",
-  //     description: "Choosing the right laptop for programming...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Technology",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "How We Built The First Self-Driving Car",
-  //     description: "Electric self-driving cars will save millions...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Innovation",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "How To Persuade Your Parents",
-  //     description: "Parents often don't want to...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Lifestyle",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Another Awesome Article",
-  //     description: "More content that keeps the user scrolling...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Culture",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "The Future of Design",
-  //     description: "Exploring new trends in modern design...",
-  //     image:
-  //       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-  //     category: "Design",
-  //   },
-  // ];
+  // 🔥 Variants iguais ao BrandAndFounders
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
 
-  // Atualiza o número de itens visíveis conforme o tamanho da tela
+  const fadeScale = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+
+  // Atualiza quantidade por tela
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setItemsPerView(1); // mobile: mostrar 1 item (mas cada item tem 16% de width)
-      } else if (window.innerWidth < 1024) {
-        setItemsPerView(2);
-      } else {
-        setItemsPerView(4);
-      }
+      if (window.innerWidth < 768) setItemsPerView(1);
+      else if (window.innerWidth < 1024) setItemsPerView(2);
+      else setItemsPerView(4);
     };
+
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Limite máximo para o índice do slide
   const maxIndex =
     window.innerWidth < 768
-      ? articles.length - 1 // só rola um por vez no mobile
+      ? articles.length - 1
       : articles.length - itemsPerView;
 
   const scrollContainerByIndex = (index) => {
     if (!containerRef.current) return;
     const containerWidth = containerRef.current.offsetWidth;
 
-    let scrollAmount;
-
-    if (window.innerWidth < 768) {
-      // No mobile, rola 100% da largura do container por índice
-      scrollAmount = containerWidth * index;
-    } else {
-      scrollAmount = (containerWidth / itemsPerView) * index;
-    }
+    const scrollAmount =
+      window.innerWidth < 768
+        ? containerWidth * index
+        : (containerWidth / itemsPerView) * index;
 
     containerRef.current.scrollTo({
       left: scrollAmount,
@@ -101,7 +63,6 @@ const CultureSection = () => {
     });
   };
 
-  // Botões de navegação atualizam índice e rolam o container
   const nextSlide = () => {
     setCurrentIndex((prev) => {
       const newIndex = Math.min(prev + 1, maxIndex);
@@ -131,8 +92,14 @@ const CultureSection = () => {
       style={{ backgroundColor: "#F1F0EB" }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* 🔥 Header animado */}
+        <motion.div
+          className="text-center mb-12"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+        >
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
             ABANIC LIFE
           </h1>
@@ -140,18 +107,17 @@ const CultureSection = () => {
             Acompanhe com a ABANIC as últimas novidades sobre cultura e
             tenedências.
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel */}
         <div className="relative">
-          {/* Navigation Arrows */}
+          {/* Arrows */}
           <Button
             variant="ghost"
             size="icon"
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full w-12 h-12 transition-smooth"
-            aria-label="Artigos anteriores"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl disabled:opacity-50 rounded-full w-12 h-12"
           >
             <ChevronLeft className="h-6 w-6 text-abanic-gray" />
           </Button>
@@ -161,19 +127,23 @@ const CultureSection = () => {
             size="icon"
             onClick={nextSlide}
             disabled={currentIndex >= maxIndex}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed rounded-full w-12 h-12 transition-smooth"
-            aria-label="Próximos artigos"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl disabled:opacity-50 rounded-full w-12 h-12"
           >
             <ChevronRight className="h-6 w-6 text-abanic-gray" />
           </Button>
 
-          {/* Cards Container */}
+          {/* Cards */}
           <div className="overflow-hidden" ref={containerRef}>
             <div className="flex">
-              {articles.map((article) => (
-                <div
+              {articles.map((article, index) => (
+                <motion.div
                   key={article.id}
                   className="flex-shrink-0 px-1.5"
+                  variants={fadeScale}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ delay: index * 0.1 }}
                   style={{
                     width:
                       window.innerWidth < 768
@@ -195,6 +165,7 @@ const CultureSection = () => {
                           </span>
                         </div>
                       </div>
+
                       <div className="p-4 bg-white">
                         <h3 className="text-lg font-semibold text-abanic-gray-dark mb-2 group-hover:text-orange-600 transition-colors">
                           {article.title}
@@ -210,24 +181,23 @@ const CultureSection = () => {
                       </div>
                     </Link>
                   </Card>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Slide Indicators */}
+        {/* Bullets */}
         <div className="flex justify-center mt-8 space-x-2">
           {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-smooth ${
+              className={`w-3 h-3 rounded-full transition-all ${
                 index === currentIndex
                   ? "bg-orange-600"
                   : "bg-gray-300 hover:bg-gray-400"
               }`}
-              aria-label={`Ir para grupo ${index + 1}`}
             />
           ))}
         </div>
