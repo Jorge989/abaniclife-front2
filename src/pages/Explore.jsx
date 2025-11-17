@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import FotoCreme from "../assets/Produtoladoesquerdo.png";
 import rhodophytas from "../assets/explore/rhodophytas.jpeg";
 import bellis from "../assets/explore/belis.jpg";
 import evodia from "../assets/explore/evodia.jpg";
+
 const sectionsData = [
   {
     id: "rhodophytas",
     title: "Rhodophytas - Algas vermelhas",
     image: rhodophytas,
     intro: [
-      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018).<br><br> Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado na linha <b>RHODY SENCE</b> é o extrato das Rhodophytas hidrolisado. ",
+      "<p>Muitos organismos marinhos evoluíram sob condições extremas — como salinidade elevada, variações de pH, radiação intensa e baixa disponibilidade de nutrientes — desenvolvendo mecanismos de defesa altamente eficientes. Esses mecanismos resultam na produção de metabólitos com potencial para uso terapêutico e cosmético, incluindo ação antioxidante, imunomoduladora e fotoprotetora (Hwang et al., 2018).<br><br> Entre esses organismos, destacam-se as macroalgas vermelhas pertencentes ao filo das Rhodophytas. Encontradas no Mar Báltico, ao norte da Noruega, mais especificamente na Baía de Kassari na Estônia (Kotta et al., 2003). Sua composição bioquímica diversa é fonte promissora de ativos multifuncionais para a pele (Rayment, 2008). O ativo utilizado na linha <b>RHODY SENCE</b> é o extrato das Rhodophytas hidrolisado. ",
     ],
     items: [
       {
@@ -61,7 +63,7 @@ const sectionsData = [
         title:
           "Equilíbrio oxidativo e controle de espécies reativas de oxigênio (ROS)",
         text: [
-          "<p>O envelhecimento cutâneo é impulsionado por fatores intrínsecos (como genética e alterações hormonais) e extrínsecos, como exposição à radiação UV, poluição e hábitos de vida.  Tanto os raios solares UVA quanto os raios solares UVB  desempenham papel central na aceleração do envelhecimento da pele, promovendo estresse oxidativo e inflamação crônica. A radiação solar ativa vias de sinalização que estimulam a produção excessiva de espécies reativas de oxigênio (ROS), desencadeando inflamação, degradação da matriz extracelular e perda da integridade da barreira cutânea. Compostos presentes em algas vermelhas, como catalase, superóxido dismutase e carragenas, são conhecidos por atuar como agentes antioxidantes naturais, ajudando a restaurar o equilíbrio celular mesmo sob condições de estresse ambiental (Berthon et al., 2017; Hwang et al., 2018). A <em>Furcellaria lumbricalis</em>, alga vermelha da qual é derivado o ativo, contém carragenas sulfatadas, que auxiliam na preservação da matriz extracelular por meio da inibição de processos inflamatórios e da neutralização de ROS — dois gatilhos centrais na degradação do colágeno (Hwang et al., 2018). Adicionalmente, estudos demonstram que compostos bioativos derivados de Rhodophytas, como polifenóis e polissacarídeos, podem modular a atividade de enzimas como as metaloproteinases de matriz (MMPs), responsáveis por fragmentar o colágeno e elastina da pele. A superexpressão dessas enzimas é estimulada por fatores como radiação UV e poluição atmosférica, e sua regulação representa um mecanismo-chave de ação antienvelhecimento (Baptista et al., 2023; Hwang et al., 2018). O extrato padronizado de <em>Furcellaria lumbricalis</em> demonstrou ação antioxidante significativa em testes in vitro, sugerindo potencial para proteger a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas naturais. </p>",
+          "<p>O envelhecimento cutâneo é impulsionado por fatores intrínsecos (como genética e alterações hormonais) e extrínsecos, como exposição à radiação UV, poluição e hábitos de vida.  Tanto os raios solares UVA quanto os raios solares UVB  desempenham papel central na aceleração do envelhecimento da pele, promovendo estresse oxidativo e inflamação crônica. A radiação solar ativa vias de sinalização que estimulam a produção excessiva de espécies reativas de oxigênio (ROS), desencadeando inflamação, degradação da matriz extracelular e perda da integridade da barreira cutânea. Compostos presentes em algas vermelhas, como catalase, superóxido dismutase e carragenas, são conhecidos por atuar como agentes antioxidantes naturais, ajudando a restaurar o equilíbrio celular mesmo sob condições de estresse ambiental (Berthon et al., 2017; Hwang et al., 2018). A <em>Furcellaria lumbricalis</em>, alga vermelha da qual é derivado o ativo, contém carragenas sulfatadas, que auxiliam na preservação da matriz extracelular por meio da inibição de processos inflamatórios e da neutralização de ROS — dois gatilhos centrais na degradação do colágeno (Hwang et al., 2018). Adicionalmente, estudos demonstram que compostos bioativos derivados de Rhodophytas, como polifenóis e polissacarídeos, podem modular a atividade de enzimas como as metaloproteinases de matriz (MMPs), responsáveis por fragmentar o colágeno e elastina da pele. A superexpressão dessas enzimas é estimulada por fatores como radiação UV e poluição atmosférica, e sua regulação representa um mecanismo-chave de ação antienvelhecimento (Baptista et al., 2023; Hwang et al., 2018). O extrato padronizado de <em>Furcellaria lumbricalis</em> demonstrou ação antioxidante significativa em testes in vitro, sugerindo potencial para proteger a pele contra os danos induzidos por poluentes e radiação UV, reforçando as defesas cutâneas naturais. </p>",
         ],
       },
       {
@@ -141,7 +143,7 @@ const sectionsData = [
     title: "Evodia rutaecarpa — Rutaceae",
     image: evodia,
     intro: [
-      "<p>Originária da medicina tradicional oriental, a planta  <em>Evodia rutaecarpa </em> (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada.   <br><br>Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
+      "<p>Originária da medicina tradicional oriental, a planta  <em>Evodia rutaecarpa </em> (Wu-Zhu-Yu) é cultivada principalmente na província de Jiangxi, na China. Pertencente da família Rutaceae, O composto que está presente na linha <b>RHODY SENCE</b> é o extrato padronizado obtido da fruta quase madura da planta e desenvolvido para estimular a microcirculação e devolver radiância e vitalidade à pele opaca ou sensibilizada.   <br><br>Seu extrato é rico em alcaloides (compostos nitrogenados bioativos derivados de plantas) indólicos bioativos, como evodiamina, rutaecarpina e dehidroevodiamina, além de conter flavonoides (compostos de fenóis) e ácidos graxos (molécula lipídica) (Tian et al., 2019; Chen et al., 2012; Jiang et al. 2009). </p>",
     ],
     items: [
       {
@@ -160,7 +162,7 @@ const sectionsData = [
         id: "evodea2",
         title: "Proteção antipoluição e ação anti-inflamatória",
         text: [
-          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do micro bioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. <br><br>Foi demonstrado que a exposição da pele a poluíção do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado com o ativo da linha <b>RHODY SENCE</b>, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. <br><br>Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
+          "<p>A exposição à poluição do ar, especialmente à fração de partículas finas, está associada à disfunção da barreira cutânea, alteração do micro bioma da pele, estresse oxidativo e inflamações persistentes, promovendo envelhecimento precoce, hipersensibilidade e doenças inflamatórias da pele. <br><br>Foi demonstrado que a exposição da pele a poluícion do ar altera aspectos de sensibilidade como, dilatação dos poros, vermelhidão, opacidade e aparencia de não saudável. O teste clínico realizado com o ativo da linha <b>RHODY SENCE</b>, onde foi  utilizado  por 28 dias resultou na percepção dos voluntários de <b>85%</b> menos sensibilidade da pele, <b>89%</b> a pele mais hidratada e <b>100%</b> do aumento da macies da pele. <br><br>Esses efeitos são atribuídos à presença dos alcaloides evodiamina e rutaecarpina, compostos que possuem atividades antioxidantes e anti-inflamatórias bem documentadas em literatura científica (Forman, 2021; Gu et al., 2020) </p>",
         ],
       },
       {
@@ -203,17 +205,45 @@ const Explore = () => {
     setOpenItemId((prev) => (prev === id ? null : id));
   };
 
+  // ---------- VARIANTS (igual BrandAndFounders) ----------
+  const imageVariants = (reverse) => ({
+    hidden: { opacity: 0, x: reverse ? 150 : -150 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  });
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, delay: 0.3 },
+    },
+  };
+
   return (
-    <div className=" min-h-screen py-12 mt-25">
+    <div className="min-h-screen py-12 mt-25">
       <div className="w-full max-w-6xl mx-auto px-6">
         {/* Header com foto + textos */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
           <div className="flex-1 flex justify-center">
-            <img
-              src={FotoCreme}
-              alt="Produto prateado"
-              className="w-full max-w-md h-auto object-contain rounded-lg"
-            />
+            {/* --- imagem do header com motion (apenas envolvida) --- */}
+            <motion.div
+              variants={imageVariants(false)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="w-full max-w-md"
+            >
+              <img
+                src={FotoCreme}
+                alt="Produto prateado"
+                className="w-full h-auto object-contain rounded-lg shadow-lg"
+              />
+            </motion.div>
           </div>
 
           <div className="flex-1">
@@ -246,36 +276,51 @@ const Explore = () => {
 
         {/* Seções detalhadas */}
         <div className="space-y-12 text-center">
-          {sectionsData.map((section) => (
+          {sectionsData.map((section, idx) => (
             <section
               key={section.id}
               id={section.id}
               className="text-left max-w-2xl mx-auto scroll-mt-32"
             >
-              <h2
-                className="text-2xl font-semibold text-gray-800 mb-3 font-space-grotesk-h3
-              "
-              >
+              <h2 className="text-2xl font-semibold text-gray-800 mb-3 font-space-grotesk-h3">
                 {section.title}
               </h2>
+
               {/* Renderiza intro como string ou array */}
               {Array.isArray(section.intro) ? (
                 section.intro.map((texto, i) => (
-                  <>
-                    <div
-                      key={i}
+                  <React.Fragment key={i}>
+                    {/* Texto animado */}
+                    <motion.div
+                      variants={textVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.35 }}
                       className="text-gray-700 mb-4 text-justify"
                       dangerouslySetInnerHTML={{ __html: texto }}
                     />
-                    <img
-                      src={section.image}
-                      alt="foto ativo"
-                      className="rounded-xl"
-                    />
-                  </>
+
+                    {/* Imagem animada */}
+                    <motion.div
+                      variants={imageVariants(false)}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.35 }}
+                    >
+                      <img
+                        src={section.image}
+                        alt="foto ativo"
+                        className="rounded-xl"
+                      />
+                    </motion.div>
+                  </React.Fragment>
                 ))
               ) : (
-                <div
+                <motion.div
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.35 }}
                   className="text-gray-700 mb-4 text-justify"
                   dangerouslySetInnerHTML={{ __html: section.intro }}
                 />
@@ -296,11 +341,17 @@ const Explore = () => {
                   </button>
 
                   {openItemId === item.id && (
-                    <div className="mt-2 text-gray-700 text-justify space-y-3 leading-[2]">
+                    <motion.div
+                      variants={textVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.35 }}
+                      className="mt-2 text-gray-700 text-justify space-y-3 leading-[2]"
+                    >
                       {item.text.map((t, i) => (
                         <div key={i} dangerouslySetInnerHTML={{ __html: t }} />
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               ))}

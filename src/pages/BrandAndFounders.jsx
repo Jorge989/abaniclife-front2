@@ -141,7 +141,10 @@ const BrandAndFounders = () => {
       className="overflow-x-hidden"
       style={{ backgroundColor: "#F1F0EB" }}
     >
-      <div id="marca" className="max-w-5xl mx-auto px-6 py-10 mt-28 space-y-20">
+      <div
+        id="marca"
+        className="max-w-[1070px] mx-auto px-6 py-10 mt-28 space-y-20"
+      >
         {sections.map((section) => renderSection(section))}
       </div>
     </section>
