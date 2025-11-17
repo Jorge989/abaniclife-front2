@@ -102,7 +102,7 @@ const MosaicoProdutos = () => {
                 viewport={{ once: true }}
               >
                 <p className="text-gray-600 text-base lg:text-[22px] leading-loose pt-4 pr-0 pb-0 pl-0 lg:pt-0 lg:pr-10 lg:pb-0 lg:pl-0">
-                  <b>3 passos</b> essenciais que reúnem múltiplos benefícios
+                  <b>3 Passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
                   ativos naturais extraídos de
                   <b>
@@ -114,7 +114,7 @@ const MosaicoProdutos = () => {
                   Além de ativos que oferecem
                   <b> regeneração, equilíbrio da oleosidade</b> e fortalecem a
                   barreira cutânea contra agressões externas como poluição, luz
-                  visível e radicais livres
+                  visível e radicais livres.
                 </p>
               </motion.div>
 

@@ -151,7 +151,7 @@ const Footer = () => {
               </div>
               <p className="leading-relaxed mb-6">
                 {language === "pt"
-                  ? "Queremos inspirar, de modo provocativo, as pessoas a buscarem todas as suas versões através do autocuidado, vida saudável e expansiva"
+                  ? "Queremos inspirar, de modo provocativo, as pessoas a buscarem todas as suas versões através do autocuidado, vida saudável e expansiva."
                   : "We want to provocatively inspire people to seek out all their versions through self-care, healthy and expansive living"}
               </p>
             </div>

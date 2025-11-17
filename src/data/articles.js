@@ -9,7 +9,7 @@ export const articles = [
     description: "A arte sempre acompanhou a humanidade como espelho e farol.",
     image: ArticleImageOne,
     content: `
- A arte sempre acompanhou a humanidade como um espelho e, ao mesmo tempo, como um farol. É o instrumento pelo qual nos expressamos, contamos nossas histórias e alcançamos o imaginário. 
+ A arte sempre acompanhou a humanidade como um espelho e ao mesmo tempo, como um farol. É o instrumento pelo qual nos expressamos, contamos nossas histórias e alcançamos o imaginário. 
  
  Ela não apenas traduz o espírito de uma época, como também expõe as complexidades. Amplia a consciência de forma coletiva e traz consigo questionamentos, estimulando o pensamento crítico e instigando o nosso intelecto a sair do modo automático e ir além do óbvio.
  
@@ -17,7 +17,7 @@ export const articles = [
 
  
 
- A arte também é um agente transformador da sociedade, unindo as pessoas das através da cultura. Inspira movimentos e conecta as pessoas através de um valor estético, um conceito ou uma mensagem. Fala uma língua universal e não exige títulos ou posição social para ser vivida e, portanto, cria espaços de pertencimento e identificação. 
+ A arte também é um agente transformador da sociedade, unindo as pessoas através da cultura. Inspira movimentos e nos conecta através de um valor estético, um conceito ou uma mensagem. Fala uma língua universal e não exige títulos ou posição social para ser vivida, cria espaços de pertencimento e identificação. 
 
  
 
@@ -29,7 +29,7 @@ export const articles = [
 
  
 
- O contato com a arte não apenas encanta ou provoca, mas também inspira. Ela instiga a explorar territórios ainda não vividos, a experimentar novas maneiras de existir, a se permitir ousar. Cada encontro com a arte é uma oportunidade de transformação uma chance de ressignificar o olhar, de reinventar o cotidiano e de abrir espaço para novas possibilidades de vivências.  
+ O contato com a arte não apenas encanta ou provoca, mas também inspira. Ela instiga a explorar territórios ainda não vividos, a experimentar novas maneiras de existir a se permitir ousar. Cada encontro com a arte é uma oportunidade de transformação uma chance de ressignificar o olhar, de reinventar o cotidiano e de abrir espaço para novas possibilidades de vivências.  
 
  
 
@@ -37,7 +37,7 @@ export const articles = [
 
  
 
- Esse movimento é válido e autêntico, se você pensar que está sendo suportado pelo senso estético comum e que nutre a busca das pessoas pelo equilíbrio, harmonia e sensação de bem-estar. Além de transmitirem valores como gosto pela cultura, estética refinada, e incentivarem um estilo de vida mais equilibrado.  
+ Esse movimento é válido e autêntico, se você pensar que está sendo suportado pelo senso estético comum e que nutre a busca das pessoas pelo equilíbrio, harmonia e sensação de bem-estar. Além de transmitirem valores como gosto pela cultura, estética refinada e incentivarem um estilo de vida mais equilibrado.  
 
  
 
@@ -56,12 +56,12 @@ export const articles = [
     title: "A Estética Contemporânea e as possibilidades",
     category: "Comunicação & Estética",
     description:
-      "Explorando a comunicação visual da ABANIC e sua conexão com a Estética Contemporânea.",
+      "Explorando a comunicação visual da ABANIC e sua conexão com a estética contemporânea.",
     image: ArticleImagetwo,
     content: `
  A comunicação visual da marca ABANIC com a sua comunidade está intrinsecamente ligada à essência da Estética Contemporânea e sua natureza questionadora, inovadora e reflexiva.
 
- Ela se caracteriza principalmente pela liberdade de expressão e rompimento com o convencional. Traz uma abordagem fluida, onde vislumbramos uma realidade cheia de camadas e conceitos coexistentes.
+ Ela Caracteriza-se princialmente pela liberdade de expressão e rompimento com o convencional. Traz uma abordagem fluida, onde vislumbramos uma realidade cheia de camadas e conceitos coexistentes.
 
 Através desse cenário, criamos um lugar de conexão, onde as pessoas possam se inspirar e se identificar.
 
