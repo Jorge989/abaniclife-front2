@@ -123,9 +123,9 @@ const HeroSection = () => {
         onClick={() => {
           prevSlide();
           trackEvent({
-            category: "HeroSection",
-            action: "Click Previous Slide",
-            label: `Slide ${currentSlide}`,
+            name: "click_banner_prev",
+            category: "CTA",
+            action: "Botão Banner Anterior",
           });
         }}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"

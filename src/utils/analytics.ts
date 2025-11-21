@@ -1,13 +1,19 @@
 import ReactGA from "react-ga4";
 
 interface TrackEventParams {
-  category: string;
-  action: string;
+  name: string; // nome do evento no GA4
+  category?: string;
+  action?: string;
   label?: string;
 }
 
-export const trackEvent = ({ category, action, label }: TrackEventParams) => {
-  ReactGA.event({
+export const trackEvent = ({
+  name,
+  category,
+  action,
+  label,
+}: TrackEventParams) => {
+  ReactGA.event(name, {
     category,
     action,
     label,
