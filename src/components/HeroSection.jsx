@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import Banner1 from "../assets/Bannerteste1.jpg";
 import Banner3 from "../assets/Banner3.jpg";
 import Banner2 from "../assets/Banner2.jpg";
+import { trackEvent } from "../utils/analytics";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
