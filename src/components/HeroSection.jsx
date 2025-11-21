@@ -120,7 +120,14 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={prevSlide}
+        onClick={() => {
+          prevSlide();
+          trackEvent({
+            category: "HeroSection",
+            action: "Click Previous Slide",
+            label: `Slide ${currentSlide}`,
+          });
+        }}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Slide anterior"
       >
