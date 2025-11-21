@@ -4,11 +4,18 @@ import { Button } from "./ui/button";
 import Banner1 from "../assets/Bannerteste1.jpg";
 import Banner3 from "../assets/Banner3.jpg";
 import Banner2 from "../assets/Banner2.jpg";
-import { trackEvent } from "../utils/analytics";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    // aplica no body quando o componente monta
+    document.body.style.overflow = "hidden";
 
+    // remove quando sair da página
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   const slides = [
     {
       id: 1,
@@ -52,7 +59,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden" id="home">
+    <section
+      className="relative h-screen overflow-hidden overscroll-hidden touch-none "
+      id="home"
+    >
       {/* Estilos específicos para iPad */}
       <style>
         {`
@@ -71,13 +81,13 @@ const HeroSection = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity  duration-1000 ease-in-out ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
             <div
               key={index}
-              className="absolute inset-0 h-full w-full bg-no-repeat bg-cover"
+              className="absolute inset-0 h-full w-full bg-no-repeat bg-cover "
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundPosition:
@@ -92,43 +102,25 @@ const HeroSection = () => {
             />
 
             {/* Overlay */}
-            <div className={`absolute inset-0 ${slide.overlay}`} />
+            <div className={`absolute inset-0 ${slide.overlay} `} />
 
             {/* Content */}
-            {/* Content */}
-            <div className="relative z-10 h-full">
-              <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
-                {index === 0 ? (
-                  <h1
-                    className="
-          text-[40px]
-          md:text-[28px]
-          lg:text-[38px]
-          mb-0
-          opacity-90
-          animate-fade-in-up
-          animation-delay-300
-          font-space-grotesk-h1
-        "
-                  >
-                    {slide.subtitle}
-                  </h1>
-                ) : (
-                  <h2
-                    className="
-          text-[40px]
-          md:text-[28px]
-          lg:text-[38px]
-          mb-0
-          opacity-90
-          animate-fade-in-up
-          animation-delay-300
-          font-space-grotesk-h1
-        "
-                  >
-                    {slide.subtitle}
-                  </h2>
-                )}
+            <div className="relative z-10 h-full ">
+              <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white ">
+                <p
+                  className="
+    text-[40px]          /* 🔥 maior no mobile */
+    md:text-[28px]       /* bom em tablets */
+    lg:text-[38px]       /* mantém no desktop */
+    mb-0 
+    opacity-90 
+    animate-fade-in-up 
+    animation-delay-300 
+    font-space-grotesk-h1
+  "
+                >
+                  {slide.subtitle}
+                </p>
               </div>
             </div>
           </div>
@@ -139,14 +131,7 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => {
-          prevSlide();
-          trackEvent({
-            name: "click_banner_prev",
-            category: "CTA",
-            action: "Botão Banner Anterior",
-          });
-        }}
+        onClick={prevSlide}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Slide anterior"
       >
@@ -156,14 +141,7 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => {
-          nextSlide();
-          trackEvent({
-            name: "click_banner_next",
-            category: "CTA",
-            action: "Botão Banner Próximo",
-          });
-        }}
+        onClick={nextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Próximo slide"
       >
@@ -171,7 +149,7 @@ const HeroSection = () => {
       </Button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3 ">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -187,7 +165,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 right-8 z-20 animate-bounce">
+      <div className="absolute bottom-8 right-8 z-20 animate-bounce ">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
         </div>
