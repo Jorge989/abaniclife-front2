@@ -95,22 +95,40 @@ const HeroSection = () => {
             <div className={`absolute inset-0 ${slide.overlay}`} />
 
             {/* Content */}
+            {/* Content */}
             <div className="relative z-10 h-full">
               <div className="absolute bottom-20 left-0 right-0 px-4 max-w-4xl mx-auto text-center text-white">
-                <p
-                  className="
-    text-[40px]          /* 🔥 maior no mobile */
-    md:text-[28px]       /* bom em tablets */
-    lg:text-[38px]       /* mantém no desktop */
-    mb-0 
-    opacity-90 
-    animate-fade-in-up 
-    animation-delay-300 
-    font-space-grotesk-h1
-  "
-                >
-                  {slide.subtitle}
-                </p>
+                {index === 0 ? (
+                  <h1
+                    className="
+          text-[40px]
+          md:text-[28px]
+          lg:text-[38px]
+          mb-0
+          opacity-90
+          animate-fade-in-up
+          animation-delay-300
+          font-space-grotesk-h1
+        "
+                  >
+                    {slide.subtitle}
+                  </h1>
+                ) : (
+                  <h2
+                    className="
+          text-[40px]
+          md:text-[28px]
+          lg:text-[38px]
+          mb-0
+          opacity-90
+          animate-fade-in-up
+          animation-delay-300
+          font-space-grotesk-h1
+        "
+                  >
+                    {slide.subtitle}
+                  </h2>
+                )}
               </div>
             </div>
           </div>
