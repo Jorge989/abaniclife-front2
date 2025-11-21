@@ -138,7 +138,14 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={nextSlide}
+        onClick={() => {
+          nextSlide();
+          trackEvent({
+            name: "click_banner_next",
+            category: "CTA",
+            action: "Botão Banner Próximo",
+          });
+        }}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Próximo slide"
       >
