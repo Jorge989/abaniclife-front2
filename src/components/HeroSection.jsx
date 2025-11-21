@@ -4,14 +4,13 @@ import { Button } from "./ui/button";
 import Banner1 from "../assets/Bannerteste1.jpg";
 import Banner3 from "../assets/Banner3.jpg";
 import Banner2 from "../assets/Banner2.jpg";
+import { trackEvent } from "../utils/analytics";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    // aplica no body quando o componente monta
     document.body.style.overflow = "hidden";
 
-    // remove quando sair da página
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -131,7 +130,14 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={prevSlide}
+        onClick={() => {
+          prevSlide();
+          trackEvent({
+            name: "click_banner_prev",
+            category: "CTA",
+            action: "Botão Banner Anterior",
+          });
+        }}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Slide anterior"
       >
@@ -141,7 +147,14 @@ const HeroSection = () => {
       <Button
         variant="ghost"
         size="icon"
-        onClick={nextSlide}
+        onClick={() => {
+          nextSlide();
+          trackEvent({
+            name: "click_banner_next",
+            category: "CTA",
+            action: "Botão Banner Próximo",
+          });
+        }}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
         aria-label="Próximo slide"
       >
