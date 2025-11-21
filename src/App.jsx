@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
+import { GAListener } from "./GAListener";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(import.meta.env.VITE_GA_ID);
 
 // Lazy loading das páginas
 const Home = lazy(() => import("./pages/Home"));
@@ -18,6 +22,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
+        <GAListener />
         <div className="App">
           <Header />
           <Suspense fallback={<div>Loading...</div>}>
