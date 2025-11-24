@@ -9,15 +9,14 @@ import { trackEvent } from "../utils/analytics";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    const isMobile = window.innerWidth < 768; // breakpoint Tailwind
+    const isMobile = window.innerWidth < 768;
 
     if (!isMobile) {
-      // Desktop e tablet → bloqueia scroll
       document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // limpa ao desmontar
+      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -65,7 +64,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative h-screen overflow-hidden overscroll-hidden touch-none "
+      className="relative h-screen overflow-hidden overscroll-hidden"
       id="home"
     >
       {/* Estilos específicos para iPad */}
