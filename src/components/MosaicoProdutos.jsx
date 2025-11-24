@@ -29,14 +29,14 @@ const MosaicoProdutos = () => {
 
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
-      <div className="w-full max-w-[90%] mx-auto text-center">
+      <div className="w-full max-w-[100%] mx-auto text-center">
         <div className="flex flex-col gap-4 w-full">
           {/* Imagens de cima */}
-          <div className="flex flex-col gap-4 w-full">
+          <div className="flex flex-col w-full gap-6">
             {products.slice(0, 2).map((product, index) => (
               <motion.div
                 key={product.id}
-                className="w-full h-[380px] overflow-hidden rounded-lg" // altura controlada
+                className="w-full h-[550px] overflow-hidden rounded-xl" // altura controlada
                 initial={{
                   opacity: 0,
                   x: index === 0 ? -100 : 100,
@@ -62,7 +62,7 @@ const MosaicoProdutos = () => {
 
           {/* Card grande */}
           <motion.div
-            className="relative w-full rounded-lg mt-30"
+            className="relative w-full rounded-lg"
             initial={{ opacity: 0, y: 100, scale: 0.95 }}
             whileInView={{
               opacity: 1,
@@ -72,26 +72,12 @@ const MosaicoProdutos = () => {
             }}
             viewport={{ once: true }}
           >
-            {/* Label laranja */}
-            <motion.div
-              className="w-full bg-[#f6622b] text-white py-3 text-[22px] z-10 text-center rounded-t-lg font-space-grotesk-p "
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.8, ease: "easeOut", delay: 0.1 },
-              }}
-              viewport={{ once: true }}
-            >
-              RHODY SENCE LINHA DE CUIDADOS ESSENCIAIS E ESCOLHA DIÁRIA PARA AS
-              SUAS MÚLTIPLAS VERSÕES
-            </motion.div>
-
             {/* Conteúdo interno */}
-            <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-auto pt-2 pb-8 lg:pt- lg:pb-10 gap-0 mt-10">
+            <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-auto pt-2 pb-8 lg:pb-10 gap-0">
               {/* Texto */}
               <motion.div
-                className="flex flex-col justify-start w-full lg:w-[60%] text-justify"
+                className="flex flex-col justify-start w-full lg:w-[60%] text-justify
+                 px-4 lg:px-0 lg:pl-12" /* padding no mobile + desktop separado */
                 initial={{ opacity: 0, x: -100, scale: 0.95 }}
                 whileInView={{
                   opacity: 1,
@@ -101,16 +87,16 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-loose pt-4 pr-0 pb-0 pl-0 lg:pt-0 lg:pr-10 lg:pb-0 lg:pl-0">
+                <p className="text-gray-600 text-base lg:text-[22px] leading-loose pt-4 lg:pr-10">
                   <b>3 Passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
                   ativos naturais extraídos de
                   <b>
                     {" "}
                     algas vermelhas, flores de margaridas e esqualano vegetal
-                  </b>{" "}
+                  </b>
                   com propriedades
-                  <b> antioxidantes, clareadoras e iluminadoras.</b> <br></br>
+                  <b> antioxidantes, clareadoras e iluminadoras.</b> <br />
                   Além de ativos que oferecem
                   <b> regeneração, equilíbrio da oleosidade</b> e fortalecem a
                   barreira cutânea contra agressões externas como poluição, luz
@@ -120,7 +106,8 @@ const MosaicoProdutos = () => {
 
               {/* Imagem */}
               <motion.div
-                className="flex justify-end items-start w-full lg:w-[40%] mt-6 lg:mt-0"
+                className="flex justify-center lg:justify-end items-start 
+                 w-full lg:w-[40%] mt-6 lg:mt-0"
                 initial={{ opacity: 0, x: 100, scale: 0.9 }}
                 whileInView={{
                   opacity: 1,
@@ -130,11 +117,14 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <div className="relative w-full flex justify-end">
+                <div className="relative w-full flex justify-center lg:justify-end">
                   <img
                     src={products[2].image}
                     alt={products[2].name}
-                    className="w-full max-w-[500px] object-contain transition-transform duration-500 hover:scale-[1.03] rounded-lg shadow-sm"
+                    className="w-full max-w-none lg:max-w-[500px] 
+                     object-cover lg:object-contain
+                     transition-transform duration-500 hover:scale-[1.03]
+                     rounded-lg shadow-sm"
                   />
                 </div>
               </motion.div>
