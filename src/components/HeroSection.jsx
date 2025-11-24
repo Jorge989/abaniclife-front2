@@ -64,7 +64,9 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative h-screen overflow-hidden overscroll-hidden"
+      className="   overflow-y-hidden   /* 👈 remove barra vertical */
+    overflow-x-hidden
+    overscroll-none relative h-screen overflow-hidden overscroll-"
       id="home"
     >
       {/* Estilos específicos para iPad */}
