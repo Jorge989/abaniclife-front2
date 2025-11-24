@@ -9,11 +9,7 @@ import { trackEvent } from "../utils/analytics";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    if (!isMobile) {
-      document.body.style.overflow = "hidden";
-    }
+    document.body.style.overflow = "hidden";
 
     return () => {
       document.body.style.overflow = "auto";
