@@ -73,11 +73,22 @@ const MosaicoProdutos = () => {
             viewport={{ once: true }}
           >
             {/* Conteúdo interno */}
-            <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-auto pt-2 pb-8 lg:pb-10 gap-0">
+            <div
+              className="
+        flex flex-col lg:flex-row 
+        justify-between 
+        items-center lg:items-start 
+        w-full mx-auto 
+        pt-2 pb-8 lg:pb-10 gap-0
+      "
+            >
               {/* Texto */}
               <motion.div
-                className="flex flex-col justify-start w-full lg:w-[60%] text-justify
-                 px-4 lg:px-0 lg:pl-12" /* padding no mobile + desktop separado */
+                className="
+          flex flex-col justify-center 
+          w-full lg:w-[60%] text-justify
+          px-4 lg:px-0 lg:pl-12
+        "
                 initial={{ opacity: 0, x: -100, scale: 0.95 }}
                 whileInView={{
                   opacity: 1,
@@ -106,8 +117,12 @@ const MosaicoProdutos = () => {
 
               {/* Imagem */}
               <motion.div
-                className="flex justify-center lg:justify-end items-start 
-                 w-full lg:w-[40%] mt-6 lg:mt-0"
+                className="
+          flex justify-center lg:justify-end 
+          items-center 
+          w-full lg:w-[50%] 
+          mt-6 lg:mt-0
+        "
                 initial={{ opacity: 0, x: 100, scale: 0.9 }}
                 whileInView={{
                   opacity: 1,
@@ -121,10 +136,13 @@ const MosaicoProdutos = () => {
                   <img
                     src={products[2].image}
                     alt={products[2].name}
-                    className="w-full max-w-none lg:max-w-[500px] 
-                     object-cover lg:object-contain
-                     transition-transform duration-500 hover:scale-[1.03]
-                     rounded-lg shadow-sm"
+                    className="
+              w-full max-w-none 
+              lg:max-w-[600px]   /* imagem maior */
+              object-cover lg:object-contain
+              transition-transform duration-500 hover:scale-[1.03]
+              rounded-lg shadow-sm
+            "
                   />
                 </div>
               </motion.div>
