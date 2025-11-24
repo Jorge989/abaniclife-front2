@@ -9,12 +9,18 @@ import { trackEvent } from "../utils/analytics";
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    const isMobile = window.innerWidth < 768; // breakpoint Tailwind
+
+    if (!isMobile) {
+      // Desktop e tablet → bloqueia scroll
+      document.body.style.overflow = "hidden";
+    }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; // limpa ao desmontar
     };
   }, []);
+
   const slides = [
     {
       id: 1,
