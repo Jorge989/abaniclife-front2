@@ -85,10 +85,11 @@ const MosaicoProdutos = () => {
               {/* Texto */}
               <motion.div
                 className="
-          flex flex-col justify-center 
-          w-full lg:w-[60%] text-justify
-          px-4 lg:px-0 lg:pl-12
-        "
+    flex flex-col justify-center 
+    w-full lg:w-[60%] text-justify
+    px-4 lg:px-0 lg:pl-12
+    pt-4 lg:pt-12
+  "
                 initial={{ opacity: 0, x: -100, scale: 0.95 }}
                 whileInView={{
                   opacity: 1,
@@ -98,14 +99,13 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-loose pt-4 lg:pr-10">
+                <p className="text-gray-600 text-base lg:text-[22px] leading-loose lg:pt-0 lg:pr-10">
                   <b>3 Passos</b> essenciais que reúnem múltiplos benefícios
                   para os cuidados necessários com sua pele. Desenvolvidos com
-                  ativos naturais extraídos de
+                  ativos naturais extraídos de{" "}
                   <b>
-                    {" "}
                     algas vermelhas, flores de margaridas e esqualano vegetal
-                  </b>
+                  </b>{" "}
                   com propriedades
                   <b> antioxidantes, clareadoras e iluminadoras.</b> <br />
                   Além de ativos que oferecem
