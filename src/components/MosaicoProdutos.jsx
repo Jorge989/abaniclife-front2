@@ -30,13 +30,13 @@ const MosaicoProdutos = () => {
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
       <div className="w-full max-w-[90%] mx-auto text-center">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-full">
           {/* Imagens de cima */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-4 w-full">
             {products.slice(0, 2).map((product, index) => (
               <motion.div
                 key={product.id}
-                className="relative w-full h-0 pb-[65%] overflow-hidden rounded-lg"
+                className="w-full h-[380px] overflow-hidden rounded-lg" // altura controlada
                 initial={{
                   opacity: 0,
                   x: index === 0 ? -100 : 100,
@@ -54,7 +54,7 @@ const MosaicoProdutos = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500"
+                  className="w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500"
                 />
               </motion.div>
             ))}
