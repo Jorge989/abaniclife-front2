@@ -334,9 +334,12 @@ const PrincipiosAtivos = () => {
   );
 };
 const ProductPage = () => {
-  const [openUso, setOpenUso] = useState(false);
-  const [openIngredientes, setOpenIngredientes] = useState(false);
-
+  const [openUsoOne, setOpenUsoOne] = useState(false);
+  const [openIngredientesOne, setOpenIngredientesOne] = useState(false);
+  const [openUsoTwo, setOpenUsoTwo] = useState(false);
+  const [openIngredientesTwo, setOpenIngredientesTwo] = useState(false);
+  const [openUsoThree, setOpenUsoThree] = useState(false);
+  const [openIngredientesThree, setOpenIngredientesThree] = useState(false);
   return (
     <section style={{ backgroundColor: "#F1F0EB" }}>
       <motion.div
@@ -394,16 +397,16 @@ const ProductPage = () => {
               </p>
               {/* INDICAÇÃO DE USO */}
               <button
-                onClick={() => setOpenUso(!openUso)}
-                aria-expanded={openUso}
+                onClick={() => setOpenUsoOne(!openUsoOne)}
+                aria-expanded={openUsoOne}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoOne ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
                 </span>
               </button>
 
-              {openUso && (
+              {openUsoOne && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   APLIQUE UM PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO E ADICIONA
                   POUCA QUANTIDADE
@@ -412,16 +415,16 @@ const ProductPage = () => {
 
               {/* INGREDIENTES */}
               <button
-                onClick={() => setOpenIngredientes(!openIngredientes)}
-                aria-expanded={openIngredientes}
+                onClick={() => setOpenIngredientesOne(!openIngredientesOne)}
+                aria-expanded={openIngredientesOne}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                  {openIngredientesOne ? "- INGREDIENTES" : "+ INGREDIENTES"}
                 </span>
               </button>
 
-              {openIngredientes && (
+              {openIngredientesOne && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
@@ -493,16 +496,16 @@ const ProductPage = () => {
 
               {/* INDICAÇÃO DE USO */}
               <button
-                onClick={() => setOpenUso(!openUso)}
-                aria-expanded={openUso}
+                onClick={() => setOpenUsoTwo(!openUsoTwo)}
+                aria-expanded={openUsoTwo}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoTwo ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
                 </span>
               </button>
 
-              {openUso && (
+              {openUsoTwo && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   APLIQUE UMA PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO. ESPALHE
                   DE FORMA HOMOGENIA POR TODO O ROSTO COM MOVIMENTOS LEVES E
@@ -512,16 +515,16 @@ const ProductPage = () => {
 
               {/* INGREDIENTES */}
               <button
-                onClick={() => setOpenIngredientes(!openIngredientes)}
-                aria-expanded={openIngredientes}
+                onClick={() => setOpenIngredientesTwo(!openIngredientesTwo)}
+                aria-expanded={openIngredientesTwo}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                  {openIngredientesTwo ? "- INGREDIENTES" : "+ INGREDIENTES"}
                 </span>
               </button>
 
-              {openIngredientes && (
+              {openIngredientesTwo && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
@@ -596,16 +599,16 @@ const ProductPage = () => {
 
               {/* INDICAÇÃO DE USO */}
               <button
-                onClick={() => setOpenUso(!openUso)}
-                aria-expanded={openUso}
+                onClick={() => setOpenUsoThree(!openUsoThree)}
+                aria-expanded={openUsoThree}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoThree ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
                 </span>
               </button>
 
-              {openUso && (
+              {openUsoThree && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   ROSTO. ESPALHE ATÉ SENTIR TOTAL ABSORÇÃO DA PELE.
                   <br />
@@ -615,16 +618,16 @@ const ProductPage = () => {
 
               {/* INGREDIENTES */}
               <button
-                onClick={() => setOpenIngredientes(!openIngredientes)}
-                aria-expanded={openIngredientes}
+                onClick={() => setOpenIngredientesThree(!openIngredientesThree)}
+                aria-expanded={openIngredientesThree}
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                  {openIngredientesThree ? "- INGREDIENTES" : "+ INGREDIENTES"}
                 </span>
               </button>
 
-              {openIngredientes && (
+              {openIngredientesThree && (
                 <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
                   Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
