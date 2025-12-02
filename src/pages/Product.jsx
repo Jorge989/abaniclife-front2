@@ -14,6 +14,8 @@ import EsqualanoItem from "../assets/itemsAtivos/AtivoEsqualano.png";
 import EvodiaItem from "../assets/itemsAtivos/AtivoEvodia.png";
 import JojobaItem from "../assets/itemsAtivos/AtivoJojoba.png";
 import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
+import { motion } from "framer-motion";
+import ProductActivetext from "../components/ProductActiveText";
 
 const ativosInfo = [
   {
@@ -331,39 +333,199 @@ const PrincipiosAtivos = () => {
     </section>
   );
 };
-
 const ProductPage = () => {
+  const [openUso, setOpenUso] = useState(false);
+  const [openIngredientes, setOpenIngredientes] = useState(false);
+
   return (
-    <div style={{ backgroundColor: "#F1F0EB" }}>
-      <section className="w-full bg-[#F1F0EB] py-12 px-4 mt-[8%]">
-        <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-6 md:gap-12">
+    <section style={{ backgroundColor: "#F1F0EB" }}>
+      <motion.div
+        className="max-w-[1070px] mx-auto px-6 py-10 mt-28"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Imagem do Produto */}
-          <div className="flex justify-center md:justify-end w-full md:w-1/2">
+          <motion.div
+            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+            }}
+          >
             <img
-              src="https://abaniclife.com/wp-content/uploads/2025/06/Produto-RHODY-SENCE-FPS50.png"
+              src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Hidratante FPS50"
-              className="w-full max-w-[300px] md:max-w-[440px] h-auto object-contain rounded-lg"
+              className="w-full h-auto object-cover rounded-lg shadow-md"
             />
-          </div>
+          </motion.div>
 
           {/* Conteúdo do Produto */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
-              Hidratante com FPS50
+          <motion.div
+            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            variants={{
+              hidden: { opacity: 0, x: 100 }, // sai da direita
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 0.3 },
+              },
+            }}
+          >
+            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+              <span className="font-bold">GEL RHODY CLEANSE</span>
+              <br />
+              <span className="font-normal">LIMPEZA</span>
             </h1>
 
-            <p className="text-lg font-semibold text-[#ff5722]">R$00,00</p>
+            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+              <p>R$00,00</p>
+              <p>150ml</p>
+            </div>
 
-            <div className="text-sm md:text-base text-[#555555] leading-relaxed space-y-1">
-              <p>Recomendação de uso</p>
-              <p>Textura Hidratante</p>
-              <p>Aroma: Neutro</p>
-              <p>FPS50 – 50ml</p>
-              <p>100% natural. cruelty-free. sem parabenos.</p>
-              <p>
-                ingredientes: ácido hialurônico, gatuline, beleides, esqualano,
-                jojoba, camomila, fps físico.
+            <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
+              <p className="text-gray-700 text-[16px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                FORMULAÇÃO MOUSSE ENRIQUECIDA COM ATIVOS ANTIOXIDANTES EXTRAÍDOS
+                DE ALGAS VERMELHAS.
+                <br />
+                SUA TEXTURA ENVOLVE AS SUJEIRAS COM DELICADEZA, DEIXANDO A PELE
+                COM SENSAÇÃO DE LIMPEZA E HIDRATAÇÃO.
               </p>
+              {/* INDICAÇÃO DE USO */}
+              <button
+                onClick={() => setOpenUso(!openUso)}
+                aria-expanded={openUso}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                </span>
+              </button>
+
+              {openUso && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  APLIQUE UM PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO E ADICIONA
+                  POUCA QUANTIDADE
+                </p>
+              )}
+
+              {/* INGREDIENTES */}
+              <button
+                onClick={() => setOpenIngredientes(!openIngredientes)}
+                aria-expanded={openIngredientes}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                </span>
+              </button>
+
+              {openIngredientes && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                </p>
+              )}
+            </div>
+
+            <div className="w-full max-w-[320px] mt-6">
+              <button className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105">
+                Comprar agora
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+      <motion.div
+        className="max-w-[1070px] mx-auto px-6 py-10 mt-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+          {/* Imagem do Produto */}
+          <motion.div
+            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Hidratante FPS50"
+              className="w-full h-auto object-cover rounded-lg shadow-md"
+            />
+          </motion.div>
+
+          {/* Conteúdo do Produto */}
+          <motion.div
+            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 0.3 },
+              },
+            }}
+          >
+            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+              <span className="font-bold">SÉRUM RHODY CLAREADOR</span>
+              <br />
+              <span className="font-normal">CONCENTRADO DE ATIVOS</span>
+            </h1>
+
+            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+              <p>R$00,00</p>
+              <p>30ML</p>
+            </div>
+
+            <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
+              <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
+                VERMELHAS E FLORES DE MARGARIDAS.
+                <br />
+                PELE COM RADIÂNCIA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DE ALGAS E
+                FLORES DE MARGARIDAS. ALÉM DE ATIVOS HIDRATANTES E CALMANTES E
+                QUE ATIVAM A MICROCIRCULAÇÃO DA PELE.
+              </p>
+
+              {/* INDICAÇÃO DE USO */}
+              <button
+                onClick={() => setOpenUso(!openUso)}
+                aria-expanded={openUso}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                </span>
+              </button>
+
+              {openUso && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  APLIQUE UMA PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO. ESPALHE
+                  DE FORMA HOMOGENIA POR TODO O ROSTO COM MOVIMENTOS LEVES E
+                  CIRCULARES.
+                </p>
+              )}
+
+              {/* INGREDIENTES */}
+              <button
+                onClick={() => setOpenIngredientes(!openIngredientes)}
+                aria-expanded={openIngredientes}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                </span>
+              </button>
+
+              {openIngredientes && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                </p>
+              )}
             </div>
 
             <div className="w-full max-w-[320px] mt-6">
@@ -374,12 +536,118 @@ const ProductPage = () => {
                 Comprar agora
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.div>
+      <motion.div
+        className="max-w-[1070px] mx-auto px-6 py-10 mt-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+          {/* Imagem do Produto */}
+          <motion.div
+            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Hidratante FPS50"
+              className="w-full h-auto object-cover rounded-lg shadow-md"
+            />
+          </motion.div>
 
-      <PrincipiosAtivos />
-    </div>
+          {/* Conteúdo do Produto */}
+          <motion.div
+            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 1, delay: 0.3 },
+              },
+            }}
+          >
+            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+              <span className="font-bold">RHODY SENCE FPS50</span>
+              <br />
+              <span className="font-normal">CREME MULTIFUNCIONAL</span>
+            </h1>
+
+            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+              <p>R$00,00</p>
+              <p>60MG</p>
+            </div>
+
+            <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
+              <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
+                VERMELHAS E FLORES DE MARGARIDAS
+                <br />
+                ALÉM DE ATIVOS HIDRATANTES E CALMANTES E QUE ATIVAM A
+                MICROCIRCULAÇÃO DA PELE. TOQUE SEDOSO E AVELUDADO. PELE COM
+                RADIÂNCIA. SUA FRAGÂNCIA POSSUI NOTAS MINERAIS...REMETE
+              </p>
+
+              {/* INDICAÇÃO DE USO */}
+              <button
+                onClick={() => setOpenUso(!openUso)}
+                aria-expanded={openUso}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openUso ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                </span>
+              </button>
+
+              {openUso && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  ROSTO. ESPALHE ATÉ SENTIR TOTAL ABSORÇÃO DA PELE.
+                  <br />
+                  AO SE EXPOR AO SOL INTENSO APLIQUE O PROTETOR SOLAR.
+                </p>
+              )}
+
+              {/* INGREDIENTES */}
+              <button
+                onClick={() => setOpenIngredientes(!openIngredientes)}
+                aria-expanded={openIngredientes}
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+              >
+                <span className="text-[17px] md:text-[17px]">
+                  {openIngredientes ? "- INGREDIENTES" : "+ INGREDIENTES"}
+                </span>
+              </button>
+
+              {openIngredientes && (
+                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                </p>
+              )}
+            </div>
+
+            <div className="w-full max-w-[320px] mt-6">
+              <button
+                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
+                aria-label="Comprar agora"
+              >
+                Comprar agora
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+      <ProductActivetext />
+      {/* PrincipiosAtivos fica fora do container principal pra herdar background, se desejar igual, envolva com outro container */}
+      <div style={{ backgroundColor: "#F1F0EB" }} className="mt-30">
+        <PrincipiosAtivos />
+      </div>
+    </section>
   );
 };
 
