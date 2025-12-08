@@ -117,7 +117,7 @@ const PrincipiosAtivos = () => {
       const element = document.querySelector(hash);
       if (element) {
         setTimeout(() => {
-          const yOffset = -165;
+          const yOffset = -105;
           const y =
             element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
@@ -213,24 +213,22 @@ const PrincipiosAtivos = () => {
       {ativoSelecionado && (
         <div
           ref={painelRef}
-          className="shadow-lg rounded-b-md max-w-[1224px] mx-auto border border-gray-200 overflow-hidden bg-[#F1F0EB]"
+          className="shadow-md rounded-b-md max-w-[1224px] mx-auto border border-gray-200 overflow-hidden bg-[#F1F0EB]"
           aria-live="polite"
           role="region"
           aria-labelledby="ativo-titulo"
         >
-          {/* Cabeçalho do card */}
-          <div className="px-4 sm:px-6 py-4 border-b border-gray-300">
-            <div className="flex justify-between items-start gap-4">
-              {/* Título e Subtítulo - Agora ocupa mais espaço */}
+          {/* Cabeçalho */}
+          <div className="px-4 sm:px-5 py-3 border-b border-gray-300">
+            <div className="flex justify-between items-start gap-3">
+              {/* Título */}
               <div className="flex-1 min-w-0">
-                {" "}
-                {/* min-w-0 permite que o texto quebre */}
                 <div className="flex justify-between items-start mb-1">
-                  <h1 className="text-[28px] md:text-[36px] font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
+                  <h1 className="text-[22px] md:text-[28px] font-bold text-gray-800 mb-2 leading-tight font-space-grotesk-h1">
                     {ativoSelecionado}
                   </h1>
 
-                  {/* Botão de fechar - agora dentro do fluxo do título */}
+                  {/* Fechar */}
                   <button
                     onClick={() => {
                       setAtivoSelecionado(null);
@@ -239,21 +237,19 @@ const PrincipiosAtivos = () => {
                         if (section) {
                           const y =
                             section.getBoundingClientRect().top +
-                            window.pageYOffset -
-                            0;
+                            window.pageYOffset;
                           window.scrollTo({ top: y, behavior: "smooth" });
-                        } else {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
                         }
                       }, 100);
                     }}
-                    className="text-[#ff5722] hover:text-[#e64a19] text-2xl md:text-2xl font-bold cursor-pointer focus:outline-none transition-colors duration-200 flex-shrink-0 mt-1"
-                    aria-label="Fechar painel de princípio ativo"
+                    className="text-[#ff5722] hover:text-[#e64a19] text-xl cursor-pointer transition-colors mt-1"
+                    aria-label="Fechar painel"
                   >
                     &times;
                   </button>
                 </div>
-                <h3 className="text-[20px] md:text-[23px] font-bold text-[#FF5C26] mb-3 font-space-grotesk-h3">
+
+                <h3 className="text-[16px] md:text-[18px] font-semibold text-[#FF5C26] mb-2 font-space-grotesk-h3">
                   {
                     ativosInfo.find((a) => a.name === ativoSelecionado)
                       ?.subtitle
@@ -263,57 +259,59 @@ const PrincipiosAtivos = () => {
             </div>
           </div>
 
-          {/* Conteúdo do card */}
-          <div className="p-4 sm:p-6 md:p-8">
+          {/* Conteúdo */}
+          <div className="p-4 sm:p-5 md:p-6">
             {/* Descrição */}
-            <div className="mb-6 flex items-start">
-              <span className="w-3 h-3 bg-[#ff5722] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <h3 className="text-lg font-bold text-black mb-3 font-space-grotesk-h3">
+            <div className="mb-4 flex items-start">
+              <span className="w-2.5 h-2.5 bg-[#ff5722] rounded-full mt-1.5 mr-2"></span>
+              <h3 className="text-md font-bold text-black font-space-grotesk-h3">
                 Descrição
               </h3>
             </div>
-            <div className="space-y-4 text-gray-700">
+
+            <div className="space-y-3 text-gray-700 text-[17px] leading-relaxed">
               {ativosInfo
                 .find((a) => a.name === ativoSelecionado)
                 ?.descricao.map((texto, i) => (
                   <p
                     key={i}
-                    className="text-gray-700 mb-4 text-justify"
+                    className="text-gray-700 text-justify"
                     dangerouslySetInnerHTML={{ __html: texto }}
                   />
                 ))}
             </div>
 
-            {/* Linha divisória */}
-            <div className="my-8">
+            {/* Linha */}
+            <div className="my-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
             </div>
 
             {/* Benefícios */}
-            <div className="mt-6 flex items-start">
-              <span className="w-3 h-3 bg-[#ff5722] rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <h3 className="text-lg font-bold text-black mb-3 font-space-grotesk-h3">
+            <div className="mt-4 flex items-start">
+              <span className="w-2.5 h-2.5 bg-[#ff5722] rounded-full mt-1.5 mr-2"></span>
+              <h3 className="text-md font-bold text-black font-space-grotesk-h3">
                 Benefícios
               </h3>
             </div>
-            <div className="space-y-4 text-gray-700">
+
+            <div className="space-y-3 text-gray-700 text-[17px] leading-relaxed">
               {ativosInfo
                 .find((a) => a.name === ativoSelecionado)
                 ?.beneficios.map((texto, i) => (
                   <p
                     key={i}
-                    className="text-gray-700 mb-4 text-justify"
+                    className="text-gray-700 text-justify"
                     dangerouslySetInnerHTML={{ __html: texto }}
                   />
                 ))}
             </div>
 
-            {/* Label com background */}
-            <div className="mt-8 pt-6 border-t border-gray-300">
+            {/* Label */}
+            <div className="mt-6 pt-4 border-t border-gray-300">
               <div className="flex items-center justify-center">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-orange-100 text-[#ff5722] border border-orange-200">
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-orange-100 text-[#ff5722] border border-orange-200">
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className="w-3.5 h-3.5 mr-1"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -333,6 +331,7 @@ const PrincipiosAtivos = () => {
     </section>
   );
 };
+
 const ProductPage = () => {
   const [openUsoOne, setOpenUsoOne] = useState(false);
   const [openIngredientesOne, setOpenIngredientesOne] = useState(false);
@@ -347,6 +346,7 @@ const ProductPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        id="rhody"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Imagem do Produto */}
@@ -444,6 +444,7 @@ const ProductPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        id="serum"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Imagem do Produto */}
@@ -547,6 +548,7 @@ const ProductPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        id="fps50"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Imagem do Produto */}

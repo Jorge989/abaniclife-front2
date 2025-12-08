@@ -25,9 +25,9 @@ const translations = {
         name: "Produtos",
         href: "#",
         submenu: [
-          { name: "GEL RHODY CLEANSE", href: "/product#ativos" },
-          { name: "SÉRUM RHODY CLAREDOR", href: "/product#ativos" },
-          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
+          { name: "GEL RHODY CLEANSE", href: "/product#rhody" },
+          { name: "SÉRUM RHODY CLAREDOR", href: "/product#serum" },
+          { name: "RHODY SENSE FPS50", href: "/product#fps50" },
         ],
       },
       {
