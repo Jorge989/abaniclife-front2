@@ -18,6 +18,7 @@ const BrandAndFounders = lazy(() => import("./pages/BrandAndFounders"));
 const Faq = lazy(() => import("./pages/Faq"));
 const Explore = lazy(() => import("./pages/Explore"));
 const BlogPostPage = lazy(() => import("./pages/Blog"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 function App() {
   return (
     <LanguageProvider>
@@ -34,6 +35,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/faq" element={<Faq />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
               <Route path="/blog/:id" element={<BlogPostPage />} />
             </Routes>
           </Suspense>

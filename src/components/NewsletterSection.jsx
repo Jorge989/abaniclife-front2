@@ -61,7 +61,7 @@ const NewsletterSection = () => {
             className="relative"
           >
             <div
-              className="relative overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center h-96 lg:h-[500px]"
+              className="relative overflow-hidden rounded-2xl shadow-2xl flex items-center justify-center h-72 md:h-80 lg:h-[420px]"
               style={{ backgroundColor: "#A1B6C1" }}
             >
               <img
@@ -86,10 +86,10 @@ const NewsletterSection = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
                 Fique por <span className="abanic-orange">dentro</span>
               </h2>
-              <p className="text-gray-700 mb-4 text-justify text-[18px]">
+              <p className="text-gray-700 mb-4 text-justify text-base sm:text-[17px] md:text-[18px]">
                 Assine a nossa newsletter e receba em primeira mão as
                 atualizações sobre lançamentos, edições especiais e eventos da
                 marca.
@@ -114,7 +114,7 @@ const NewsletterSection = () => {
                         </span>
                       </div>
 
-                      <div className="flex gap-3">
+                      <div className="flex flex-col md:flex-row gap-3">
                         <div className="flex flex-col gap-3 flex-1">
                           <Input
                             type="text"
@@ -138,7 +138,7 @@ const NewsletterSection = () => {
                         <Button
                           type="submit"
                           disabled={isLoading || !nome || !email}
-                          className="text-white px-8 py-3 font-semibold transition-smooth hover-lift self-center"
+                          className="text-white px-8 py-3 font-semibold transition-smooth hover-lift self-center md:self-end"
                           style={{
                             height: "100%",
                             backgroundColor:
@@ -158,7 +158,7 @@ const NewsletterSection = () => {
                         </Button>
                       </div>
 
-                      <p className="text-gray-700 mb-4 text-justify text-[17px]">
+                      <p className="text-gray-700 mb-4 text-justify text-sm sm:text-[15px] md:text-[17px]">
                         Segurança de dados de acordo com a Política de
                         Privacidade. A assinatura poderá ser cancelada a
                         qualquer momento.

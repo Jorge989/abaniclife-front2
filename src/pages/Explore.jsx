@@ -225,8 +225,11 @@ const Explore = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 mt-25">
-      <div className="w-full max-w-6xl mx-auto px-6">
+    <section
+      className="w-full overflow-x-hidden"
+      style={{ backgroundColor: "#F1F0EB" }}
+    >
+      <div className="max-w-[1070px] mx-auto px-6 py-10 mt-28 space-y-20">
         {/* Header com foto + textos */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
           <div className="flex-1 flex justify-center">
@@ -275,13 +278,9 @@ const Explore = () => {
         </div>
 
         {/* Seções detalhadas */}
-        <div className="space-y-12 text-center">
+        <div className="space-y-12 text-left">
           {sectionsData.map((section, idx) => (
-            <section
-              key={section.id}
-              id={section.id}
-              className="text-left max-w-2xl mx-auto scroll-mt-32"
-            >
+            <section key={section.id} id={section.id} className="scroll-mt-32">
               <h2 className="text-2xl font-semibold text-gray-800 mb-3 font-space-grotesk-h3">
                 {section.title}
               </h2>
@@ -306,11 +305,12 @@ const Explore = () => {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.35 }}
+                      className="w-full h-72 md:h-80 lg:h-[420px] overflow-hidden rounded-xl"
                     >
                       <img
                         src={section.image}
                         alt="foto ativo"
-                        className="rounded-xl"
+                        className="w-full h-full object-cover rounded-xl"
                       />
                     </motion.div>
                   </React.Fragment>
@@ -327,10 +327,7 @@ const Explore = () => {
               )}
 
               {section.items.map((item) => (
-                <div
-                  key={item.id}
-                  className="border-t border-b py-3 inline-block w-full max-w-2xl"
-                >
+                <div key={item.id} className="border-t border-b py-3 w-full">
                   <button
                     className="flex items-center justify-between w-full text-left font-medium text-gray-800"
                     onClick={() => toggleSection(item.id)}
@@ -359,7 +356,7 @@ const Explore = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

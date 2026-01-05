@@ -36,7 +36,7 @@ const MosaicoProdutos = () => {
             {products.slice(0, 2).map((product, index) => (
               <motion.div
                 key={product.id}
-                className="w-full h-[550px] overflow-hidden rounded-xl" // altura controlada
+                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[480px] overflow-hidden rounded-xl" // alturas responsivas para notebooks
                 initial={{
                   opacity: 0,
                   x: index === 0 ? -100 : 100,
@@ -54,7 +54,7 @@ const MosaicoProdutos = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover rounded-lg shadow-xl transition-transform duration-500"
+                  className="w-full h-full object-cover lg:object-bottom lg:max-h-[480px] rounded-lg shadow-xl transition-transform duration-500"
                 />
               </motion.div>
             ))}
@@ -137,8 +137,9 @@ const MosaicoProdutos = () => {
                     src={products[2].image}
                     alt={products[2].name}
                     className="
-              w-full max-w-none 
-              lg:max-w-[600px]   /* imagem maior */
+              w-full max-w-none
+              lg:max-w-[520px]   /* ligeiramente menor em notebooks */
+              lg:max-h-[480px]
               object-cover lg:object-contain
               transition-transform duration-500 hover:scale-[1.03]
               rounded-lg shadow-sm
