@@ -20,6 +20,7 @@ const Explore = lazy(() => import("./pages/Explore"));
 const BlogPostPage = lazy(() => import("./pages/Blog"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfUse = lazy(() => import("./pages/TermsOfUse"));
 function App() {
   return (
     <LanguageProvider>
@@ -38,6 +39,7 @@ function App() {
               <Route path="/faq" element={<Faq />} />
               <Route path="/cookie-policy" element={<CookiePolicy />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/blog/:id" element={<BlogPostPage />} />
             </Routes>
           </Suspense>
