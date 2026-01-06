@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
       </div>
 
       {/* Content */}
-      <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* 1. Introdução */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">

@@ -56,7 +56,7 @@ const CookiePolicy = () => {
       </div>
 
       {/* Content */}
-      <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24">
+      <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* Section 1 */}
         <div className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
