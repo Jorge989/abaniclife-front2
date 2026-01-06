@@ -44,7 +44,7 @@ const translations = {
         href: "#",
         submenu: [
           { name: "FAQ", href: "/faq" },
-          { name: "Política de Privacidade", href: "#contato" },
+          { name: "Política de Privacidade", href: "/privacy-policy" },
           { name: "Política de Cookies", href: "/cookie-policy" },
           { name: "Termos de Uso", href: "#tutorial" },
         ],
@@ -86,7 +86,7 @@ const translations = {
         href: "#",
         submenu: [
           { name: "FAQ", href: "/faq" },
-          { name: "Privacy Policy", href: "#contato" },
+          { name: "Privacy Policy", href: "/privacy-policy" },
           { name: "Cookie Policy", href: "/cookie-policy" },
           { name: "Terms of Use", href: "#tutorial" },
         ],
