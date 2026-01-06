@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
             dos seus dados pessoais.
           </p>
           <p className="text-sm text-gray-500 mt-6 mb-6">
-            Última atualização: Dezembro de 2024
+            Última atualização: Dezembro de 2025
           </p>
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto"></div>
         </div>
