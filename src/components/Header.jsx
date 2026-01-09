@@ -25,9 +25,10 @@ const translations = {
         name: "Produtos",
         href: "#",
         submenu: [
-          { name: "GEL RHODY CLEANSE", href: "/product#rhody" },
-          { name: "SÉRUM RHODY CLAREDOR", href: "/product#serum" },
-          { name: "RHODY SENSE FPS50", href: "/product#fps50" },
+          { name: "Linha RHODY SENCE" },
+          { name: "Creme Facial Radiance FPS50", href: "/product#rhody" },
+          { name: "Sérum Facial Clareador", href: "/product#serum" },
+          { name: "Gel de Limpeza Facial", href: "/product#fps50" },
         ],
       },
       {
@@ -43,7 +44,7 @@ const translations = {
         name: "Suporte",
         href: "#",
         submenu: [
-          { name: "FAQ", href: "/faq" },
+          { name: "Perguntas Frequentes", href: "/faq" },
           { name: "Política de Privacidade", href: "/privacy-policy" },
           { name: "Política de Cookies", href: "/cookie-policy" },
           { name: "Termos de Uso", href: "/terms-of-use" },

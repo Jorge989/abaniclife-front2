@@ -33,11 +33,9 @@ const PrivacyPolicy = () => {
             1. Introdução
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
-            A ABANIC LIFE está comprometida com a proteção da sua privacidade e
-            dos seus dados pessoais. Esta Política de Privacidade descreve como
-            coletamos, usamos, armazenamos e protegemos suas informações, em
-            conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº
-            13.709/2018).
+            Esta Política de Privacidade descreve como coletamos, usamos,
+            armazenamos e protegemos suas informações, em conformidade com a Lei
+            Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
           </p>
         </div>
 
@@ -174,11 +172,11 @@ const PrivacyPolicy = () => {
           <p className="text-base text-abanic-gray mt-4">
             Para exercer seus direitos, entre em contato através do e-mail:{" "}
             <a
-              href="mailto:privacidade@abaniclife.com"
+              href="mailto:contato@abaniclife.com"
               className="font-semibold"
               style={{ color: "#fc622b" }}
             >
-              privacidade@abaniclife.com
+              contato@abaniclife.com
             </a>
           </p>
         </div>
@@ -243,22 +241,22 @@ const PrivacyPolicy = () => {
         {/* 11. Contato do Encarregado (DPO) */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
-            11. Contato do Encarregado (DPO)
+            11. Contato
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             Para questões relacionadas à privacidade e proteção de dados, entre
-            em contato com nosso Encarregado de Proteção de Dados:
+            em contato:
           </p>
           <div className="flex items-center gap-3 mt-4">
             <span className="text-2xl" style={{ color: "#fc622b" }}>
               ✉
             </span>
             <a
-              href="mailto:dpo@abaniclife.com"
+              href="mailto:contato@abaniclife.com"
               className="font-semibold text-lg transition-colors"
               style={{ color: "#fc622b" }}
             >
-              dpo@abaniclife.com
+              contato@abaniclife.com
             </a>
           </div>
         </div>

@@ -255,8 +255,8 @@ const Explore = () => {
             </h1>
 
             <p className="text-gray-700 mb-6">
-              A Linha RHODY SENCE foi desenvolvida com ativos naturais e
-              selecionado com base em seus benefícios. Conheça abaxo os
+              A linha RHODY SENCE foi desenvolvida com ativos naturais e
+              selecionados com base em seus benefícios. Conheça abaixo os
               principais ativos de nossas formulações e sua ações.
             </p>
 

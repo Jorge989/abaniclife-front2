@@ -105,7 +105,7 @@ const CultureSection = () => {
           </h1>
           <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
             Acompanhe com a ABANIC as últimas novidades sobre cultura e
-            tenedências.
+            tendências.
           </p>
         </motion.div>
 
