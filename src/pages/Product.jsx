@@ -145,7 +145,10 @@ const PrincipiosAtivos = () => {
       id="ativos"
       className="max-w-[1290px] mx-auto px-4 mb-10 relative transition-all mt-10"
     >
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight font-space-grotesk-h1 text-center mb-10">
+      <h1
+        className="text-3xl md:text-4xl font-bold leading-tight font-space-grotesk-h1 text-center mb-10"
+        style={{ color: "var(--abanic-gray-dark)" }}
+      >
         Princípios Ativos
       </h1>
       {/* --- Animação de dica no topo --- */}
@@ -269,13 +272,16 @@ const PrincipiosAtivos = () => {
               </h3>
             </div>
 
-            <div className="space-y-3 text-gray-700 text-[17px] leading-relaxed">
+            <div
+              className="space-y-3 text-[17px] leading-relaxed"
+              style={{ color: "var(--abanic-gray)" }}
+            >
               {ativosInfo
                 .find((a) => a.name === ativoSelecionado)
                 ?.descricao.map((texto, i) => (
                   <p
                     key={i}
-                    className="text-gray-700 text-justify"
+                    className="text-justify"
                     dangerouslySetInnerHTML={{ __html: texto }}
                   />
                 ))}
@@ -294,13 +300,16 @@ const PrincipiosAtivos = () => {
               </h3>
             </div>
 
-            <div className="space-y-3 text-gray-700 text-[17px] leading-relaxed">
+            <div
+              className="space-y-3 text-[17px] leading-relaxed"
+              style={{ color: "var(--abanic-gray)" }}
+            >
               {ativosInfo
                 .find((a) => a.name === ativoSelecionado)
                 ?.beneficios.map((texto, i) => (
                   <p
                     key={i}
-                    className="text-gray-700 text-justify"
+                    className="text-justify"
                     dangerouslySetInnerHTML={{ __html: texto }}
                   />
                 ))}
@@ -377,9 +386,19 @@ const ProductPage = () => {
             }}
           >
             <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
-              <span className="font-bold">GEL RHODY CLEANSE</span>
+              <span
+                className="font-bold"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                GEL RHODY CLEANSE
+              </span>
               <br />
-              <span className="font-normal">LIMPEZA</span>
+              <span
+                className="font-normal"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                LIMPEZA
+              </span>
             </h1>
 
             <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
@@ -388,7 +407,13 @@ const ProductPage = () => {
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
-              <p className="text-gray-700 text-[16px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+              <p
+                className="text-[16px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                style={{
+                  color: "var(--abanic-gray)",
+                  textTransform: "uppercase",
+                }}
+              >
                 FORMULAÇÃO MOUSSE ENRIQUECIDA COM ATIVOS ANTIOXIDANTES EXTRAÍDOS
                 DE ALGAS VERMELHAS.
                 <br />
@@ -407,7 +432,13 @@ const ProductPage = () => {
               </button>
 
               {openUsoOne && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
                   APLIQUE UM PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO E ADICIONA
                   POUCA QUANTIDADE
                 </p>
@@ -425,8 +456,14 @@ const ProductPage = () => {
               </button>
 
               {openIngredientesOne && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
-                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
                 </p>
               )}
             </div>
@@ -475,9 +512,19 @@ const ProductPage = () => {
             }}
           >
             <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
-              <span className="font-bold">SÉRUM RHODY CLAREADOR</span>
+              <span
+                className="font-bold"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                SÉRUM RHODY CLAREADOR
+              </span>
               <br />
-              <span className="font-normal">CONCENTRADO DE ATIVOS</span>
+              <span
+                className="font-normal"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                CONCENTRADO DE ATIVOS
+              </span>
             </h1>
 
             <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
@@ -486,7 +533,13 @@ const ProductPage = () => {
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
-              <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+              <p
+                className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                style={{
+                  color: "var(--abanic-gray)",
+                  textTransform: "uppercase",
+                }}
+              >
                 FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
                 VERMELHAS E FLORES DE MARGARIDAS.
                 <br />
@@ -507,7 +560,13 @@ const ProductPage = () => {
               </button>
 
               {openUsoTwo && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
                   APLIQUE UMA PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO. ESPALHE
                   DE FORMA HOMOGENIA POR TODO O ROSTO COM MOVIMENTOS LEVES E
                   CIRCULARES.
@@ -526,8 +585,14 @@ const ProductPage = () => {
               </button>
 
               {openIngredientesTwo && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
-                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
                 </p>
               )}
             </div>
@@ -579,9 +644,19 @@ const ProductPage = () => {
             }}
           >
             <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
-              <span className="font-bold">RHODY SENCE FPS50</span>
+              <span
+                className="font-bold"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                RHODY SENCE FPS50
+              </span>
               <br />
-              <span className="font-normal">CREME MULTIFUNCIONAL</span>
+              <span
+                className="font-normal"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
+                CREME MULTIFUNCIONAL
+              </span>
             </h1>
 
             <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
@@ -590,13 +665,19 @@ const ProductPage = () => {
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
-              <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+              <p
+                className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                style={{
+                  color: "var(--abanic-gray)",
+                  textTransform: "uppercase",
+                }}
+              >
                 FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
                 VERMELHAS E FLORES DE MARGARIDAS
                 <br />
                 ALÉM DE ATIVOS HIDRATANTES E CALMANTES E QUE ATIVAM A
                 MICROCIRCULAÇÃO DA PELE. TOQUE SEDOSO E AVELUDADO. PELE COM
-                RADIÂNCIA. SUA FRAGÂNCIA POSSUI NOTAS MINERAIS...REMETE
+                RADIÂNCIA. SUA FRAGRÂNCIA POSSUI NOTAS MINERAIS...REMETE
               </p>
 
               {/* INDICAÇÃO DE USO */}
@@ -611,7 +692,13 @@ const ProductPage = () => {
               </button>
 
               {openUsoThree && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
                   ROSTO. ESPALHE ATÉ SENTIR TOTAL ABSORÇÃO DA PELE.
                   <br />
                   AO SE EXPOR AO SOL INTENSO APLIQUE O PROTETOR SOLAR.
@@ -630,8 +717,14 @@ const ProductPage = () => {
               </button>
 
               {openIngredientesThree && (
-                <p className="text-gray-700 text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1">
-                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                <p
+                  className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                  style={{
+                    color: "var(--abanic-gray)",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
                 </p>
               )}
             </div>

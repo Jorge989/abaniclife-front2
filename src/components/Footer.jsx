@@ -149,7 +149,10 @@ const Footer = () => {
                   className="h-6 w-auto sm:h-11 md:h-10 lg:h-7"
                 />
               </div>
-              <p className="leading-relaxed mb-6">
+              <p
+                className="leading-relaxed mb-6"
+                style={{ color: "var(--abanic-gray)" }}
+              >
                 {language === "pt"
                   ? "Queremos inspirar, de modo provocativo, as pessoas a buscarem todas as suas versões através do autocuidado, vida saudável e expansiva."
                   : "We want to provocatively inspire people to seek out all their versions through self-care, healthy and expansive living"}
@@ -159,11 +162,13 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-[#444444] flex-shrink-0" />
-                <span>contato@abaniclife.com.br</span>
+                <span style={{ color: "var(--abanic-gray)" }}>
+                  contato@abaniclife.com.br
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-[#444444] flex-shrink-0" />
-                <span>
+                <span style={{ color: "var(--abanic-gray)" }}>
                   {language === "pt"
                     ? "São Paulo, Brasil"
                     : "São Paulo, Brazil"}
@@ -181,6 +186,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="hover:text-[#444444] transition-colors"
+                    style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
                   </a>
@@ -198,6 +204,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="hover:text-[#444444] transition-colors"
+                    style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
                   </a>
@@ -214,6 +221,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="hover:text-[#444444] transition-colors"
+                    style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
                   </a>
@@ -230,6 +238,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="hover:text-[#444444] transition-colors"
+                    style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
                   </a>

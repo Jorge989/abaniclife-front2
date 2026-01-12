@@ -99,18 +99,27 @@ const MosaicoProdutos = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <p className="text-gray-600 text-base lg:text-[22px] leading-loose lg:pt-0 lg:pr-10">
-                  <b>Três passos</b> essenciais que reúnem múltiplos benefícios
-                  para os cuidados necessários com sua pele. Fórmulas
-                  desenvolvidas com ativos naturais de alta performance,
-                  extraídos de{" "}
-                  <b>
+                <p
+                  className="text-base lg:text-[22px] leading-loose lg:pt-0 lg:pr-10"
+                  style={{ color: "var(--abanic-gray)" }}
+                >
+                  <b style={{ color: "var(--abanic-gray-dark)" }}>
+                    Três passos
+                  </b>{" "}
+                  essenciais que reúnem múltiplos benefícios para os cuidados
+                  necessários com sua pele. Fórmulas desenvolvidas com ativos
+                  naturais de alta performance, extraídos de{" "}
+                  <b style={{ color: "var(--abanic-gray-dark)" }}>
                     algas vermelhas, flores de margaridas e esqualano vegetal,
                   </b>{" "}
                   reconhecidos por suas propriedades
-                  <b> antioxidantes, clareadoras e iluminadoras.</b> <br />
+                  <b style={{ color: "var(--abanic-gray-dark)" }}>
+                    {" "}
+                    antioxidantes, clareadoras e iluminadoras.
+                  </b>{" "}
+                  <br />
                   Além de ativos que promovem,
-                  <b>
+                  <b style={{ color: "var(--abanic-gray-dark)" }}>
                     {" "}
                     regeneração, equilíbrio da oleosidade e fortalecem a
                     barreira cutânea

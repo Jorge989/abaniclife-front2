@@ -295,7 +295,8 @@ const Explore = () => {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.35 }}
-                      className="text-gray-700 mb-4 text-justify"
+                      className="mb-4 text-justify"
+                      style={{ color: "var(--abanic-gray)" }}
                       dangerouslySetInnerHTML={{ __html: texto }}
                     />
 
@@ -321,7 +322,8 @@ const Explore = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.35 }}
-                  className="text-gray-700 mb-4 text-justify"
+                  className="mb-4 text-justify"
+                  style={{ color: "var(--abanic-gray)" }}
                   dangerouslySetInnerHTML={{ __html: section.intro }}
                 />
               )}
@@ -343,7 +345,8 @@ const Explore = () => {
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.35 }}
-                      className="mt-2 text-gray-700 text-justify space-y-3 leading-[2]"
+                      className="mt-2 text-justify space-y-3 leading-[2]"
+                      style={{ color: "var(--abanic-gray)" }}
                     >
                       {item.text.map((t, i) => (
                         <div key={i} dangerouslySetInnerHTML={{ __html: t }} />

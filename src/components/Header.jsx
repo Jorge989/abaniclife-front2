@@ -217,20 +217,36 @@ const Header = () => {
 
               {item.submenu && activeSubmenu === index && (
                 <div className="absolute top-full left-0 w-58 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {item.submenu.map((subItem) => (
-                    <a
-                      key={subItem.name}
-                      href={subItem.href}
-                      className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
-                      style={{
-                        fontFamily: '"Inter", sans-serif',
-                        fontWeight: "500",
-                        fontSize: "14px",
-                      }}
-                    >
-                      {subItem.name}
-                    </a>
-                  ))}
+                  {item.submenu.map((subItem) =>
+                    subItem.href ? (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
+                        style={{
+                          fontFamily: '"Inter", sans-serif',
+                          fontWeight: "500",
+                          fontSize: "14px",
+                        }}
+                      >
+                        {subItem.name}
+                      </a>
+                    ) : (
+                      <div
+                        key={subItem.name}
+                        className="px-4 py-2 text-xs font-bold uppercase tracking-wide"
+                        style={{
+                          fontFamily: '"Space Grotesk", sans-serif',
+                          color: "#fc622b",
+                          borderBottom: "1px solid #f0f0f0",
+                          marginBottom: "4px",
+                          cursor: "default",
+                        }}
+                      >
+                        {subItem.name}
+                      </div>
+                    )
+                  )}
                 </div>
               )}
             </div>
@@ -301,17 +317,27 @@ const Header = () => {
                       </button>
                       {mobileActiveSubmenu === index && (
                         <ul className="mt-2 pl-4 border-l border-gray-300 space-y-1">
-                          {item.submenu.map((subItem) => (
-                            <li key={subItem.name}>
-                              <a
-                                href={subItem.href}
-                                className="block py-1 text-gray-700 hover:text-abanic-orange transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
+                          {item.submenu.map((subItem) =>
+                            subItem.href ? (
+                              <li key={subItem.name}>
+                                <a
+                                  href={subItem.href}
+                                  className="block py-1 text-gray-700 hover:text-abanic-orange transition-colors"
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {subItem.name}
+                                </a>
+                              </li>
+                            ) : (
+                              <li
+                                key={subItem.name}
+                                className="py-2 text-xs font-bold uppercase tracking-wide"
+                                style={{ color: "#fc622b" }}
                               >
                                 {subItem.name}
-                              </a>
-                            </li>
-                          ))}
+                              </li>
+                            )
+                          )}
                         </ul>
                       )}
                     </>

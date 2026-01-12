@@ -86,10 +86,20 @@ const NewsletterSection = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-abanic-gray-dark mb-6">
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6"
+                style={{
+                  fontFamily: '"Space Grotesk", sans-serif',
+                  fontWeight: 400,
+                  color: "var(--abanic-gray-dark)",
+                }}
+              >
                 Fique por <span className="abanic-orange">dentro</span>
               </h2>
-              <p className="text-gray-700 mb-4 text-justify text-base sm:text-[17px] md:text-[18px]">
+              <p
+                className="mb-4 text-justify text-base sm:text-[17px] md:text-[18px]"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
                 Assine a nossa newsletter e receba em primeira mão as
                 atualizações sobre lançamentos, edições especiais e eventos da
                 marca.
@@ -109,7 +119,10 @@ const NewsletterSection = () => {
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="flex items-center space-x-2 mb-4">
                         <Mail className="h-5 w-5 text-orange-500" />
-                        <span className="font-semibold text-abanic-gray-dark">
+                        <span
+                          className="font-semibold"
+                          style={{ color: "var(--abanic-gray-dark)" }}
+                        >
                           Inscreva-se na nossa newsletter
                         </span>
                       </div>

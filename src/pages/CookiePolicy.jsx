@@ -37,9 +37,10 @@ const CookiePolicy = () => {
       <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
         <div className="max-w-6xl text-center">
           <h1
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-space-grotesk-h1"
+            className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
             style={{
               fontFamily: '"Space Grotesk", sans-serif',
+              color: "var(--abanic-gray-dark)",
             }}
           >
             Política de Cookies
@@ -48,10 +49,8 @@ const CookiePolicy = () => {
             Entenda como utilizamos cookies para melhorar sua experiência e
             controle suas preferências
           </p>
-          <p className="text-sm text-gray-500 mt-6 mb-6">
-            Última atualização: Dezembro de 2025
-          </p>
-          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto"></div>
+
+          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
       </div>
 
@@ -59,7 +58,10 @@ const CookiePolicy = () => {
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* Section 1 */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             1. O que são Cookies?
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -73,7 +75,10 @@ const CookiePolicy = () => {
 
         {/* Section 2 */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2. Como Utilizamos Cookies
           </h2>
           <p className="text-base text-abanic-gray mb-6 leading-relaxed">
@@ -98,7 +103,10 @@ const CookiePolicy = () => {
 
         {/* Section 3 - Cookie Types Cards */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-10 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             3. Tipos de Cookies que Utilizamos
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -108,7 +116,10 @@ const CookiePolicy = () => {
                 className={`p-6 rounded-lg ${cookie.color} transition-all hover:shadow-md`}
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-gray-800">
+                  <h3
+                    className="text-lg font-semibold"
+                    style={{ color: "var(--abanic-gray-dark)" }}
+                  >
                     {cookie.title}
                   </h3>
                   {cookie.status && (
@@ -140,7 +151,10 @@ const CookiePolicy = () => {
 
         {/* Section 4 */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             4. Cookies de Terceiros
           </h2>
           <p className="text-base text-abanic-gray mb-6 leading-relaxed">
@@ -168,7 +182,10 @@ const CookiePolicy = () => {
 
         {/* Section 5 */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             5. Gerenciamento de Cookies
           </h2>
           <p className="text-base text-abanic-gray mb-8 leading-relaxed">
@@ -177,7 +194,10 @@ const CookiePolicy = () => {
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 font-space-grotesk-h1">
+              <h3
+                className="text-xl font-semibold mb-4 font-space-grotesk-h1"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
                 5.1 Configurações do Navegador
               </h3>
               <p className="text-base text-abanic-gray mb-4 leading-relaxed">
@@ -200,7 +220,10 @@ const CookiePolicy = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 font-space-grotesk-h1">
+              <h3
+                className="text-xl font-semibold mb-4 font-space-grotesk-h1"
+                style={{ color: "var(--abanic-gray-dark)" }}
+              >
                 5.2 Links para Configurações dos Navegadores
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -224,7 +247,10 @@ const CookiePolicy = () => {
 
         {/* Section 6 */}
         <div className="mb-16 p-6 bg-orange-50 border-l-4 border-abanic-orange rounded-r-lg">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             6. Consequências da Desativação
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
@@ -248,7 +274,10 @@ const CookiePolicy = () => {
 
         {/* Section 7 */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             7. Atualizações desta Política
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -261,7 +290,10 @@ const CookiePolicy = () => {
 
         {/* Section 8 - Contact */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             8. Contato
           </h2>
           <p className="text-base text-abanic-gray mb-6 leading-relaxed">

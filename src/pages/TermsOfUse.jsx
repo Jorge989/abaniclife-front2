@@ -7,8 +7,11 @@ const TermsOfUse = () => {
       <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
         <div className="max-w-6xl text-center">
           <h1
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-space-grotesk-h1"
-            style={{ fontFamily: '"Space Grotesk", sans-serif' }}
+            className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
+            style={{
+              fontFamily: '"Space Grotesk", sans-serif',
+              color: "var(--abanic-gray-dark)",
+            }}
           >
             Termos de Uso
           </h1>
@@ -16,10 +19,8 @@ const TermsOfUse = () => {
             Estes Termos de Uso regulam o acesso e a utilização do site da
             ABANIC LIFE.
           </p>
-          <p className="text-sm text-gray-500 mt-6 mb-6">
-            Última atualização: Dezembro de 2025
-          </p>
-          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto"></div>
+
+          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
       </div>
 
@@ -27,7 +28,10 @@ const TermsOfUse = () => {
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* 1. Aceitação dos Termos */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             1. Aceitação dos Termos
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -45,7 +49,10 @@ const TermsOfUse = () => {
 
         {/* 2. Descrição dos Serviços */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2. Descrição dos Serviços
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
@@ -128,8 +135,11 @@ const TermsOfUse = () => {
 
         {/* 7. Propriedade Intelectual */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
-            7. Propriedade Intelectual
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
+            5. Propriedade Intelectual
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             Todo o conteúdo do site é de propriedade exclusiva da ABANIC LIFE ou
@@ -140,8 +150,11 @@ const TermsOfUse = () => {
 
         {/* 8. Limitação de Responsabilidade */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
-            8. Limitação de Responsabilidade
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
+            7. Limitação de Responsabilidade
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             A ABANIC LIFE não se responsabiliza por danos diretos ou indiretos
@@ -151,7 +164,10 @@ const TermsOfUse = () => {
 
         {/* 9. Lei Aplicável */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             9. Lei Aplicável
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -162,12 +178,18 @@ const TermsOfUse = () => {
 
         {/* 10. Contato */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             10. Contato
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             Para dúvidas ou esclarecimentos sobre estes Termos de Uso, entre em
             contato:
+          </p>
+          <p className="text-sm text-gray-500 mt-6 mb-6">
+            Última atualização: Dezembro de 2025
           </p>
           <div className="flex items-center gap-3 mt-4">
             <span className="text-2xl" style={{ color: "#fc622b" }}>

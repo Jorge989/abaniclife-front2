@@ -7,9 +7,10 @@ const PrivacyPolicy = () => {
       <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
         <div className="max-w-6xl text-center">
           <h1
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-space-grotesk-h1"
+            className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
             style={{
               fontFamily: '"Space Grotesk", sans-serif',
+              color: "var(--abanic-gray-dark)",
             }}
           >
             Política de Privacidade
@@ -18,10 +19,8 @@ const PrivacyPolicy = () => {
             A ABANIC LIFE está comprometida com a proteção da sua privacidade e
             dos seus dados pessoais.
           </p>
-          <p className="text-sm text-gray-500 mt-6 mb-6">
-            Última atualização: Dezembro de 2025
-          </p>
-          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto"></div>
+
+          <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
       </div>
 
@@ -29,7 +28,10 @@ const PrivacyPolicy = () => {
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* 1. Introdução */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             1. Introdução
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -41,48 +43,120 @@ const PrivacyPolicy = () => {
 
         {/* 2. Dados que Coletamos */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2. Dados que Coletamos
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
             Podemos coletar as seguintes categorias de dados pessoais:
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">
+          <h3
+            className="text-xl mb-3"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2.1 Dados de Identificação
           </h3>
-          <ul className="list-disc pl-6 text-abanic-gray mb-4">
-            <li>Nome completo</li>
-            <li>CPF</li>
-            <li>Data de nascimento</li>
-            <li>Endereço de e-mail</li>
-            <li>Número de telefone</li>
+          <ul className="space-y-3 mb-4">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">Nome completo</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">CPF</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Data de nascimento
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Endereço de e-mail
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Número de telefone
+              </span>
+            </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">
+          <h3
+            className="text-xl mb-3"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2.2 Dados de Endereço
           </h3>
-          <ul className="list-disc pl-6 text-abanic-gray mb-4">
-            <li>Endereço residencial ou comercial</li>
-            <li>CEP</li>
-            <li>Cidade e Estado</li>
+          <ul className="space-y-3 mb-4">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Endereço residencial ou comercial
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">CEP</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Cidade e Estado
+              </span>
+            </li>
           </ul>
 
-          <h3 className="text-xl font-semibold text-gray-800 mb-3">
+          <h3
+            className="text-xl mb-3"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             2.3 Dados de Navegação
           </h3>
-          <ul className="list-disc pl-6 text-abanic-gray">
-            <li>Endereço IP</li>
-            <li>Tipo de navegador</li>
-            <li>Páginas visitadas</li>
-            <li>Tempo de permanência no site</li>
-            <li>Origem do acesso</li>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">Endereço IP</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Tipo de navegador
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Páginas visitadas
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Tempo de permanência no site
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Origem do acesso
+              </span>
+            </li>
           </ul>
         </div>
 
         {/* 3. Como Utilizamos seus Dados */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             3. Como Utilizamos seus Dados
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -110,42 +184,82 @@ const PrivacyPolicy = () => {
 
         {/* 4. Base Legal */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             4. Base Legal para Tratamento
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             O tratamento dos seus dados pessoais é realizado com base nas
             seguintes hipóteses legais previstas na LGPD:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray mt-4">
-            <li>Execução de contrato: para processar pedidos e entregas</li>
-            <li>Consentimento: para envio de comunicações de marketing</li>
-            <li>
-              Legítimo interesse: para melhorar nossos serviços e prevenir
-              fraudes
+          <ul className="space-y-3 mt-4">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Execução de contrato: para processar pedidos e entregas
+              </span>
             </li>
-            <li>
-              Cumprimento de obrigação legal: para atender exigências fiscais e
-              regulatórias
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Consentimento: para envio de comunicações de marketing
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Legítimo interesse: para melhorar nossos serviços e prevenir
+                fraudes
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Cumprimento de obrigação legal: para atender exigências fiscais
+                e regulatórias
+              </span>
             </li>
           </ul>
         </div>
 
         {/* 5. Compartilhamento de Dados */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             5. Compartilhamento de Dados
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
             Podemos compartilhar seus dados pessoais com:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray">
-            <li>Parceiros de logística: para entrega dos produtos</li>
-            <li>Processadores de pagamento: para processar transações</li>
-            <li>
-              Prestadores de serviços: que nos auxiliam na operação do site
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Parceiros de logística: para entrega dos produtos
+              </span>
             </li>
-            <li>Autoridades competentes: quando exigido por lei</li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Processadores de pagamento: para processar transações
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Prestadores de serviços: que nos auxiliam na operação do site
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Autoridades competentes: quando exigido por lei
+              </span>
+            </li>
           </ul>
           <p className="text-base text-abanic-gray mt-4">
             Não vendemos ou alugamos seus dados pessoais a terceiros.
@@ -154,20 +268,58 @@ const PrivacyPolicy = () => {
 
         {/* 6. Seus Direitos */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             6. Seus Direitos
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
             De acordo com a LGPD, você tem os seguintes direitos:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray">
-            <li>Confirmação: saber se tratamos seus dados</li>
-            <li>Acesso: solicitar cópia dos seus dados</li>
-            <li>Correção: atualizar dados incompletos ou incorretos</li>
-            <li>Anonimização: tornar dados anônimos quando aplicável</li>
-            <li>Eliminação: solicitar a exclusão de dados desnecessários</li>
-            <li>Portabilidade: transferir dados para outro fornecedor</li>
-            <li>Revogação: retirar o consentimento a qualquer momento</li>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Confirmação: saber se tratamos seus dados
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Acesso: solicitar cópia dos seus dados
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Correção: atualizar dados incompletos ou incorretos
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Anonimização: tornar dados anônimos quando aplicável
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Eliminação: solicitar a exclusão de dados desnecessários
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Portabilidade: transferir dados para outro fornecedor
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Revogação: retirar o consentimento a qualquer momento
+              </span>
+            </li>
           </ul>
           <p className="text-base text-abanic-gray mt-4">
             Para exercer seus direitos, entre em contato através do e-mail:{" "}
@@ -183,7 +335,10 @@ const PrivacyPolicy = () => {
 
         {/* 7. Segurança dos Dados */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             7. Segurança dos Dados
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -191,17 +346,40 @@ const PrivacyPolicy = () => {
             proteger seus dados pessoais contra acesso não autorizado, perda,
             alteração ou divulgação:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray mt-4">
-            <li>Criptografia de dados em trânsito e em repouso</li>
-            <li>Controle de acesso restrito</li>
-            <li>Monitoramento contínuo de segurança</li>
-            <li>Treinamento de colaboradores</li>
+          <ul className="space-y-3 mt-4">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Criptografia de dados em trânsito e em repouso
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Controle de acesso restrito
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Monitoramento contínuo de segurança
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Treinamento de colaboradores
+              </span>
+            </li>
           </ul>
         </div>
 
         {/* 8. Retenção de Dados */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             8. Retenção de Dados
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -214,7 +392,10 @@ const PrivacyPolicy = () => {
 
         {/* 9. Transferência Internacional */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             9. Transferência Internacional
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -227,7 +408,10 @@ const PrivacyPolicy = () => {
 
         {/* 10. Alterações nesta Política */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             10. Alterações nesta Política
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -240,12 +424,18 @@ const PrivacyPolicy = () => {
 
         {/* 11. Contato do Encarregado (DPO) */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             11. Contato
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             Para questões relacionadas à privacidade e proteção de dados, entre
             em contato:
+          </p>
+          <p className="text-sm text-gray-500 mt-6 mb-6">
+            Última atualização: Dezembro de 2025
           </p>
           <div className="flex items-center gap-3 mt-4">
             <span className="text-2xl" style={{ color: "#fc622b" }}>

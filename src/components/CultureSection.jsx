@@ -100,10 +100,16 @@ const CultureSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight font-space-grotesk-h1">
+          <h1
+            className="text-3xl md:text-4xl font-bold mb-4 leading-tight font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             ABANIC LIFE
           </h1>
-          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
+          <p
+            className="text-lg md:text-xl max-w-3xl mx-auto"
+            style={{ color: "var(--abanic-gray)" }}
+          >
             Acompanhe com a ABANIC as últimas novidades sobre cultura e
             tendências.
           </p>
