@@ -390,14 +390,14 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                GEL RHODY CLEANSE
+                GEL DE LIMPEZA
               </span>
               <br />
               <span
                 className="font-normal"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                LIMPEZA
+                RHODY SENCE
               </span>
             </h1>
 
@@ -516,14 +516,14 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                SÉRUM RHODY CLAREADOR
+                SÉRUM CLAREADOR
               </span>
               <br />
               <span
                 className="font-normal"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                CONCENTRADO DE ATIVOS
+                RHODY CLAREADOR
               </span>
             </h1>
 
@@ -648,14 +648,14 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                RHODY SENCE FPS50
+                CREME FACIAL
               </span>
               <br />
               <span
                 className="font-normal"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                CREME MULTIFUNCIONAL
+                RHODY SENCE FPS50
               </span>
             </h1>
 
