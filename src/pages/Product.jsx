@@ -121,8 +121,11 @@ const PrincipiosAtivos = () => {
           const y =
             element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
-        }, 100);
+        }, 600);
       }
+    } else {
+      // Se não há hash, volta para o topo da página
+      window.scrollTo({ top: 0, behavior: "auto" });
     }
   }, [location]);
 
@@ -349,7 +352,7 @@ const ProductPage = () => {
   const [openUsoThree, setOpenUsoThree] = useState(false);
   const [openIngredientesThree, setOpenIngredientesThree] = useState(false);
   return (
-    <section style={{ backgroundColor: "#F1F0EB" }}>
+    <section style={{ backgroundColor: "#F1F0EB", scrollBehavior: "smooth" }}>
       <motion.div
         className="max-w-[1070px] mx-auto px-6 py-10 mt-28"
         initial="hidden"
@@ -357,10 +360,10 @@ const ProductPage = () => {
         viewport={{ once: true, amount: 0.3 }}
         id="rhody"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Imagem do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            className="w-4/5 md:w-2/5 flex justify-center md:justify-start"
             variants={{
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -368,14 +371,14 @@ const ProductPage = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Hidratante FPS50"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              alt="Gel de Limpeza RHODY SENCE"
+              className="w-full h-auto max-h-[380px] object-cover rounded-lg shadow-md"
             />
           </motion.div>
 
           {/* Conteúdo do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            className="w-full md:w-3/5 flex flex-col justify-center items-center md:items-start gap-3 text-center md:text-left"
             variants={{
               hidden: { opacity: 0, x: 100 }, // sai da direita
               visible: {
@@ -385,7 +388,7 @@ const ProductPage = () => {
               },
             }}
           >
-            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+            <h1 className="text-2xl md:text-3xl mb-0 leading-tight font-space-grotesk-h1">
               <span
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
@@ -401,30 +404,32 @@ const ProductPage = () => {
               </span>
             </h1>
 
-            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+            <div className="flex items-center gap-4 text-base font-semibold text-[#ff5722]">
               <p>R$00,00</p>
               <p>150ml</p>
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
               <p
-                className="text-[16px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
                   textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO MOUSSE ENRIQUECIDA COM ATIVOS ANTIOXIDANTES EXTRAÍDOS
-                DE ALGAS VERMELHAS.
-                <br />
-                SUA TEXTURA ENVOLVE AS SUJEIRAS COM DELICADEZA, DEIXANDO A PELE
-                COM SENSAÇÃO DE LIMPEZA E HIDRATAÇÃO.
+                FORMULAÇÃO EM GEL COM EFEITO TEIA. ENRIQUECIDO COM ATIVOS
+                ANTIOXIDANTES EXTRAÍDOS DE ALGAS VERMELHAS E ATIVOS CLAREADORES.
+                SUA TEXTURA AUXILIA NA REMOÇÃO DE IMPUREZAS COM DELICADEZA,
+                DEIXANDO A PELE COM SENSAÇÃO HIDRATANTE E CONFORTO CALMANTE.
+                {"\n"}
+                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
+                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
               </p>
               {/* INDICAÇÃO DE USO */}
               <button
                 onClick={() => setOpenUsoOne(!openUsoOne)}
                 aria-expanded={openUsoOne}
-                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
                   {openUsoOne ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
@@ -439,8 +444,10 @@ const ProductPage = () => {
                     textTransform: "uppercase",
                   }}
                 >
-                  APLIQUE UM PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO E ADICIONA
-                  POUCA QUANTIDADE
+                  APLIQUE UMA PORÇÃO DE DOIS PUMPS NO ROSTO E PESCOÇO UMIDECIDOS
+                  NO ROSTO E PESCOÇO UMEDECIDOS E ESPALHE DE FORMA HOMOGÊNEA COM
+                  MOVIMENTOS LEVES CIRCULARES. RETIRE O PRODUTO COM ÁGUA
+                  ABUNDANTE.
                 </p>
               )}
 
@@ -468,8 +475,8 @@ const ProductPage = () => {
               )}
             </div>
 
-            <div className="w-full max-w-[320px] mt-6">
-              <button className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105">
+            <div className="w-full max-w-[320px] mt-4">
+              <button className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-2.5 transition duration-300 transform hover:scale-105">
                 Comprar agora
               </button>
             </div>
@@ -477,16 +484,16 @@ const ProductPage = () => {
         </div>
       </motion.div>
       <motion.div
-        className="max-w-[1070px] mx-auto px-6 py-10 mt-8"
+        className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         id="serum"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Imagem do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            className="w-4/5 md:w-2/5 flex justify-center md:justify-start"
             variants={{
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -494,14 +501,14 @@ const ProductPage = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Hidratante FPS50"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              alt="Sérum Clareador RHODY"
+              className="w-full h-auto max-h-[380px] object-cover rounded-lg shadow-md"
             />
           </motion.div>
 
           {/* Conteúdo do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            className="w-full md:w-3/5 flex flex-col justify-center items-center md:items-start gap-3 text-center md:text-left"
             variants={{
               hidden: { opacity: 0, x: 100 },
               visible: {
@@ -511,7 +518,7 @@ const ProductPage = () => {
               },
             }}
           >
-            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+            <h1 className="text-2xl md:text-3xl mb-0 leading-tight font-space-grotesk-h1">
               <span
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
@@ -527,32 +534,34 @@ const ProductPage = () => {
               </span>
             </h1>
 
-            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+            <div className="flex items-center gap-4 text-base font-semibold text-[#ff5722]">
               <p>R$00,00</p>
               <p>30ML</p>
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
               <p
-                className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
                   textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
-                VERMELHAS E FLORES DE MARGARIDAS.
-                <br />
-                PELE COM RADIÂNCIA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DE ALGAS E
-                FLORES DE MARGARIDAS. ALÉM DE ATIVOS HIDRATANTES E CALMANTES E
-                QUE ATIVAM A MICROCIRCULAÇÃO DA PELE.
+                FORMULAÇÃO LEVE COM AÇÃO CLAREADORA. POSSUI ATIVOS NATURAIS
+                EXTRAÍDOS DE ALGAS VERMELHAS E FLORES DE MARGARIDAS, QUE
+                CONTRIBUEM PARA A UNIFORMIZAÇÃO DO TOM DA PELE. PERMITE A
+                UTILIZAÇÃO DO PRODUTO DURANTE O DIA E À NOITE. PELE ILUMINOSA
+                COM APARÊNCIA HOMOGÊNEA.
+                {"\n"}
+                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
+                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
               </p>
 
               {/* INDICAÇÃO DE USO */}
               <button
                 onClick={() => setOpenUsoTwo(!openUsoTwo)}
                 aria-expanded={openUsoTwo}
-                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
                   {openUsoTwo ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
@@ -567,9 +576,9 @@ const ProductPage = () => {
                     textTransform: "uppercase",
                   }}
                 >
-                  APLIQUE UMA PORÇÃO DE DOIS PUMPINGS NA PALMA DA MÃO. ESPALHE
-                  DE FORMA HOMOGENIA POR TODO O ROSTO COM MOVIMENTOS LEVES E
-                  CIRCULARES.
+                  APLIQUE TRÊS GOTAS DO PRODUTO EM TODO O ROSTO E PESCOÇO.
+                  ESPALHE DE FORMA HOMOGÊNEA, COM MOVIMENTOS LEVES E CIRCULARES,
+                  ATÉ SENTIR A TOTAL ABSORÇÃO DO PRODUTO.
                 </p>
               )}
 
@@ -597,9 +606,9 @@ const ProductPage = () => {
               )}
             </div>
 
-            <div className="w-full max-w-[320px] mt-6">
+            <div className="w-full max-w-[320px] mt-4">
               <button
-                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
+                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-2.5 transition duration-300 transform hover:scale-105"
                 aria-label="Comprar agora"
               >
                 Comprar agora
@@ -609,16 +618,16 @@ const ProductPage = () => {
         </div>
       </motion.div>
       <motion.div
-        className="max-w-[1070px] mx-auto px-6 py-10 mt-8"
+        className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         id="fps50"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Imagem do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex justify-center md:justify-start"
+            className="w-4/5 md:w-2/5 flex justify-center md:justify-start"
             variants={{
               hidden: { opacity: 0, x: -100 },
               visible: { opacity: 1, x: 0, transition: { duration: 1 } },
@@ -626,14 +635,14 @@ const ProductPage = () => {
           >
             <img
               src="https://images.unsplash.com/photo-1671575192248-5d8e42f18a9c?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Hidratante FPS50"
-              className="w-full h-auto object-cover rounded-lg shadow-md"
+              alt="Creme Facial RHODY SENCE FPS50"
+              className="w-full h-auto max-h-[380px] object-cover rounded-lg shadow-md"
             />
           </motion.div>
 
           {/* Conteúdo do Produto */}
           <motion.div
-            className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start gap-4 text-center md:text-left"
+            className="w-full md:w-3/5 flex flex-col justify-center items-center md:items-start gap-3 text-center md:text-left"
             variants={{
               hidden: { opacity: 0, x: 100 },
               visible: {
@@ -643,7 +652,7 @@ const ProductPage = () => {
               },
             }}
           >
-            <h1 className="text-3xl md:text-4xl mb-0 leading-tight font-space-grotesk-h1">
+            <h1 className="text-2xl md:text-3xl mb-0 leading-tight font-space-grotesk-h1">
               <span
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
@@ -659,32 +668,31 @@ const ProductPage = () => {
               </span>
             </h1>
 
-            <div className="flex items-center gap-4 text-lg font-semibold text-[#ff5722]">
+            <div className="flex items-center gap-4 text-base font-semibold text-[#ff5722]">
               <p>R$00,00</p>
               <p>60MG</p>
             </div>
 
             <div className="text-sm md:text-base leading-relaxed space-y-1 w-full">
               <p
-                className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
+                className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
                   textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DAS ALGAS
-                VERMELHAS E FLORES DE MARGARIDAS
-                <br />
-                ALÉM DE ATIVOS HIDRATANTES E CALMANTES E QUE ATIVAM A
-                MICROCIRCULAÇÃO DA PELE. TOQUE SEDOSO E AVELUDADO. PELE COM
-                RADIÂNCIA. SUA FRAGRÂNCIA POSSUI NOTAS MINERAIS...REMETE
+                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DE ALGAS
+                VERMELHAS E FLORES DE MARGARIDA, ALÉM DE ATIVOS HIDRATANTES E
+                CALMANTES, QUE CONTRIBUEM PARA O TOQUE SEDOSO E AVELUDADO.
+                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
+                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
               </p>
 
               {/* INDICAÇÃO DE USO */}
               <button
                 onClick={() => setOpenUsoThree(!openUsoThree)}
                 aria-expanded={openUsoThree}
-                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-5"
+                className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
                   {openUsoThree ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
@@ -699,9 +707,10 @@ const ProductPage = () => {
                     textTransform: "uppercase",
                   }}
                 >
-                  ROSTO. ESPALHE ATÉ SENTIR TOTAL ABSORÇÃO DA PELE.
-                  <br />
-                  AO SE EXPOR AO SOL INTENSO APLIQUE O PROTETOR SOLAR.
+                  APLIQUE UMA GOTA DO PRODUTO EM CADA REGIÃO DO ROSTO E DO
+                  PESCOÇO. ESPALHE DE FORMA HOMOGÊNEA ATÉ SENTIR A TOTAL
+                  ABSORÇÃO DO PRODUTO. AO SE EXPOR AO SOL INTENSO, APLIQUE
+                  PROTETOR SOLAR.
                 </p>
               )}
 
@@ -729,9 +738,9 @@ const ProductPage = () => {
               )}
             </div>
 
-            <div className="w-full max-w-[320px] mt-6">
+            <div className="w-full max-w-[320px] mt-4">
               <button
-                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-3 transition duration-300 transform hover:scale-105"
+                className="w-full bg-[#ff5722] hover:bg-[#e64a19] text-white text-sm font-semibold rounded-md py-2.5 transition duration-300 transform hover:scale-105"
                 aria-label="Comprar agora"
               >
                 Comprar agora
