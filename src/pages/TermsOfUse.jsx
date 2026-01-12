@@ -70,7 +70,10 @@ const TermsOfUse = () => {
 
         {/* 3. Uso do Site */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             3. Uso do Site
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
@@ -90,7 +93,10 @@ const TermsOfUse = () => {
 
         {/* 4. Cadastro e Conta */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             4. Cadastro e Conta
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
@@ -107,7 +113,10 @@ const TermsOfUse = () => {
 
         {/* 5. Produtos e Preços */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             5. Produtos e Preços
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
@@ -123,7 +132,10 @@ const TermsOfUse = () => {
 
         {/* 6. Pagamento e Entrega */}
         <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 font-space-grotesk-h1">
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
+            style={{ color: "var(--abanic-gray-dark)" }}
+          >
             6. Pagamento e Entrega
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
