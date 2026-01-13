@@ -5,7 +5,6 @@ import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
 import FiqueLigado from "../assets/Fiqueligado.png";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 // Variants reutilizáveis (mesmos usados no BrandAndFounders)
 const fadeUp = {
@@ -33,25 +32,27 @@ const NewsletterSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Função para enviar email de confirmação
+  // Função para enviar email de confirmação via serverless
   const sendConfirmationEmail = async (nome, email) => {
     try {
-      const templateParams = {
-        to_email: email,
-        to_name: nome,
-        nome: nome,
-      };
+      const response = await fetch("/api/send-confirmation-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email }),
+      });
 
-      const response = await emailjs.send(
-        "service_54g6ge8",
-        "template_03zk0a8",
-        templateParams,
-        "GnALhYWo26CYtbitj"
-      );
+      const data = await response.json();
 
-      console.log("Email enviado com sucesso:", response);
+      if (data.success) {
+        console.log("Email de confirmação enviado com sucesso");
+      } else {
+        console.warn("Erro ao enviar email de confirmação:", data.message);
+      }
     } catch (error) {
-      console.error("Erro ao enviar email:", error);
+      console.warn(
+        "Erro ao enviar email de confirmação (pode ser local):",
+        error
+      );
     }
   };
 
