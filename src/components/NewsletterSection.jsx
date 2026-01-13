@@ -40,6 +40,7 @@ const NewsletterSection = () => {
     setErrorMessage("");
 
     try {
+      // 1. Enviar dados para Newsletter@abaniclife.com via Web3Forms
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -61,6 +62,8 @@ const NewsletterSection = () => {
       const data = await response.json();
 
       if (data.success) {
+        // Inscrição realizada com sucesso!
+        // Email de confirmação será implementado no deploy (Vercel)
         setIsSubscribed(true);
         setEmail("");
         setNome("");
