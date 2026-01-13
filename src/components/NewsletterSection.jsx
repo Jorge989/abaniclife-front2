@@ -37,7 +37,8 @@ const NewsletterSection = () => {
   const sendConfirmationEmail = async (nome, email) => {
     try {
       const templateParams = {
-        email: email,
+        to_email: email,
+        to_name: nome,
         nome: nome,
       };
 
