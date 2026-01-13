@@ -32,22 +32,14 @@ const NewsletterSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY;
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !nome) return;
-
-    if (!web3formsKey) {
-      setErrorMessage("Chave VITE_WEB3FORMS_KEY não configurada.");
-      return;
-    }
 
     setIsLoading(true);
     setErrorMessage("");
 
     try {
-      // 1. Enviar dados para Newsletter@abaniclife.com via Web3Forms
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -55,7 +47,7 @@ const NewsletterSection = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: web3formsKey,
+          access_key: "f8916c6d-ef8f-4673-849c-e4f0283edb29",
           subject: `Nova inscrição na Newsletter - ${nome}`,
           from_name: "ABANIC Life Website",
           name: nome,
@@ -69,21 +61,6 @@ const NewsletterSection = () => {
       const data = await response.json();
 
       if (data.success) {
-        // Dispara email de confirmação (serverless em produção)
-        try {
-          await fetch("/api/send-newsletter-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nome, email }),
-          });
-        } catch (emailErr) {
-          // Ignora em desenvolvimento/local ou se API estiver indisponível
-          console.warn(
-            "Email de confirmação não enviado (ambiente local?)",
-            emailErr
-          );
-        }
-
         setIsSubscribed(true);
         setEmail("");
         setNome("");
