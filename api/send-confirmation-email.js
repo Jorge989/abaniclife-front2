@@ -1,11 +1,11 @@
-import emailjs from "@emailjs/nodejs";
+const emailjs = require("@emailjs/nodejs");
 
 emailjs.init({
   publicKey: "GnALhYWo26CYtbitj",
   privateKey: process.env.EMAILJS_PRIVATE_KEY,
 });
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Método não permitido" });
   }
@@ -47,4 +47,4 @@ export default async function handler(req, res) {
       error: error.message,
     });
   }
-}
+};
