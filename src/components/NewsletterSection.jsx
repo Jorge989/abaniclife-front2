@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
 import FiqueLigado from "../assets/Fiqueligado.png";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 // Variants reutilizáveis (mesmos usados no BrandAndFounders)
 const fadeUp = {
@@ -31,6 +32,26 @@ const NewsletterSection = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Inicializar EmailJS
+  useEffect(() => {
+    emailjs.init("GnALhYWo26CYtbitj");
+  }, []);
+
+  // Função para enviar email de confirmação
+  const sendConfirmationEmail = async (nome, email) => {
+    try {
+      await emailjs.send("service_54g6ge8", "template_03zk0a8", {
+        to_email: email,
+        nome: nome,
+        email: email,
+      });
+      console.log("Email de confirmação enviado com sucesso");
+    } catch (error) {
+      console.warn("Erro ao enviar email de confirmação:", error);
+      // Não bloqueia a inscrição se o email falhar
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,6 +82,9 @@ const NewsletterSection = () => {
       const data = await response.json();
 
       if (data.success) {
+        // Enviar email de confirmação via EmailJS
+        await sendConfirmationEmail(nome, email);
+
         setIsSubscribed(true);
         setEmail("");
         setNome("");
