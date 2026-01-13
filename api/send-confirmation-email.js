@@ -1,4 +1,4 @@
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   // Apenas retornar sucesso sem enviar email por enquanto
   // A inscrição já foi feita via Web3Forms
 
@@ -31,4 +31,4 @@ module.exports = async function handler(req, res) {
       message: "Erro ao processar confirmação",
     });
   }
-};
+}
