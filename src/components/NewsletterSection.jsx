@@ -43,12 +43,12 @@ const NewsletterSection = () => {
     try {
       await emailjs.send("service_54g6ge8", "template_03zk0a8", {
         to_email: email,
+        to_name: nome,
         nome: nome,
-        email: email,
       });
       console.log("Email de confirmação enviado com sucesso");
     } catch (error) {
-      console.warn("Erro ao enviar email de confirmação:", error);
+      console.error("Erro ao enviar email de confirmação:", error);
       // Não bloqueia a inscrição se o email falhar
     }
   };
