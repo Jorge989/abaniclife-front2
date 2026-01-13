@@ -30,18 +30,49 @@ const NewsletterSection = () => {
   const [nome, setNome] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !nome) return;
 
     setIsLoading(true);
+    setErrorMessage("");
 
-    setTimeout(() => {
-      setIsSubscribed(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "f8916c6d-ef8f-4673-849c-e4f0283edb29",
+          subject: `Nova inscrição na Newsletter - ${nome}`,
+          from_name: "ABANIC Life Website",
+          name: nome,
+          email: email,
+          message: `Nova inscrição na Newsletter:\n\nNome: ${nome}\nEmail: ${email}\nData: ${new Date().toLocaleString(
+            "pt-BR"
+          )}`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubscribed(true);
+        setEmail("");
+        setNome("");
+      } else {
+        throw new Error("Erro ao enviar inscrição");
+      }
+    } catch (error) {
+      console.error("Erro:", error);
+      setErrorMessage("Erro ao processar inscrição. Tente novamente.");
+    } finally {
       setIsLoading(false);
-      setEmail("");
-    }, 1500);
+    }
   };
 
   return (
@@ -176,6 +207,12 @@ const NewsletterSection = () => {
                         Privacidade. A assinatura poderá ser cancelada a
                         qualquer momento.
                       </p>
+
+                      {errorMessage && (
+                        <div className="text-red-600 text-sm text-center mt-2">
+                          {errorMessage}
+                        </div>
+                      )}
                     </form>
                   ) : (
                     <div className="text-center py-4">
