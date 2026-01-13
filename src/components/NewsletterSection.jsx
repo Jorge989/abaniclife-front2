@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Mail, CheckCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -33,23 +33,24 @@ const NewsletterSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Inicializar EmailJS
-  useEffect(() => {
-    emailjs.init("GnALhYWo26CYtbitj");
-  }, []);
-
   // Função para enviar email de confirmação
   const sendConfirmationEmail = async (nome, email) => {
     try {
-      await emailjs.send("service_54g6ge8", "template_03zk0a8", {
-        to_email: email,
-        to_name: nome,
+      const templateParams = {
+        email: email,
         nome: nome,
-      });
-      console.log("Email de confirmação enviado com sucesso");
+      };
+
+      const response = await emailjs.send(
+        "service_54g6ge8",
+        "template_03zk0a8",
+        templateParams,
+        "GnALhYWo26CYtbitj"
+      );
+
+      console.log("Email enviado com sucesso:", response);
     } catch (error) {
-      console.error("Erro ao enviar email de confirmação:", error);
-      // Não bloqueia a inscrição se o email falhar
+      console.error("Erro ao enviar email:", error);
     }
   };
 
