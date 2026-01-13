@@ -1,9 +1,14 @@
 import { Resend } from "resend";
 import { getConfirmationEmailTemplate } from "../utils/emailService";
 
-const resend = new Resend("re_MR7easHv_FX6CjatayeNa1YBKJbDZT9zd");
+export async function sendNewsletterConfirmation(nome, email) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY não configurada");
+  }
 
-export async function sendNewsletterConfirmation(nome: string, email: string) {
+  const resend = new Resend(apiKey);
+
   try {
     // Enviar confirmação para o usuário
     const result = await resend.emails.send({

@@ -32,9 +32,16 @@ const NewsletterSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const web3formsKey = import.meta.env.VITE_WEB3FORMS_KEY;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !nome) return;
+
+    if (!web3formsKey) {
+      setErrorMessage("Chave VITE_WEB3FORMS_KEY não configurada.");
+      return;
+    }
 
     setIsLoading(true);
     setErrorMessage("");
@@ -48,7 +55,7 @@ const NewsletterSection = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "f8916c6d-ef8f-4673-849c-e4f0283edb29",
+          access_key: web3formsKey,
           subject: `Nova inscrição na Newsletter - ${nome}`,
           from_name: "ABANIC Life Website",
           name: nome,
@@ -62,8 +69,21 @@ const NewsletterSection = () => {
       const data = await response.json();
 
       if (data.success) {
-        // Inscrição realizada com sucesso!
-        // Email de confirmação será implementado no deploy (Vercel)
+        // Dispara email de confirmação (serverless em produção)
+        try {
+          await fetch("/api/send-newsletter-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nome, email }),
+          });
+        } catch (emailErr) {
+          // Ignora em desenvolvimento/local ou se API estiver indisponível
+          console.warn(
+            "Email de confirmação não enviado (ambiente local?)",
+            emailErr
+          );
+        }
+
         setIsSubscribed(true);
         setEmail("");
         setNome("");

@@ -181,7 +181,15 @@ export default async function handler(req, res) {
   }
 
   try {
-    const resend = new Resend("re_MR7easHv_FX6CjatayeNa1YBKJbDZT9zd");
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({
+        success: false,
+        message: "RESEND_API_KEY não configurada no ambiente",
+      });
+    }
+
+    const resend = new Resend(apiKey);
 
     const result = await resend.emails.send({
       from: "ABANIC Life <onboarding@resend.dev>",
