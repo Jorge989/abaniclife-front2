@@ -20,6 +20,15 @@ export default async function handler(req, res) {
     });
   }
 
+  // Garantir que a chave privada esteja configurada em produção
+  if (!process.env.EMAILJS_PRIVATE_KEY) {
+    return res.status(500).json({
+      success: false,
+      message:
+        "EMAILJS_PRIVATE_KEY não configurada nas variáveis de ambiente do Vercel",
+    });
+  }
+
   try {
     console.log("Enviando email via EmailJS Node SDK para:", email);
 
