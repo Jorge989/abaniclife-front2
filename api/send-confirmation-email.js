@@ -1,7 +1,4 @@
 export default async function handler(req, res) {
-  // Apenas retornar sucesso sem enviar email por enquanto
-  // A inscrição já foi feita via Web3Forms
-
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Método não permitido" });
   }
@@ -16,19 +13,50 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Placeholder: você pode configurar um serviço de email aqui
-    // Por enquanto apenas retorna sucesso para evitar erros na UI
-    console.log(`Confirmação solicitada para: ${nome} (${email})`);
+    // Enviar email de confirmação via EmailJS REST API
+    const response = await fetch(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: "service_54g6ge8", // Seu service ID
+          template_id: "template_newsletter", // Seu template ID
+          user_id: "GnALhYWo26CYtbitj", // Sua public key
+          template_params: {
+            to_email: email,
+            to_name: nome,
+            nome: nome,
+          },
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error("EmailJS error:", error);
+      return res.status(500).json({
+        success: false,
+        message: "Erro ao enviar email",
+        error: error,
+      });
+    }
+
+    const result = await response.json();
 
     return res.status(200).json({
       success: true,
-      message: "Email de confirmação será enviado em breve",
+      message: "Email de confirmação enviado com sucesso",
+      result,
     });
   } catch (error) {
-    console.error("Erro:", error);
+    console.error("Erro ao enviar email:", error);
     return res.status(500).json({
       success: false,
-      message: "Erro ao processar confirmação",
+      message: "Erro ao enviar email de confirmação",
+      error: error.message,
     });
   }
 }
