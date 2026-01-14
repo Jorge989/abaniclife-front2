@@ -1,6 +1,5 @@
 import emailjs from "@emailjs/nodejs";
 
-// Inicializa EmailJS com chave pública e privada do ambiente
 emailjs.init({
   publicKey: "GnALhYWo26CYtbitj",
   privateKey: process.env.EMAILJS_PRIVATE_KEY,
@@ -36,6 +35,9 @@ export default async function handler(req, res) {
       to_email: email,
       to_name: nome,
       nome: nome,
+      reply_to: email,
+      from_name: "ABANIC Life Website",
+      subject: "Confirmação de inscrição na newsletter",
     });
 
     return res.status(200).json({
@@ -48,7 +50,8 @@ export default async function handler(req, res) {
     return res.status(500).json({
       success: false,
       message: "Erro ao enviar email de confirmação",
-      error: error.message,
+      error: error?.message || String(error),
+      stack: error?.stack || undefined,
     });
   }
 }
