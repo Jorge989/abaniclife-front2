@@ -13,38 +13,49 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log("Enviando email para:", email);
+
     // Enviar email de confirmação via EmailJS REST API
-    const response = await fetch(
-      "https://api.emailjs.com/api/v1.0/email/send",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: "service_54g6ge8", // Seu service ID
-          template_id: "template_newsletter", // Seu template ID
-          user_id: "GnALhYWo26CYtbitj", // Sua public key
-          template_params: {
-            to_email: email,
-            to_name: nome,
-            nome: nome,
-          },
-        }),
-      }
-    );
+    const emailJsUrl = "https://api.emailjs.com/api/v1.0/email/send";
+    const payload = {
+      service_id: "service_54g6ge8",
+      template_id: "template_newsletter",
+      user_id: "GnALhYWo26CYtbitj",
+      template_params: {
+        to_email: email,
+        to_name: nome,
+        nome: nome,
+      },
+    };
+
+    console.log("Payload:", JSON.stringify(payload));
+
+    const response = await fetch(emailJsUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const responseText = await response.text();
+    console.log("EmailJS Response Status:", response.status);
+    console.log("EmailJS Response Text:", responseText);
 
     if (!response.ok) {
-      const error = await response.text();
-      console.error("EmailJS error:", error);
-      return res.status(500).json({
+      return res.status(response.status).json({
         success: false,
-        message: "Erro ao enviar email",
-        error: error,
+        message: "Erro ao enviar email via EmailJS",
+        error: responseText,
       });
     }
 
-    const result = await response.json();
+    let result;
+    try {
+      result = JSON.parse(responseText);
+    } catch (e) {
+      result = responseText;
+    }
 
     return res.status(200).json({
       success: true,
@@ -52,7 +63,7 @@ export default async function handler(req, res) {
       result,
     });
   } catch (error) {
-    console.error("Erro ao enviar email:", error);
+    console.error("Erro geral:", error);
     return res.status(500).json({
       success: false,
       message: "Erro ao enviar email de confirmação",
