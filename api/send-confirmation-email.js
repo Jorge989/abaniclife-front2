@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     const emailJsUrl = "https://api.emailjs.com/api/v1.0/email/send";
     const payload = {
       service_id: "service_54g6ge8",
-      template_id: "template_newsletter",
+      template_id: "template_mgl3s8w",
       user_id: "GnALhYWo26CYtbitj",
       template_params: {
         to_email: email,
@@ -27,6 +27,11 @@ export default async function handler(req, res) {
         nome: nome,
       },
     };
+
+    // Incluir accessToken se variável de ambiente estiver configurada
+    if (process.env.EMAILJS_PRIVATE_KEY) {
+      payload.accessToken = process.env.EMAILJS_PRIVATE_KEY;
+    }
 
     console.log("Payload:", JSON.stringify(payload));
 
