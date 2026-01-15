@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import FotoCreme from "../assets/produto.png";
+import {
+  CreditCard,
+  Package,
+  Sparkles,
+  Heart,
+  RefreshCw,
+  Headphones,
+} from "lucide-react";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
   // Animation variants similar to Explore page
   const textVariants = {
@@ -18,6 +26,7 @@ const Faq = () => {
   const faqData = [
     {
       category: "PEDIDOS & PAGAMENTOS",
+      icon: CreditCard,
       questions: [
         {
           question: "Como localizar meu pedido?",
@@ -38,6 +47,7 @@ const Faq = () => {
     },
     {
       category: "ENVIO & ENTREGA",
+      icon: Package,
       questions: [
         {
           question: "Para onde a ABANIC entrega?",
@@ -52,6 +62,7 @@ const Faq = () => {
     },
     {
       category: "PRODUTOS & EXPERIÊNCIA",
+      icon: Sparkles,
       questions: [
         {
           question: "Como posso receber amostras dos produtos?",
@@ -67,6 +78,7 @@ const Faq = () => {
     },
     {
       category: "MARCA & COMPROMISSOS",
+      icon: Heart,
       questions: [
         {
           question: "Os produtos ABANIC são testados em animais?",
@@ -81,6 +93,7 @@ const Faq = () => {
     },
     {
       category: "TROCAS & DEVOLUÇÕES",
+      icon: RefreshCw,
       questions: [
         {
           question:
@@ -113,6 +126,7 @@ const Faq = () => {
     },
     {
       category: "ATENDIMENTO",
+      icon: Headphones,
       questions: [
         {
           question: "Como entrar em contato com a ABANIC?",
@@ -127,145 +141,175 @@ const Faq = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
-  // Flatten all questions with category info
-  const allQuestions = faqData.flatMap((category) =>
-    category.questions.map((q) => ({
-      ...q,
-      category: category.category,
-    }))
-  );
-
   return (
     <section
-      className="w-full px-4 py-12 md:py-20 flex flex-col items-center mt-28"
+      className="w-full py-12 md:py-20 mt-28"
       style={{ backgroundColor: "#F1F0EB" }}
     >
-      <h1
-        className="text-3xl md:text-4xl lg:text-5xl leading-tight font-space-grotesk-h1 text-center mb-4"
-        style={{ color: "var(--abanic-gray-dark)", fontWeight: 400 }}
-      >
-        Perguntas <span style={{ color: "#fc622b" }}>Frequentes</span>
-      </h1>
-      <p
-        className="text-base md:text-lg text-center mb-12 max-w-2xl"
-        style={{ color: "var(--abanic-gray)" }}
-      >
-        Encontre respostas para as dúvidas mais comuns sobre nossos produtos e
-        serviços.
-      </p>
-
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10 mt-6">
-        {/* FAQ Section */}
-        <div className="w-full md:w-1/2 space-y-6">
-          {faqData.map((category, catIndex) => (
-            <div key={catIndex} className="mb-6">
-              <h2
-                className="text-xl md:text-2xl font-semibold mb-4 uppercase font-space-grotesk-h3"
-                style={{ color: "#fc622b" }}
-              >
-                {category.category}
-              </h2>
-              <div className="space-y-3">
-                {category.questions.map((item, qIndex) => {
-                  const globalIndex = `${catIndex}-${qIndex}`;
-                  const isActive = activeIndex === globalIndex;
-
-                  return (
-                    <div
-                      key={qIndex}
-                      className="border-b-2 border-gray-300 transition-all duration-200"
-                    >
-                      <button
-                        className="cursor-pointer flex justify-between items-center w-full text-left py-4 transition-colors duration-200"
-                        onClick={() => toggleIndex(globalIndex)}
-                      >
-                        <span
-                          className="font-medium text-sm md:text-base pr-4"
-                          style={{ color: "var(--abanic-gray-dark)" }}
-                        >
-                          {item.question}
-                        </span>
-                        <span
-                          className="text-xl flex-shrink-0 transition-transform duration-200"
-                          style={{
-                            color: "#fc622b",
-                            transform: isActive ? "rotate(90deg)" : "rotate(0)",
-                          }}
-                        >
-                          ▸
-                        </span>
-                      </button>
-                      {isActive && (
-                        <motion.div
-                          variants={textVariants}
-                          initial="hidden"
-                          animate="visible"
-                          className="pb-4 pt-2"
-                        >
-                          <p
-                            className="text-sm md:text-base leading-relaxed text-justify"
-                            style={{ color: "var(--abanic-gray)" }}
-                          >
-                            {item.answer}
-                          </p>
-                        </motion.div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center items-start">
-          <img
-            src={FotoCreme}
-            alt="Decorative"
-            className="rounded-xl w-full max-w-md object-cover shadow-md"
-          />
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="w-full max-w-4xl mt-16">
-        <h2
-          className="text-2xl md:text-3xl leading-tight font-space-grotesk-h1 text-center mb-8"
-          style={{ color: "var(--abanic-gray-dark)", fontWeight: 600 }}
+      <div className="max-w-[1070px] mx-auto px-6">
+        <h1
+          className="text-3xl md:text-4xl lg:text-5xl leading-tight font-space-grotesk-h1 text-center mb-4"
+          style={{ color: "var(--abanic-gray-dark)", fontWeight: 400 }}
         >
-          Ainda tem dúvidas? Fale conosco!
-        </h2>
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input
-            type="text"
-            placeholder="Seu nome"
-            className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
-            style={{ color: "var(--abanic-gray-dark)" }}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
-            style={{ color: "var(--abanic-gray-dark)" }}
-          />
-          <textarea
-            rows={4}
-            placeholder="Sua mensagem"
-            className="md:col-span-2 border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors resize-none"
-            style={{ color: "var(--abanic-gray-dark)" }}
-          ></textarea>
+          Perguntas <span style={{ color: "#fc622b" }}>Frequentes</span>
+        </h1>
+        <p
+          className="text-base md:text-lg text-center mb-12"
+          style={{ color: "var(--abanic-gray)" }}
+        >
+          Encontre respostas para as dúvidas mais comuns sobre nossos produtos e
+          serviços.
+        </p>
 
-          <div className="md:col-span-2 flex justify-start">
-            <button
-              type="submit"
-              className="text-white text-sm md:text-base font-semibold rounded-md px-8 py-3 transition-all duration-300 hover:shadow-lg transform hover:scale-105"
-              style={{ backgroundColor: "#fc622b" }}
-            >
-              Enviar mensagem →
-            </button>
+        {/* Category Icons Grid */}
+        <div className="w-full mb-16">
+          <h3
+            className="text-xs uppercase tracking-widest text-center mb-10"
+            style={{ color: "var(--abanic-gray)", letterSpacing: "0.15em" }}
+          >
+            CATEGORIAS
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {faqData.map((category, index) => {
+              const IconComponent = category.icon;
+              const isSelected = selectedCategory === index;
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => setSelectedCategory(index)}
+                  className="flex flex-col items-center justify-center p-4 transition-all duration-200 group"
+                >
+                  <IconComponent
+                    size={32}
+                    strokeWidth={1}
+                    style={{
+                      color: isSelected ? "#fc622b" : "var(--abanic-gray)",
+                      marginBottom: "10px",
+                      transition: "all 0.2s ease",
+                    }}
+                    className="group-hover:scale-110"
+                  />
+                  <span
+                    className="text-xs text-center leading-tight transition-colors duration-200"
+                    style={{
+                      color: isSelected ? "#fc622b" : "var(--abanic-gray)",
+                    }}
+                  >
+                    {category.category}
+                  </span>
+                  <style jsx>{`
+                    button:hover svg {
+                      color: #fc622b !important;
+                    }
+                    button:hover span {
+                      color: #fc622b !important;
+                    }
+                  `}</style>
+                </button>
+              );
+            })}
           </div>
-        </form>
+        </div>
+
+        {/* Questions for Selected Category */}
+        <div className="w-full">
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-1"
+          >
+            {faqData[selectedCategory].questions.map((item, qIndex) => {
+              const globalIndex = `${selectedCategory}-${qIndex}`;
+              const isActive = activeIndex === globalIndex;
+
+              return (
+                <div
+                  key={qIndex}
+                  className="border-b border-gray-300 transition-all duration-200"
+                >
+                  <button
+                    className="cursor-pointer flex justify-between items-center w-full text-left py-6 transition-colors duration-200"
+                    onClick={() => toggleIndex(globalIndex)}
+                  >
+                    <span
+                      className="text-lg md:text-xl pr-4 font-space-grotesk-h3"
+                      style={{ color: "#fc622b", fontWeight: 400 }}
+                    >
+                      {item.question}
+                    </span>
+                    <span
+                      className="text-lg flex-shrink-0 transition-transform duration-200"
+                      style={{
+                        color: "var(--abanic-gray)",
+                        transform: isActive ? "rotate(90deg)" : "rotate(0)",
+                      }}
+                    >
+                      ▸
+                    </span>
+                  </button>
+                  {isActive && (
+                    <motion.div
+                      variants={textVariants}
+                      initial="hidden"
+                      animate="visible"
+                      className="pb-6 pt-1 pr-8"
+                    >
+                      <p
+                        className="text-base leading-relaxed"
+                        style={{ color: "var(--abanic-gray)" }}
+                      >
+                        {item.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </div>
+              );
+            })}
+          </motion.div>
+        </div>
+
+        {/* Contact Form */}
+        <div className="w-full mt-16">
+          <h2
+            className="text-2xl md:text-3xl leading-tight font-space-grotesk-h1 text-center mb-8"
+            style={{ color: "var(--abanic-gray-dark)", fontWeight: 600 }}
+          >
+            Ainda tem dúvidas? Fale conosco!
+          </h2>
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              placeholder="Seu nome"
+              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
+              style={{ color: "var(--abanic-gray-dark)" }}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
+              style={{ color: "var(--abanic-gray-dark)" }}
+            />
+            <textarea
+              rows={4}
+              placeholder="Sua mensagem"
+              className="md:col-span-2 border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors resize-none"
+              style={{ color: "var(--abanic-gray-dark)" }}
+            ></textarea>
+
+            <div className="md:col-span-2 flex justify-start">
+              <button
+                type="submit"
+                className="text-white text-sm md:text-base font-semibold rounded-md px-8 py-3 transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                style={{ backgroundColor: "#fc622b" }}
+              >
+                Enviar mensagem →
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );
