@@ -234,9 +234,10 @@ const Header = () => {
                     ) : (
                       <div
                         key={subItem.name}
-                        className="px-4 py-2 text-xs font-bold uppercase tracking-wide"
+                        className="px-4 py-2 text-sm font-bold uppercase tracking-wide"
                         style={{
                           fontFamily: '"Space Grotesk", sans-serif',
+                          fontSize: "14px",
                           color: "#fc622b",
                           borderBottom: "1px solid #f0f0f0",
                           marginBottom: "4px",

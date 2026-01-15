@@ -1,8 +1,19 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import FotoCreme from "../assets/produto.png";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+
+  // Animation variants similar to Explore page
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   const faqData = [
     {
@@ -149,7 +160,7 @@ const Faq = () => {
           {faqData.map((category, catIndex) => (
             <div key={catIndex} className="mb-6">
               <h2
-                className="text-xl md:text-2xl font-semibold mb-4 uppercase"
+                className="text-xl md:text-2xl font-semibold mb-4 uppercase font-space-grotesk-h3"
                 style={{ color: "#fc622b" }}
               >
                 {category.category}
@@ -185,14 +196,19 @@ const Faq = () => {
                         </span>
                       </button>
                       {isActive && (
-                        <div className="pb-4 pt-2">
+                        <motion.div
+                          variants={textVariants}
+                          initial="hidden"
+                          animate="visible"
+                          className="pb-4 pt-2"
+                        >
                           <p
                             className="text-sm md:text-base leading-relaxed text-justify"
                             style={{ color: "var(--abanic-gray)" }}
                           >
                             {item.answer}
                           </p>
-                        </div>
+                        </motion.div>
                       )}
                     </div>
                   );

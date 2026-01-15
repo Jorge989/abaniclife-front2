@@ -1,6 +1,7 @@
 import ArticleImageOne from "../assets/blog/article1.png";
 import ArticleImagetwo from "../assets/blog/article2.png";
 import ArticleImageThree from "../assets/blog/article3.png";
+import ArticleImageFour from "../assets/blog/article4.png";
 export const articles = [
   {
     id: 1,
@@ -84,5 +85,30 @@ As nossas múltiplas versões é que nos tornam únicos.
       "Como a ABANIC está reinventando a indústria de cosméticos com práticas sustentáveis.",
     image: ArticleImageThree,
     content: `A indústria de cosméticos vive um momento de transformação profunda, onde inovação e sustentabilidade se tornaram pilares fundamentais para o futuro. Na ABANIC, acreditamos que é possível criar produtos de alta performance sem comprometer o meio ambiente ou os valores éticos. Nossa abordagem combina pesquisa científica avançada com práticas sustentáveis em toda a cadeia produtiva. Desenvolvemos fórmulas que utilizam ativos naturais provenientes de fontes renováveis, sempre priorizando o comércio justo e a preservação da biodiversidade. A embalagem dos nossos produtos é pensada para minimizar o impacto ambiental, utilizando materiais reciclados e recicláveis, além de incentivar a reutilização. Mas a sustentabilidade vai além dos produtos em si. Estamos comprometidos com uma produção consciente que respeita os limites do planeta e valoriza as comunidades envolvidas em todo o processo. Acreditamos que a verdadeira beleza está na harmonia entre eficácia, segurança e responsabilidade ambiental. Cada produto ABANIC é resultado de um cuidadoso equilíbrio entre ciência, natureza e ética, representando nosso compromisso com um futuro mais consciente e sustentável para a indústria de cosméticos.`,
+  },
+  {
+    id: 4,
+    title: "Vida to the Fullest e o que isso significa",
+    category: "Lifestyle & Bem-Estar",
+    description:
+      "Como o estilo de vida fullest transforma nossa busca por equilíbrio e novas experiências.",
+    image: ArticleImageFour,
+    content: `Nos últimos anos, falar sobre bem-estar deixou de ser apenas tendência para se tornar um estilo de vida. De repente, academias cheias, parques lotados de corredores, grupos de meditação online, receitas saudáveis espalhadas nas redes sociais, mas essa transformação não aconteceu da noite para o dia.
+
+Com a internet e a troca de informações, que o movimento ganhou força de verdade. De repente, estávamos todos conectados a uma cultura global que falava de mindfulness, esportes ao ar livre, superfoods e longevidade saudável.
+
+Alguns fatores explicam por que tanta gente decidiu mudar seus hábitos e na verdade podemos chamar de "o bem e o mal da vida contemporânea". Excesso de trabalho, de uso do celular, redes sociais, era inevitável buscar uma forma de equilíbrio. Hoje sabemos, com dados concretos, que ter sono de qualidade, se alimentar de forma equilibrada e se exercitar, mudam completamente nossa saúde. Ansiedade e burnout deixaram de ser tabu, abrindo espaço para falar de equilíbrio emocional e autocuidado. E claro, a pandemia acelerou ainda mais essa percepção. O mundo parou, o estresse aumentou, e ficou impossível ignorar a necessidade de cuidar não só do corpo, mas também da mente.
+
+A longevidade virou pauta, mas não basta adicionar anos à vida, e sim qualidade aos anos. Hoje, mudar de hábito não é mais sobre "seguir dieta da moda" ou "correr atrás do corpo perfeito". É sobre viver com mais consciência, encontrar prazer nas pequenas rotinas e criar rituais que mantêm a energia lá em cima. É sobre sair para correr para limpar a mente, meditar para organizar os pensamentos, cozinhar com calma para se nutrir de verdade.
+
+No fim, essa revolução silenciosa mostra que cuidar de si não é egoísmo nem vaidade. É uma forma inteligente de viver, que conecta corpo, mente e espírito em busca de algo que todos queremos: Equilíbrio. Mas, de que maneira isso impacta nossas vidas no cotidiano? Como isso é percebido e transformador, além de qualidade de sono, corpo saudável e promessa de longevidade?
+
+A resposta pode ser muito pessoal para cada indivíduo, mas um ponto que muito provavelmente deve ser muito comum a todos, é sobre a qualidade! Quanto mais acesso temos às informações, mais buscamos experimentar coisas novas e precisamos estar bem, física e mentalmente, para nos proporcionarmos vivenciar com multiplicidade.
+
+Então, estamos falando de disposição e preparo, e porque não dizer, de abrirmos nossas mentes para coisas novas: Aprender um idioma novo, fazer uma viagem que parecia ser impossível, treinar uma nova modalidade de esporte, preparar um prato diferente e se desafiar a descobrir novos aspectos de si e novos gostos, promovendo uma expansão pessoal contínua.
+
+Isso é o que chamamos de estilo de vida "fullest", ou seja, uma vida abundante e consciente, que busca equilibrar diferentes aspectos de bem-estar e de realizações.
+
+Uma mente e corpo equilibrados ampliam nossa disposição emocional e psicológica para experimentar coisas novas, aprender habilidades, conhecer pessoas diferentes e abrir espaço para momentos de novas descobertas.`,
   },
 ];
