@@ -30,32 +30,33 @@ const Footer = () => {
       subscribeBtn: "Inscrever-se",
       copyright: `© ${currentYear} ABANIC. Todos os direitos reservados.`,
       legalLinks: [
-        { name: "Termos de Uso", href: "#termos" },
-        { name: "Privacidade", href: "#privacidade" },
-        { name: "Cookies", href: "#cookies" },
+        { name: "Termos de Uso", href: "/terms-of-use" },
+        { name: "Privacidade", href: "/privacy-policy" },
+        { name: "Cookies", href: "/cookie-policy" },
       ],
       footerLinks: {
         company: [{ name: "Manifesto da Marca", href: "/about#marca" }],
         products: [
-          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
-          { name: "Lip Balm", href: "/product#ativos" },
+          { name: "Creme Facial Radiance FPS50", href: "/product#rhody" },
+          { name: "Sérum Facial Clareador", href: "/product#serum" },
+          { name: "Gel de Limpeza Facial", href: "/product#fps50" },
         ],
         support: [
-          { name: "FAQ", href: "/faq" },
-          { name: "Política de Privacidade", href: "#contato" },
-          { name: "Política de Cookies", href: "#contato" },
-          { name: "Termos de Uso", href: "#tutorial" },
+          { name: "Perguntas Frequentes", href: "/faq" },
+          { name: "Política de Privacidade", href: "/privacy-policy" },
+          { name: "Política de Cookies", href: "/cookie-policy" },
+          { name: "Termos de Uso", href: "/terms-of-use" },
         ],
         explore: [
-          { name: "Ativos e Benefícios", href: "#guia" },
+          { name: "Saiba mais Sobre Ativos e Benefícios", href: "/explore" },
           { name: "A importância da proteção solar", href: "#importancia" },
           { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
         ],
       },
     },
     en: {
-      companyTitle: "Company",
-      productsTitle: "Products",
+      companyTitle: "About",
+      productsTitle: "Product",
       supportTitle: "Support",
       exploreTitle: "Explore",
       newsletterTitle: "Stay Updated",
@@ -64,34 +65,26 @@ const Footer = () => {
       subscribeBtn: "Subscribe",
       copyright: `© ${currentYear} ABANIC. All rights reserved.`,
       legalLinks: [
-        { name: "Terms of Use", href: "#terms" },
-        { name: "Privacy", href: "#privacy" },
-        { name: "Cookies", href: "#cookies" },
+        { name: "Terms of Use", href: "/terms-of-use" },
+        { name: "Privacy", href: "/privacy-policy" },
+        { name: "Cookies", href: "/cookie-policy" },
       ],
       footerLinks: {
-        company: [
-          { name: "About Us", href: "#about" },
-          { name: "Our History", href: "#history" },
-          { name: "Founders", href: "#founders" },
-          { name: "Careers", href: "#careers" },
-        ],
+        company: [{ name: "Brand Manifesto", href: "/about#marca" }],
         products: [
-          { name: "SPF 50 Moisturizer", href: "#moisturizer" },
-          { name: "Natural Actives", href: "#actives" },
-          { name: "Complete Line", href: "#products" },
-          { name: "News", href: "#news" },
+          { name: "RHODY SENSE FPS50", href: "/product#hidratante" },
+          { name: "Lip Balm", href: "/product#ativos" },
         ],
         support: [
-          { name: "FAQ", href: "#faq" },
-          { name: "Contact", href: "#contact" },
-          { name: "Tutorial", href: "#tutorial" },
-          { name: "Privacy Policy", href: "#privacy" },
+          { name: "FAQ", href: "/faq" },
+          { name: "Privacy Policy", href: "/privacy-policy" },
+          { name: "Cookie Policy", href: "/cookie-policy" },
+          { name: "Terms of Use", href: "/terms-of-use" },
         ],
         explore: [
-          { name: "Explore Guide", href: "#guide" },
-          { name: "Beauty Tips", href: "#tips" },
-          { name: "Blog", href: "#blog" },
-          { name: "Community", href: "#community" },
+          { name: "Actives and Benefits", href: "/explore" },
+          { name: "The Importance of Sun Protection", href: "#importancia" },
+          { name: "ABANIC and Sustainability", href: "#dicas" },
         ],
       },
     },
@@ -179,13 +172,16 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6"> {t.companyTitle} </h4>
+            <h4 className="text-lg font-semibold mb-6 font-space-grotesk-h3">
+              {" "}
+              {t.companyTitle}{" "}
+            </h4>
             <ul className="space-y-3">
               {t.footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-[#444444] transition-colors"
+                    className="hover:text-[#fc622b] transition-all duration-200 hover:translate-x-1 inline-block"
                     style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
@@ -197,13 +193,16 @@ const Footer = () => {
 
           {/* Products Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6"> {t.productsTitle} </h4>
+            <h4 className="text-lg font-semibold mb-6 font-space-grotesk-h3">
+              {" "}
+              {t.productsTitle}{" "}
+            </h4>
             <ul className="space-y-3">
               {t.footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-[#444444] transition-colors"
+                    className="hover:text-[#fc622b] transition-all duration-200 hover:translate-x-1 inline-block"
                     style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
@@ -214,13 +213,16 @@ const Footer = () => {
           </div>
           {/* Explore Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6"> {t.exploreTitle} </h4>
+            <h4 className="text-lg font-semibold mb-6 font-space-grotesk-h3">
+              {" "}
+              {t.exploreTitle}{" "}
+            </h4>
             <ul className="space-y-3">
               {t.footerLinks.explore.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-[#444444] transition-colors"
+                    className="hover:text-[#fc622b] transition-all duration-200 hover:translate-x-1 inline-block"
                     style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}
@@ -231,13 +233,16 @@ const Footer = () => {
           </div>
           {/* Support Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6"> {t.supportTitle} </h4>
+            <h4 className="text-lg font-semibold mb-6 font-space-grotesk-h3">
+              {" "}
+              {t.supportTitle}{" "}
+            </h4>
             <ul className="space-y-3">
               {t.footerLinks.support.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="hover:text-[#444444] transition-colors"
+                    className="hover:text-[#fc622b] transition-all duration-200 hover:translate-x-1 inline-block"
                     style={{ color: "var(--abanic-gray)" }}
                   >
                     {link.name}

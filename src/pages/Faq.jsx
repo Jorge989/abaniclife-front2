@@ -13,6 +13,15 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(0);
 
+  // Contact form states
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+
   // Animation variants similar to Explore page
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -139,6 +148,66 @@ const Faq = () => {
 
   const toggleIndex = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.nome || !formData.email || !formData.mensagem) {
+      setSubmitStatus("error");
+      return;
+    }
+
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "f8916c6d-ef8f-4673-849c-e4f0283edb29",
+          subject: `FAQ - Nova mensagem de ${formData.nome}`,
+          from_name: "ABANIC Life - FAQ",
+          name: formData.nome,
+          email: formData.email,
+          message: `Nova mensagem via FAQ:\n\nNome: ${formData.nome}\nEmail: ${
+            formData.email
+          }\nMensagem:\n${
+            formData.mensagem
+          }\n\nData: ${new Date().toLocaleString("pt-BR")}`,
+          to: "contato@abaniclife.com",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus("success");
+        setFormData({ nome: "", email: "", mensagem: "" });
+
+        // Resetar status após 5 segundos
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        throw new Error("Erro ao enviar mensagem");
+      }
+    } catch (error) {
+      console.error("Erro:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -279,33 +348,62 @@ const Faq = () => {
           >
             Ainda tem dúvidas? Fale conosco!
           </h2>
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {submitStatus === "success" && (
+            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center">
+              ✓ Mensagem enviada com sucesso! Responderemos em breve.
+            </div>
+          )}
+
+          {submitStatus === "error" && (
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-center">
+              ✗ Erro ao enviar mensagem. Verifique os campos e tente novamente.
+            </div>
+          )}
+
+          <form
+            onSubmit={handleSubmit}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
             <input
               type="text"
+              name="nome"
+              value={formData.nome}
+              onChange={handleInputChange}
               placeholder="Seu nome"
-              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
+              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors bg-transparent"
               style={{ color: "var(--abanic-gray-dark)" }}
+              required
             />
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
               placeholder="Email"
-              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors"
+              className="border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors bg-transparent"
               style={{ color: "var(--abanic-gray-dark)" }}
+              required
             />
             <textarea
+              name="mensagem"
+              value={formData.mensagem}
+              onChange={handleInputChange}
               rows={4}
               placeholder="Sua mensagem"
-              className="md:col-span-2 border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors resize-none"
+              className="md:col-span-2 border-b-2 border-gray-300 px-2 py-3 focus:outline-none focus:border-[#fc622b] transition-colors resize-none bg-transparent"
               style={{ color: "var(--abanic-gray-dark)" }}
+              required
             ></textarea>
 
             <div className="md:col-span-2 flex justify-start">
               <button
                 type="submit"
-                className="text-white text-sm md:text-base font-semibold rounded-md px-8 py-3 transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                disabled={isLoading}
+                className="text-white text-sm md:text-base font-semibold rounded-md px-8 py-3 transition-all duration-300 hover:shadow-lg transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 style={{ backgroundColor: "#fc622b" }}
               >
-                Enviar mensagem →
+                {isLoading ? "Enviando..." : "Enviar mensagem →"}
               </button>
             </div>
           </form>
