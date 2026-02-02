@@ -416,14 +416,7 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                GEL DE LIMPEZA
-              </span>
-              <br />
-              <span
-                className="font-normal"
-                style={{ color: "var(--abanic-gray-dark)" }}
-              >
-                RHODY SENCE
+                GEL DE LIMPEZA RHODY SENCE
               </span>
             </h1>
 
@@ -437,16 +430,16 @@ const ProductPage = () => {
                 className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
-                  textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO EM GEL COM EFEITO TEIA. ENRIQUECIDO COM ATIVOS
-                ANTIOXIDANTES EXTRAÍDOS DE ALGAS VERMELHAS E ATIVOS CLAREADORES.
-                SUA TEXTURA AUXILIA NA REMOÇÃO DE IMPUREZAS COM DELICADEZA,
-                DEIXANDO A PELE COM SENSAÇÃO HIDRATANTE E CONFORTO CALMANTE.
+                Formulação em gel efeito teia. Enriquecido com ativos
+                antioxidantes extraídos de algas vermelhas e ativos clareadores.
                 {"\n"}
-                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
-                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
+                Sua textura auxilia na remoção de impurezas com delicadeza,
+                deixando a pele com sensação hidratante e conforto calmante.
+                {"\n"}
+                Fragrância hipoalergênica. Possui notas minerais que remetem ao
+                frescor da brisa do mar, habitat natural das algas vermelhas.
               </p>
               {/* INDICAÇÃO DE USO */}
               <button
@@ -464,13 +457,11 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  APLIQUE UMA PORÇÃO DE DOIS PUMPS NO ROSTO E PESCOÇO UMIDECIDOS
-                  NO ROSTO E PESCOÇO UMEDECIDOS E ESPALHE DE FORMA HOMOGÊNEA COM
-                  MOVIMENTOS LEVES CIRCULARES. RETIRE O PRODUTO COM ÁGUA
-                  ABUNDANTE.
+                  Aplique uma porção de dois pumps no rosto e pescoço umedecidos
+                  e espalhe de forma homogênea com movimentos leves circulares.
+                  Retire o produto com água abundante.
                 </p>
               )}
 
@@ -490,10 +481,9 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
               )}
             </div>
@@ -547,14 +537,7 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                SÉRUM CLAREADOR
-              </span>
-              <br />
-              <span
-                className="font-normal"
-                style={{ color: "var(--abanic-gray-dark)" }}
-              >
-                RHODY CLAREADOR
+                SÉRUM CLAREADOR RHODY SENCE
               </span>
             </h1>
 
@@ -568,17 +551,18 @@ const ProductPage = () => {
                 className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
-                  textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO LEVE COM AÇÃO CLAREADORA. POSSUI ATIVOS NATURAIS
-                EXTRAÍDOS DE ALGAS VERMELHAS E FLORES DE MARGARIDAS, QUE
-                CONTRIBUEM PARA A UNIFORMIZAÇÃO DO TOM DA PELE. PERMITE A
-                UTILIZAÇÃO DO PRODUTO DURANTE O DIA E À NOITE. PELE ILUMINOSA
-                COM APARÊNCIA HOMOGÊNEA.
+                Formulação leve com ação clareadora.
                 {"\n"}
-                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
-                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
+                Possui ativos naturais extraídos de algas vermelhas e flores de
+                margaridas, que contribuem para a uniformização do tom da pele.
+                Permitem a utilização do produto durante o dia e à noite.
+                {"\n"}
+                Pele luminosa com aparência homogênea.
+                {"\n"}
+                Fragrância hipoalergênica. Possui notas minerais que remetem ao
+                frescor da brisa do mar, habitat natural das algas vermelhas.
               </p>
 
               {/* INDICAÇÃO DE USO */}
@@ -597,12 +581,11 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  APLIQUE TRÊS GOTAS DO PRODUTO EM TODO O ROSTO E PESCOÇO.
-                  ESPALHE DE FORMA HOMOGÊNEA, COM MOVIMENTOS LEVES E CIRCULARES,
-                  ATÉ SENTIR A TOTAL ABSORÇÃO DO PRODUTO.
+                  Aplique 3 (três) gotas do produto em todo o rosto e pescoço.
+                  Espalhe de forma homogênea, com movimentos leves e circulares,
+                  até sentir a total absorção do produto.
                 </p>
               )}
 
@@ -622,10 +605,9 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
               )}
             </div>
@@ -682,14 +664,7 @@ const ProductPage = () => {
                 className="font-bold"
                 style={{ color: "var(--abanic-gray-dark)" }}
               >
-                CREME FACIAL
-              </span>
-              <br />
-              <span
-                className="font-normal"
-                style={{ color: "var(--abanic-gray-dark)" }}
-              >
-                RHODY SENCE FPS50
+                CREME FACIAL RHODY SENCE FPS50
               </span>
             </h1>
 
@@ -703,14 +678,17 @@ const ProductPage = () => {
                 className="text-[14px] md:text-[15px] text-justify whitespace-pre-line leading-normal rounded-lg items-start mt-1"
                 style={{
                   color: "var(--abanic-gray)",
-                  textTransform: "uppercase",
                 }}
               >
-                FORMULAÇÃO CREMOSA. POSSUI ATIVOS NATURAIS EXTRAÍDOS DE ALGAS
-                VERMELHAS E FLORES DE MARGARIDA, ALÉM DE ATIVOS HIDRATANTES E
-                CALMANTES, QUE CONTRIBUEM PARA O TOQUE SEDOSO E AVELUDADO.
-                FRAGÂNCIA HIPOALERGÊNICA. POSSUI NOTAS MINERAIS QUE REMETEM AO
-                FRESCOR DA BRISA DO MAR, HABITAT NATURAL DAS ALGAS VERMELHAS.
+                Formulação cremosa. Possui ativos naturais extraídos de algas
+                vermelhas e flores de margarida, além de ativos hidratantes e
+                calmantes, que contribuem para a aparência de uma pele radiante
+                e revitalizada.
+                {"\n"}
+                Toque sedoso e aveludado.
+                {"\n"}
+                Fragrância hipoalergênica. Possui notas minerais que remetem ao
+                frescor da brisa do mar, habitat natural das algas vermelhas.
               </p>
 
               {/* INDICAÇÃO DE USO */}
@@ -729,13 +707,13 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  APLIQUE UMA GOTA DO PRODUTO EM CADA REGIÃO DO ROSTO E DO
-                  PESCOÇO. ESPALHE DE FORMA HOMOGÊNEA ATÉ SENTIR A TOTAL
-                  ABSORÇÃO DO PRODUTO. AO SE EXPOR AO SOL INTENSO, APLIQUE
-                  PROTETOR SOLAR.
+                  Aplique uma gota do produto em cada região do rosto e do
+                  pescoço. Espalhe de forma homogênea até sentir a total
+                  absorção do produto.
+                  {"\n"}
+                  Ao se expor ao sol intenso, aplique protetor solar.
                 </p>
               )}
 
@@ -755,10 +733,9 @@ const ProductPage = () => {
                   className="text-[15px] md:text-[15px] text-justify whitespace-pre-line leading-relaxed rounded-lg items-start mt-1"
                   style={{
                     color: "var(--abanic-gray)",
-                    textTransform: "uppercase",
                   }}
                 >
-                  COLOQUE AQUI SUA LISTA DE INGREDIENTES, DESCRIÇÃO, ETC.
+                  Coloque aqui sua lista de ingredientes, descrição, etc.
                 </p>
               )}
             </div>
