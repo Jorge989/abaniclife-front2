@@ -37,9 +37,9 @@ const Footer = () => {
       footerLinks: {
         company: [{ name: "Manifesto da Marca", href: "/about#marca" }],
         products: [
-          { name: "Creme Facial Radiance FPS50", href: "/product#rhody" },
+          { name: "Gel de Limpeza Facial", href: "/product#gel" },
           { name: "Sérum Facial Clareador", href: "/product#serum" },
-          { name: "Gel de Limpeza Facial", href: "/product#fps50" },
+          { name: "Creme Facial Radiance FPS50", href: "/product#fps50" },
         ],
         support: [
           { name: "Perguntas Frequentes", href: "/faq" },

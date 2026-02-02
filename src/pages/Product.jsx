@@ -100,7 +100,6 @@ const ativosInfo = [
 const PrincipiosAtivos = () => {
   const [ativoSelecionado, setAtivoSelecionado] = useState(null);
   const painelRef = useRef(null);
-  const location = useLocation();
 
   const itemsAtivos = [
     { id: 1, src: BelidesItem, alt: "Belides" },
@@ -110,24 +109,6 @@ const PrincipiosAtivos = () => {
     { id: 5, src: JojobaItem, alt: "Jojoba" },
     { id: 6, src: RhodophytaItem, alt: "Rhodophyta" },
   ];
-
-  useEffect(() => {
-    const hash = location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        setTimeout(() => {
-          const yOffset = -105;
-          const y =
-            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }, 600);
-      }
-    } else {
-      // Se não há hash, volta para o topo da página
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }
-  }, [location]);
 
   useEffect(() => {
     if (ativoSelecionado && painelRef.current) {
@@ -351,14 +332,56 @@ const ProductPage = () => {
   const [openIngredientesTwo, setOpenIngredientesTwo] = useState(false);
   const [openUsoThree, setOpenUsoThree] = useState(false);
   const [openIngredientesThree, setOpenIngredientesThree] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll para a seção específica ou primeiro produto
+    const scrollToTarget = () => {
+      const hash = location.hash;
+
+      // Se não houver hash específico de produto, sempre vai para o primeiro
+      if (
+        !hash ||
+        (hash !== "#gel" &&
+          hash !== "#serum" &&
+          hash !== "#fps50" &&
+          hash !== "#ativos")
+      ) {
+        const element = document.querySelector("#gel");
+        if (element) {
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset - 140;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+        return;
+      }
+
+      // Se tem hash válido, vai para ele
+      const element = document.querySelector(hash);
+      if (element) {
+        // Offset consistente para todos os produtos - alinha no topo com espaço para header
+        const yOffset = -140;
+
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    };
+
+    // Aguarda o DOM estar pronto
+    const timer = setTimeout(scrollToTarget, 150);
+    return () => clearTimeout(timer);
+  }, [location.hash, location.pathname]);
+
   return (
     <section style={{ backgroundColor: "#F1F0EB", scrollBehavior: "smooth" }}>
       <motion.div
+        key="gel"
         className="max-w-[1070px] mx-auto px-6 py-10 mt-28"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        id="rhody"
+        viewport={{ once: false, amount: 0.3 }}
+        id="gel"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Imagem do Produto */}
@@ -484,10 +507,11 @@ const ProductPage = () => {
         </div>
       </motion.div>
       <motion.div
+        key="serum"
         className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         id="serum"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
@@ -618,10 +642,11 @@ const ProductPage = () => {
         </div>
       </motion.div>
       <motion.div
+        key="fps50"
         className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         id="fps50"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

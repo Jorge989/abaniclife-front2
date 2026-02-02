@@ -26,9 +26,9 @@ const translations = {
         href: "#",
         submenu: [
           { name: "Linha RHODY SENCE" },
-          { name: "Creme Facial Radiance FPS50", href: "/product#rhody" },
+          { name: "Gel de Limpeza Facial", href: "/product#gel" },
           { name: "Sérum Facial Clareador", href: "/product#serum" },
-          { name: "Gel de Limpeza Facial", href: "/product#fps50" },
+          { name: "Creme Facial Radiance FPS50", href: "/product#fps50" },
         ],
       },
       {
@@ -203,8 +203,13 @@ const Header = () => {
               }}
             >
               <a
-                href={item.href}
-                className="text-abanic-gray hover:text-abanic-gray-dark transition-smooth flex items-center"
+                href={item.submenu ? undefined : item.href}
+                onClick={(e) => {
+                  if (item.submenu) {
+                    e.preventDefault();
+                  }
+                }}
+                className="text-abanic-gray hover:text-abanic-gray-dark transition-smooth flex items-center cursor-pointer"
                 style={{
                   fontFamily: '"Space Grotesk", sans-serif',
                   fontWeight: "500",
@@ -246,7 +251,7 @@ const Header = () => {
                       >
                         {subItem.name}
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               )}
@@ -337,7 +342,7 @@ const Header = () => {
                               >
                                 {subItem.name}
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
                       )}
