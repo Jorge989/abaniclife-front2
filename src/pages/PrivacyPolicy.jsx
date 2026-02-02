@@ -16,8 +16,8 @@ const PrivacyPolicy = () => {
             Política de Privacidade
           </h1>
           <p className="text-base text-abanic-gray leading-relaxed">
-            A ABANIC LIFE está comprometida com a proteção da sua privacidade e
-            dos seus dados pessoais.
+            A ABANIC está comprometida com a proteção da sua privacidade e dos
+            seus dados pessoais.
           </p>
 
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>

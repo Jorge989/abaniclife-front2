@@ -17,7 +17,7 @@ const TermsOfUse = () => {
           </h1>
           <p className="text-base text-abanic-gray leading-relaxed">
             Estes Termos de Uso regulam o acesso e a utilização do site da
-            ABANIC LIFE.
+            ABANIC.
           </p>
 
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
@@ -35,14 +35,13 @@ const TermsOfUse = () => {
             1. Aceitação dos Termos
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
-            Ao acessar e utilizar o site da ABANIC LIFE, você concorda
-            integralmente com estes Termos de Uso. Caso não concorde com
-            qualquer parte destes termos, recomendamos que não utilize nossos
-            serviços.
+            Ao acessar e utilizar o site da ABANIC, você concorda integralmente
+            com estes Termos de Uso. Caso não concorde com qualquer parte destes
+            termos, recomendamos que não utilize nossos serviços.
           </p>
           <p className="text-base text-abanic-gray mt-4 leading-relaxed">
-            A ABANIC LIFE reserva-se o direito de modificar estes termos a
-            qualquer momento, sendo responsabilidade do usuário verificá-los
+            A ABANIC reserva-se o direito de modificar estes termos a qualquer
+            momento, sendo responsabilidade do usuário verificá-los
             periodicamente.
           </p>
         </div>
@@ -56,15 +55,35 @@ const TermsOfUse = () => {
             2. Descrição dos Serviços
           </h2>
           <p className="text-base text-abanic-gray mb-4 leading-relaxed">
-            A ABANIC LIFE é uma plataforma dedicada à comercialização de
-            produtos de skincare e cuidados pessoais da linha RHODY SENCE.
-            Nossos serviços incluem:
+            A ABANIC é uma plataforma dedicada à comercialização de produtos de
+            skincare e cuidados pessoais da linha RHODY SENCE. Nossos serviços
+            incluem:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray space-y-2">
-            <li>Venda de produtos de skincare com ativos naturais</li>
-            <li>Informações sobre ingredientes e benefícios dos produtos</li>
-            <li>Conteúdo educacional sobre cuidados com a pele</li>
-            <li>Atendimento ao cliente e suporte pós-venda</li>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Venda de produtos de skincare com ativos naturais
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Informações sobre ingredientes e benefícios dos produtos
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Conteúdo educacional sobre cuidados com a pele
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Atendimento ao cliente e suporte pós-venda
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -80,14 +99,38 @@ const TermsOfUse = () => {
             Você se compromete a utilizar o site de forma ética, legal e
             responsável. Não é permitido:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray space-y-2">
-            <li>Reproduzir ou copiar conteúdos sem autorização prévia</li>
-            <li>Utilizar o site para fins ilegais ou não autorizados</li>
-            <li>Transmitir vírus ou códigos maliciosos</li>
-            <li>
-              Interferir na integridade ou no desempenho do site e seus sistemas
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Reproduzir ou copiar conteúdos sem autorização prévia
+              </span>
             </li>
-            <li>Coletar informações de outros usuários sem consentimento</li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Utilizar o site para fins ilegais ou não autorizados
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Transmitir vírus ou códigos maliciosos
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Interferir na integridade ou no desempenho do site e seus
+                sistemas
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Coletar informações de outros usuários sem consentimento
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -103,11 +146,31 @@ const TermsOfUse = () => {
             Para realizar compras, pode ser necessário criar uma conta. O
             usuário é responsável por:
           </p>
-          <ul className="list-disc pl-6 text-abanic-gray space-y-2">
-            <li>Fornecer informações verdadeiras e atualizadas</li>
-            <li>Manter a confidencialidade de sua senha</li>
-            <li>Notificar qualquer uso não autorizado da conta</li>
-            <li>Todas as atividades realizadas sob sua conta</li>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Fornecer informações verdadeiras e atualizadas
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Manter a confidencialidade de sua senha
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Notificar qualquer uso não autorizado da conta
+              </span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-abanic-orange mt-2 flex-shrink-0" />
+              <span className="text-base text-abanic-gray">
+                Todas as atividades realizadas sob sua conta
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -154,9 +217,9 @@ const TermsOfUse = () => {
             5. Propriedade Intelectual
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
-            Todo o conteúdo do site é de propriedade exclusiva da ABANIC LIFE ou
-            de seus licenciadores, sendo protegido por leis de direitos autorais
-            e propriedade intelectual.
+            Todo o conteúdo do site é de propriedade exclusiva da ABANIC ou de
+            seus licenciadores, sendo protegido por leis de direitos autorais e
+            propriedade intelectual.
           </p>
         </div>
 
@@ -169,7 +232,7 @@ const TermsOfUse = () => {
             7. Limitação de Responsabilidade
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
-            A ABANIC LIFE não se responsabiliza por danos diretos ou indiretos
+            A ABANIC não se responsabiliza por danos diretos ou indiretos
             decorrentes do uso ou da impossibilidade de uso do site ou produtos.
           </p>
         </div>

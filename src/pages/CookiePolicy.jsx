@@ -82,7 +82,7 @@ const CookiePolicy = () => {
             2. Como Utilizamos Cookies
           </h2>
           <p className="text-base text-abanic-gray mb-6 leading-relaxed">
-            A ABANIC LIFE utiliza cookies para diversos fins, incluindo:
+            A ABANIC utiliza cookies para diversos fins, incluindo:
           </p>
           <ul className="space-y-3">
             {[

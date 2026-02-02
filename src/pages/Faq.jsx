@@ -50,7 +50,7 @@ const Faq = () => {
         {
           question: "Posso utilizar cartão-presente ou voucher?",
           answer:
-            "Sim. Cartões-presente e vouchers ABANIC Life podem ser utilizados exclusivamente em nosso site, conforme as condições indicadas no momento da emissão.",
+            "Sim. Cartões-presente e vouchers ABANIC podem ser utilizados exclusivamente em nosso site, conforme as condições indicadas no momento da emissão.",
         },
       ],
     },
@@ -76,12 +76,12 @@ const Faq = () => {
         {
           question: "Como posso receber amostras dos produtos?",
           answer:
-            "Na sessão Explore > ABANIC Life você pode nos enviar uma mensagem e solicitar suas amostras exclusivamente em nosso site, conforme as condições indicadas no momento da emissão.",
+            "Na sessão Explore > ABANIC você pode nos enviar uma mensagem e solicitar suas amostras exclusivamente em nosso site, conforme as condições indicadas no momento da emissão.",
         },
         {
           question: "Como escolher o produto ideal para mim?",
           answer:
-            "Cada criação ABANIC Life nasce do encontro entre funcionalidade, bem-estar e estética e é indicado para todos os tipos de peles. Recomendamos consultar a descrição detalhada do produto.",
+            "Cada criação ABANIC nasce do encontro entre funcionalidade, bem-estar e estética e é indicado para todos os tipos de peles. Recomendamos consultar a descrição detalhada do produto.",
         },
       ],
     },
