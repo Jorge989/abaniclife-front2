@@ -203,37 +203,39 @@ const Header = () => {
       {/* Main header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between py-4 mt-5">
-          {/* Desktop Language Selector */}
-          <div className="hidden lg:block absolute left-0">
-            <select
-              value={language}
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="
-        bg-transparent
-        border border-gray-300
-        rounded-md
-        py-1 px-3
-        text-sm
-        text-abanic-gray
-        cursor-pointer
-        focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500
-        transition-colors
-        appearance-none
-        pr-6
-        min-w-[120px]
-      "
-              style={{
-                backgroundImage: `url("data:image/svg+xml;utf8,<svg fill='none' stroke='%236B7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6 9l6 6 6-6'></path></svg>")`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "right 0.75rem center",
-                backgroundSize: "1em",
-              }}
-              aria-label="Selecionar idioma"
-            >
-              <option value="pt">Português</option>
-              <option value="en">English</option>
-            </select>
-          </div>
+          {/* Desktop Language Selector (comentado) */}
+          {/**
+            <div className="hidden lg:block absolute left-0">
+              <select
+                value={language}
+                onChange={(e) => changeLanguage(e.target.value)}
+                className="
+          bg-transparent
+          border border-gray-300
+          rounded-md
+          py-1 px-3
+          text-sm
+          text-abanic-gray
+          cursor-pointer
+          focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500
+          transition-colors
+          appearance-none
+          pr-6
+          min-w-[120px]
+        "
+                style={{
+                  backgroundImage: `url("data:image/svg+xml;utf8,<svg fill='none' stroke='%236B7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6 9l6 6 6-6'></path></svg>")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right 0.75rem center",
+                  backgroundSize: "1em",
+                }}
+                aria-label="Selecionar idioma"
+              >
+                <option value="pt">Português</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+            */}
 
           {/* Logo centered */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
@@ -334,7 +336,8 @@ const Header = () => {
         {mobileMenuOpen && (
           <nav className="lg:hidden bg-white border-t border-gray-200 shadow-md py-6">
             <ul className="flex flex-col space-y-4 px-4">
-              {/* Idioma dentro do menu mobile */}
+              {/* Idioma dentro do menu mobile (comentado) */}
+              {/**
               <li className="mb-4">
                 <select
                   value={language}
@@ -365,6 +368,7 @@ const Header = () => {
                   <option value="en">English</option>
                 </select>
               </li>
+              */}
 
               {/* Menu itens */}
               {menuItems.map((item, index) => (
