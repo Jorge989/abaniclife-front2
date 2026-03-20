@@ -1,10 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TermsOfUse = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <section className="w-full bg-gradient-to-b from-abanic-gray-light to-white mt-20">
       {/* Hero Header */}
-      <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
+      <motion.div
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full px-6 py-16 md:py-24 flex flex-col items-center"
+      >
         <div className="max-w-6xl text-center">
           <h1
             className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
@@ -22,12 +38,18 @@ const TermsOfUse = () => {
 
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* 1. Aceitação dos Termos */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -44,10 +66,16 @@ const TermsOfUse = () => {
             momento, sendo responsabilidade do usuário verificá-los
             periodicamente.
           </p>
-        </div>
+        </motion.div>
 
         {/* 2. Descrição dos Serviços */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -85,10 +113,16 @@ const TermsOfUse = () => {
               </span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* 3. Uso do Site */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -132,10 +166,16 @@ const TermsOfUse = () => {
               </span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* 4. Cadastro e Conta */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -172,10 +212,16 @@ const TermsOfUse = () => {
               </span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* 5. Produtos e Preços */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -191,10 +237,16 @@ const TermsOfUse = () => {
             Reservamo-nos o direito de limitar quantidades, cancelar pedidos ou
             recusar vendas conforme critérios internos.
           </p>
-        </div>
+        </motion.div>
 
         {/* 6. Pagamento e Entrega */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -206,39 +258,57 @@ const TermsOfUse = () => {
             entrega são estimativas e podem variar de acordo com a localidade e
             disponibilidade.
           </p>
-        </div>
+        </motion.div>
 
         {/* 7. Propriedade Intelectual */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
           >
-            5. Propriedade Intelectual
+            7. Propriedade Intelectual
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             Todo o conteúdo do site é de propriedade exclusiva da ABANIC ou de
             seus licenciadores, sendo protegido por leis de direitos autorais e
             propriedade intelectual.
           </p>
-        </div>
+        </motion.div>
 
         {/* 8. Limitação de Responsabilidade */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
           >
-            7. Limitação de Responsabilidade
+            8. Limitação de Responsabilidade
           </h2>
           <p className="text-base text-abanic-gray leading-relaxed">
             A ABANIC não se responsabiliza por danos diretos ou indiretos
             decorrentes do uso ou da impossibilidade de uso do site ou produtos.
           </p>
-        </div>
+        </motion.div>
 
         {/* 9. Lei Aplicável */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -249,10 +319,16 @@ const TermsOfUse = () => {
             Estes Termos de Uso são regidos pelas leis da República Federativa
             do Brasil, sendo eleito o foro da comarca de São Paulo/SP.
           </p>
-        </div>
+        </motion.div>
 
         {/* 10. Contato */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -278,7 +354,7 @@ const TermsOfUse = () => {
               contato@abaniclife.com
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

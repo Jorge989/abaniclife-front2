@@ -51,7 +51,7 @@ const NewsletterSection = () => {
     } catch (error) {
       console.warn(
         "Erro ao enviar email de confirmação (pode ser local):",
-        error
+        error,
       );
     }
   };
@@ -77,7 +77,7 @@ const NewsletterSection = () => {
           name: nome,
           email: email,
           message: `Nova inscrição na Newsletter:\n\nNome: ${nome}\nEmail: ${email}\nData: ${new Date().toLocaleString(
-            "pt-BR"
+            "pt-BR",
           )}`,
         }),
       });
@@ -108,7 +108,7 @@ const NewsletterSection = () => {
       style={{ backgroundColor: "#A4B6C0" }}
       id="newsletter"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* 📌 Image Side com animação */}
           <motion.div
@@ -127,7 +127,7 @@ const NewsletterSection = () => {
                 alt="Imagem Newsletter"
                 className="w-auto h-auto max-w-full max-h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
             </div>
 
             {/* Floating Elements */}
@@ -269,7 +269,7 @@ const NewsletterSection = () => {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full border-2 border-white"
+                    className="w-8 h-8 bg-linear-to-br from-orange-400 to-pink-400 rounded-full border-2 border-white"
                   />
                 ))}
               </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
 import Belides from "../assets/cardsAtivos/Belides.png";
 import Calendula from "../assets/cardsAtivos/Calendula.png";
 import Rhodophyta from "../assets/cardsAtivos/Rhodophyta.png";
@@ -16,6 +15,30 @@ import JojobaItem from "../assets/itemsAtivos/AtivoJojoba.png";
 import RhodophytaItem from "../assets/itemsAtivos/AtivoRodhophyta.png";
 import { motion } from "framer-motion";
 import ProductActivetext from "../components/ProductActiveText";
+
+// Scroll suave customizado com duração controlável
+const smoothScrollTo = (targetY, duration = 1000) => {
+  const startY = window.pageYOffset;
+  const distance = targetY - startY;
+  let startTime = null;
+
+  const easeOutQuad = (t) => t * (2 - t);
+
+  const step = (timestamp) => {
+    if (startTime === null) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutQuad(progress);
+
+    window.scrollTo(0, startY + distance * eased);
+
+    if (elapsed < duration) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
+};
 
 const ativosInfo = [
   {
@@ -119,7 +142,7 @@ const PrincipiosAtivos = () => {
         const elementPosition =
           painelRef.current.getBoundingClientRect().top + window.pageYOffset;
         const y = elementPosition + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
+        smoothScrollTo(y, 1000);
       }, 100);
     }
   }, [ativoSelecionado]);
@@ -225,7 +248,7 @@ const PrincipiosAtivos = () => {
                           const y =
                             section.getBoundingClientRect().top +
                             window.pageYOffset;
-                          window.scrollTo({ top: y, behavior: "smooth" });
+                          smoothScrollTo(y, 1000);
                         }
                       }, 100);
                     }}
@@ -332,55 +355,15 @@ const ProductPage = () => {
   const [openIngredientesTwo, setOpenIngredientesTwo] = useState(false);
   const [openUsoThree, setOpenUsoThree] = useState(false);
   const [openIngredientesThree, setOpenIngredientesThree] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    // Scroll para a seção específica ou primeiro produto
-    const scrollToTarget = () => {
-      const hash = location.hash;
-
-      // Se não houver hash específico de produto, sempre vai para o primeiro
-      if (
-        !hash ||
-        (hash !== "#gel" &&
-          hash !== "#serum" &&
-          hash !== "#fps50" &&
-          hash !== "#ativos")
-      ) {
-        const element = document.querySelector("#gel");
-        if (element) {
-          const y =
-            element.getBoundingClientRect().top + window.pageYOffset - 140;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-        return;
-      }
-
-      // Se tem hash válido, vai para ele
-      const element = document.querySelector(hash);
-      if (element) {
-        // Offset consistente para todos os produtos - alinha no topo com espaço para header
-        const yOffset = -140;
-
-        const y =
-          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    };
-
-    // Aguarda o DOM estar pronto
-    const timer = setTimeout(scrollToTarget, 150);
-    return () => clearTimeout(timer);
-  }, [location.hash, location.pathname]);
 
   return (
-    <section style={{ backgroundColor: "#F1F0EB", scrollBehavior: "smooth" }}>
+    <section style={{ backgroundColor: "#F1F0EB" }}>
       <motion.div
         key="gel"
         className="max-w-[1070px] mx-auto px-6 py-10 mt-28"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         id="gel"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
@@ -501,7 +484,7 @@ const ProductPage = () => {
         className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         id="serum"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
@@ -628,7 +611,7 @@ const ProductPage = () => {
         className="max-w-[1070px] mx-auto px-6 py-6 mt-6"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         id="fps50"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

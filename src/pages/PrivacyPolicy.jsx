@@ -1,10 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const PrivacyPolicy = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
   return (
     <section className="w-full bg-gradient-to-b from-abanic-gray-light to-white mt-20">
       {/* Hero Header */}
-      <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
+      <motion.div
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full px-6 py-16 md:py-24 flex flex-col items-center"
+      >
         <div className="max-w-6xl text-center">
           <h1
             className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
@@ -19,15 +34,20 @@ const PrivacyPolicy = () => {
             A ABANIC está comprometida com a proteção da sua privacidade e dos
             seus dados pessoais.
           </p>
-
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* 1. Introdução */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -39,10 +59,16 @@ const PrivacyPolicy = () => {
             armazenamos e protegemos suas informações, em conformidade com a Lei
             Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
           </p>
-        </div>
+        </motion.div>
 
         {/* 2. Dados que Coletamos */}
-        <div className="mb-12">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-12"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-4 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -149,7 +175,7 @@ const PrivacyPolicy = () => {
               </span>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* 3. Como Utilizamos seus Dados */}
         <div className="mb-12">

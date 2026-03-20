@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Search, User, ChevronDown, Menu, X, ShoppingBag } from "lucide-react";
 import { Heart, Star, StarHalf, StarOff } from "lucide-react";
 
@@ -6,6 +7,30 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import LogoAbanic from "../assets/LogoAbanic.png";
 import { useLanguage } from "../context/LanguageContext";
+
+// Scroll suave customizado
+const smoothScrollTo = (targetY, duration = 1000) => {
+  const startY = window.pageYOffset;
+  const distance = targetY - startY;
+  let startTime = null;
+
+  const easeOutQuad = (t) => t * (2 - t);
+
+  const step = (timestamp) => {
+    if (startTime === null) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutQuad(progress);
+
+    window.scrollTo(0, startY + distance * eased);
+
+    if (elapsed < duration) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
+};
 
 const translations = {
   pt: {
@@ -36,8 +61,7 @@ const translations = {
         href: "#",
         submenu: [
           { name: "Saiba mais Sobre Ativos e Benefícios", href: "/explore" },
-          { name: "A importância da proteção solar", href: "#importancia" },
-          { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
+          { name: "Escolha Inteligente", href: "/smart-choice" },
         ],
       },
       {
@@ -78,8 +102,7 @@ const translations = {
         href: "#",
         submenu: [
           { name: "Actives and Benefits", href: "/explore" },
-          { name: "The Importance of Sun Protection", href: "#importancia" },
-          { name: "ABANIC and Sustainability", href: "#dicas" },
+          { name: "Smart Choice", href: "/smart-choice" },
         ],
       },
       {
@@ -103,6 +126,53 @@ const Header = () => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileActiveSubmenu, setMobileActiveSubmenu] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Função para lidar com cliques em links com hash
+  const handleLinkClick = (e, href) => {
+    if (!href) return;
+
+    // Verifica se é um link com hash (ex: /product#gel)
+    const hasHash = href.includes("#");
+    if (!hasHash) return; // Deixa o comportamento padrão
+
+    e.preventDefault();
+    setActiveSubmenu(null);
+    setMobileMenuOpen(false);
+
+    const [path, hash] = href.split("#");
+    const currentPath = location.pathname;
+
+    // Se já está na mesma página, só faz scroll
+    if (currentPath === path || (currentPath === "/" && path === "")) {
+      const element = document.getElementById(hash);
+      if (element) {
+        const yOffset = -140;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        smoothScrollTo(y, 1000);
+      }
+      // Atualiza a URL sem recarregar
+      window.history.pushState(null, "", href);
+    } else {
+      // Navega para a página sem o hash primeiro
+      navigate(path);
+
+      // Depois faz scroll suave para o elemento
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          const yOffset = -140;
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          smoothScrollTo(y, 1000);
+        }
+        // Atualiza a URL com o hash
+        window.history.replaceState(null, "", href);
+      }, 150);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -227,6 +297,7 @@ const Header = () => {
                       <a
                         key={subItem.name}
                         href={subItem.href}
+                        onClick={(e) => handleLinkClick(e, subItem.href)}
                         className="block px-4 py-2 text-sm text-abanic-gray hover:bg-gray-50 hover:text-abanic-gray-dark transition-smooth"
                         style={{
                           fontFamily: '"Inter", sans-serif',
@@ -328,8 +399,11 @@ const Header = () => {
                               <li key={subItem.name}>
                                 <a
                                   href={subItem.href}
+                                  onClick={(e) => {
+                                    handleLinkClick(e, subItem.href);
+                                    setMobileMenuOpen(false);
+                                  }}
                                   className="block py-1 text-gray-700 hover:text-abanic-orange transition-colors"
-                                  onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {subItem.name}
                                 </a>

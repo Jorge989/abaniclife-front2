@@ -205,13 +205,13 @@ const Explore = () => {
     setOpenItemId((prev) => (prev === id ? null : id));
   };
 
-  // ---------- VARIANTS (igual BrandAndFounders) ----------
+  // ---------- VARIANTS (padronizado igual Product.jsx) ----------
   const imageVariants = (reverse) => ({
-    hidden: { opacity: 0, x: reverse ? 150 : -150 },
+    hidden: { opacity: 0, x: reverse ? 40 : -40 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
     },
   });
 
@@ -220,15 +220,12 @@ const Explore = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, delay: 0.3 },
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.3 },
     },
   };
 
   return (
-    <section
-      className="w-full overflow-x-hidden"
-      style={{ backgroundColor: "#F1F0EB" }}
-    >
+    <section className="w-full" style={{ backgroundColor: "#F1F0EB" }}>
       <div className="max-w-[1070px] mx-auto px-6 py-10 mt-28 space-y-20">
         {/* Header com foto + textos */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
@@ -294,7 +291,8 @@ const Explore = () => {
                       variants={textVariants}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{ once: true, amount: 0.35 }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      viewport={{ once: true }}
                       className="mb-4 text-justify"
                       style={{ color: "var(--abanic-gray)" }}
                       dangerouslySetInnerHTML={{ __html: texto }}
@@ -305,8 +303,9 @@ const Explore = () => {
                       variants={imageVariants(false)}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{ once: true, amount: 0.35 }}
-                      className="w-full h-72 md:h-80 lg:h-[420px] overflow-hidden rounded-xl"
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      className="w-full h-48 md:h-56 lg:h-72 overflow-hidden rounded-xl"
                     >
                       <img
                         src={section.image}
@@ -344,8 +343,9 @@ const Explore = () => {
                       variants={textVariants}
                       initial="hidden"
                       whileInView="visible"
-                      viewport={{ once: true, amount: 0.35 }}
-                      className="mt-2 text-justify space-y-3 leading-[2]"
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      className="mt-2 text-justify space-y-3 leading-loose"
                       style={{ color: "var(--abanic-gray)" }}
                     >
                       {item.text.map((t, i) => (

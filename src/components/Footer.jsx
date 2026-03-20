@@ -49,8 +49,7 @@ const Footer = () => {
         ],
         explore: [
           { name: "Saiba mais Sobre Ativos e Benefícios", href: "/explore" },
-          { name: "A importância da proteção solar", href: "#importancia" },
-          { name: "ABANIC e a Sustentabilidade", href: "#dicas" },
+          { name: "Escolha Inteligente", href: "/smart-choice" },
         ],
       },
     },

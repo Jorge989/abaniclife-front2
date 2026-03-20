@@ -1,6 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const CookiePolicy = () => {
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   const cookieTypes = [
     {
       title: "Cookies Essenciais",
@@ -34,7 +44,13 @@ const CookiePolicy = () => {
   return (
     <section className="w-full bg-gradient-to-b from-abanic-gray-light to-white mt-20">
       {/* Hero Header */}
-      <div className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
+      <motion.div
+        variants={textVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full px-6 py-16 md:py-24 flex flex-col items-center"
+      >
         <div className="max-w-6xl text-center">
           <h1
             className="text-3xl md:text-4xl font-bold mb-4 font-space-grotesk-h1"
@@ -52,12 +68,18 @@ const CookiePolicy = () => {
 
           <div className="w-full max-w-[1070px] h-px bg-abanic-orange mx-auto mt-6"></div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="max-w-[1070px] mx-auto px-6 py-16 md:py-24 -mt-20">
         {/* Section 1 */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -71,10 +93,16 @@ const CookiePolicy = () => {
             de forma mais eficiente, bem como para fornecer informações aos
             proprietários do site.
           </p>
-        </div>
+        </motion.div>
 
         {/* Section 2 */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -99,10 +127,16 @@ const CookiePolicy = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Section 3 - Cookie Types Cards */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-10 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -147,10 +181,16 @@ const CookiePolicy = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Section 4 */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -178,10 +218,16 @@ const CookiePolicy = () => {
             Esses terceiros têm suas próprias políticas de privacidade e
             cookies.
           </p>
-        </div>
+        </motion.div>
 
         {/* Section 5 */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -243,10 +289,16 @@ const CookiePolicy = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Section 6 */}
-        <div className="mb-16 p-6 bg-orange-50 border-l-4 border-abanic-orange rounded-r-lg">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16 p-6 bg-orange-50 border-l-4 border-abanic-orange rounded-r-lg"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -270,10 +322,16 @@ const CookiePolicy = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Section 7 */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -286,10 +344,16 @@ const CookiePolicy = () => {
             operacionais, legais ou regulatórios. Recomendamos que você revise
             esta página regularmente.
           </p>
-        </div>
+        </motion.div>
 
         {/* Section 8 - Contact */}
-        <div className="mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mb-16"
+        >
           <h2
             className="text-2xl md:text-3xl font-bold mb-6 font-space-grotesk-h1"
             style={{ color: "var(--abanic-gray-dark)" }}
@@ -312,7 +376,7 @@ const CookiePolicy = () => {
               contato@abaniclife.com
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

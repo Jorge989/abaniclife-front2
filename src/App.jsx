@@ -17,6 +17,7 @@ const Login = lazy(() => import("./pages/Login"));
 const BrandAndFounders = lazy(() => import("./pages/BrandAndFounders"));
 const Faq = lazy(() => import("./pages/Faq"));
 const Explore = lazy(() => import("./pages/Explore"));
+const SmartChoiceSection = lazy(() => import("./pages/SmartChoiceSection"));
 const BlogPostPage = lazy(() => import("./pages/Blog"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -36,6 +37,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/explore" element={<Explore />} />
+              <Route path="/smart-choice" element={<SmartChoiceSection />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/cookie-policy" element={<CookiePolicy />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />

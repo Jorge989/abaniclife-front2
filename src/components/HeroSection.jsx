@@ -8,13 +8,6 @@ import { trackEvent } from "../utils/analytics";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
 
   const slides = [
     {
@@ -60,26 +53,11 @@ const HeroSection = () => {
 
   return (
     <section
-      className="   overflow-y-hidden   /* 👈 remove barra vertical */
-    overflow-x-hidden
-    overscroll-none relative h-screen overflow-hidden overscroll-"
+      className="relative w-full box-border overflow-x-hidden"
+      style={{ height: "100dvh", maxHeight: "100dvh" }}
       id="home"
     >
-      {/* Estilos específicos para iPad */}
-      <style>
-        {`
-          /* Ajustes específicos para iPad (768px - 1024px) */
-          @media (min-width: 768px) and (max-width: 1024px) {
-            .ipad-adjustment {
-              background-size: cover !important;
-              background-position: center center !important;
-            }
-          }
-        `}
-      </style>
-
-      {/* Slides */}
-      <div className="relative w-full h-full">
+      <div className="max-w-7xl mx-auto w-full h-full px-4 sm:px-6 lg:px-8">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -97,8 +75,8 @@ const HeroSection = () => {
                     ? index === 0
                       ? "left 52% top 50px"
                       : index === 1
-                      ? "right 53% top 50px"
-                      : "center top 75px"
+                        ? "right 53% top 50px"
+                        : "center top 75px"
                     : "center top 75px",
               }}
             />
@@ -142,11 +120,9 @@ const HeroSection = () => {
           });
         }}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm rounded-full w-12 h-12 transition-smooth"
-        aria-label="Slide anterior"
       >
         <ChevronLeft className="h-6 w-6" />
       </Button>
-
       <Button
         variant="ghost"
         size="icon"

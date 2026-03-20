@@ -29,14 +29,14 @@ const MosaicoProdutos = () => {
 
   return (
     <div className="py-12" style={{ backgroundColor: "#F1F0EB" }}>
-      <div className="w-full max-w-[100%] mx-auto text-center">
+      <div className="max-w-7xl mx-auto w-full text-center px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 w-full">
           {/* Imagens de cima */}
           <div className="flex flex-col w-full gap-6">
             {products.slice(0, 2).map((product, index) => (
               <motion.div
                 key={product.id}
-                className="w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[480px] overflow-hidden rounded-xl" // alturas responsivas para notebooks
+                className="w-full h-[280px] sm:h-80 md:h-[380px] lg:h-[480px] overflow-hidden rounded-xl"
                 initial={{
                   opacity: 0,
                   x: index === 0 ? -100 : 100,
@@ -49,7 +49,6 @@ const MosaicoProdutos = () => {
                   transition: { duration: 0.8, ease: "easeOut" },
                 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.03, transition: { duration: 0.4 } }}
               >
                 <img
                   src={product.image}
@@ -155,7 +154,7 @@ const MosaicoProdutos = () => {
               lg:max-w-[520px]   /* ligeiramente menor em notebooks */
               lg:max-h-[480px]
               object-cover lg:object-contain
-              transition-transform duration-500 hover:scale-[1.03]
+              transition-transform duration-500
               rounded-lg shadow-sm
             "
                   />

@@ -8,19 +8,7 @@ const BreadText = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="
-        mt-40
-        text-[36px]
-        leading-normal
-        max-w-4xl
-        mx-auto
-        mb-28
-        font-space-grotesk-h1
-        text-center
-        px-6           /* adiciona margem lateral no mobile */
-        sm:px-8        /* um pouco mais em tablets */
-        md:px-0        /* remove no desktop */
-      "
+      className="mt-40 text-[36px] leading-normal max-w-7xl mx-auto mb-28 font-space-grotesk-h1 text-center px-4 sm:px-6 lg:px-8"
       style={{ color: "var(--abanic-gray)" }}
     >
       COM FÓRMULAS LEVES E CONCENTRADAS EM ATIVOS A LINHA{" "}

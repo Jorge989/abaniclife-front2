@@ -91,7 +91,7 @@ const CultureSection = () => {
       id="cultura"
       style={{ backgroundColor: "#F1F0EB" }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         {/* 🔥 Header animado */}
         <motion.div
           className="text-center mb-12"
@@ -144,7 +144,7 @@ const CultureSection = () => {
               {articles.map((article, index) => (
                 <motion.div
                   key={article.id}
-                  className="flex-shrink-0 px-1.5"
+                  className="shrink-0 px-1.5"
                   variants={fadeScale}
                   initial="hidden"
                   whileInView="visible"

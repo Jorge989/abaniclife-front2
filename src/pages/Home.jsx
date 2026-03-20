@@ -5,7 +5,7 @@ import MosaicoProdutos from "../components/MosaicoProdutos";
 import BreadText from "../components/BreadText";
 function Home() {
   return (
-    <main>
+    <main className="  box-border">
       <HeroSection />
       <BreadText />
       <MosaicoProdutos />

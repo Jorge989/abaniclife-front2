@@ -216,22 +216,36 @@ const Faq = () => {
       style={{ backgroundColor: "#F1F0EB" }}
     >
       <div className="max-w-[1070px] mx-auto px-6">
-        <h1
-          className="text-3xl md:text-4xl lg:text-5xl leading-tight font-space-grotesk-h1 text-center mb-4"
-          style={{ color: "var(--abanic-gray-dark)", fontWeight: 400 }}
+        {/* Header */}
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          Perguntas <span style={{ color: "#fc622b" }}>Frequentes</span>
-        </h1>
-        <p
-          className="text-base md:text-lg text-center mb-12"
-          style={{ color: "var(--abanic-gray)" }}
-        >
-          Encontre respostas para as dúvidas mais comuns sobre nossos produtos e
-          serviços.
-        </p>
+          <h1
+            className="text-3xl md:text-4xl lg:text-5xl leading-tight font-space-grotesk-h1 text-center mb-4"
+            style={{ color: "var(--abanic-gray-dark)", fontWeight: 400 }}
+          >
+            Perguntas <span style={{ color: "#fc622b" }}>Frequentes</span>
+          </h1>
+          <p
+            className="text-base md:text-lg text-center mb-12"
+            style={{ color: "var(--abanic-gray)" }}
+          >
+            Encontre respostas para as dúvidas mais comuns sobre nossos produtos
+            e serviços.
+          </p>
+        </motion.div>
 
         {/* Category Icons Grid */}
-        <div className="w-full mb-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full mb-16"
+        >
           <h3
             className="text-xs uppercase tracking-widest text-center mb-10"
             style={{ color: "var(--abanic-gray)", letterSpacing: "0.15em" }}
@@ -279,10 +293,16 @@ const Faq = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Questions for Selected Category */}
-        <div className="w-full">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full"
+        >
           <motion.div
             key={selectedCategory}
             initial={{ opacity: 0, y: 20 }}
@@ -295,8 +315,12 @@ const Faq = () => {
               const isActive = activeIndex === globalIndex;
 
               return (
-                <div
+                <motion.div
                   key={qIndex}
+                  variants={textVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
                   className="border-b border-gray-300 transition-all duration-200"
                 >
                   <button
@@ -310,7 +334,7 @@ const Faq = () => {
                       {item.question}
                     </span>
                     <span
-                      className="text-lg flex-shrink-0 transition-transform duration-200"
+                      className="text-lg shrink-0 transition-transform duration-200"
                       style={{
                         color: "var(--abanic-gray)",
                         transform: isActive ? "rotate(90deg)" : "rotate(0)",
@@ -334,14 +358,20 @@ const Faq = () => {
                       </p>
                     </motion.div>
                   )}
-                </div>
+                </motion.div>
               );
             })}
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Contact Form */}
-        <div className="w-full mt-16">
+        <motion.div
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="w-full mt-16"
+        >
           <h2
             className="text-2xl md:text-3xl leading-tight font-space-grotesk-h1 text-center mb-8"
             style={{ color: "var(--abanic-gray-dark)", fontWeight: 600 }}
@@ -407,7 +437,7 @@ const Faq = () => {
               </button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
