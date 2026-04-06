@@ -431,7 +431,7 @@ const ProductPage = () => {
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUsoOne ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoOne ? "- MODO DE USAR" : "+ MODO DE USAR"}
                 </span>
               </button>
 
@@ -442,9 +442,10 @@ const ProductPage = () => {
                     color: "var(--abanic-gray)",
                   }}
                 >
-                  Aplique uma porção de dois pumps no rosto e pescoço umedecidos
-                  e espalhe de forma homogênea com movimentos leves circulares.
-                  Retire o produto com água abundante.
+                  Aplique sobre a pele do rosto úmida, massageando suavemente
+                  até formar uma camada fina de espuma. Enxágue abundantemente
+                  com água, até total remoção do produto. Pode ser utilizado no
+                  pescoço e colo. Indicado para todos os tipos de pele.
                 </p>
               )}
 
@@ -466,7 +467,14 @@ const ProductPage = () => {
                     color: "var(--abanic-gray)",
                   }}
                 >
-                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                  Aqua, Decyl Glucoside, Olivamidopropyl Betaine, Glycerin,
+                  Xanthan Gum, Calendula Officinalis Flower Extract, Manihot
+                  Esculenta Root Extract, Vaccinium Myrtillus Fruit Extract,
+                  Benzyl Alcohol, Dehydroacetic Acid, Sodium Benzoate, Potassium
+                  Sorbate, Phenoxyethanol, DMDM Hydantoin, Maris Aqua, Phenethyl
+                  Alcohol, Hydrolyzed Rhodophyceae Extract, Bellis Perennis
+                  (Daisy) Flower Extract, Alcohol Denat., Melissa Officinalis
+                  Leaf Extract, Disodium Phosphate, Sodium Gluconate, Parfum.
                 </p>
               )}
             </div>
@@ -555,7 +563,7 @@ const ProductPage = () => {
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUsoTwo ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoTwo ? "- MODO DE USAR" : "+ MODO DE USAR"}
                 </span>
               </button>
 
@@ -566,9 +574,10 @@ const ProductPage = () => {
                     color: "var(--abanic-gray)",
                   }}
                 >
-                  Aplique 3 (três) gotas do produto em todo o rosto e pescoço.
-                  Espalhe de forma homogênea, com movimentos leves e circulares,
-                  até sentir a total absorção do produto.
+                  Aplique algumas gotas do produto sobre a pele do rosto limpa e
+                  seca, massageando até sentir total absorção do produto. Pode
+                  ser utilizado no pescoço e colo. Indicado para todos os tipos
+                  de pele.
                 </p>
               )}
 
@@ -590,7 +599,14 @@ const ProductPage = () => {
                     color: "var(--abanic-gray)",
                   }}
                 >
-                  Coloque aqui sua lista de ingredientes, descrição, etc.
+                  Aqua, Glycerin, Propanediol, Caesalpinia Spinosa Gum,
+                  Calendula Officinalis Flower Extract, Dipentaerythrityl
+                  Tri-Polyhydroxystearate, Ethyl Olivate, Bellis Perennis
+                  (Daisy) Flower Extract, Maris Aqua, Cystoseira Tamariscifolia
+                  Extract, Olea Europaea (Olive) Leaf Extract, Phenoxyethanol,
+                  Benzyl Alcohol, Dehydroacetic Acid, Phenethyl Alcohol, Melissa
+                  Officinalis Leaf Extract, Disodium Phosphate, Sodium
+                  Gluconate, Parfum.
                 </p>
               )}
             </div>
@@ -681,7 +697,7 @@ const ProductPage = () => {
                 className="flex items-center justify-between w-full text-left font-medium text-gray-800 mt-4"
               >
                 <span className="text-[17px] md:text-[17px]">
-                  {openUsoThree ? "- INDICAÇÃO DE USO" : "+ INDICAÇÃO DE USO"}
+                  {openUsoThree ? "- MODO DE USAR" : "+ MODO DE USAR"}
                 </span>
               </button>
 
