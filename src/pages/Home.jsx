@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import CultureSection from "../components/CultureSection";
 import NewsletterSection from "../components/NewsletterSection";
 import MosaicoProdutos from "../components/MosaicoProdutos";
 import BreadText from "../components/BreadText";
 function Home() {
+  useEffect(() => {
+    alert("BEM VINDO");
+  }, []);
+
   return (
     <main className="  box-border">
       <HeroSection />
